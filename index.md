@@ -5,9 +5,10 @@ Vupiter is a DC power supply with 4 isolated channels and computer readout for l
 
 ### Design Members 
 
-```markdown
-
 Alex Jones - Group Leader
+
 Chase Flatau
+
 Rice Shelley
+
 AL Spies 
