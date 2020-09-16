@@ -1,27 +1,17 @@
-## Welcome to GitHub Pages
+## Welcome to Vupiter Control
 
-You can use the [editor on GitHub](https://github.com/ams0187/Vupiter.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Vupiter is a DC power supply with 4 isolated channels and computer readout for logging/control. Easy to customize power supply opens the door to a wide range of experimentation.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Design Members 
 
 ```markdown
 Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
+Alex Jones - Group Leader
+Chase Flatau
+Rice Shelley
+AL Spies 
 
 [Link](url) and ![Image](src)
 ```
