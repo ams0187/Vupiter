@@ -10,3 +10,4 @@ Al Spies
 
 
 ## [Main Page](https://ams0187.github.io/Vupiter/) 
+## [Design](https://ams0187.github.io/Vupiter/design) 
