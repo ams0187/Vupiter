@@ -13,4 +13,3 @@ Rice Shelley
 
 Al Spies 
 
-[contact.md]
