@@ -8,3 +8,5 @@ Information to be added later.
 ```
 
 ## [Main Page](https://ams0187.github.io/Vupiter/)
+
+## [Members](https://ams0187.github.io/Vupiter/members)
