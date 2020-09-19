@@ -8,5 +8,5 @@ Vupiter is a DC power supply with 4 isolated channels and computer readout for l
 
 
 
-### [Design Members](https://ams0187.github.io/Vupiter/members).
+### [Design Members](https://ams0187.github.io/Vupiter/members.)
 
