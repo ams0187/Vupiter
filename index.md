@@ -13,4 +13,3 @@ Rice Shelley
 
 Al Spies 
 
-[ https://ams0187.github.io/test/]
