@@ -9,4 +9,4 @@ Rice Shelley
 Al Spies 
 
 
-## [Vupiter Main Page](https://ams0187.github.io/Vupiter/) 
+## [Main Page](https://ams0187.github.io/Vupiter/) 
