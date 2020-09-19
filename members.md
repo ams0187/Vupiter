@@ -1,4 +1,4 @@
-### Design Team
+### Team Members
 
 Alex Jones - Group Leader
 
