@@ -9,7 +9,7 @@
 
 
 
-## [Main Page](https://ams0187.github.io/Vupiter/)
+## [Vupiter](https://ams0187.github.io/Vupiter/)
 
 ## [Team](https://ams0187.github.io/Vupiter/members)
 
