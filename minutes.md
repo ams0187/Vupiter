@@ -58,7 +58,7 @@
   - Rough draft of time frames created for task completion
 ```
 
-## [Main Page](https://ams0187.github.io/Vupiter/)
+## [Vupiter](https://ams0187.github.io/Vupiter/)
 
 ## [Team](https://ams0187.github.io/Vupiter/members)
 
