@@ -1,5 +1,7 @@
 # Team Meeeting Minutes
 
+## Next Meeting Wednesday, September 30 at 9:00 AM
+
 ## 09/25/2005
 ```
 * Where does it go when we are done? 
