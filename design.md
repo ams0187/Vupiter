@@ -5,7 +5,7 @@
 ### 0 - 30 VDC per channel - 10mV resolution
 ### 5 Amp max current per channel - 10mA resulution
 ### Dimensions - 200mm x 150mm x 300mm
-### Cost - $100.00 goal (could vary as design finalized)
+### Cost - $100.00 (could vary as design finalized)
 
 
 
