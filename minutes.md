@@ -13,7 +13,7 @@
     - 0 to 30v dc per channel
     - 5A  per channel
   - 10 mV/mA resolution 
-  - Demensions = 200mm(W) x 150mm(H) x 300mm(D)
+  - Dimensions = 200mm(W) x 150mm(H) x 300mm(D)
 
 * Unit max cost goal for prototype build?
   $100
