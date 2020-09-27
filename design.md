@@ -12,8 +12,6 @@
  
  Cost - $100.00 (could vary as design finalized)
 
-## 
-
 ## [Vupiter](https://ams0187.github.io/Vupiter/)
 
 ## [Team](https://ams0187.github.io/Vupiter/members)
