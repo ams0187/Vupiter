@@ -47,5 +47,11 @@
   - Rough draft of time frames created for task completion
   
 * Next meeting Wednesday, September 30, 2020
+```
 
+## [Main Page](https://ams0187.github.io/Vupiter/)
+
+## [Team](https://ams0187.github.io/Vupiter/members)
+
+## [Design](https://ams0187.github.io/Vupiter/design)
 
