@@ -11,7 +11,7 @@
 * Desired specs?
   - 3 Channels
     - 0 to 30v dc per channel
-    - 5A  per channel
+    - 5A per channel
   - 10 mV/mA resolution 
   - Dimensions = 200mm(W) x 150mm(H) x 300mm(D)
 
@@ -41,13 +41,13 @@
   - manufacturability - Well we made it didn't we?
   - health and safety - Radiated emissions? idk on this one 
 
-* Descions are made by vote with ties decided by?
+* Decisions are made by vote with ties decided by?
   In tie situation, team will discuss options and come to 
-  agreement. If no agreement reached, team leader is the 
-  tie beaker.
+  agreement. If no agreement reached, team leader make final
+  decision.
 
-* Discord will handle communication, meetings are wednesday
-  mornings at 9.Meetings will be recorded by hand and posted 
+* Discord will handle communication, meetings are Wednesday
+  mornings at 9. Meetings will be recorded by hand and posted 
   on the website.
 
 * SPARC lab and home shop are facilities to be used
