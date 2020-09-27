@@ -1,4 +1,4 @@
-# Team Meeeting Minutes
+# Team Meeting Minutes
 
 ### [09/25/2005](https://ams0187.github.io/Vupiter/9_25_2020.txt)
 
