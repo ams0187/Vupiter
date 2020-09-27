@@ -35,16 +35,16 @@
   - Team members to research assigned areas and determine
     other standards when more design specs are knows.
 
-* Project Constraints
+* Project Constraints (needs further discussion)
   - economic - CHEAP BB
   - environmental - EFFICENCY
   - manufacturability - Well we made it didn't we?
-  - health and safety - Radiated emissions? idk on this one 
+  - health and safety - Radiated emissions? 
 
 * Decisions are made by vote with ties decided by?
   In tie situation, team will discuss options and come to 
-  agreement. If no agreement reached, team leader make final
-  decision.
+  agreement. If no agreement reached, team leader make 
+  final decision.
 
 * Discord will handle communication, meetings are Wednesday
   mornings at 9. Meetings will be recorded by hand and 
