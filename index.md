@@ -1,6 +1,6 @@
 # Welcome to Vupiter Control
 
-Vupiter is a DC power supply with 3 isolated channels with computer logging/control. Simple adjustment power supply control opens the door to boundless assortment of experimentation.
+Vupiter is a DC power supply with 3 isolated channels for computer logging/control. Simple adjustment power supply control opens the door to boundless assortment of experimentation.
 
 
 ## 
