@@ -15,8 +15,8 @@
   - 10 mV/mA resolution 
   - Dimensions = 200mm(W) x 150mm(H) x 300mm(D)
 
-* Unit max cost goal for prototype build?
-  $100
+* Unit cost goal for prototype build?
+  < $100
 
 * Project funding?
   Split cost evenly between all members.
