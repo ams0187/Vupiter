@@ -5,8 +5,8 @@
 ## 09/25/2005
 ```
 * Where does it go when we are done? 
-  SPARC Lab or person who would like the unit will reimburse
-  team member full cost to build.
+    SPARC Lab or person who would like the unit will reimburse
+    team member full cost to build.
 
 * Desired specs?
     - 3 Channels
