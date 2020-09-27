@@ -43,16 +43,16 @@
 
 * Descions are made by vote with ties decided by?
   In tie situation, team will discuss options and come to 
-  agreement. If no agreement reached then team leader will be 
+  agreement. If no agreement reached, team leader is the 
   tie beaker.
 
 * Discord will handle communication, meetings are wednesday
   mornings at 9.Meetings will be recorded by hand and posted 
   on the website.
 
-* SPARC lab and home shop are the only facilities to be used
+* SPARC lab and home shop are facilities to be used
 
-* Gantt chart created with excel and will be stored on Auburn 
+* Gantt chart created with excel and to be stored on Auburn 
   BoxDrive for collaboration.
   - Task were assigned to each member
   - Rough draft of time frames created for task completion
