@@ -47,8 +47,8 @@
   decision.
 
 * Discord will handle communication, meetings are Wednesday
-  mornings at 9. Meetings will be recorded by hand and posted 
-  on the website.
+  mornings at 9. Meetings will be recorded by hand and 
+  posted on the website.
 
 * SPARC lab and home shop are facilities to be used
 
