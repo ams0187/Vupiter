@@ -1,6 +1,6 @@
 # Team Meeting Minutes
 
-## Next Meeting: 
+# Next Meeting: 
 
 ### Wednesday, September 30 at 9:00 AM
 
