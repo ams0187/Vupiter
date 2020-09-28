@@ -6,7 +6,7 @@ Chase Flatau
 
 Rice Shelley 
 
-Al Spies 
+Al Spies <img src="Al.jpg" class="img-responsive" alt=""> </div>
 
 ## [Vupiter](https://ams0187.github.io/Vupiter/) 
 
