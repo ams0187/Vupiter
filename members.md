@@ -1,12 +1,12 @@
 # Team Members
 
-Alex Jones - Group Leader 
+### Alex Jones - Group Leader 
 
-Chase Flatau 
+### Chase Flatau 
 
-Rice Shelley 
+### Rice Shelley 
 
-Al Spies
+### Al Spies
 ```
 Bachelor of Electrical and Computer Engineering
 
