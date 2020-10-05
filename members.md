@@ -8,7 +8,7 @@
 
 ### Al Spies
 ```
-Bachelor of Electrical and Computer Engineering
+Degree: Bachelor of Electrical and Computer Engineering
 
 Project Role: Interface Design / Webpage Management
 
