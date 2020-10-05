@@ -12,7 +12,7 @@ Bachelor of Electrical and Computer Engineering
 Project Role: Innerface Design / Webpage Management
 Al enjoys the outdoors when not busy with work, school, or
 family events. His free time, when there is some, is 
-spent fishing, golfing, or backcountry camping.
+spent fishing, golfing, or backcountry hiking/camping.
 ```
 <img src="Pictures/Al.jpg" class="img-responsive" alt="">
 
