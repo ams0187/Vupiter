@@ -6,8 +6,8 @@
 
 ## Files:
 
-[09/25/2020 Word](https://ams0187.github.io/Vupiter/Minutes/9_25_2020.docx)
-[09/25/2020 PDF](https://ams0187.github.io/Vupiter/Minutes/9_25_2020.pdf)
+September 25, 2020 [Word](https://ams0187.github.io/Vupiter/Minutes/9_25_2020.docx) or 
+[PDF](https://ams0187.github.io/Vupiter/Minutes/9_25_2020.pdf)
 
 [GANTT Excel File](https://ams0187.github.io/Vupiter/Minutes/VupiterGantt.xlsx)
 
