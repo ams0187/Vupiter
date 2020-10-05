@@ -10,7 +10,7 @@
 ```
 Degree: Bachelor of Electrical and Computer Engineering
 
-Project Role: Interface Design / Webpage Management
+Project Role: Interface Design / Website Management
 
 Al enjoys the outdoors when not busy with work, school, or
 family events. His free time, when there is some, is 
