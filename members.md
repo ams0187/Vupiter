@@ -6,7 +6,15 @@ Chase Flatau
 
 Rice Shelley 
 
-Al Spies <img src="Pictures/Al.jpg" class="img-responsive" alt="">
+Al Spies
+```
+Bachelor of Electrical and Computer Engineering
+Project Role: Innerface Design / Webpage Management
+Al enjoys the outdoors when not busy with work, school, or
+family events. His free time, when there is some, is 
+spent fishing, golfing, or backcountry camping.
+```
+<img src="Pictures/Al.jpg" class="img-responsive" alt="">
 
 ## [Vupiter](https://ams0187.github.io/Vupiter/) 
 
