@@ -2,7 +2,7 @@
 
 ## Next Meeting: 
 
-#### Wednesday, October 7 at 9:00 AM
+#### Friday, October 9 at 9:00 AM
 
 ## Files:
 
