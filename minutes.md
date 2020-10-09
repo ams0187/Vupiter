@@ -12,7 +12,7 @@ October 2, 2020 ([Word Download](https://ams0187.github.io/Vupiter/Minutes/10_2_
 September 25, 2020 ([Word Download](https://ams0187.github.io/Vupiter/Minutes/9_25_2020.docx) or 
 [PDF View](https://ams0187.github.io/Vupiter/Minutes/9_25_2020.pdf))
 
-[GANTT Excel File Download](https://ams0187.github.io/Vupiter/Minutes/VupiterGantt.xlsx)
+[GANTT Excel File Download](https://ams0187.github.io/Vupiter/Minutes/GANTT(3).xlsx)
 
 ## [Vupiter](https://ams0187.github.io/Vupiter/)
 
