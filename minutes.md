@@ -6,6 +6,9 @@
 
 ## Files:
 
+October 9, 2020 ([Word Download](https://ams0187.github.io/Vupiter/Minutes/10_9_2020.docx) or 
+[PDF View](https://ams0187.github.io/Vupiter/Minutes/10_9_2020.pdf))
+
 October 2, 2020 ([Word Download](https://ams0187.github.io/Vupiter/Minutes/10_2_2020.docx) or 
 [PDF View](https://ams0187.github.io/Vupiter/Minutes/10_2_2020.pdf))
 
