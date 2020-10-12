@@ -1,8 +1,10 @@
 # Vupiter Design Specification
-
+```
  3 Channels
  
- Front panel display (type to be decided later)
+ Front panel interface:
+    - Quadraturn encoders for control
+    - 7 segment displays for voltage/current display
  
  0 - 30 VDC per channel - 10mV resolution
  
@@ -11,7 +13,7 @@
  Dimensions - 200mm x 150mm x 300mm
  
  Cost - $100.00 (could vary as design finalized)
-
+```
 ## [Vupiter](https://ams0187.github.io/Vupiter/)
 
 ## [Team](https://ams0187.github.io/Vupiter/members)
