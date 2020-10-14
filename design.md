@@ -1,9 +1,11 @@
 # Vupiter Design Specification
 ```
+Vupiter
+
  3 Channels
  
  Front panel interface:
-    - Quadraturn encoders for control
+    - Quadrature encoders for control
     - 7 segment displays for voltage/current display
  
  0 - 30 VDC per channel - 10mV resolution
