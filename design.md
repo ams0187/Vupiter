@@ -16,6 +16,10 @@ Vupiter
  
  Cost - $100.00 (could vary as design finalized)
 ```
+Interface Trade Study ([Word Download](https://ams0187.github.io/Vupiter/Design/Interface_Design_T_S.docx) or 
+[PDF View](https://ams0187.github.io/Vupiter/Design/Interface_Design_T_S.pdf))
+
+
 ## [Vupiter](https://ams0187.github.io/Vupiter/)
 
 ## [Team](https://ams0187.github.io/Vupiter/members)
