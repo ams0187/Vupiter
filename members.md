@@ -22,7 +22,7 @@ I enjoy reading, outodoor activities, and hanging out with
 friends. I also enjoy designing and building circuits for 
 my internship or outside.
 ```
-<img src="Pictures/Chase.jpg" class="img-responsive" alt="">
+
 
 ### Rice Shelley 
 
