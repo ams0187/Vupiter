@@ -13,6 +13,15 @@ I also swing dance and cook when I get the time.
 <img src="Pictures/Alex.jpg" class="img-responsive" alt="">
 
 ### Chase Flatau 
+```
+Degree: Bachelor of Electrical Engineering
+
+Project Role: Power Stage Designer
+
+I enjoy reading, outodoor activities, and hanging out with
+friends. I also enjoy designing and building circuits for 
+my internship or outside.
+```
 
 ### Rice Shelley 
 
