@@ -20,9 +20,9 @@ Degree: Bachelor of Electrical Engineering
 
 Project Role: Power Stage Designer
 
-I enjoy reading, outodoor activities, and hanging out with
-friends. I also enjoy designing and building circuits for 
-my internship or outside.
+I enjoy reading, outodoor activities, and hanging out 
+with friends. I also enjoy designing and building 
+circuits for my internship or outside.
 ```
 
 
