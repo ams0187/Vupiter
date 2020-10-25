@@ -2,7 +2,8 @@
 
 ### Alex Jones - Group Leader 
 ```
-Degree: Dual Bachelors in Electrical Engineering and Computer Engineering
+Degree: Dual Bachelors in Electrical Engineering 
+        and Computer Engineering
 
 Project Role: Group Leader and Power Stage Designer
 
