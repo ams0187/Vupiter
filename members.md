@@ -7,9 +7,10 @@ Degree: Dual Bachelors in Electrical Engineering
 
 Project Role: Group Leader and Power Stage Designer
 
-Outside of school I do hobbyist work in a number of fields,
-everything from software and FPGA's to robotics and machining.
-I also swing dance and cook when I get the time.
+Outside of school I do hobbyist work in a number of 
+fields, everything from software and FPGA's to robotics
+and machining. I also swing dance and cook when I get
+the time.
 ```
 <img src="Pictures/Alex.jpg" class="img-responsive" alt="">
 
