@@ -5,8 +5,8 @@ Vupiter
  3 Channels
  
  Front panel interface:
-    - Quadrature encoders for control
-    - 7 segment displays for voltage/current display
+    - TFT Screen for display and control
+    - Possible quadrature encoders for quick adjust
  
  0 - 30 VDC per channel - 10mV resolution
  
@@ -16,6 +16,8 @@ Vupiter
  
  Cost - $100.00 (could vary as design finalized)
 ```
+
+
 ## [Vupiter](https://ams0187.github.io/Vupiter/)
 
 ## [Team](https://ams0187.github.io/Vupiter/members)

@@ -2,9 +2,15 @@
 
 ## Next Meeting: 
 
-#### October 14 at 9:00 AM
+#### October 23 at 9:00 AM
 
 ## Files:
+
+October 23, 2020 ([Word Download](https://ams0187.github.io/Vupiter/Minutes/10_23_2020.docx) or 
+[PDF View](https://ams0187.github.io/Vupiter/Minutes/10_23_2020.pdf))
+
+October 14, 2020 ([Word Download](https://ams0187.github.io/Vupiter/Minutes/10_14_2020.docx) or 
+[PDF View](https://ams0187.github.io/Vupiter/Minutes/10_14_2020.pdf))
 
 October 9, 2020 ([Word Download](https://ams0187.github.io/Vupiter/Minutes/10_9_2020.docx) or 
 [PDF View](https://ams0187.github.io/Vupiter/Minutes/10_9_2020.pdf))
@@ -15,7 +21,7 @@ October 2, 2020 ([Word Download](https://ams0187.github.io/Vupiter/Minutes/10_2_
 September 25, 2020 ([Word Download](https://ams0187.github.io/Vupiter/Minutes/9_25_2020.docx) or 
 [PDF View](https://ams0187.github.io/Vupiter/Minutes/9_25_2020.pdf))
 
-[GANTT Excel File Download](https://ams0187.github.io/Vupiter/Minutes/GANTT.xlsx)
+[Gantt Excel Download](https://ams0187.github.io/Vupiter/Minutes/VupiterGantt.xlsx)
 
 ## [Vupiter](https://ams0187.github.io/Vupiter/)
 
