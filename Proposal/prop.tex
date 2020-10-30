@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 \usepackage[superscript]{cite}   % remove to use brackets instead of superscripts in citations
 \usepackage{graphicx}
 \usepackage{fancyhdr}
@@ -7,13 +7,14 @@
 \usepackage[a4paper, portrait, margin=1in]{geometry}
 \usepackage{lastpage}
 \usepackage{float}
+\usepackage{tabularx}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{Vupiter}
 \fancyhead[R]{Project Proposal}
 \rfoot{Page \thepage \hspace{1pt} of \pageref*{LastPage}}
 \pagenumbering{arabic}
-
+\newcolumntype{L}{>{\centering\arraybackslash}m{3cm}}
 \usepackage[pdftex,bookmarks,pdfpagemode=UseOutlines,
     pdfauthor={Vupiter Team},
     pdftitle={Project Proposal},colorlinks=true, linkcolor=blue]{hyperref}
@@ -23,7 +24,7 @@
 
 \setlength\parindent{5ex}
 \setlength\parskip{2ex}
-
+\newcommand\xrowht[2][0]{\addstackgap[.5\dimexpr#2\relax]{\vphantom{#1}}}
 \newcommand{\fig}[1]{\centerline{\includegraphics{#1}}}
 
 \DeclareGraphicsExtensions{.pdf, .jpg, .png}
@@ -37,7 +38,7 @@
         \textbf{Vupiter DC Power Supply}
             
         \vspace{0.5cm}
-        \LARGE
+        \large
         Date: \today
             
         \vspace{4.5cm}
@@ -71,7 +72,6 @@
 \pagebreak
 
 \section{Project Description}
-\par
 DC power supplies are easily one of the most important pieces of test equipment 
 in a lab while simultaneously being the most basic in concept. The focus of the 
 Vupiter project will be to create a low-cost open-source versatile benchtop power 
@@ -95,6 +95,74 @@ USB interface. The affordability of the design is addressed via choosing cheap
 yet powerful micro-controllers and designing a front panel that is usable yet 
 economical.
 
+
+\subsection{Constraints}
+\subsubsection{Economical}
+The primary purpose of a Vupiter power supply is to make desktop experimentation for 
+hobbyist versatile, convenient, and low cost without sacrificing precision. Devices 
+with comparable function and control resolution that are currently in the market 
+range from \$300 to \$700. The economical constraint for this project is keeping 
+build cost less than \$100 dollars to provide an affordable option for all electronic 
+enthusiast, regardless of budgets. This difference in cost will be recouped by not having 
+make a profit or pay staff to support users.
+
+\subsubsection{Environmental}
+Vupiter is intended for standard lab usage use so there’s a strict ban on toxic materials 
+with all components. Toxic materials are an environmental concern due to the possibility of these 
+materials being discarded and also the environmental effects of the components creation, 
+so special attention will be paid in the component selection process so that we only consider safe options.
+
+Energy efficiency is also a major topic of concern globally so the design process will have to adhere to
+reasonable levels of efficiency. This is accomplished via switch-mode supplies that are followed by linear stages so that we can meet both the performance and efficiency requirements.
+
+\subsubsection{Manufacturability}
+In order to ensure that hobbyists and factories can both product the design, we will be constraining or PCB
+2-layers with only one side populated by surface mount components. By avoiding through-hole components and 
+only populating one side of the board we can drastically simplify automated PCB assembly. To further assist hobbyists 
+we will be limiting our passive component size to 0603 or above, and banning the use of ball grid arrays or other 
+difficult to hand solder IC packages in favor of packages with exposed leads such as quad flat packs.
+\subsubsection{Health and Safety}
+Well-being of users, or anyone in close proximity, is the highest priority of the design process 
+and creates constraints for the device. Constraints include a fuse in the first stage of the power supply, opto-isolation of the front panel, no sharp edges, and an ergonomic user interface to maximize comfort under standard usage.
+
+\subsubsection{Usefulness}
+From our team’s experience using power supplies we have identified a number of minimum 
+performance targets that are necessary to keep Vupiter useful in a lab setting while still 
+maintaining simplicity of design. The target will be three independently isolated channels 
+capable of 0-30V and 0-5A regulation at 10mV and 10mA resolution. Physically, the supply 
+should sit flat on a level surface, and have a flat top, to allow for stacking of other 
+instruments.
+
+\subsection{Standards}
+\subsubsection{UL 1310 Class 2 Power Units Standard for Safety}
+The UL 1310 standard outlines and classifies power supplies. A class two power 
+supply cannot exceed an output of 30 Volts and 8 Amperes. The Vupiter lab supply 
+would be considered a class two power supply under the UL 1310 standard.
+UL 1310 covers both indoor and outdoor power supplies however the primary environment
+for the Vupiter lab supply is intended to be indoors. This class of power supply is 
+intended primarily to provide power to low voltage electrical devices. 
+
+\subsubsection{Universal Serial Bus Version 2.0}
+The Vupiter power supply can be interfaced with a PC over the USB 2.0 protocol. Data 
+transmission will be at a rate of 12 Mb/s. The Vupiter power supply will be a slave
+device and have a USB type B port located on the front panel. Compliance with the standard 
+is assured by the microcontroller vendor.
+
+\subsubsection{USB Test and Measurement Class Specification}
+USBTMC will be used on top of the USB 2.0 protocol for communication with the power supply.
+USBTMC will be a support medium for the SCPI command interface. The interface will provide 
+plug and play communication at a lower cost when compared to other common lab equipment interfaces. 
+
+\subsubsection{Standard Commands for Programmable Instruments (SCPI)}
+SCPI is used to define the commands for controlling programmable test and 
+measurement devices. The Vupiter power supply will use SCPI as the top level command
+interface between itself and PC desktop software. The SCPI functionality class DCPSUPPLY
+will be implemented into the design. The DCPSUPPLY class will ensure that other SCPI
+DC power supply control software can be used with the Vupiter power supply. 
+
+
+
+    
 \subsection{Power Stages}
 Benchtop power supplies are frequently attached to sensitive and poorly 
 characterized devices meaning that the supply is subject to more rigorous 
@@ -104,7 +172,7 @@ and output step response requirements. These two criteria will be considered
 in addition to our budgetary and environmental requirements when evaluating 
 designs. Four topologies for the power supply section of this project are 
 explored and explained below, addressing these criteria. The final tallying 
-of their pros and cons can be seen in Table X.
+of their pros and cons can be seen in \autoref{tab:power}.
 
 \subsubsection{Topology 1 - Linear mode devices only}
 This topology is by far the simplest as all it does is transform and rectify mains 
@@ -175,7 +243,7 @@ voltage at low output voltages while still maintaining strong regulation.
 The alternative to this is a floating mixed mode design whereby the output of the 
 second rectifier is regulated to always be just slightly above the dropout of the 
 linear stage. This ensures exceptionally high efficiency as the linear element is 
-dissipating at most 10 watts even with a short circuit across its output. Where this 
+dissipating at most 10 Watts even with a short circuit across its output. Where this 
 is problematic is when reacting to large step inputs both on the load or the command 
 side, as the maximum positive output voltage slew is dictated by the switched elements 
 rather than the linear elements which can react almost instantly. Another point off 
@@ -253,9 +321,104 @@ is designed.\\
 \caption{Pugh table for micro-controller selection }
 \label{tab:micro}
 \end{table}
+\subsection{User Interface}
+
+The user interface can be broken into two subsections, the information display and the controls. The main criteria for these two subsections are cost, implementation, and versatility of function in design. For the display, three options were considered: seven segment displays, a TFT screen, and a touchscreen. The touchscreen simplifies our component count by unifying the display and the interface, but it lacks tactile feedback ruining the user experience, and even worse is rather expensive. Seven-segment displays are a classic and robust solution but the shear quantity required to display three channels would be two expensive and have a cluttered display. The intermediary solution of a non-touchscreen with a discrete interface fixes these issues and is relatively inexpensive. These results are summarized in \autoref{tab:display}
+\begin{table}[H]
+    \centering
+\begin{tabular}{ |c|c||L|L|L|  }
+    \cline{3-5}
+    \multicolumn{1}{c}{}& \multicolumn{1}{c}{}&  \multicolumn{3}{|c|}{\textbf{Options}} \\
+    \hline
+    \textbf{Criteria} & \textbf{Weight} & LTC-4627JR 4 Digit Seven Segment Display & Hx8357B TFT Screen & Mikroe-495 touchscreen display \\ 
+    \hline
+    Price & 3 & 0 & + & -  \\
+    Usability & 2 & - & 0 & + \\
+    Quality & 1 & - & 0 & + \\
+    Durability & 1 & + & 0 & - \\
+    Implementation & 2 & + & 0 & - \\ 
+    \hline
+    \hline
+    \multicolumn{2}{|c||}{+} & 3 & 3 & 3\\
+    \multicolumn{2}{|c||}{0} & 1 & 4 & 0\\
+    \multicolumn{2}{|c||}{-} & 3 & 0 & -6\\
+    \hline \hline
+    \multicolumn{2}{|c||}{\textbf{Net Score}} & 0 & 3 & -3\\
+    \hline
+\end{tabular}
+\caption{Pugh table for display selection }
+\label{tab:display}
+\end{table}
+
+For the user interface, once again three options of encoder, matrix button array, and the touchscreen were considered against
+the same criteria. The touchscreen has the same issues as above of being expensive and lacking tactile feedback. A keypad,
+while robust and relatively cheap, would make fine adjustments difficult and menu navigation unintuitive. This leaves us with
+encoders, which allow for fine adjustment, provide tactile feedback, and are relatively cheap. Intuitive menu navigation can 
+be achieved by having three encoders, two dedicated to voltage and current control with the third managing the switching between channels and any other menu options. These results are summarized in \autoref{tab:control}
+\begin{table}[H]
+    \centering
+\begin{tabular}{ |c|c||L|L|L|  }
+    \cline{3-5}
+    \multicolumn{2}{c}{} &  \multicolumn{3}{|c|}{\textbf{Options}} \\
+    \hline
+    \textbf{Criteria} & \textbf{Weight} & 4x3 Matrix Keypad & Encoders & Mikroe-495 touchscreen display \\ 
+    \hline
+    Price & 3 & - & + & -  \\
+    Usability & 2 & - & + & 0 \\
+    Quality & 1 & - & + & - \\
+    Durability & 1 & 0 & + & - \\
+    Implementation & 2 & 0 & + & - \\ 
+    \hline
+    \hline
+    \multicolumn{2}{|c||}{+} & 0 & 9 & 0\\
+    \multicolumn{2}{|c||}{0} & 2 & 0 & 1\\
+    \multicolumn{2}{|c||}{-} & -6 & 0 & -7\\
+    \hline \hline
+    \multicolumn{2}{|c||}{\textbf{Net Score}} & -6 & 9 & -7\\
+    \hline
+\end{tabular}
+\caption{Pugh table for user interface selection }
+\label{tab:control}
+\end{table}
 \section{Management Approach}
+Our team holds weekly meetings on Wednesday morning at 9 AM to discuss progress and work on team tasks.
+These meeting are done on our discord server which is also how we communicate outside of meetings. Documentation 
+and version control is done through GitHub. The team is roughly split into two groups with Alex Jones and Chase Flatau working 
+on power stages while Rice Shelley and Al Spies work on firmware. Each team communicates within separate channels for 
+internal communication, and any major decisions or issues are run by the entire team at the weekly meetings. The overall
+project lead is Alex Jones.
+
+\noindent 
+Meeting minutes are recorded weekly by Al Spies and can be accessed on our website: \url{https://ams0187.github.io/Vupiter/}
+
+\noindent
+All files, including this proposal are hosted on our github:\\
+\url{https://github.com/ams0187/Vupiter}
 \section{Budget}
+In order to be competitive with market alternatives, our target cost is \$100. 
+Each member will donate \$25 to purchase the necessary materials. The finished product will
+be assembled in each members’ private workspace; therefore, consumables such as solder will count as
+donations but will still be counted into the final price. The current targets for each subsection
+are: \$25 are for front panel display and button/knobs, \$50 for the power stages
+and PCBs, and \$25 for the casing of the supply.
+
 \section{Timeline}
+The project timeline can be accessed here: \url{https://aub.ie/vupiterTL}
 \section{Facilities}
+The facilities that will be utilized are Auburn’s SPaRC Lab and individual members’ home workshops. In the event that these labs are insufficient, the ECE shop will be contacted for assistance
 \section{Disposition Agreement}
+All members agree that the final physical product will donated to SPaRC and that all documentation, code, and intellectual property will be released on GitHub under the MIT licence. By signing on the next page each member acknowledges and agrees to the above statements.
+\newpage
+
+\begin{table}[H]
+\begin{tabular}{ l | c }
+    \textbf{Name} & \textbf{Signature} \\
+    & \\ [5ex]
+    Chase Flatau &\\[10ex]
+    Alex Jones &\\[10ex]
+    Rice Shelley &\\[10ex]
+    Al Spies &\\[10ex]
+
+\end{tabular}
+\end{table}
 \end{document}
