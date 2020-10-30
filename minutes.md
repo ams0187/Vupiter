@@ -2,7 +2,7 @@
 
 ## Next Meeting: 
 
-#### October 23 at 9:00 AM
+#### November 04 at 9:00 AM
 
 ## Files:
 
