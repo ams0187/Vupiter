@@ -1,9 +1,5 @@
 # Team Meetings
 
-## Next Meeting: 
-
-#### November 06 at 9:00 AM
-
 ## Files:
 
 October 30, 2020 ([Word Download](https://ams0187.github.io/Vupiter/Minutes/10_30_2020.docx) or 
