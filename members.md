@@ -24,15 +24,16 @@ I enjoy reading, outodoor activities, and hanging out
 with friends. I also enjoy designing and building 
 circuits for my internship or outside.
 ```
-<img src="Pictures/PicComingSoon.JPG" class="img-responsive" alt="">
+<img src="Pictures/rice.jpg" class="img-responsive" alt="">
 
 ### Rice Shelley 
 ```
-Degree: Details coming soon
+Degree: Bachelor of Computer Engineering
 
-Project Role: Details coming soon
+Project Role: MCU board / embedded software 
 
-Details coming soon
+FPGA enthusiast and amateur outdoorsman. Proficency in agile full stack development of grilled cheese sandwiches using both conventional oven and microwave technology.
+
 ```
 <img src="Pictures/PicComingSoon.JPG" class="img-responsive" alt="">
 
@@ -42,7 +43,7 @@ Degree: Bachelor of Electrical and Computer Engineering
 
 Project Role: Interface Design / Website Management
 
-I enjoys the outdoors when not busy with work, school,
+I enjoy the outdoors when not busy with work, school,
 or family events. With my free time, when there is 
 some, I can be found fishing, golfing, or backcountry 
 hiking/camping.
