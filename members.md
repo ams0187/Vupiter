@@ -32,7 +32,10 @@ Degree: Bachelor of Computer Engineering
 
 Project Role: MCU board / embedded software 
 
-FPGA enthusiast and amateur outdoorsman. Proficency in agile full stack development of grilled cheese sandwiches using both conventional oven and microwave technology.
+FPGA enthusiast and amateur outdoorsman. Proficency 
+in agile full stack development of grilled cheese 
+sandwiches using both conventional oven 
+and microwave technology.
 
 ```
 <img src="Pictures/PicComingSoon.JPG" class="img-responsive" alt="">
