@@ -24,7 +24,7 @@ I enjoy reading, outodoor activities, and hanging out
 with friends. I also enjoy designing and building 
 circuits for my internship or outside.
 ```
-<img src="Pictures/PicComingSoon.JPG" class="img-responsive" alt="">
+<img src="Pictures/Toomers2.jpg" class="img-responsive" alt="">
 
 ### Rice Shelley 
 ```
