@@ -1,6 +1,11 @@
 # Team Meetings
 
+Wednesdays @ 9 AM
+
 ## Files:
+
+November 11, 2020 ([Word Download](https://ams0187.github.io/Vupiter/Minutes/11_11_2020.docx) or 
+[PDF View](https://ams0187.github.io/Vupiter/Minutes/11_11_2020.pdf))
 
 October 30, 2020 ([Word Download](https://ams0187.github.io/Vupiter/Minutes/10_30_2020.docx) or 
 [PDF View](https://ams0187.github.io/Vupiter/Minutes/10_30_2020.pdf))
