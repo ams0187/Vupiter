@@ -1,6 +1,6 @@
 # Team Meetings
 
-Wednesdays @ 9 AM
+Wednesdays @ 2 PM
 
 ## Files:
 
