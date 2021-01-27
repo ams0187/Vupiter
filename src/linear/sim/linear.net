@@ -46,7 +46,6 @@ D2 0 N006 1N5819
 R28 fb5 v5 3.8k
 C17 0 preg 10µ Rser=1
 L7 vin preg 5µ Rser=36.5m
-D4 0 preg TFZ39B
 R34 AD 0 6k
 L2 vin N009 1.5µ Ipk=8 Rser=8m
 C1 N009 0 10µ Rser=0.1
@@ -106,6 +105,9 @@ C13 vread 0 100p
 * ignore these
 .meas TRAN I1 PP I(R1) FROM 0.9m TO 1.0m
 * R12 should be 1k+1k pot
+* low esr
+* Power rated resistors
+* Power rated shunt resistor
 .lib Z:\home\twoninefour\Downloads\LM317_TRANS.LIB
 .lib Z:\home\twoninefour\Downloads\MC33063A-Q1_TRANS.lib
 .backanno
