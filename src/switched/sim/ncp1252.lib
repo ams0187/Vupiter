@@ -1,0 +1,1026 @@
+* PSpice Model Editor - Version 16.2.0
+*$
+*****************************************
+* Creation: Thierry SUTTO               *
+*     Date: 18 SEP 2003                 *
+* Based on: n/a                         *
+*****************************************
+.SUBCKT UVLO_S1 1 2 3 4 params: VT=5.25V VH=0.25V TD=0
+S_S1         3 4 1 2 _S1
+RS_S1        1 2     1G
+.MODEL         _S1 VSWITCH Roff=1e6 Ron=1.0 VH={VH} VT={VT} TD={TD}
+.ENDS
+
+*$
+******
+
+.SUBCKT 74AC14 Y A VCC AGND
+XU1 Y A VCC VCC AGND LOGIC_GATE_2PIN_OD_AHC_1i_NAND_PP_ST_CD74AC14
+.ENDS
+
+.subckt or4 a b c d vcc g z
+M1 N004 d N003 N003 PMOS
+M2 N004 a g g NMOS
+M3 N004 b g g NMOS
+M4 N004 c g g NMOS
+M5 N004 d g g NMOS
+M6 N003 c N002 N002 PMOS
+M7 N002 b N001 N001 PMOS
+M8 N001 a vcc vcc PMOS
+M9 z N004 g g NMOS
+M10 z N004 vcc vcc PMOS
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\users\twoninefour\My Documents\LTspiceXVII\lib\cmp\standard.mos
+.ends
+
+.subckt or5 a b c d e vcc g z
+M1 N014 d N003 N003 PMOS
+M1 N004 e N014 N014 PMOS
+M2 N004 a g g NMOS
+M3 N004 b g g NMOS
+M4 N004 c g g NMOS
+M5 N004 d g g NMOS
+M100 N004 e g g NMOS
+M6 N003 c N002 N002 PMOS
+M7 N002 b N001 N001 PMOS
+M8 N001 a vcc vcc PMOS
+M9 z N004 g g NMOS
+M10 z N004 vcc vcc PMOS
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\users\twoninefour\My Documents\LTspiceXVII\lib\cmp\standard.mos
+.ends
+
+.subckt and2 a b vcc g z
+M2 N002 a g g NMOS
+M3 N001 b N002 N002 NMOS
+M7 N001 b vcc vcc PMOS
+M8 N001 a vcc vcc PMOS
+M9 z N001 g g NMOS
+M10 z N001 vcc vcc PMOS
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\users\twoninefour\My Documents\LTspiceXVII\lib\cmp\standard.mos
+.ends
+
+.subckt or2 a b vcc g z
+M2 N002 a g g NMOS
+M3 N002 b g g NMOS
+M7 N002 b N001 N001 PMOS
+M8 N001 a vcc vcc PMOS
+M9 z N002 g g NMOS
+M10 z N002 vcc vcc PMOS
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\users\twoninefour\My Documents\LTspiceXVII\lib\cmp\standard.mos
+.ends
+
+.subckt INV a vcc g d
+M1 d a g g NMOS
+M2 d a vcc vcc PMOS
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\users\twoninefour\My Documents\LTspiceXVII\lib\cmp\standard.mos
+.ends
+
+.SUBCKT LOGIC_GATE_2PIN_OD_AHC_1i_NAND_PP_ST_CD74AC14 OUT A B VCC GND
+
+.PARAM VCC_ABS_MAX = 6
+.PARAM VCC_MAX = 5.5
+.PARAM RA = 2.2e-05
+.PARAM RB = 2.2e-05
+.PARAM CA = 1e-11
+.PARAM CB = 1e-11
+.PARAM ROEZ = 2000
+.PARAM COEZ = 3e-12
+RA  A  GND {RA}
+RB  B  GND {RB}
+CA  A  GND {CA}
+CB  B  GND {CB}
+XUA NA A VCC GND LOGIC_INPUT_AHC_1i_NAND_PP_ST_CD74AC14
+XUB NB B VCC GND LOGIC_INPUT_AHC_1i_NAND_PP_ST_CD74AC14
+XUG NA NB NOUTG VCC GND LOGIC_FUNCTION_2_AHC_1i_NAND_PP_ST_CD74AC14
+XOUTPD NOUTG NOUTTPD VCC GND TPD_AHC_1i_NAND_PP_ST_CD74AC14
+XUOUT NOUTTPD NOUT_INT VCC GND LOGIC_PP_OUTPUT_AHC_1i_NAND_PP_ST_CD74AC14
+XICC VCC GND NVIOUT LOGIC_ICC_AHC_1i_NAND_PP_ST_CD74AC14
+SICC VCC GND VCC GND SW1
+H1 NVIOUT GND VIOUT 1
+VIOUT NOUT_INT OUTsw 0
+SIOFF OUTsw OUT VCC GND SW2
+DA2 GND A D1
+DB2 GND B D1
+DO2 GND OUT D1
+RDA1 NA1 GND 1e6
+SDA1 NA1 A VCC GND SW2
+RDB1 NB1 GND 1e6
+SDB1 NB1 B VCC GND SW2
+RDO1 NO1 GND 1e6
+SDO1 NO1 OUT VCC GND SW2
+.MODEL SW1 VSWITCH VON = {VCC_ABS_MAX} VOFF = {VCC_MAX} RON = 10 ROFF = 60e6
+.MODEL SW2 VSWITCH VON = {0.55} VOFF = {0.45} RON = 10m ROFF = 100e6
+.MODEL D1 D
+.ENDS
+.SUBCKT LOGIC_INPUT_AHC_1i_NAND_PP_ST_CD74AC14 OUT IN VCC VEE
+.PARAM STANDARD_INPUT_SELECT = 0
+
+.PARAM SCHMITT_TRIGGER_INPUT_SELECT = 1
+ESTD_THR VSTD_THR VEE TABLE {V(VCC,VEE)} =
++(1,0.5)
++(1.8,0.9)
++(2.5,1.25)
++(3.3,1.65)
++(5,2.5)
++(6,3)
+ETRP_P VTRP_P VEE TABLE {V(VCC,VEE)} =
++(4.5,2.6)
++(5.5,3.4)
+ETRP_N VTRP_N VEE TABLE {V(VCC,VEE)} =
++(4.5,1.6)
++(5.5,2.4)
+EHYST VHYST VEE TABLE {V(VCC,VEE)} =
++(4.5,0.5)
++(5.5,0.6)
+ETRUE NTRUE VEE VALUE = {V(VCC,VEE)}
+EFALSE NFALSE VEE VALUE = {0}
+EBETA BETA VEE VALUE = {V(VHYST,VEE)/(V(NTRUE,VEE) - V(NFALSE,VEE) + V(VHYST,VEE))}
+EFB NFB VEE VALUE = {(1 - V(BETA,VEE))*V(IN,VEE) + V(BETA,VEE)*V(CURR_OUT,VEE)}
+EREF NREF VEE VALUE = {0.5*(1 - V(BETA,VEE))*(V(VTRP_P,VEE) + V(VTRP_N,VEE))
++ + 0.5*V(BETA,VEE)*(V(NTRUE,VEE) + V(NFALSE,VEE))}
+EDIFF NDIFF VEE VALUE = {V(NFB,NREF)}
+ESWITCH VSWITCH VEE VALUE = {0.5*(-SGN(V(NDIFF,VEE)) + ABS(SGN(V(NDIFF,VEE))))}
+ESWITCH1 VSWITCH1 VEE VALUE = {0.5*(SGN(V(NDIFF,VEE)) + ABS(SGN(V(NDIFF,VEE))))}
+GCOMP VEE CURR_OUT VALUE = {SCHMITT_TRIGGER_INPUT_SELECT*0.5*V(VCC,VEE)*(SGN(V(NDIFF,VEE)) + ABS(SGN(V(NDIFF,VEE))))}
+GSTD VEE CURR_OUT VALUE = {STANDARD_INPUT_SELECT*0.5*V(VCC,VEE)*(SGN(V(IN,VSTD_THR)) + ABS(SGN(V(IN,VSTD_THR))))}
+ROUT CURR_OUT VEE 1
+EMID MID VEE VALUE = {0.5*(V(VCC,VEE) + V(VEE))}
+EARG NARG VEE VALUE = {V(CURR_OUT,VEE) - V(MID,VEE)}
+EOUT OUT VEE VALUE = {0.5*(SGN(V(NARG,VEE)) + ABS(SGN(V(NARG,VEE) ) ) )}
+.PARAM MAXICC = 0.0009
+.PARAM VT = .7
+.PARAM VCC_MIN = 1.5
+
+EV_VT1 VTN VEE VALUE = { VT }
+EV_VT2 VTP VEE VALUE = { V(VCC,VEE) - VT }
+
+ETEST TEST VEE VALUE = {.9*V(VCC,VEE)}
+
+EVTHDIFF VTH_DIFF VEE VALUE = {V(IN,VSTD_THR)}
+EVTHPDIFF VTHP_DIFF VEE VALUE = {V(IN,VTRP_P)}
+EVTHNDIFF VTHN_DIFF VEE VALUE = {V(IN,VTRP_N)}
+EVTNDIFF VTN_DIFF VEE VALUE = { V(IN,VTN) }
+EVTPDIFF VTP_DIFF VEE VALUE = { V(IN,VTP) }
+
+
+GICCVA VCC VEE VALUE = { (-ABS(( (1+SGN(V(VTN_DIFF,VEE)) ) )/2 -1) *
++ 2*MAXICC*((V(IN,VEE)-VT)/V(VCC,VEE))^2)*(1 + SGN(V(VCC,VEE) - VCC_MIN))*V(VSWITCH,VEE)}
+GICCVB VCC VEE VALUE = { (ABS(( (1+SGN(V(VTHP_DIFF,VEE)) ) )/2 -1) *
++ 2*MAXICC*((V(IN,VEE)-VT)/V(VCC,VEE))^2)*(1 + SGN(V(VCC,VEE) - VCC_MIN))*V(VSWITCH,VEE)}
+GICCVC VCC VEE VALUE = { ( ABS(  (1+SGN(V(VTHN_DIFF,VEE)) ) )/2  *
++ 2*MAXICC*((V(IN,VEE)-(V(VCC,VEE)-VT))/V(VCC,VEE))^2)*(1 + SGN(V(VCC,VEE) - VCC_MIN))*V(VSWITCH1,VEE)}
+GICCVD VCC VEE VALUE = { (-ABS(  (1+SGN(V(VTP_DIFF,VEE)) ) )/2  *
++ 2*MAXICC*((V(IN,VEE)-(V(VCC,VEE)-VT))/V(VCC,VEE))^2)*(1 + SGN(V(VCC,VEE) - VCC_MIN))*V(VSWITCH1,VEE)}
+
+.ENDS
+.SUBCKT LOGIC_FUNCTION_2_AHC_1i_NAND_PP_ST_CD74AC14 A B OUT VCC VEE
+.PARAM AND  = 0
+.PARAM NAND = 1
+.PARAM OR   = 0
+.PARAM NOR  = 0
+.PARAM XOR  = 0
+.PARAM XNOR = 0
+GAND  VEE N1 VALUE = {AND*V(A,VEE)*V(B,VEE)}
+GNAND VEE N1 VALUE = {NAND*(1 - V(A,VEE)*V(B,VEE))}
+GOR   VEE N1 VALUE = {OR*(MIN(V(A,VEE) + V(B,VEE),1))}
+GNOR  VEE N1 VALUE = {NOR*(1 - MIN(V(A,VEE) + V(B,VEE),1))}
+GXOR  VEE N1 VALUE = {XOR*((1 - V(A,VEE))*V(B,VEE) + V(A,VEE)*(1 - V(B,VEE)))}
+GXNOR VEE N1 VALUE = {XNOR*(1 - ((1 - V(A,VEE))*V(B,VEE) + V(A,VEE)*(1 - V(B,VEE))))}
+RN1 N1 VEE 1
+EOUT OUT VEE N1 VEE 1
+.ENDS
+.SUBCKT TPD_AHC_1i_NAND_PP_ST_CD74AC14 IN OUT VCC VEE
+.PARAM TPDELAY1 = 1N
+.PARAM RS = 10K
+.PARAM CS = {-TPDELAY1/(RS*LOG(0.5))}
+ETPDNORM NTPDNORM VEE TABLE {V(VCC,VEE)} =
++(1.5,88.5)
++(3.3,7.25)
++(5,4.95)
+G1 IN N1 VALUE = {V(IN,N1)/(V(NTPDNORM,VEE)*RS)}
+RZ IN N1 10G
+C1 N1 VEE {CS}
+E1 N2 VEE VALUE = {0.5*(1 + SGN(V(N1,VEE) - 0.5))}
+EOUT OUT VEE N2 VEE 1
+.ENDS
+.SUBCKT LOGIC_PP_OUTPUT_AHC_1i_NAND_PP_ST_CD74AC14 IN OUT VCC VEE
+EROH NROH VEE TABLE {V(VCC,VEE)} =
++(1.5,1200)
++(3,37.5)
++(4.5,10)
++(5.5,14.4)
+EROL NROL VEE TABLE {V(VCC,VEE)} =
++(1.5,1200)
++(3,30)
++(4.5,7.5)
++(5.5,4.8)
+E1 N1 VEE VALUE = {V(VCC,VEE)*V(IN,VEE)}
+GOUT N1 OUT VALUE = {V(N1,OUT)*(V(IN,VEE)/V(NROH,VEE) + (1 - V(IN,VEE))/V(NROL,VEE))}
+.ENDS
+.SUBCKT LOGIC_ICC_AHC_1i_NAND_PP_ST_CD74AC14 VCC VEE VIOUT
+.PARAM ICC = 1e-05
+.PARAM VCC_MAX = 5.5
+.PARAM VCC_MIN = 1.5
+GICC VCC VEE VALUE = {ICC*0.5*(1 + SGN(V(VCC,VEE) - VCC_MIN))}
+EGNDF GNDF 0 VALUE = {0.5*(V(VCC) + V(VEE))}
+GOUTP VCC GNDF VALUE = {V(VIOUT,VEE)*0.5*(SGN(V(VIOUT,VEE)) + ABS(SGN(V(VIOUT,VEE))))}
+GOUTN GNDF VEE VALUE = {V(VIOUT,VEE)*0.5*(SGN(V(VIOUT,VEE)) + ABS(SGN(V(VIOUT,VEE))))}
+.ENDS
+
+
+.SUBCKT COMPARHYS NINV INV OUT params: VHIGH=5 VLOW=100m VHYS=50m
+E2 HYS NINV Value = { IF ( V(OUT) > {(VHIGH+VLOW)/2}, {VHYS}, 0 ) }
+E1 4 0 Value = { IF ( V(HYS,INV) > 0, {VHIGH}, {VLOW} ) }
+RO 4 OUT 100
+CO OUT 0 100PF
+.ENDS
+*$
+**** MULTI-WINDING TRANSFORMER ****
+.SUBCKT XFMR2 1 2 3 4 10 11 PARAMS: RATIO1=1 RATIO2=1
+RP 1 2 1MEG
+E1 5 4 VALUE = { V(1,2)*RATIO1 }
+G1 1 2 VALUE = { I(VM1)*RATIO1 }
+RS1 6 3 1U
+VM1 5 6
+E2 20 11 VALUE = { V(2,1)*RATIO2 }
+G2 2 1 VALUE = { I(VM2)*RATIO2 }
+RS2 21 10 1U
+VM2 20 21
+.ENDS XFMR2
+*$
+.SUBCKT SFH615A_4 1 2 3   5
+* ISOLATOR        A C COL EMITTER
+*pinout DIL4 1 2 3 4
+*pinout SO4 1 2 3 4
+RB 4 0 100Meg
+VM 1 6
+D1 6 2 LED
+E1 7 0 value = { I(VM)*.0075*(1-.25*(temp-27)/50)}
+R1 7 8 1K
+C1 8 0 .25nF
+G1 3 4 8 0 1
+Q1 3 4 5 MPSA06
+*RBE 4 5 150k
+CC 2 5 .4p
+.MODEL LED D ( IS=4.94e-021 RS=3.83m
++ CJO=13.0p  M=0.333 N=1.01 TT=1n )
+.MODEL MPSA06 NPN (IS=20.3f NF=1.00 BF=343 VAF=25
++ IKF=39.6m ISE=1.19p NE=2.00 BR=10.00 NR=1.00
++ VAR=16.0 IKR=75.0m RE=23.1 RB=92.6 RC=9.26
++ XTB=1.5 CJE=20.7p VJE=1.10 MJE=0.500 CJC=10.0p VJC=0.300
++ MJC=0.500 TF=4.0n TR=500n EG=1.12 )
+.ENDS SFH615A_4
+*$
+.subckt Model_main_spec1_6_S4 1 2 3 4
+S_S4         3 4 1 2 _S4
+RS_S4         1 2 1G
+.MODEL         _S4 VSWITCH Roff=1e6 Ron=7 Voff=0.0V Von=1.5
+.ends Model_main_spec1_6_S4
+*$
+.subckt Model_main_spec1_6_S5 1 2 3 4
+S_S5         3 4 1 2 _S5
+RS_S5         1 2 1G
+.MODEL         _S5 VSWITCH Roff=1e6 Ron=7 Voff=1.5 Von=0
+.ends Model_main_spec1_6_S5
+*$
+.subckt Model_main_spec1_6_S6 1 2 3 4
+S_S6         3 4 1 2 _S6
+RS_S6         1 2 1G
+.MODEL         _S6 VSWITCH Roff=1e6 Ron=1.0 Voff=0V Von=2.5V
+.ends Model_main_spec1_6_S6
+*$
+*****************************************
+* Creation: Thierry SUTTO               *
+*     Date: 18 SEP 2003                 *
+* Based on: analog.lib/S_ST switch      *
+*****************************************
+.SUBCKT UVLO_Spice In Out GND_REF params: Von=5.5V Voff=5.0V TD=20ns
+X_S1    In GND_REF OUT_HYST_plus OUT_HYST_moins UVLO_S1 params: VT={(Von+Voff)/2} VH={(Von-Voff)/2} TD={TD}
+V_V6         OUT_HYST_plus	GND_REF		5V
+R_R2         OUT_HYST_moins	OUT			100
+R_R1         GND_REF       	OUT_HYST_moins	1k
+C_C1         OUT       		GND_REF		100p IC={5}
+.ENDS
+*$
+.SUBCKT COMP_HYST2 Out V+ Vmoins V_Hyst
+* source NCP1215 STANDBY
+*.EXTERNAL INPUT V+
+*.EXTERNAL INPUT V-
+*.EXTERNAL OUTPUT Out
+*.EXTERNAL INPUT V_Hyst
+E_E2         N01680 0 VALUE { if(V(OUT)>2.5,-V(V_HYST),+V(V_HYST)) }
+R_R3         0 V_HYST  1MEG
+R_R1         0 Vmoins  1MEG
+R_R2         0 V+  1MEG
+* E_E1         OUT 0 VALUE { if((V(V+)-V(Vmoins))>V(N01680),5,0) }
+E_E1         4 0 VALUE { if((V(V+)-V(Vmoins))>V(N01680),5,0) }
+R_RO         4   OUT  10
+C_CO         OUT 0    100pF
+.ENDS COMP_HYST2
+*$
+*****************************************
+* Creation: Thierry SUTTO               *
+*     Date: 18 SEP 2003                 *
+* Based on: n/a                         *
+*****************************************
+* The pulse is generated when a rising  *
+* edge is detected on IN pin.           *
+* The pulse width is adjustable         *
+*****************************************
+.SUBCKT Pulse_Rising In Pulse params: Width=100ns
+X_U2         N200223 IN N385549 $G_DPWR $G_DGND XOR
+X_U3         N385493 IN PULSE  $G_DPWR $G_DGND AND2
+X_U4         N385549 N385493 $G_DPWR $G_DGND DELAY PARAMS: DELAY=5n TOL=10 IO_LEVEL=0 MNTYMXDLY=0
+X_U1         IN N200223 $G_DPWR $G_DGND DELAY PARAMS: DELAY={Width} TOL=10 IO_LEVEL=0 MNTYMXDLY=0
+.ENDS
+*$
+*****************************************
+* Creation: Thierry SUTTO               *
+*     Date: 18 SEP 2003                 *
+* Based on: n/a                         *
+*****************************************
+* The pulse is generated when a falling *
+* edge is detected on IN pin.           *
+* The width of the pulse is an          *
+* adjustable param.                     *
+*****************************************
+.SUBCKT Pulse_Falling IN Pulse params: Width=100ns
+X_U2         N383922 N383908 PULSE  $G_DPWR $G_DGND AND2
+X_U1         N383828 N383908 $G_DPWR $G_DGND DELAY PARAMS: DELAY=30ns TOL=10 IO_LEVEL=0 MNTYMXDLY=0
+X_U4         IN N383828 $G_DPWR $G_DGND DELAY PARAMS: DELAY={Width} TOL=10 IO_LEVEL=0 MNTYMXDLY=0
+X_U5         N383828 IN N383922 $G_DPWR $G_DGND XOR
+.ENDS
+*$
+.SUBCKT DLAT_RESET D LAT R S Q Qbar
+*.EXTERNAL OUTPUT D
+*.EXTERNAL OUTPUT Q
+*.EXTERNAL OUTPUT R
+*.EXTERNAL OUTPUT S
+*.EXTERNAL OUTPUT Qbar
+*.EXTERNAL OUTPUT LAT
+X_U1         R N565256  $G_DPWR $G_DGND INV
+X_U2         N565256 S N565274  $G_DPWR $G_DGND AND2
+X_U3         D LAT R N565274 Q QBAR $G_DPWR $G_DGND DLATRSH
+.ENDS
+*$
+********
+.subckt limit_a d dc params: clampH=0.99 clampL=16m
+Gd 0 dcx VALUE = { V(d)*100u }
+Rdc dcx 0 10k
+V1 clpn 0 {clampL}
+V2 clpp 0 {clampH}
+D1 clpn dcx dclamp
+D2 dcx clpp dclamp
+Edc dc 0 value={ V(dcx) }
+.model dclamp d n=0.01 rs=100m
+.ENDS
+*$
+********
+.subckt limit2_a d2nc d d2c
+*
+Gd 0 d2cx d2nc 0 100u
+Rdc d2cx 0 10k
+V1 clpn 0 7m
+E2 clpp 0 Value = { 1-V(d)-6.687m }
+D1 clpn d2cx dclamp
+D2 d2cx clpp dclamp
+Edc d2c 0 value={ V(d2cx) }
+.model dclamp d n=0.01 rs=100m
+.ENDS
+*$
+********
+.SUBCKT VARICAP 1 2 CTRL
+R1 1 3 1u
+VC 3 4
+EBC 4 2 Value = { (1/v(ctrl))*v(int) }
+GINT 0 INT Value = { I(VC) }
+CINT INT 0 1
+Rdum INT 0 10E10
+.ENDS
+*******
+*$
+********
+.SUBCKT PWMCM a c p vc dc params: L=35u Fs=200k Ri=1 Se=100m
+*
+* auto toggling between DCM and CCM, current-mode
+*
+Edc dcx 0 value = { v(d2)*v(cx,p)/(v(a,p)-v(cx,p)+1u) }
+Xdc dcx dc limit_a params: clampH=0.99 clampL=7m
+Ed2 d2X 0 value = { (2*{L}*{Fs}*I(VM)/(V(dc)*V(a,cx)+1u)) - V(dc) }
+Xd2 d2X dc d2 limit2_a
+GIap a p value = { (V(dc)/(V(dc)+V(d2)+1u))*I(VM) }
+GIpc p cx value = { V(vc)/{Ri} }
+GImju cx p value = { {Se}*V(dc)/({Ri}*{Fs}) + (v(cx,p)/{L})*V(d2)*{1/Fs}*(1-(V(dc)+V(d2))/2) }
+Rdum1 dc 0 1Meg
+Rdum2 vc 0 1Meg
+VM cx c
+XC1 c p mode varicap
+Emode mode 0 Value = { IF (  (2*{L}*{Fs}*I(VM)/(V(dc)*V(a,cx)+1u))
++ < 1, 1p , {4/((L)*(6.28*Fs)^2)}	) } ; connect or disconnects the resonating capacitor
+*
+.ENDS
+*$
+.SUBCKT TL431 k a ref
+* made by Chris Basso - 2005
+G1 a 2 5 ref -250u
+Q1 k 2 1 QN3904
+R1 1 7 240
+R2 7 a 6.6k
+Q2 k 7 a QN3904 50
+D1 ref k DN4148
+C2 7 a 1n
+D2 a k D2_mod
+C1 k 2 43p
+V1 5 a DC=2.49
+D3 a 2 D3_mod
+.MODEL QN3904 NPN AF=1.0 BF=300 BR=7.5 CJC=3.5PF CJE=4.5PF
++ IKF=.025 IS=1.4E-14 ISE=3E-13 KF=9E-16 NE=1.5 RC=2.4
++ TF=4E-10 TR=21E-9 VAF=100 XTB=1.5
+.MODEL DN4148 D BV=100V CJO=4PF IS=7E-09 M=.45 N=2 RS=.8
++ TT=6E-09 VJ=.6V
+.MODEL D2_mod D BV=36 CJO=4PF IS=7E-09 M=.45 N=1.3 RS=.8
++ TT=6E-09 VJ=.6V
+.MODEL D3_mod D N=0.01
+.ENDS
+*$
+*******
+.SUBCKT Opto A K C E params: Cpole=2.2n CTR=2
+VILED 2 K
+DLED A 2 Dmod
+Vsat C 4 DC=100m
+D2 E 4 DCLAMP
+F2 4 E VILED {CTR}
+Cpole 4 E {Cpole}
+.MODEL DCLAMP D BV=30 N=0.01
+.MODEL Dmod D N=1.8
+.ENDS
+*$
+**** SINGLE WINDING TRANSFORMER ****
+.SUBCKT XFMR1 1 2 3 4 PARAMS: RATIO=1
+RP 1 2 1MEG
+E 5 4 VALUE = { V(1,2)*RATIO }
+G 1 2 VALUE = { I(VM)*RATIO }
+RS 6 3 1U
+VM 5 6
+.ENDS XFMR1
+*$
+**************************************
+*      Model Generated by MODPEX     *
+*Copyright(c) Symmetry Design Systems*
+*         All Rights Reserved        *
+*    UNPUBLISHED LICENSED SOFTWARE   *
+*   Contains Proprietary Information *
+*      Which is The Property of      *
+*     SYMMETRY OR ITS LICENSORS      *
+*Commercial Use or Resale Restricted *
+*   by Symmetry License Agreement    *
+**************************************
+* Model generated on Apr 28, 06
+* MODEL FORMAT: PSpice
+.MODEL MBRB30H60CT d
++IS=4.71172e-05 RS=0.00643347 N=1.47217 EG=0.649833
++XTI=2.97686 BV=60 IBV=0.00025 CJO=3.8802e-10
++VJ=2.4711 M=0.656049 FC=0.5 TT=8.19215e-09
++KF=0 AF=1
+*$
+
+.subckt AND3 a b c vcc g d
+M1 d a P001 P001 NMOS
+M2 vcc a d d PMOS
+M3 P001 b P002 P002 NMOS
+M4 P002 c g g NMOS
+M5 vcc b d d PMOS
+M6 vcc c d d PMOS
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\users\twoninefour\My Documents\LTspiceXVII\lib\cmp\standard.mos
+.ends
+
+
+.subckt BUF a vcc g d
+XU1 b a b opamp Aol=100K GBW=10Meg
+.lib opamp.sub
+.ends
+.subckt NCP1252B FB BO CS RT GND SS Vcc_int DRV
+* A version DC_MAX = 50% Vmax_duty=1.950V
+* B version DC_max = 80% Vmax_duty=3.230V
+* created: 08 / sept / 2009
+* note : no jittering
+G_ABMI1         VCC_INT GND VALUE { if(I(V_VDRV)>0,I(V_VDRV),0)    }
+X_U1         VCC_INT UVLO GND UVLO_SPICE PARAMS:  VON=10V VOFF=9V TD=20ns
+X_U93         N1553198 BOK UVLO N1562196 $G_DPWR $G_DGND AND3
+E_GAIN1         N1584232 0 VALUE {0.25 * V(SS)}
+E_ABM1         VREF 0 VALUE { if(V(UVLO)>2.5V,5V,0)    }
+X_U90         N1571092 N1553198 $G_DPWR $G_DGND BUF
+G_ABMII4         VREF SS VALUE { if(V(N1553198)>1.5V,10u,0)    }
+R_RFB_pullup         FB N1508655  4k
+V_V46         N1557593 GND 20mVdc
+V_VDRV         N134405 DRV 0Vdc
+X_U83         N1508555 N1862319 N1508505 N1508605 COMP_HYST2
+X_U86         N1559222 CSLEB N1584072 N1557593 COMP_HYST2
+V_V42         N15087150 GND 1V
+V_V45         N1521804 GND 0.3V
+D_D3         N134405 N134441 D1N4937
+V_V44         N1521251 GND 20mVdc
+E_ABM4         CSLEB 0 VALUE { If(V(N1508571,GND)<1.5,
++ +V(CS, GND),
++ +0)  }
+D_D4         GND N134405 D1N4937
+G_ABMII3         VCC_INT GND VALUE { If(V(UVLO)>2.5,1m,100u)    }
+D_D38         GND VCC_INT BZX84C30/ZTX
+D_D35         N1508621 N1508627 DIODE_PERFECT
+X_U84         N1522274 N1521804 FB N1521251 COMP_HYST2
+R_Rramp         CS N1517688  26.5k
+R_R80         GND N1508505  13.33k
+X_S4    DRV_CMD GND N134441 N134405 Model_main_spec1_6_S4
+E_ABM2         N134441 0 VALUE { if(V(VCC_INT)>15V,15V,V(VCC_INT))    }
+X_U81         N1508555 FEEDBACK $G_DPWR $G_DGND BUF
+V_V40         N1508655 GND 6.5Vdc
+X_U88         DRV_CMD N1508571 PULSE_RISING PARAMS:  WIDTH=130ns
+X_U92A         UVLO GRDRST $G_DPWR $G_DGND 74AC14 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_S5    DRV_CMD GND N134405 GND Model_main_spec1_6_S5
+X_Oscillator_U21         N1571092 Oscillator_N727076  $G_DPWR $G_DGND INV
+X_Oscillator_U40         Oscillator_N728768 Oscillator_N742848 PULSE_FALLING
++  PARAMS:  WIDTH=50ns
+X_Oscillator_U30         Oscillator_N589498 DRV_CMD $G_DPWR $G_DGND DELAY
++  PARAMS:
++ DELAY=20ns TOL=10 IO_LEVEL=0 MNTYMXDLY=0
+C_Oscillator_Ct         0 VCT  128p IC=0
+X_Oscillator_U23         Oscillator_N579057 Oscillator_N578993 VCT
++  Oscillator_N579151 COMP_HYST2
+X_Oscillator_U15         Oscillator_N579205 Oscillator_N710183 $G_DPWR $G_DGND
++  BUF
+D_Oscillator_D5         VCT VREF DIODE_PERFECT
+D_Oscillator_D6         0 VCT DIODE_PERFECT
+X_Oscillator_U37         Oscillator_N728768 BOK N1531463 Oscillator_N727076
++  DRVOFF $G_DPWR $G_DGND OR4
+V_Oscillator_V7         Oscillator_N579245 0 3.4V
+X_Oscillator_U34         DRVOFF Oscillator_N710183 Oscillator_N578959 $G_DPWR
++  $G_DGND OR2
+E_Oscillator_E1         N1517688 0 VALUE { If(V(DRV_CMD)>1.5V,V(VCT),0) }
+V_Oscillator_Max_duty         Oscillator_N651066 0 3.230Vdc
+V_Oscillator_V6         Oscillator_N09850 0 5m
+X_Oscillator_U32         Oscillator_CLOCK Oscillator_N580115 PULSE_RISING
++  PARAMS:  WIDTH=100ns
+X_Oscillator_U28         DRVOFF Oscillator_N587394  $G_DPWR $G_DGND INV
+G_Oscillator_ABMII1         VREF VCT VALUE {
++  if(V(Oscillator_N579311)>1.5,-I(V_Oscillator_VRT)*1.17,0)    }
+X_Oscillator_U92A         UVLO Oscillator_N728768 $G_DPWR $G_DGND 74AC14
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_Oscillator_U12         Oscillator_CLOCKB UVLO Oscillator_N579289  $G_DPWR
++  $G_DGND AND2
+G_Oscillator_ABMII2         VCT 0 VALUE {
++  if(V(Oscillator_N579289)>1.5,-I(V_Oscillator_VRT)*6.64,0)    }
+X_Oscillator_U22         $D_LO $D_LO Oscillator_N578959 Oscillator_N579009
++  Oscillator_CLOCK Oscillator_CLOCKB DLAT_RESET
+X_Oscillator_U16         Oscillator_N579057 Oscillator_N579009 $G_DPWR $G_DGND
++  BUF
+V_Oscillator_V10         Oscillator_N579151 0 100mV
+X_Oscillator_U33         0 0 Oscillator_RESET Oscillator_N580115
++  Oscillator_N81932 N85205 DLAT_RESET
+X_Oscillator_U26         Oscillator_N81932 Oscillator_N587394
++  Oscillator_N589498  $G_DPWR $G_DGND AND2
+V_Oscillator_VRT         RT 0 2Vdc
+X_Oscillator_U13         Oscillator_CLOCK UVLO Oscillator_N579311  $G_DPWR
++  $G_DGND AND2
+X_Oscillator_U31         Oscillator_N615749 Oscillator_MAX_DUTY_LIMIT $G_DPWR
++  $G_DGND BUF
+X_Oscillator_U39         Oscillator_MAX_DUTY_LIMIT FEEDBACK Oscillator_N742848
++  N1522274 N1559222 Oscillator_RESET $G_DPWR $G_DGND OR5
+X_Oscillator_U9         Oscillator_N615749 VCT Oscillator_N651066
++  Oscillator_N09850 COMP_HYST2
+X_Oscillator_U24         Oscillator_N579205 VCT Oscillator_N579245
++  Oscillator_N579151 COMP_HYST2
+V_Oscillator_V9         Oscillator_N578993 0 0.1V
+V_V48         CSLEB N1862319 30m
+V_V41         FB N1508621 0.75V
+X_S6    N1562196 GND SS GND Model_main_spec1_6_S6
+V_V43         N1508605 GND 20mVdc
+G_Safety_fault_ABM2I1         BO 0 VALUE { if((V(BOK)-V(0))>1.5,10u,0)    }
+X_Safety_fault_U84         Safety_fault_TQ6 Safety_fault_Q6
++  Safety_fault_N1795216  $G_DPWR $G_DGND AND2
+X_Safety_fault_U49         $D_HI Safety_fault_N1722330 Safety_fault_N1721584
++  Safety_fault_N1721804 Safety_fault_N1723208 $G_DPWR $G_DGND TFFRH
+X_Safety_fault_U44         Safety_fault_TQ2 Safety_fault_N1721606
++  Safety_fault_N1721550 Safety_fault_Q2 Safety_fault_N1722792 $G_DPWR $G_DGND
++  TFFRH
+R_Safety_fault_R2         Safety_fault_N1795216 Safety_fault_N1795432  220
+X_Safety_fault_U47         Safety_fault_TQ5 Safety_fault_N1721606
++  Safety_fault_N1721550 Safety_fault_Q5 Safety_fault_N1723326 $G_DPWR $G_DGND
++  TFFRH
+X_Safety_fault_U54         Safety_fault_TSTUPQ1 Safety_fault_N1787093
++  Safety_fault_N1787089 Safety_fault_STUPQ1 Safety_fault_N1787213 $G_DPWR
++  $G_DGND TFFRH
+X_Safety_fault_U81         N1571092 Safety_fault_N1782581  $G_DPWR $G_DGND INV
+X_Safety_fault_U75         Safety_fault_N1723238 N1531463
++  Safety_fault_RESET_TIMER $G_DPWR $G_DGND OR2
+X_Safety_fault_U62         Safety_fault_STUPQ0 Safety_fault_STUPQ1
++  Safety_fault_STUPQ2 Safety_fault_TSTUPQ3 $G_DPWR $G_DGND AND3
+C_Safety_fault_C2         0 Safety_fault_N1795432  1n
+X_Safety_fault_U74         Safety_fault_N17234340 Safety_fault_N1722330
++  $G_DPWR $G_DGND INV
+X_Safety_fault_U48         Safety_fault_TQ6 Safety_fault_N1721606
++  Safety_fault_N1721550 Safety_fault_Q6 Safety_fault_N1723362 $G_DPWR $G_DGND
++  TFFRH
+X_Safety_fault_U46         Safety_fault_TQ4 Safety_fault_N1721606
++  Safety_fault_N1721550 Safety_fault_Q4 Safety_fault_N1723168 $G_DPWR $G_DGND
++  TFFRH
+X_Safety_fault_U78         Safety_fault_N1722276 Safety_fault_CLK_TIMER
++  N1571092 Safety_fault_N1779813 $G_DPWR $G_DGND AND3
+X_Safety_fault_U64         Safety_fault_STUPQ0 Safety_fault_STUPQ1
++  Safety_fault_TSTUPQ2  $G_DPWR $G_DGND AND2
+U_Safety_fault_DSTM1         STIM(1,1) $G_DPWR $G_DGND Safety_fault_CLK_TIMER
++  IO_STM IO_LEVEL=0
++ 0 0
++ +0 1
++REPEAT FOREVER
++ +50u 0
++  +50u 1
++ ENDREPEAT
+V_Safety_fault_VFCS         Safety_fault_N1722514 0 1
+X_Safety_fault_U43         Safety_fault_TQ1 Safety_fault_N1721606
++  Safety_fault_N1721550 Safety_fault_Q1 Safety_fault_N1722520 $G_DPWR $G_DGND
++  TFFRH
+X_Safety_fault_U22         $D_LO $D_LO Safety_fault_N1736725
++  Safety_fault_RESET_END_FAULT Safety_fault_N1722276 N1722246 DLAT_RESET
+X_Safety_fault_U89         Safety_fault_CLK_TIMER UVLO Safety_fault_N1782581
++  Safety_fault_N1782772 $G_DPWR $G_DGND AND3
+X_Safety_fault_U77         Safety_fault_Q0 Safety_fault_TQ1 $G_DPWR $G_DGND
++  DELAY PARAMS:
++ DELAY=50ns TOL=10 IO_LEVEL=0 MNTYMXDLY=0
+X_Safety_fault_U7         CSLEB Safety_fault_N1722514 Safety_fault_N1926799
++  COMPARHYS PARAMS:  VHIGH=5 VLOW=100M VHYS=10mV
+C_Safety_fault_C1         0 Safety_fault_N1753790  1n
+X_Safety_fault_U91         UVLO Safety_fault_N1787089  $G_DPWR $G_DGND INV
+X_Safety_fault_U92A         Safety_fault_N1795432 Safety_fault_N18428031
++  $G_DPWR $G_DGND 74AC14 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_Safety_fault_U56         Safety_fault_N1721800 Safety_fault_MASTER_RESET
++  $G_DPWR $G_DGND BUF
+X_Safety_fault_U42         $D_HI Safety_fault_N1721606 Safety_fault_N1721550
++  Safety_fault_Q0 Safety_fault_N1721626 $G_DPWR $G_DGND TFFRH
+X_Safety_fault_U82         DRV_CMD N1571092 Safety_fault_N17234340  $G_DPWR
++  $G_DGND AND2
+X_Safety_fault_U67         Safety_fault_RESET_END_FAULT GRDRST
++  Safety_fault_MASTER_RESET Safety_fault_N1721584 $G_DPWR $G_DGND OR3
+X_Safety_fault_U95         Safety_fault_RESET_TIMER GRDRST
++  Safety_fault_MASTER_RESET Safety_fault_N1871616 Safety_fault_N1721550 $G_DPWR
++  $G_DGND OR4
+X_Safety_fault_U45         Safety_fault_TQ3 Safety_fault_N1721606
++  Safety_fault_N1721550 Safety_fault_Q3 Safety_fault_N1723104 $G_DPWR $G_DGND
++  TFFRH
+X_Safety_fault_U83         Safety_fault_Q2 Safety_fault_Q5 Safety_fault_Q6
++  N1571092 Safety_fault_N1752347 $G_DPWR $G_DGND AND4
+X_Safety_fault_U51         Safety_fault_TSTUPQ3 Safety_fault_N1787093
++  Safety_fault_N1787089 Safety_fault_STUPQ3 Safety_fault_N1816927 $G_DPWR
++  $G_DGND TFFRH
+X_Safety_fault_U57         Safety_fault_Q0 Safety_fault_Q1 Safety_fault_TQ2
++  $G_DPWR $G_DGND AND2
+X_Safety_fault_U96         BOK Safety_fault_N1871616 PULSE_FALLING PARAMS:
++  WIDTH=100ns
+X_Safety_fault_U79         Safety_fault_N1779813 Safety_fault_N1782772
++  Safety_fault_N1721606 $G_DPWR $G_DGND OR2
+R_Safety_fault_R1         Safety_fault_N1752347 Safety_fault_N1753790  220
+X_Safety_fault_U88         Safety_fault_STUPQ0 Safety_fault_TSTUPQ1 $G_DPWR
++  $G_DGND DELAY PARAMS:
++ DELAY=50ns TOL=10 IO_LEVEL=0 MNTYMXDLY=0
+X_Safety_fault_U93         Safety_fault_N18428031 Safety_fault_N1787093
++  $G_DPWR $G_DGND INV
+X_Safety_fault_U59         Safety_fault_Q0 Safety_fault_Q1 Safety_fault_Q2
++  Safety_fault_Q3 Safety_fault_TQ4 $G_DPWR $G_DGND AND4
+V_Safety_fault_V3         Safety_fault_N1916906 0 4Vdc
+V_Safety_fault_V1         Safety_fault_N1721800 0
++PULSE 0 5 10u 10n 10n 10u 10s
+X_Safety_fault_U97A         Safety_fault_N1753790 Safety_fault_N18860021
++  $G_DPWR $G_DGND 74AC14 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_Safety_fault_U52         Safety_fault_TSTUPQ2 Safety_fault_N1787093
++  Safety_fault_N1787089 Safety_fault_STUPQ2 Safety_fault_N1787293 $G_DPWR
++  $G_DGND TFFRH
+X_Safety_fault_U97B         Safety_fault_N1916906 Safety_fault_N19166171
++  $G_DPWR $G_DGND 74AC14 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_Safety_fault_U4         Safety_fault_N1731949 BO BOK COMPARHYS PARAMS:
++  VHIGH=5 VLOW=100M VHYS=10mV
+X_Safety_fault_U50         Safety_fault_N1721804 Safety_fault_N1722330
++  Safety_fault_N1721584 Safety_fault_N1723174 Safety_fault_N1723222 $G_DPWR
++  $G_DGND TFFRH
+X_Safety_fault_U60         Safety_fault_Q0 Safety_fault_Q1 Safety_fault_Q2
++  Safety_fault_Q3 Safety_fault_Q4 Safety_fault_TQ5 $G_DPWR $G_DGND AND5
+X_Safety_fault_U86         $D_LO $D_LO Safety_fault_N1787089
++  Safety_fault_N1800269 Safety_fault_N1897485 Safety_fault_N1802999 $G_DPWR
++  $G_DGND DFFRSH
+X_Safety_fault_U99B         Safety_fault_N1926799 Safety_fault_N19265081
++  $G_DPWR $G_DGND 74AC14 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_Safety_fault_U58         Safety_fault_Q0 Safety_fault_Q1 Safety_fault_Q2
++  Safety_fault_TQ3 $G_DPWR $G_DGND AND3
+X_Safety_fault_U94         Safety_fault_N18860021 Safety_fault_N1722510
++  $G_DPWR $G_DGND INV
+V_Safety_fault_V2         Safety_fault_N1731949 0 1Vdc
+X_Safety_fault_U98         Safety_fault_N19166171 N1571092  $G_DPWR $G_DGND INV
+X_Safety_fault_U100         Safety_fault_N19265081 Safety_fault_RESET_END_FAULT
++   $G_DPWR $G_DGND INV
+X_Safety_fault_U61         Safety_fault_Q0 Safety_fault_Q1 Safety_fault_Q2
++  Safety_fault_Q3 Safety_fault_Q4 Safety_fault_Q5 Safety_fault_TQ6 $G_DPWR
++  $G_DGND AND6
+X_Safety_fault_U53         $D_HI Safety_fault_N1787093 Safety_fault_N1787089
++  Safety_fault_STUPQ0 Safety_fault_N1787109 $G_DPWR $G_DGND TFFRH
+X_Safety_fault_U87         Safety_fault_STUPQ1 Safety_fault_STUPQ3
++  Safety_fault_N1800269  $G_DPWR $G_DGND AND2
+X_Safety_fault_U65         $D_LO $D_LO GRDRST Safety_fault_N1722510 N1531463
++  Safety_fault_N1728943 $G_DPWR $G_DGND DFFRSH
+X_Safety_fault_U63         Safety_fault_N1721804 Safety_fault_N1723174
++  Safety_fault_N1723238  $G_DPWR $G_DGND AND2
+X_Safety_fault_U76         Safety_fault_RESET_TIMER Safety_fault_MASTER_RESET
++  Safety_fault_N1736725 $G_DPWR $G_DGND OR2
+D_D37         SS VREF DIODE_PERFECT
+D_D36         N1508505 N15087150 DIODE_PERFECT
+V_V47         N1584072 N1584232 20mVdc
+X_U10         N135415 N135348 $G_DPWR $G_DGND BUF
+R_R79         N1508627 N1508505  26.66k
+X_U7         BOK GRDRST N135415 $G_DPWR $G_DGND OR2
+.ends NCP1252B
+*$
+.subckt NCP1252A FB BO CS RT GND SS Vcc_int DRV
+* A version DC_MAX = 50% Vmax_duty=1.950V
+* B version DC_max = 80% Vmax_duty=3.230V
+* created: 08 / sept / 2009
+* note : no jittering
+G_ABMI1         VCC_INT GND VALUE { if(I(V_VDRV)>0,I(V_VDRV),0)    }
+X_U1         VCC_INT UVLO GND UVLO_SPICE PARAMS:  VON=10V VOFF=9V TD=20ns
+X_U93         N1553198 BOK UVLO N1562196 $G_DPWR $G_DGND AND3
+E_GAIN1         N1584232 0 VALUE {0.25 * V(SS)}
+E_ABM1         VREF 0 VALUE { if(V(UVLO)>2.5V,5V,0)    }
+X_U90         N1571092 N1553198 $G_DPWR $G_DGND BUF
+G_ABMII4         VREF SS VALUE { if(V(N1553198)>1.5V,10u,0)    }
+R_RFB_pullup         FB N1508655  4k
+V_V46         N1557593 GND 20mVdc
+V_VDRV         N134405 DRV 0Vdc
+X_U83         N1508555 N1862319 N1508505 N1508605 COMP_HYST2
+X_U86         N1559222 CSLEB N1584072 N1557593 COMP_HYST2
+V_V42         N15087150 GND 1V
+V_V45         N1521804 GND 0.3V
+D_D3         N134405 N134441 D1N4937
+V_V44         N1521251 GND 20mVdc
+E_ABM4         CSLEB 0 VALUE { If(V(N1508571,GND)<1.5,
++ +V(CS, GND),
++ +0)  }
+D_D4         GND N134405 D1N4937
+G_ABMII3         VCC_INT GND VALUE { If(V(UVLO)>2.5,1m,100u)    }
+D_D38         GND VCC_INT BZX84C30/ZTX
+D_D35         N1508621 N1508627 DIODE_PERFECT
+X_U84         N1522274 N1521804 FB N1521251 COMP_HYST2
+R_Rramp         CS N1517688  26.5k
+R_R80         GND N1508505  13.33k
+X_S4    DRV_CMD GND N134441 N134405 Model_main_spec1_6_S4
+E_ABM2         N134441 0 VALUE { if(V(VCC_INT)>15V,15V,V(VCC_INT))    }
+X_U81         N1508555 FEEDBACK $G_DPWR $G_DGND BUF
+V_V40         N1508655 GND 6.5Vdc
+X_U88         DRV_CMD N1508571 PULSE_RISING PARAMS:  WIDTH=130ns
+X_U92A         UVLO GRDRST $G_DPWR $G_DGND 74AC14 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_S5    DRV_CMD GND N134405 GND Model_main_spec1_6_S5
+X_Oscillator_U21         N1571092 Oscillator_N727076  $G_DPWR $G_DGND INV
+X_Oscillator_U40         Oscillator_N728768 Oscillator_N742848 PULSE_FALLING
++  PARAMS:  WIDTH=50ns
+X_Oscillator_U30         Oscillator_N589498 DRV_CMD $G_DPWR $G_DGND DELAY
++  PARAMS:
++ DELAY=20ns TOL=10 IO_LEVEL=0 MNTYMXDLY=0
+C_Oscillator_Ct         0 VCT  128p IC=0
+X_Oscillator_U23         Oscillator_N579057 Oscillator_N578993 VCT
++  Oscillator_N579151 COMP_HYST2
+X_Oscillator_U15         Oscillator_N579205 Oscillator_N710183 $G_DPWR $G_DGND
++  BUF
+D_Oscillator_D5         VCT VREF DIODE_PERFECT
+D_Oscillator_D6         0 VCT DIODE_PERFECT
+X_Oscillator_U37         Oscillator_N728768 BOK N1531463 Oscillator_N727076
++  DRVOFF $G_DPWR $G_DGND OR4
+V_Oscillator_V7         Oscillator_N579245 0 3.4V
+X_Oscillator_U34         DRVOFF Oscillator_N710183 Oscillator_N578959 $G_DPWR
++  $G_DGND OR2
+E_Oscillator_E1         N1517688 0 VALUE { If(V(DRV_CMD)>1.5V,V(VCT),0) }
+V_Oscillator_Max_duty         Oscillator_N651066 0 1.950Vdc
+V_Oscillator_V6         Oscillator_N09850 0 5m
+X_Oscillator_U32         Oscillator_CLOCK Oscillator_N580115 PULSE_RISING
++  PARAMS:  WIDTH=100ns
+X_Oscillator_U28         DRVOFF Oscillator_N587394  $G_DPWR $G_DGND INV
+G_Oscillator_ABMII1         VREF VCT VALUE {
++  if(V(Oscillator_N579311)>1.5,-I(V_Oscillator_VRT)*1.17,0)    }
+X_Oscillator_U92A         UVLO Oscillator_N728768 $G_DPWR $G_DGND 74AC14
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_Oscillator_U12         Oscillator_CLOCKB UVLO Oscillator_N579289  $G_DPWR
++  $G_DGND AND2
+G_Oscillator_ABMII2         VCT 0 VALUE {
++  if(V(Oscillator_N579289)>1.5,-I(V_Oscillator_VRT)*6.64,0)    }
+X_Oscillator_U22         $D_LO $D_LO Oscillator_N578959 Oscillator_N579009
++  Oscillator_CLOCK Oscillator_CLOCKB DLAT_RESET
+X_Oscillator_U16         Oscillator_N579057 Oscillator_N579009 $G_DPWR $G_DGND
++  BUF
+V_Oscillator_V10         Oscillator_N579151 0 100mV
+X_Oscillator_U33         0 0 Oscillator_RESET Oscillator_N580115
++  Oscillator_N81932 N85205 DLAT_RESET
+X_Oscillator_U26         Oscillator_N81932 Oscillator_N587394
++  Oscillator_N589498  $G_DPWR $G_DGND AND2
+V_Oscillator_VRT         RT 0 2Vdc
+X_Oscillator_U13         Oscillator_CLOCK UVLO Oscillator_N579311  $G_DPWR
++  $G_DGND AND2
+X_Oscillator_U31         Oscillator_N615749 Oscillator_MAX_DUTY_LIMIT $G_DPWR
++  $G_DGND BUF
+X_Oscillator_U39         Oscillator_MAX_DUTY_LIMIT FEEDBACK Oscillator_N742848
++  N1522274 N1559222 Oscillator_RESET $G_DPWR $G_DGND OR5
+X_Oscillator_U9         Oscillator_N615749 VCT Oscillator_N651066
++  Oscillator_N09850 COMP_HYST2
+X_Oscillator_U24         Oscillator_N579205 VCT Oscillator_N579245
++  Oscillator_N579151 COMP_HYST2
+V_Oscillator_V9         Oscillator_N578993 0 0.1V
+V_V48         CSLEB N1862319 30m
+V_V41         FB N1508621 0.75V
+X_S6    N1562196 GND SS GND Model_main_spec1_6_S6
+V_V43         N1508605 GND 20mVdc
+G_Safety_fault_ABM2I1         BO 0 VALUE { if((V(BOK)-V(0))>1.5,10u,0)    }
+X_Safety_fault_U84         Safety_fault_TQ6 Safety_fault_Q6
++  Safety_fault_N1795216  $G_DPWR $G_DGND AND2
+X_Safety_fault_U49         $D_HI Safety_fault_N1722330 Safety_fault_N1721584
++  Safety_fault_N1721804 Safety_fault_N1723208 $G_DPWR $G_DGND TFFRH
+X_Safety_fault_U44         Safety_fault_TQ2 Safety_fault_N1721606
++  Safety_fault_N1721550 Safety_fault_Q2 Safety_fault_N1722792 $G_DPWR $G_DGND
++  TFFRH
+R_Safety_fault_R2         Safety_fault_N1795216 Safety_fault_N1795432  220
+X_Safety_fault_U47         Safety_fault_TQ5 Safety_fault_N1721606
++  Safety_fault_N1721550 Safety_fault_Q5 Safety_fault_N1723326 $G_DPWR $G_DGND
++  TFFRH
+X_Safety_fault_U54         Safety_fault_TSTUPQ1 Safety_fault_N1787093
++  Safety_fault_N1787089 Safety_fault_STUPQ1 Safety_fault_N1787213 $G_DPWR
++  $G_DGND TFFRH
+X_Safety_fault_U81         N1571092 Safety_fault_N1782581  $G_DPWR $G_DGND INV
+X_Safety_fault_U75         Safety_fault_N1723238 N1531463
++  Safety_fault_RESET_TIMER $G_DPWR $G_DGND OR2
+X_Safety_fault_U62         Safety_fault_STUPQ0 Safety_fault_STUPQ1
++  Safety_fault_STUPQ2 Safety_fault_TSTUPQ3 $G_DPWR $G_DGND AND3
+C_Safety_fault_C2         0 Safety_fault_N1795432  1n
+X_Safety_fault_U74         Safety_fault_N17234340 Safety_fault_N1722330
++  $G_DPWR $G_DGND INV
+X_Safety_fault_U48         Safety_fault_TQ6 Safety_fault_N1721606
++  Safety_fault_N1721550 Safety_fault_Q6 Safety_fault_N1723362 $G_DPWR $G_DGND
++  TFFRH
+X_Safety_fault_U46         Safety_fault_TQ4 Safety_fault_N1721606
++  Safety_fault_N1721550 Safety_fault_Q4 Safety_fault_N1723168 $G_DPWR $G_DGND
++  TFFRH
+X_Safety_fault_U78         Safety_fault_N1722276 Safety_fault_CLK_TIMER
++  N1571092 Safety_fault_N1779813 $G_DPWR $G_DGND AND3
+X_Safety_fault_U64         Safety_fault_STUPQ0 Safety_fault_STUPQ1
++  Safety_fault_TSTUPQ2  $G_DPWR $G_DGND AND2
+U_Safety_fault_DSTM1         STIM(1,1) $G_DPWR $G_DGND Safety_fault_CLK_TIMER
++  IO_STM IO_LEVEL=0
++ 0 0
++ +0 1
++REPEAT FOREVER
++ +50u 0
++  +50u 1
++ ENDREPEAT
+V_Safety_fault_VFCS         Safety_fault_N1722514 0 1
+X_Safety_fault_U43         Safety_fault_TQ1 Safety_fault_N1721606
++  Safety_fault_N1721550 Safety_fault_Q1 Safety_fault_N1722520 $G_DPWR $G_DGND
++  TFFRH
+X_Safety_fault_U22         $D_LO $D_LO Safety_fault_N1736725
++  Safety_fault_RESET_END_FAULT Safety_fault_N1722276 N1722246 DLAT_RESET
+X_Safety_fault_U89         Safety_fault_CLK_TIMER UVLO Safety_fault_N1782581
++  Safety_fault_N1782772 $G_DPWR $G_DGND AND3
+X_Safety_fault_U77         Safety_fault_Q0 Safety_fault_TQ1 $G_DPWR $G_DGND
++  DELAY PARAMS:
++ DELAY=50ns TOL=10 IO_LEVEL=0 MNTYMXDLY=0
+X_Safety_fault_U7         CSLEB Safety_fault_N1722514 Safety_fault_N1926799
++  COMPARHYS PARAMS:  VHIGH=5 VLOW=100M VHYS=10mV
+C_Safety_fault_C1         0 Safety_fault_N1753790  1n
+X_Safety_fault_U91         UVLO Safety_fault_N1787089  $G_DPWR $G_DGND INV
+X_Safety_fault_U92A         Safety_fault_N1795432 Safety_fault_N18428031
++  $G_DPWR $G_DGND 74AC14 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_Safety_fault_U56         Safety_fault_N1721800 Safety_fault_MASTER_RESET
++  $G_DPWR $G_DGND BUF
+X_Safety_fault_U42         $D_HI Safety_fault_N1721606 Safety_fault_N1721550
++  Safety_fault_Q0 Safety_fault_N1721626 $G_DPWR $G_DGND TFFRH
+X_Safety_fault_U82         DRV_CMD N1571092 Safety_fault_N17234340  $G_DPWR
++  $G_DGND AND2
+X_Safety_fault_U67         Safety_fault_RESET_END_FAULT GRDRST
++  Safety_fault_MASTER_RESET Safety_fault_N1721584 $G_DPWR $G_DGND OR3
+X_Safety_fault_U95         Safety_fault_RESET_TIMER GRDRST
++  Safety_fault_MASTER_RESET Safety_fault_N1871616 Safety_fault_N1721550 $G_DPWR
++  $G_DGND OR4
+X_Safety_fault_U45         Safety_fault_TQ3 Safety_fault_N1721606
++  Safety_fault_N1721550 Safety_fault_Q3 Safety_fault_N1723104 $G_DPWR $G_DGND
++  TFFRH
+X_Safety_fault_U83         Safety_fault_Q2 Safety_fault_Q5 Safety_fault_Q6
++  N1571092 Safety_fault_N1752347 $G_DPWR $G_DGND AND4
+X_Safety_fault_U51         Safety_fault_TSTUPQ3 Safety_fault_N1787093
++  Safety_fault_N1787089 Safety_fault_STUPQ3 Safety_fault_N1816927 $G_DPWR
++  $G_DGND TFFRH
+X_Safety_fault_U57         Safety_fault_Q0 Safety_fault_Q1 Safety_fault_TQ2
++  $G_DPWR $G_DGND AND2
+X_Safety_fault_U96         BOK Safety_fault_N1871616 PULSE_FALLING PARAMS:
++  WIDTH=100ns
+X_Safety_fault_U79         Safety_fault_N1779813 Safety_fault_N1782772
++  Safety_fault_N1721606 $G_DPWR $G_DGND OR2
+R_Safety_fault_R1         Safety_fault_N1752347 Safety_fault_N1753790  220
+X_Safety_fault_U88         Safety_fault_STUPQ0 Safety_fault_TSTUPQ1 $G_DPWR
++  $G_DGND DELAY PARAMS:
++ DELAY=50ns TOL=10 IO_LEVEL=0 MNTYMXDLY=0
+X_Safety_fault_U93         Safety_fault_N18428031 Safety_fault_N1787093
++  $G_DPWR $G_DGND INV
+X_Safety_fault_U59         Safety_fault_Q0 Safety_fault_Q1 Safety_fault_Q2
++  Safety_fault_Q3 Safety_fault_TQ4 $G_DPWR $G_DGND AND4
+V_Safety_fault_V3         Safety_fault_N1916906 0 4Vdc
+V_Safety_fault_V1         Safety_fault_N1721800 0
++PULSE 0 5 10u 10n 10n 10u 10s
+X_Safety_fault_U97A         Safety_fault_N1753790 Safety_fault_N18860021
++  $G_DPWR $G_DGND 74AC14 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_Safety_fault_U52         Safety_fault_TSTUPQ2 Safety_fault_N1787093
++  Safety_fault_N1787089 Safety_fault_STUPQ2 Safety_fault_N1787293 $G_DPWR
++  $G_DGND TFFRH
+X_Safety_fault_U97B         Safety_fault_N1916906 Safety_fault_N19166171
++  $G_DPWR $G_DGND 74AC14 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_Safety_fault_U4         Safety_fault_N1731949 BO BOK COMPARHYS PARAMS:
++  VHIGH=5 VLOW=100M VHYS=10mV
+X_Safety_fault_U50         Safety_fault_N1721804 Safety_fault_N1722330
++  Safety_fault_N1721584 Safety_fault_N1723174 Safety_fault_N1723222 $G_DPWR
++  $G_DGND TFFRH
+X_Safety_fault_U60         Safety_fault_Q0 Safety_fault_Q1 Safety_fault_Q2
++  Safety_fault_Q3 Safety_fault_Q4 Safety_fault_TQ5 $G_DPWR $G_DGND AND5
+X_Safety_fault_U86         $D_LO $D_LO Safety_fault_N1787089
++  Safety_fault_N1800269 Safety_fault_N1897485 Safety_fault_N1802999 $G_DPWR
++  $G_DGND DFFRSH
+X_Safety_fault_U99B         Safety_fault_N1926799 Safety_fault_N19265081
++  $G_DPWR $G_DGND 74AC14 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_Safety_fault_U58         Safety_fault_Q0 Safety_fault_Q1 Safety_fault_Q2
++  Safety_fault_TQ3 $G_DPWR $G_DGND AND3
+X_Safety_fault_U94         Safety_fault_N18860021 Safety_fault_N1722510
++  $G_DPWR $G_DGND INV
+V_Safety_fault_V2         Safety_fault_N1731949 0 1Vdc
+X_Safety_fault_U98         Safety_fault_N19166171 N1571092  $G_DPWR $G_DGND INV
+X_Safety_fault_U100         Safety_fault_N19265081 Safety_fault_RESET_END_FAULT
++   $G_DPWR $G_DGND INV
+X_Safety_fault_U61         Safety_fault_Q0 Safety_fault_Q1 Safety_fault_Q2
++  Safety_fault_Q3 Safety_fault_Q4 Safety_fault_Q5 Safety_fault_TQ6 $G_DPWR
++  $G_DGND AND6
+X_Safety_fault_U53         $D_HI Safety_fault_N1787093 Safety_fault_N1787089
++  Safety_fault_STUPQ0 Safety_fault_N1787109 $G_DPWR $G_DGND TFFRH
+X_Safety_fault_U87         Safety_fault_STUPQ1 Safety_fault_STUPQ3
++  Safety_fault_N1800269  $G_DPWR $G_DGND AND2
+X_Safety_fault_U65         $D_LO $D_LO GRDRST Safety_fault_N1722510 N1531463
++  Safety_fault_N1728943 $G_DPWR $G_DGND DFFRSH
+X_Safety_fault_U63         Safety_fault_N1721804 Safety_fault_N1723174
++  Safety_fault_N1723238  $G_DPWR $G_DGND AND2
+X_Safety_fault_U76         Safety_fault_RESET_TIMER Safety_fault_MASTER_RESET
++  Safety_fault_N1736725 $G_DPWR $G_DGND OR2
+D_D37         SS VREF DIODE_PERFECT
+D_D36         N1508505 N15087150 DIODE_PERFECT
+V_V47         N1584072 N1584232 20mVdc
+X_U10         N135415 N135348 $G_DPWR $G_DGND BUF
+R_R79         N1508627 N1508505  26.66k
+X_U7         BOK GRDRST N135415 $G_DPWR $G_DGND OR2
+.ends NCP1252A
+*$
+.SUBCKT NCP1252_AC IN FB DC OUT GND PARAMS: FS = 125k L={L1/(2*N1**2)} RI= {Rsense} SE={Sp}
+R_R11         GND N09040  13k
+L_L2         N06624 FB  1gH
+R_R10         N09040 N17922531  27k
+E_LIMIT1         N02795 0 VALUE {LIMIT(V(N09040),0,1)}
+V_V2         N03272 GND 6Vdc
+R_R8         FB N03272  4k
+C_C3         N06215 N06624  1gF
+V_V3         N06215 GND DC 0Vdc AC 1Vac
+V_V4         N17922530 N17922531 0.65V
+X_U1         IN OUT GND N01645 DC PWMCM PARAMS:  L={L1/(2*N1**2)} FS=125k RI=
++ {Rsense} SE={Sp}
+D_D2         N06624 N17922530 DIODE_PERFECT
+R_R9         N02795 N01645  100m
+C_C4         GND FB  1n
+.ends NCP1252_AC
+*$
+.model DIODE_PERFECT d
++ n=0.001
++ rs=0.001
++ cjo=1e-012
++ m=0.3333
++ vj=0.75
++ isr=1e-010
++ bv=100
++ ibv=0.0001
++ tt=5e-009
+*$

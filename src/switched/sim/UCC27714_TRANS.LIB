@@ -1,0 +1,259 @@
+*$
+* UCC27714  
+*****************************************************************************
+* (C) Copyright 2014 Texas Instruments Incorporated. All rights reserved.
+*****************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.
+** TI and its licensors and suppliers make no warranties, either expressed
+** or implied, with respect to this model, including the warranties of
+** merchantability or fitness for a particular purpose. The model is
+** provided solely on an "as is" basis. The entire risk as to its quality
+** and performance is with the customer.
+*****************************************************************************
+*
+** Released by: WEBENCH Design Center, Texas Instruments Inc.
+* Part: UCC27714 
+* Date: 26MAR2015 
+* Model Type: Transient
+* Simulator: PSpice
+* Simulator Version: 16.2.0.p001
+* EVM Order Number: 
+* EVM User's Guide: 
+* Data sheet: SLUSBY6–FEBRUARY 2015
+*
+* Model Version: Final 1.00
+*
+*****************************************************************************
+*
+* Updates:
+*
+* Final 1.00
+* Release to Web
+*
+*****************************************************************************
+.SUBCKT UCC27714_TRANS VDD HI LI VSS NC_EN HB HO HS LO COM NC_1 NC_2 NC_3 NC_4 
++PARAMS: DLY_MATCH=0 EN_HYS=0.7 EN_TH=2.3 HILI_HYS=0.7 HILI_TH=2.3 
++ VDD_HYS=0.5 VDD_TH=9.1 VHBHS_HYS=1.0 VHBHS_TH=8.3 MIPW=40 TPDLH_HL=20
+X_U19         N18022616 N18022614 N18022514 OR2_BASIC_GEN PARAMS: VDD=1 VSS=0
++  VTHRESH=0.5
+C_C3         0 N18023151  1n IC=0 TC=0,0 
+C_C18         HO N18023446  100p  
+X_U28         N180224721 VHBHS_UVLO d_d1 PARAMS:
+R_R4         N180219081 N18021941  6.65k TC=0,0 
+X_U20         N18022609 LI_OUT d_d1 PARAMS:
+R_R13         N18022248 COM  0.02  
+R_R6         N18023151 HI_OUT  {{MIPW}/0.693} TC=0,0 
+R_R3         EN VDD_INTR  200k TC=0,0 
+R_R21         N18022232 N18022246  100  
+C_C1         0 N18021941  1n  TC=0,0 
+R_R12         VDD N18022230  0.02  
+R_R7         N18023179 N18022987  {{MIPW}/(0.693*1m)} TC=0,0 
+M_M3         N18023439 N18023444 HO HO NMOS01           
+X_U1         VDD_INT VDD_TH VDD_UVLO COMP_BASIC_GEN PARAMS: VDD=1 VSS=0
++  VTHRESH=0.5
+R_R22         N18022254 N18022252  100  
+M_M1         N18022230 N18022246 LO LO NMOS01           
+X_U31         N18022609 N18022614 BUF_BASIC_GEN PARAMS: VDD=1 VSS=0 VTHRESH=0.5
+C_C4         0 N18023179  1p IC=0 TC=0,0 
+X_U8         N18022987 N18023179 d_d1 PARAMS:
+M_M2         N18022248 N18022252 LO LO PMOS02           
+X_U23         VDD_UVLO_DLY N18022736 INV_BASIC_GEN PARAMS: VDD=1 VSS=0
++  VTHRESH=500E-3
+M_M4         N18023403 N18023446 HO HO PMOS02           
+X_U16         N18022996 N18022993 N18022984 N18023039 srlatchrhp_basic_gen
++  PARAMS: VDD=1 VSS=0 VTHRESH=0.5
+E_E2         VDD_INT 0 VDD VSS 1
+X_U4         LI_INT LI_TH LI_OUT COMP_BASIC_GEN PARAMS: VDD=1 VSS=0 VTHRESH=0.5
+X_U9         N18023179 N18022987 N18022996 OR2_BASIC_GEN PARAMS: VDD=1 VSS=0
++  VTHRESH=0.5
+X_U12         N18022996 N18022998 INV_BASIC_GEN PARAMS: VDD=1 VSS=0
++  VTHRESH=500E-3
+E_ABM1         VDD_TH 0 VALUE { IF ( V(VDD_UVLO) < 0.5, {VDD_TH}, {VDD_TH -
++  VDD_HYS})    }
+X_U17         N18022514 N18022518 N18021943 N18022567 srlatchrhp_basic_gen
++  PARAMS: VDD=1 VSS=0 VTHRESH=0.5
+E_E8         N18023441 HO VALUE { IF(V(GATE_HD, 0) > 0.5, 5, -5) }
+X_U10         N18023151 HI_OUT d_d1 PARAMS:
+C_C7         COM LO  10pF  
+E_E4         LI_INT 0 LI VSS 1
+X_U13         EN_OUT UV_DETECT N18022998 N18022993 OR3_BASIC_GEN PARAMS: VDD=1
++  VSS=0 VTHRESH=500E-3
+X_U15         N18022514 N18022534 INV_BASIC_GEN PARAMS: VDD=1 VSS=0
++  VTHRESH=500E-3
+C_C14         N18023444 N18023439  10p  
+E_E1         N18022232 LO VALUE { IF(V(GATE_LD, 0) > 0.5, 5, -5) }
+X_U5         EN_INT EN_TH EN_ON_OFF COMP_BASIC_GEN PARAMS: VDD=1 VSS=0
++  VTHRESH=0.5
+C_C8         N18022246 N18022230  10p  
+C_C15         N18023403 N18023446  10p  
+E_ABM3         LI_TH 0 VALUE { IF ( V(LI_OUT) < 0.5, {HILI_TH}, {HILI_TH -
++  HILI_HYS} )    }
+X_U33         N18021880 VHBHS_UVLO_DLY BUF_BASIC_GEN PARAMS: VDD=1 VSS=0
++  VTHRESH=0.5
+X_U18         EN_OUT N18022736 N18022534 N18022518 OR3_BASIC_GEN PARAMS: VDD=1
++  VSS=0 VTHRESH=500E-3
+R_R2         VSS HI  400k TC=0,0 
+X_U35         VDD VDD_INTR d_d1 PARAMS:
+R_R1         VSS LI  400k TC=0,0 
+C_C9         N18022248 N18022252  10p  
+E_E9         HO N18023448 VALUE { IF(V(GATE_HD, 0) > 0.5, -5, 5) }
+R_R5         N180218861 N18021941  52k TC=0,0 
+X_U3         HI_INT HI_TH HI_OUT COMP_BASIC_GEN PARAMS: VDD=1 VSS=0 VTHRESH=0.5
+R_R15         VDD VDD_INTR  1E6 TC=0,0 
+X_U34         N18021941 VDD_UVLO_DLY BUF_BASIC_GEN PARAMS: VDD=1 VSS=0
++  VTHRESH=0.5
+C_C10         LO N18022246  100p  
+E_E5         EN_INT 0 EN VSS 1
+X_U24         N180219081 VDD_UVLO d_d1 PARAMS:
+C_C5         0 N18022609  1n IC=0 TC=0,0 
+C_C19         0 VDD_INTR  1n  TC=0,0 
+X_U14         EN_ON_OFF N18021959 INV_BASIC_GEN PARAMS: VDD=1 VSS=0
++  VTHRESH=500E-3
+R_Rss         0 VSS  1 TC=0,0 
+C_C11         LO VDD  10pF  
+X_U7         N18021943 GATE_LD DELAY PARAMS:  RINP=1K DELAY={ (1n*TPDLH_HL) +
++  0.1n -(-1n*DLY_MATCH)}
+E_ABM4         EN_TH 0 VALUE { IF ( V(EN_ON_OFF) < 0.5, {EN_TH}, {EN_TH -
++  EN_HYS})    }
+R_R10         N180219660 N18021880  6k TC=0,0 
+R_R8         N18022609 LI_OUT  {{MIPW}/0.693} TC=0,0 
+E_E7         LO N18022254 VALUE { IF(V(GATE_LD, 0) > 0.5, -5, 5) }
+R_R23         N18023441 N18023444  100  
+X_U6         HB_INT HB_TH VHBHS_UVLO COMP_BASIC_GEN PARAMS: VDD=1 VSS=0
++  VTHRESH=0.5
+X_U22         N18021959 EN_OUT DELAY PARAMS:  RINP=1K DELAY=40n
+C_C13         HO HB  10pF  
+E_E3         HI_INT 0 HI VSS 1
+R_R24         N18023448 N18023446  100  
+R_R9         N18022616 N18022614  {{MIPW}/(0.693*1m)} TC=0,0 
+C_C17         HS HO  10pF  
+R_R11         N180224721 N18021880  6k TC=0,0 
+C_C12         LO N18022252  100p  
+X_U25         VDD_UVLO N180218861 d_d1 PARAMS:
+C_C16         HO N18023444  100p  
+E_ABM2         HI_TH 0 VALUE { IF ( V(HI_OUT) < 0.5, {HILI_TH}, {HILI_TH -
++  HILI_HYS} )    }
+X_U11         N18022614 N18022616 d_d1 PARAMS:
+C_C2         0 N18021880  1n IC=0 TC=0,0 
+R_R16         N18023403 HS  0.02  
+E_ABM5         HB_TH 0 VALUE { IF ( V(VHBHS_UVLO) < 0.5, {VHBHS_TH}, {VHBHS_TH
++  - VHBHS_HYS})    }
+X_U27         VHBHS_UVLO N180219660 d_d1 PARAMS:
+X_U30         N18023151 N18022987 BUF_BASIC_GEN PARAMS: VDD=1 VSS=0 VTHRESH=0.5
+C_C6         0 N18022616  1p IC=0 TC=0,0 
+X_U32         VDD_UVLO_DLY VHBHS_UVLO_DLY UV_DETECT NAND2_BASIC_GEN PARAMS:
++  VDD=1 VSS=0 VTHRESH=500E-3
+X_U21         N18022984 GATE_HD DELAY PARAMS:  RINP=1K DELAY={ 1n*TPDLH_HL +
++  0.1n }
+R_R17         HB N18023439  0.02  
+E_E6         HB_INT 0 HB HS 1
+.ENDS UCC27714_TRANS
+*$
+*$
+.SUBCKT INV_BASIC_GEN A  Y PARAMS: VDD=1 VSS=0 VTHRESH=0.5 
+E_ABMGATE    YINT 0 VALUE {{IF(V(A) > {VTHRESH} , 
++ {VSS},{VDD})}}
+RINT YINT Y 1
+CINT Y 0 1n
+.ENDS INV_BASIC_GEN
+*$
+.SUBCKT OR2_BASIC_GEN A B Y PARAMS: VDD=1 VSS=0 VTHRESH=0.5 
+E_ABMGATE    YINT 0 VALUE {{IF(V(A) > {VTHRESH}  |  
++ V(B) > {VTHRESH},{VDD},{VSS})}}
+RINT YINT Y 1
+CINT Y 0 1n
+.ENDS OR2_BASIC_GEN
+*$
+**Reset has higher priority in this latch
+.SUBCKT SRLATCHRHP_BASIC_GEN S R Q QB PARAMS: VDD=1 VSS=0 VTHRESH=0.5 
+GQ 0 Qint VALUE = {IF(V(R) > {VTHRESH},-5,IF(V(S)>{VTHRESH},5, 0))}
+CQint Qint 0 1n
+RQint Qint 0 1000MEG
+D_D10 Qint MY5 D_D1
+V1 MY5 0 {VDD}
+D_D11 MYVSS Qint D_D1
+V2 MYVSS 0 {VSS} 
+EQ Qqq 0 Qint 0 1
+X3 Qqq Qqqd1 BUF_BASIC_GEN PARAMS: VDD={VDD} VSS={VSS} VTHRESH={VTHRESH}
+RQq Qqqd1 Q 1
+EQb Qbr 0 VALUE = {IF( V(Q) > {VTHRESH}, {VSS},{VDD})}
+RQb Qbr QB 1 
+Cdummy1 Q 0 1n 
+Cdummy2 QB 0 1n
+.IC V(Qint) {VSS}
+.MODEL D_D1 D( IS=1e-15 TT=10p Rs=0.05 N=.1  )
+.ENDS SRLATCHRHP_BASIC_GEN
+*$
+.SUBCKT D_D1 1 2
+D1 1 2 DD1
+.MODEL DD1 D( IS=1e-15 TT=10p Rs=0.001 N=.1  )
+.ENDS D_D1
+*$
+.SUBCKT BUF_BASIC_GEN A  Y PARAMS: VDD=1 VSS=0 VTHRESH=0.5 
+E_ABMGATE    YINT 0 VALUE {{IF(V(A) > {VTHRESH} , 
++ {VDD},{VSS})}}
+RINT YINT Y 1
+CINT Y 0 1n
+.ENDS BUF_BASIC_GEN
+*$
+.SUBCKT COMP_BASIC_GEN INP INM Y PARAMS: VDD=1 VSS=0 VTHRESH=0.5	
+E_ABM Yint 0 VALUE {IF (V(INP) > 
++ V(INM), {VDD},{VSS})}
+R1 Yint Y 1
+C1 Y 0 1n
+.ENDS COMP_BASIC_GEN
+*$
+.SUBCKT NAND2_BASIC_GEN A B Y PARAMS: VDD=1 VSS=0 VTHRESH=0.5 
+E_ABMGATE    YINT 0 VALUE {{IF(V(A) > {VTHRESH}  &  
++ V(B) > {VTHRESH},{VSS},{VDD})}}
+RINT YINT Y 1
+CINT Y 0 1n
+.ENDS NAND2_BASIC_GEN
+*$
+.SUBCKT OR3_BASIC_GEN A B C Y PARAMS: VDD=1 VSS=0 VTHRESH=0.5 
+E_ABMGATE    YINT 0 VALUE {{IF(V(A) > {VTHRESH}  |  
++ V(B) > {VTHRESH} |
++ V(C) > {VTHRESH},{VDD},{VSS})}}
+RINT YINT Y 1
+CINT Y 0 1n
+.ENDS OR3_BASIC_GEN
+*$
+.SUBCKT POWERMOS G D S PARAMS: RDSON=16m Ciss=1375p Crss=70p Coss=340p VSP=3.5 RG=1
+* This is a simple model for Power MOSFET.
+* The parameters modeled are
+* - RDSon,
+* - Input Capacitance,
+* - Reverse capacitance,
+* - Output capacitance,
+* - Switching point voltage (Gate voltage where the FET starts switching),
+* - Gate Resistance
+C_C1         S Da  {Coss} IC=0
+R_R1         Da D  10
+C_C2         Ga D  {Crss}  IC=0
+R_R2         G Ga {RG}
+C_C3         Ga S  {Ciss} IC=0
+D_D1         S Db Dbreak
+R_R3         Db D 1m
+S_switchM         D S Ga S _switchM
+RS_switchM         Ga S 100Meg
+.MODEL         _switchM VSWITCH Roff=100e6 Ron={RDSON} Voff=1.1 Von={VSP}
+.model Dbreak D Is=1e-14 Cjo=.1pF Rs=.1
+.ENDS POWERMOS
+*$
+.MODEL NMOS01 NMOS
++ VTO     = 2
++ KP      = 0.889
++ LAMBDA  = 0.001
+*$
+.MODEL PMOS02 PMOS
++ VTO     = -2
++ KP      = 0.889
++ LAMBDA  = 0.001
+*$
+.SUBCKT DELAY INP OUT PARAMS: RINP = 1k DELAY = 10n
+R1 INP 101 {RINP}
+C1 101 102 { 1.4427 * DELAY / RINP }
+E1 102 0 OUT 0 0.5
+E2 OUT 0 VALUE {IF(V(101) > 0.5, 1, 0)}
+.ENDS DELAY
+*$
