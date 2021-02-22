@@ -13,18 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Connector_Generic:Conn_01x02 J1
-U 1 1 6023F774
-P 1000 4850
-F 0 "J1" H 1080 4842 50  0000 L CNN
-F 1 "AC-input" H 1080 4751 50  0000 L CNN
-F 2 "KiCad/kicad-footprints/Connector_Wire.pretty:SolderWirePad_1x02_P7.62mm_Drill2.5mm" H 1000 4850 50  0001 C CNN
-F 3 "~" H 1000 4850 50  0001 C CNN
-F 4 "0" H 1000 4850 50  0001 C CNN "price"
-	1    1000 4850
-	-1   0    0    -1  
-$EndComp
 Text GLabel 1200 4850 2    50   Input ~ 0
 v120p
 Text GLabel 1200 4950 2    50   Input ~ 0
@@ -1235,4 +1223,16 @@ Text GLabel 6900 4000 0    50   Input ~ 0
 gnd
 Text GLabel 6900 3900 0    50   Input ~ 0
 v12
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 6023F774
+P 1000 4850
+F 0 "J1" H 1080 4842 50  0000 L CNN
+F 1 "AC-input" H 1080 4751 50  0000 L CNN
+F 2 "custom:spacedConnector" H 1000 4850 50  0001 C CNN
+F 3 "~" H 1000 4850 50  0001 C CNN
+F 4 "0" H 1000 4850 50  0001 C CNN "price"
+	1    1000 4850
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
