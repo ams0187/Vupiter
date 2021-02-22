@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NCP1252CDR2G
+D ON Semiconductor NCP1252CDR2G, PWM Current Mode Controller, -800 (Sink) mA, 500 (Source) mA, 550 kHz, 30 V, 8-Pin SOIC
+K
+F https://www.onsemi.com/pub/Collateral/NCP1252-D.PDF
+$ENDCMP
+#
+#End Doc Library
