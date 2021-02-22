@@ -126,10 +126,12 @@ U 1 1 602B0936
 P 2650 5400
 F 0 "C2" H 2742 5446 50  0000 L CNN
 F 1 "470n" H 2742 5355 50  0000 L CNN
-F 2 "KiCad/kicad-footprints/Capacitor_SMD.pretty:C_1812_4532Metric_Pad1.30x3.40mm_HandSolder" H 2650 5400 50  0001 C CNN
-F 3 "~" H 2650 5400 50  0001 C CNN
+F 2 "KiCad/Capacitors_SMD.pretty:C_1812_HandSoldering" H 2650 5400 50  0001 C CNN
+F 3 "C692318" H 2650 5400 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_PSA-Prosperity-Dielectrics-FM43X474K501EGG_C692318.html" H 2650 5400 50  0001 C CNN "link"
 F 5 "0.0143" H 2650 5400 50  0001 C CNN "price"
+F 6 "yes" H 2650 5400 50  0001 C CNN "Checked"
+F 7 "500" H 2650 5400 50  0001 C CNN "Working voltage"
 	1    2650 5400
 	1    0    0    -1  
 $EndComp
@@ -170,6 +172,7 @@ F 2 "KiCad/kicad-footprints/Capacitor_THT.pretty:CP_Radial_D5.0mm_P2.00mm" H 360
 F 3 "~" H 3600 7100 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_CX-Dongguan-Chengxing-Elec-22uF-35V-5-7_C45073.html" H 3600 7100 50  0001 C CNN "link"
 F 5 "0.0125" H 3600 7100 50  0001 C CNN "price"
+F 6 "35" H 3600 7100 50  0001 C CNN "Working voltage"
 	1    3600 7100
 	1    0    0    -1  
 $EndComp
@@ -328,10 +331,12 @@ U 1 1 603BACE8
 P 2300 5400
 F 0 "C1" H 2392 5446 50  0000 L CNN
 F 1 "470n" H 2392 5355 50  0000 L CNN
-F 2 "KiCad/kicad-footprints/Capacitor_SMD.pretty:C_1812_4532Metric_Pad1.30x3.40mm_HandSolder" H 2300 5400 50  0001 C CNN
-F 3 "~" H 2300 5400 50  0001 C CNN
+F 2 "KiCad/Capacitors_SMD.pretty:C_1812_HandSoldering" H 2300 5400 50  0001 C CNN
+F 3 "C692318" H 2300 5400 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_PSA-Prosperity-Dielectrics-FM43X474K501EGG_C692318.html" H 2300 5400 50  0001 C CNN "link"
 F 5 "0.0143" H 2300 5400 50  0001 C CNN "price"
+F 6 "yes" H 2300 5400 50  0001 C CNN "Checked"
+F 7 "500" H 2300 5400 50  0001 C CNN "Working voltage"
 	1    2300 5400
 	1    0    0    -1  
 $EndComp
@@ -357,10 +362,12 @@ U 1 1 6040D8C3
 P 5050 5100
 F 0 "C11" H 5142 5146 50  0000 L CNN
 F 1 "470n" H 5142 5055 50  0000 L CNN
-F 2 "KiCad/kicad-footprints/Capacitor_SMD.pretty:C_1812_4532Metric_Pad1.30x3.40mm_HandSolder" H 5050 5100 50  0001 C CNN
-F 3 "~" H 5050 5100 50  0001 C CNN
+F 2 "KiCad/Capacitors_SMD.pretty:C_1812_HandSoldering" H 5050 5100 50  0001 C CNN
+F 3 "C692318" H 5050 5100 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_PSA-Prosperity-Dielectrics-FM43X474K501EGG_C692318.html" H 5050 5100 50  0001 C CNN "link"
 F 5 "0.0143" H 5050 5100 50  0001 C CNN "price"
+F 6 "yes" H 5050 5100 50  0001 C CNN "Checked"
+F 7 "500" H 5050 5100 50  0001 C CNN "Working voltage"
 	1    5050 5100
 	1    0    0    -1  
 $EndComp
@@ -575,9 +582,11 @@ P 2650 5700
 F 0 "C3" H 2742 5746 50  0000 L CNN
 F 1 "220p" H 2742 5655 50  0000 L CNN
 F 2 "KiCad/kicad-footprints/Capacitor_SMD.pretty:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2650 5700 50  0001 C CNN
-F 3 "~" H 2650 5700 50  0001 C CNN
+F 3 "C961523" H 2650 5700 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_PSA-Prosperity-Dielectrics-FM43X474K501EGG_C692318.html" H 2650 5700 50  0001 C CNN "link"
 F 5 "0.016" H 2650 5700 50  0001 C CNN "price"
+F 6 "yes" H 2650 5700 50  0001 C CNN "Checked"
+F 7 "1kv" H 2650 5700 50  0001 C CNN "Working voltage"
 	1    2650 5700
 	1    0    0    -1  
 $EndComp
@@ -618,9 +627,11 @@ P 3900 4600
 F 0 "C6" V 3671 4600 50  0000 C CNN
 F 1 "220p" V 3762 4600 50  0000 C CNN
 F 2 "KiCad/kicad-footprints/Capacitor_SMD.pretty:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3900 4600 50  0001 C CNN
-F 3 "~" H 3900 4600 50  0001 C CNN
+F 3 "C961523" H 3900 4600 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_PSA-Prosperity-Dielectrics-FM43X474K501EGG_C692318.html" H 3900 4600 50  0001 C CNN "link"
 F 5 "0.016" H 3900 4600 50  0001 C CNN "price"
+F 6 "yes" H 3900 4600 50  0001 C CNN "Checked"
+F 7 "1kv" H 3900 4600 50  0001 C CNN "Working voltage"
 	1    3900 4600
 	0    1    1    0   
 $EndComp
@@ -1099,9 +1110,11 @@ P 4600 3500
 F 0 "C20" H 4692 3546 50  0000 L CNN
 F 1 "220p" H 4692 3455 50  0000 L CNN
 F 2 "KiCad/kicad-footprints/Capacitor_SMD.pretty:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4600 3500 50  0001 C CNN
-F 3 "~" H 4600 3500 50  0001 C CNN
+F 3 "C961523" H 4600 3500 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_PSA-Prosperity-Dielectrics-FM43X474K501EGG_C692318.html" H 4600 3500 50  0001 C CNN "link"
 F 5 "0.016" H 4600 3500 50  0001 C CNN "price"
+F 6 "yes" H 4600 3500 50  0001 C CNN "Checked"
+F 7 "1kv" H 4600 3500 50  0001 C CNN "Working voltage"
 	1    4600 3500
 	1    0    0    -1  
 $EndComp
@@ -1112,9 +1125,11 @@ P 4450 3500
 F 0 "C19" H 4542 3500 50  0000 L CNN
 F 1 "220p" H 4542 3455 50  0001 L CNN
 F 2 "KiCad/kicad-footprints/Capacitor_SMD.pretty:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4450 3500 50  0001 C CNN
-F 3 "~" H 4450 3500 50  0001 C CNN
+F 3 "C961523" H 4450 3500 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_PSA-Prosperity-Dielectrics-FM43X474K501EGG_C692318.html" H 4450 3500 50  0001 C CNN "link"
 F 5 "0.016" H 4450 3500 50  0001 C CNN "price"
+F 6 "yes" H 4450 3500 50  0001 C CNN "Checked"
+F 7 "1kv" H 4450 3500 50  0001 C CNN "Working voltage"
 	1    4450 3500
 	1    0    0    -1  
 $EndComp
@@ -1235,4 +1250,12 @@ F 4 "0" H 1000 4850 50  0001 C CNN "price"
 	1    1000 4850
 	-1   0    0    -1  
 $EndComp
+Wire Notes Line
+	7700 4200 7700 1600
+Wire Notes Line
+	7700 1600 1250 1600
+Wire Notes Line
+	1250 1600 1250 4200
+Wire Notes Line
+	1250 4200 7700 4200
 $EndSCHEMATC
