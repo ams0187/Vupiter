@@ -1,7 +1,5 @@
 # Team Meetings
 
-Wednesdays @ 2 PM
-
 ## Files:
 
 November 11, 2020 ([Word Download](https://ams0187.github.io/Vupiter/Minutes/11_11_2020.docx) or 
