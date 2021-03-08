@@ -1586,7 +1586,7 @@ F 3 "" H 8700 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 8550 3750 2    50   ~ 0
-ENC2BUT
+E2PB
 Text Label 8550 3850 2    50   ~ 0
 VREF
 Text Label 8550 3950 2    50   ~ 0
@@ -1598,7 +1598,7 @@ C2CK
 Text Label 8550 4250 2    50   ~ 0
 C2D
 Text Label 8550 4350 2    50   ~ 0
-5CL
+SCL
 Text Label 8550 4450 2    50   ~ 0
 ISET
 Text Label 8550 4550 2    50   ~ 0
@@ -1606,7 +1606,7 @@ SDA
 Text Label 8550 4650 2    50   ~ 0
 VSET
 Text Label 8550 4750 2    50   ~ 0
-ENC1BUT
+E1PB
 Text Label 8550 4850 2    50   ~ 0
 ENC1B
 Text Label 8550 4950 2    50   ~ 0
