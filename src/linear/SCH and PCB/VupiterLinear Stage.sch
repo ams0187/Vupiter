@@ -1586,7 +1586,7 @@ F 3 "" H 8700 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 8550 3750 2    50   ~ 0
-ENC2BUT
+E2PB
 Text Label 8550 3850 2    50   ~ 0
 VREF
 Text Label 8550 3950 2    50   ~ 0
@@ -1598,7 +1598,7 @@ C2CK
 Text Label 8550 4250 2    50   ~ 0
 C2D
 Text Label 8550 4350 2    50   ~ 0
-5CL
+SCL
 Text Label 8550 4450 2    50   ~ 0
 ISET
 Text Label 8550 4550 2    50   ~ 0
@@ -1606,7 +1606,7 @@ SDA
 Text Label 8550 4650 2    50   ~ 0
 VSET
 Text Label 8550 4750 2    50   ~ 0
-ENC1BUT
+E1PB
 Text Label 8550 4850 2    50   ~ 0
 ENC1B
 Text Label 8550 4950 2    50   ~ 0
@@ -2045,4 +2045,58 @@ Wire Wire Line
 	10750 7550 10750 7400
 Text GLabel 11400 8550 2    50   Input ~ 0
 OUTP
+$Comp
+L Device:C C23
+U 1 1 604791AC
+P 8000 4250
+F 0 "C23" H 8115 4296 50  0000 L CNN
+F 1 ".1u" H 8115 4205 50  0000 L CNN
+F 2 "VupiterLinear Stage:RCL_C0402" H 8038 4100 50  0001 C CNN
+F 3 "~" H 8000 4250 50  0001 C CNN
+	1    8000 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C21
+U 1 1 6047A2AB
+P 7650 4250
+F 0 "C21" H 7765 4296 50  0000 L CNN
+F 1 "4.7u" H 7765 4205 50  0000 L CNN
+F 2 "VupiterLinear Stage:RCL_C0805" H 7688 4100 50  0001 C CNN
+F 3 "~" H 7650 4250 50  0001 C CNN
+	1    7650 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 4050 8000 4050
+Wire Wire Line
+	7650 4050 7650 4100
+Wire Wire Line
+	8000 4100 8000 4050
+Connection ~ 8000 4050
+Wire Wire Line
+	8000 4050 7650 4050
+Wire Wire Line
+	8000 4400 8000 4450
+Wire Wire Line
+	8000 4450 7650 4450
+Wire Wire Line
+	7650 4450 7650 4400
+Text Label 7750 4450 0    50   ~ 0
+GND
+$Comp
+L Device:C C22
+U 1 1 604A8393
+P 8000 3700
+F 0 "C22" H 8115 3746 50  0000 L CNN
+F 1 ".1u" H 8115 3655 50  0000 L CNN
+F 2 "VupiterLinear Stage:RCL_C0402" H 8038 3550 50  0001 C CNN
+F 3 "~" H 8000 3700 50  0001 C CNN
+	1    8000 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 3850 8550 3850
+Text Label 8000 3550 0    50   ~ 0
+GND
 $EndSCHEMATC
