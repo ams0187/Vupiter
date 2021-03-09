@@ -110,39 +110,24 @@ F 6 "0.6745" H 5250 2100 50  0001 C CNN "Price"
 	1    5250 2100
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:C C13
-U 1 1 60350F8F
-P 5600 2300
-F 0 "C13" H 5715 2346 50  0000 L CNN
-F 1 "330u" H 5715 2255 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_10x14.3" H 5638 2150 50  0001 C CNN
-F 3 "VKME1651J331MV" H 5600 2300 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_Ymin-VKME1651J331MV_C487393.html" H 5600 2300 50  0001 C CNN "Link"
-F 5 "yes" H 5600 2300 50  0001 C CNN "Checked"
-F 6 "63" H 5600 2300 50  0001 C CNN "Working Voltage"
-F 7 "0.1728" H 5600 2300 50  0001 C CNN "Price"
-	1    5600 2300
-	1    0    0    -1  
-$EndComp
-Text Label 6000 2100 0    50   ~ 0
+Text Label 7600 2050 0    50   ~ 0
 voutp
-Text Label 6000 2500 0    50   ~ 0
+Text Label 7600 2450 0    50   ~ 0
 voutn
 $Comp
 L Connector_Generic:Conn_01x02 J3
 U 1 1 6035B66C
-P 6750 2100
-F 0 "J3" H 6668 1775 50  0000 C CNN
-F 1 "Conn_01x02" H 6668 1866 50  0000 C CNN
-F 2 "Connector_Wire:SolderWire-1.5sqmm_1x02_P6mm_D1.7mm_OD3mm" H 6750 2100 50  0001 C CNN
-F 3 "~" H 6750 2100 50  0001 C CNN
-	1    6750 2100
+P 8350 2050
+F 0 "J3" H 8268 1725 50  0000 C CNN
+F 1 "Conn_01x02" H 8268 1816 50  0000 C CNN
+F 2 "Connector_Wire:SolderWire-1.5sqmm_1x02_P6mm_D1.7mm_OD3mm" H 8350 2050 50  0001 C CNN
+F 3 "~" H 8350 2050 50  0001 C CNN
+	1    8350 2050
 	1    0    0    -1  
 $EndComp
-Text Label 6550 2200 2    50   ~ 0
+Text Label 8150 2150 2    50   ~ 0
 voutn
-Text Label 6550 2100 2    50   ~ 0
+Text Label 8150 2050 2    50   ~ 0
 voutp
 Text Label 3650 6050 2    50   ~ 0
 FB
@@ -1175,17 +1160,9 @@ $EndComp
 Wire Wire Line
 	5400 2100 5600 2100
 Wire Wire Line
-	5600 2450 5600 2500
-Wire Wire Line
-	6000 2500 5600 2500
-Connection ~ 5600 2500
-Wire Wire Line
-	5600 2500 5600 2800
-Wire Wire Line
 	5600 2150 5600 2100
-Connection ~ 5600 2100
 Wire Wire Line
-	5600 2100 6000 2100
+	7200 2050 7600 2050
 Wire Wire Line
 	5000 2300 5300 2300
 Connection ~ 5000 2300
@@ -1251,21 +1228,21 @@ Wire Wire Line
 $Comp
 L Device:R_US R18
 U 1 1 605850DD
-P 6000 2300
-F 0 "R18" H 6068 2346 50  0000 L CNN
-F 1 "15k" H 6068 2255 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 6040 2290 50  0001 C CNN
-F 3 "MO1/2W-15K±5%-XT52" H 6000 2300 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Metal-Oxide-Resistors_FlyWin-MO1-2W-15K-5-XT52_C601770.html" H 6000 2300 50  0001 C CNN "Link"
-F 5 "yes" H 6000 2300 50  0001 C CNN "Checked"
-F 6 "0.0071" H 6000 2300 50  0001 C CNN "Price"
-	1    6000 2300
+P 7600 2250
+F 0 "R18" H 7668 2296 50  0000 L CNN
+F 1 "15k" H 7668 2205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 7640 2240 50  0001 C CNN
+F 3 "MO1/2W-15K±5%-XT52" H 7600 2250 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Metal-Oxide-Resistors_FlyWin-MO1-2W-15K-5-XT52_C601770.html" H 7600 2250 50  0001 C CNN "Link"
+F 5 "yes" H 7600 2250 50  0001 C CNN "Checked"
+F 6 "0.0071" H 7600 2250 50  0001 C CNN "Price"
+	1    7600 2250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6000 2150 6000 2100
+	7600 2100 7600 2050
 Wire Wire Line
-	6000 2450 6000 2500
+	7600 2400 7600 2450
 $Comp
 L Reference_Voltage:TL431LP U3
 U 1 1 605C4A72
@@ -1381,4 +1358,118 @@ Wire Wire Line
 	4700 6300 4700 6200
 Wire Wire Line
 	1800 5650 1850 5650
+$Comp
+L Device:C C13
+U 1 1 6048E788
+P 5600 2300
+F 0 "C13" H 5715 2346 50  0000 L CNN
+F 1 "10u" H 5715 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5638 2150 50  0001 C CNN
+F 3 "C1206X5R106K500NT" H 5600 2300 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 5600 2300 50  0001 C CNN "Link"
+F 5 "" H 5600 2300 50  0001 C CNN "Checked"
+F 6 "" H 5600 2300 50  0001 C CNN "Working Voltage"
+F 7 "" H 5600 2300 50  0001 C CNN "Price"
+F 8 "On linear" H 5600 2300 50  0001 C CNN "Notes"
+	1    5600 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 2450 5600 2800
+$Comp
+L Device:C C20
+U 1 1 604B2B40
+P 5950 2300
+F 0 "C20" H 6065 2346 50  0000 L CNN
+F 1 "10u" H 6065 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5988 2150 50  0001 C CNN
+F 3 "C1206X5R106K500NT" H 5950 2300 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 5950 2300 50  0001 C CNN "Link"
+F 5 "" H 5950 2300 50  0001 C CNN "Checked"
+F 6 "" H 5950 2300 50  0001 C CNN "Working Voltage"
+F 7 "" H 5950 2300 50  0001 C CNN "Price"
+F 8 "On linear" H 5950 2300 50  0001 C CNN "Notes"
+	1    5950 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C21
+U 1 1 604B3526
+P 6350 2300
+F 0 "C21" H 6465 2346 50  0000 L CNN
+F 1 "10u" H 6465 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 6388 2150 50  0001 C CNN
+F 3 "C1206X5R106K500NT" H 6350 2300 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 6350 2300 50  0001 C CNN "Link"
+F 5 "" H 6350 2300 50  0001 C CNN "Checked"
+F 6 "" H 6350 2300 50  0001 C CNN "Working Voltage"
+F 7 "" H 6350 2300 50  0001 C CNN "Price"
+F 8 "On linear" H 6350 2300 50  0001 C CNN "Notes"
+	1    6350 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C22
+U 1 1 604B3F28
+P 6700 2300
+F 0 "C22" H 6815 2346 50  0000 L CNN
+F 1 "10u" H 6815 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 6738 2150 50  0001 C CNN
+F 3 "C1206X5R106K500NT" H 6700 2300 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 6700 2300 50  0001 C CNN "Link"
+F 5 "" H 6700 2300 50  0001 C CNN "Checked"
+F 6 "" H 6700 2300 50  0001 C CNN "Working Voltage"
+F 7 "" H 6700 2300 50  0001 C CNN "Price"
+F 8 "On linear" H 6700 2300 50  0001 C CNN "Notes"
+	1    6700 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C23
+U 1 1 604B4A4B
+P 7050 2300
+F 0 "C23" H 7165 2346 50  0000 L CNN
+F 1 "10u" H 7165 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 7088 2150 50  0001 C CNN
+F 3 "C1206X5R106K500NT" H 7050 2300 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 7050 2300 50  0001 C CNN "Link"
+F 5 "" H 7050 2300 50  0001 C CNN "Checked"
+F 6 "" H 7050 2300 50  0001 C CNN "Working Voltage"
+F 7 "" H 7050 2300 50  0001 C CNN "Price"
+F 8 "On linear" H 7050 2300 50  0001 C CNN "Notes"
+	1    7050 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 2450 5950 2450
+Connection ~ 5600 2450
+Connection ~ 5950 2450
+Wire Wire Line
+	5950 2450 6350 2450
+Connection ~ 6350 2450
+Wire Wire Line
+	6350 2450 6700 2450
+Connection ~ 6700 2450
+Wire Wire Line
+	6700 2450 7050 2450
+Connection ~ 7050 2450
+Wire Wire Line
+	7050 2450 7600 2450
+Wire Wire Line
+	5600 2150 5950 2150
+Wire Wire Line
+	7200 2150 7200 2050
+Connection ~ 5600 2150
+Connection ~ 5950 2150
+Wire Wire Line
+	5950 2150 6350 2150
+Connection ~ 6350 2150
+Wire Wire Line
+	6350 2150 6700 2150
+Connection ~ 6700 2150
+Wire Wire Line
+	6700 2150 7050 2150
+Connection ~ 7050 2150
+Wire Wire Line
+	7050 2150 7200 2150
 $EndSCHEMATC
