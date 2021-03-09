@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP EFM8BB31F16G-D-QFN24R
+D 8-bit Microcontrollers - MCU 8051 50 MHz 16 kB flash 2.25 kB RAM 8-bit Busy Bee MCU
+K
+F https://www.silabs.com/documents/public/data-sheets/efm8bb3-datasheet.pdf
+$ENDCMP
+#
+#End Doc Library

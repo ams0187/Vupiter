@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name EFM8BB31F16G-D-QFN24R)(type Legacy)(uri ${KIPRJMOD}/efm8/EFM8BB31F16G-D-QFN24R.mod)(options "")(descr ""))
+  (lib (name custom)(type KiCad)(uri ${KIPRJMOD}/custom.pretty)(options "")(descr ""))
+)

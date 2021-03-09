@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name custom)(type Legacy)(uri ${KIPRJMOD}/custom.lib)(options "")(descr ""))
+  (lib (name EFM8BB31F16G-D-QFN24R)(type Legacy)(uri ${KIPRJMOD}/efm8/EFM8BB31F16G-D-QFN24R.lib)(options "")(descr ""))
+)
