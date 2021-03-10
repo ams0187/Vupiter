@@ -16,350 +16,281 @@ $EndDescr
 $Comp
 L Transistor_BJT:TIP41C Q4
 U 1 1 6045430D
-P 1800 1800
-F 0 "Q4" H 1991 1846 50  0000 L CNN
-F 1 "TIP41C" H 1991 1755 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 2050 1725 50  0001 L CIN
-F 3 "TIP41C" H 1800 1800 50  0001 L CNN
-F 4 "https://lcsc.com/product-detail/Transistors-NPN-PNP_STMicroelectronics-TIP41C_C92603.html" H 1800 1800 50  0001 C CNN "Link"
-	1    1800 1800
+P 1800 2500
+F 0 "Q4" H 1991 2546 50  0000 L CNN
+F 1 "TIP41C" H 1991 2455 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 2050 2425 50  0001 L CIN
+F 3 "TIP41C" H 1800 2500 50  0001 L CNN
+F 4 "https://lcsc.com/product-detail/Transistors-NPN-PNP_STMicroelectronics-TIP41C_C92603.html" H 1800 2500 50  0001 C CNN "Link"
+	1    1800 2500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Transistor_BJT:TIP41C Q2
 U 1 1 6045457D
-P 1300 1800
-F 0 "Q2" H 1491 1846 50  0000 L CNN
-F 1 "TIP41C" H 1491 1755 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 1550 1725 50  0001 L CIN
-F 3 "TIP41C" H 1300 1800 50  0001 L CNN
-F 4 "https://lcsc.com/product-detail/Transistors-NPN-PNP_STMicroelectronics-TIP41C_C92603.html" H 1300 1800 50  0001 C CNN "Link"
-	1    1300 1800
+P 1300 2500
+F 0 "Q2" H 1491 2546 50  0000 L CNN
+F 1 "TIP41C" H 1491 2455 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 1550 2425 50  0001 L CIN
+F 3 "TIP41C" H 1300 2500 50  0001 L CNN
+F 4 "https://lcsc.com/product-detail/Transistors-NPN-PNP_STMicroelectronics-TIP41C_C92603.html" H 1300 2500 50  0001 C CNN "Link"
+	1    1300 2500
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:Q_NPN_BCE Q1
 U 1 1 6045643B
-P 1300 1300
-F 0 "Q1" H 1491 1254 50  0000 L CNN
-F 1 "2N3904" H 1491 1345 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-223" H 1500 1225 50  0001 L CIN
-F 3 "PZT3904" H 1300 1300 50  0001 L CNN
-F 4 "https://lcsc.com/product-detail/Transistors-NPN-PNP_Changjiang-Electronics-Tech-CJ-PZT3904_C189432.html" H 1300 1300 50  0001 C CNN "Link"
-	1    1300 1300
+P 1300 2000
+F 0 "Q1" H 1491 1954 50  0000 L CNN
+F 1 "2N3904" H 1491 2045 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 1500 1925 50  0001 L CIN
+F 3 "PZT3904" H 1300 2000 50  0001 L CNN
+F 4 "https://lcsc.com/product-detail/Transistors-NPN-PNP_Changjiang-Electronics-Tech-CJ-PZT3904_C189432.html" H 1300 2000 50  0001 C CNN "Link"
+	1    1300 2000
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	1500 1300 1550 1300
+	1500 2000 1550 2000
 Wire Wire Line
-	1200 1500 1200 1550
+	1200 2200 1200 2250
 Wire Wire Line
-	1200 1550 1550 1550
+	1200 2250 1550 2250
 Wire Wire Line
-	1900 1550 1900 1500
+	1900 2250 1900 2200
 Wire Wire Line
-	1500 1800 1550 1800
+	1500 2500 1550 2500
 Wire Wire Line
-	1550 1800 1550 1550
-Connection ~ 1550 1800
+	1550 2500 1550 2250
+Connection ~ 1550 2500
 Wire Wire Line
-	1550 1800 1600 1800
+	1550 2500 1600 2500
 Wire Wire Line
-	1200 1600 1650 1600
+	1200 2300 1650 2300
 Wire Wire Line
-	1200 1100 1650 1100
-Connection ~ 1550 1550
+	1200 1800 1650 1800
+Connection ~ 1550 2250
 Wire Wire Line
-	1550 1550 1900 1550
+	1550 2250 1900 2250
 Wire Wire Line
-	1650 1600 1650 1100
-Connection ~ 1650 1600
+	1650 2300 1650 1800
+Connection ~ 1650 2300
 Wire Wire Line
-	1650 1600 1900 1600
-Connection ~ 1650 1100
+	1650 2300 1900 2300
+Connection ~ 1650 1800
 Wire Wire Line
-	1650 1100 1900 1100
+	1650 1800 1900 1800
 $Comp
 L Device:R_US R2
 U 1 1 60461729
-P 1200 2200
-F 0 "R2" H 1268 2246 50  0000 L CNN
-F 1 "0.1" H 1268 2155 50  0000 L CNN
-F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder" V 1240 2190 50  0001 C CNN
-F 3 "SY2512CFR100" H 1200 2200 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_SANYEAR-SY2512CFR100_C457144.html" H 1200 2200 50  0001 C CNN "Link"
-	1    1200 2200
+P 1200 2900
+F 0 "R2" H 1268 2946 50  0000 L CNN
+F 1 "0.1" H 1268 2855 50  0000 L CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder" V 1240 2890 50  0001 C CNN
+F 3 "SY2512CFR100" H 1200 2900 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_SANYEAR-SY2512CFR100_C457144.html" H 1200 2900 50  0001 C CNN "Link"
+	1    1200 2900
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_US R4
 U 1 1 60462278
-P 1900 2200
-F 0 "R4" H 1968 2246 50  0000 L CNN
-F 1 "0.1" H 1968 2155 50  0000 L CNN
-F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder" V 1940 2190 50  0001 C CNN
-F 3 "SY2512CFR100" H 1900 2200 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_SANYEAR-SY2512CFR100_C457144.html" H 1900 2200 50  0001 C CNN "Link"
-	1    1900 2200
+P 1900 2900
+F 0 "R4" H 1968 2946 50  0000 L CNN
+F 1 "0.1" H 1968 2855 50  0000 L CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder" V 1940 2890 50  0001 C CNN
+F 3 "SY2512CFR100" H 1900 2900 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_SANYEAR-SY2512CFR100_C457144.html" H 1900 2900 50  0001 C CNN "Link"
+	1    1900 2900
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_US R3
 U 1 1 60462751
-P 1550 2550
-F 0 "R3" H 1618 2596 50  0000 L CNN
-F 1 "0.05" H 1618 2505 50  0000 L CNN
-F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder" V 1590 2540 50  0001 C CNN
-F 3 "SY2512CFR050" H 1550 2550 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_SANYEAR-SY2512CFR050_C466811.html" H 1550 2550 50  0001 C CNN "Link"
-	1    1550 2550
+P 1550 3250
+F 0 "R3" H 1618 3296 50  0000 L CNN
+F 1 "0.05" H 1618 3205 50  0000 L CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder" V 1590 3240 50  0001 C CNN
+F 3 "SY2512CFR050" H 1550 3250 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_SANYEAR-SY2512CFR050_C466811.html" H 1550 3250 50  0001 C CNN "Link"
+	1    1550 3250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1200 2350 1550 2350
+	1200 3050 1550 3050
 Wire Wire Line
-	1550 2350 1550 2400
+	1550 3050 1550 3100
 Wire Wire Line
-	1900 2350 1550 2350
-Connection ~ 1550 2350
+	1900 3050 1550 3050
+Connection ~ 1550 3050
 Wire Wire Line
-	1200 2050 1200 2000
+	1200 2750 1200 2700
 Wire Wire Line
-	1900 2050 1900 2000
+	1900 2750 1900 2700
 Wire Wire Line
-	1550 2700 1550 2750
+	1550 3400 1550 3450
 $Comp
 L Device:R_US R6
 U 1 1 60465A6E
-P 2300 1700
-F 0 "R6" H 2368 1746 50  0000 L CNN
-F 1 "2.7k" H 2368 1655 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P15.24mm_Horizontal" V 2340 1690 50  0001 C CNN
-F 3 "MFR01SF2701A10" H 2300 1700 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Metal-Film-Resistor-TH_UNI-ROYAL-Uniroyal-Elec-MFR01SF2701A10_C111873.html" H 2300 1700 50  0001 C CNN "Link"
-	1    2300 1700
+P 2300 2400
+F 0 "R6" H 2368 2446 50  0000 L CNN
+F 1 "2.7k" H 2368 2355 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P15.24mm_Horizontal" V 2340 2390 50  0001 C CNN
+F 3 "MFR01SF2701A10" H 2300 2400 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Metal-Film-Resistor-TH_UNI-ROYAL-Uniroyal-Elec-MFR01SF2701A10_C111873.html" H 2300 2400 50  0001 C CNN "Link"
+	1    2300 2400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2300 1550 1900 1550
-Connection ~ 1900 1550
+	2300 2250 1900 2250
+Connection ~ 1900 2250
 $Comp
 L Device:R_US R1
 U 1 1 604681F8
-P 750 1200
-F 0 "R1" H 817 1154 50  0000 L CNN
-F 1 "6k" H 817 1245 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 790 1190 50  0001 C CNN
-F 3 "RN1/2WS6.04KΩFT/BA1" H 750 1200 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Metal-Film-Resistor-TH_TyoHM-RN1-2WS6-04KRFT-BA1_C385532.html" H 750 1200 50  0001 C CNN "Link"
-	1    750  1200
+P 750 1900
+F 0 "R1" H 817 1854 50  0000 L CNN
+F 1 "6k" H 817 1945 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 790 1890 50  0001 C CNN
+F 3 "RN1/2WS6.04KΩFT/BA1" H 750 1900 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Metal-Film-Resistor-TH_TyoHM-RN1-2WS6-04KRFT-BA1_C385532.html" H 750 1900 50  0001 C CNN "Link"
+	1    750  1900
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1550 1300 1550 1050
+	1550 2000 1550 1750
 Wire Wire Line
-	1550 1050 750  1050
-Connection ~ 1550 1300
+	1550 1750 750  1750
+Connection ~ 1550 2000
 Wire Wire Line
-	1550 1300 1600 1300
-Text GLabel 750  1050 0    50   Input ~ 0
+	1550 2000 1600 2000
+Text GLabel 750  1750 0    50   Input ~ 0
 ad
 $Comp
 L Connector_Generic:Conn_01x02 J1
 U 1 1 6046C772
-P 1750 2750
-F 0 "J1" H 1830 2742 50  0000 L CNN
-F 1 "out" H 1830 2651 50  0000 L CNN
-F 2 "Connector_Wire:SolderWire-1.5sqmm_1x02_P6mm_D1.7mm_OD3mm" H 1750 2750 50  0001 C CNN
-F 3 "~" H 1750 2750 50  0001 C CNN
-	1    1750 2750
+P 1750 3450
+F 0 "J1" H 1830 3442 50  0000 L CNN
+F 1 "out" H 1830 3351 50  0000 L CNN
+F 2 "Connector_Wire:SolderWire-1.5sqmm_1x02_P6mm_D1.7mm_OD3mm" H 1750 3450 50  0001 C CNN
+F 3 "~" H 1750 3450 50  0001 C CNN
+	1    1750 3450
 	1    0    0    -1  
 $EndComp
-Text GLabel 1550 2850 0    50   Input ~ 0
+Text GLabel 1550 3550 0    50   Input ~ 0
 pgp
 $Comp
 L Device:C_Small C1
 U 1 1 6046DA82
-P 1950 950
-F 0 "C1" H 2042 996 50  0000 L CNN
-F 1 "10u" H 2042 905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 1950 950 50  0001 C CNN
-F 3 "C1206X5R106K500NT" H 1950 950 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 1950 950 50  0001 C CNN "Link"
-	1    1950 950 
+P 1950 1650
+F 0 "C1" H 2042 1696 50  0000 L CNN
+F 1 "10u" H 2042 1605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 1950 1650 50  0001 C CNN
+F 3 "C1206X5R106K500NT" H 1950 1650 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 1950 1650 50  0001 C CNN "Link"
+	1    1950 1650
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L_Small L1
 U 1 1 6046F293
-P 2100 800
-F 0 "L1" V 1919 800 50  0000 C CNN
-F 1 "1.5u" V 2010 800 50  0000 C CNN
-F 2 "custom:MCS0630-1R5MN2" H 2100 800 50  0001 C CNN
-F 3 "MCS0630-1R5MN2" H 2100 800 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Inductors-SMD_PSA-Prosperity-Dielectrics-MCS0630-1R5MN2_C400394.html" H 2100 800 50  0001 C CNN "Link"
-	1    2100 800 
+P 2100 1500
+F 0 "L1" V 1919 1500 50  0000 C CNN
+F 1 "1.5u" V 2010 1500 50  0000 C CNN
+F 2 "custom:MCS0630-1R5MN2" H 2100 1500 50  0001 C CNN
+F 3 "MCS0630-1R5MN2" H 2100 1500 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Inductors-SMD_PSA-Prosperity-Dielectrics-MCS0630-2R2MN2_C385252.html" H 2100 1500 50  0001 C CNN "Link"
+	1    2100 1500
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:C_Small C4
-U 1 1 6046FC2C
-P 2250 950
-F 0 "C4" H 2342 996 50  0000 L CNN
-F 1 "10u" H 2342 905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 2250 950 50  0001 C CNN
-F 3 "C1206X5R106K500NT" H 2250 950 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 2250 950 50  0001 C CNN "Link"
-	1    2250 950 
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:L_Small L2
-U 1 1 6046FF95
-P 2400 800
-F 0 "L2" V 2219 800 50  0000 C CNN
-F 1 "1.5u" V 2310 800 50  0000 C CNN
-F 2 "custom:MCS0630-1R5MN2" H 2400 800 50  0001 C CNN
-F 3 "MCS0630-1R5MN2" H 2400 800 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Inductors-SMD_PSA-Prosperity-Dielectrics-MCS0630-1R5MN2_C400394.html" H 2400 800 50  0001 C CNN "Link"
-	1    2400 800 
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C_Small C7
-U 1 1 60470423
-P 2550 950
-F 0 "C7" H 2642 996 50  0000 L CNN
-F 1 "10u" H 2642 905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 2550 950 50  0001 C CNN
-F 3 "C1206X5R106K500NT" H 2550 950 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 2550 950 50  0001 C CNN "Link"
-	1    2550 950 
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	2550 850  2550 800 
+	2500 1550 2500 1500
+Connection ~ 2500 1500
 Wire Wire Line
-	2550 800  2500 800 
+	1950 1550 1950 1500
 Wire Wire Line
-	2250 850  2250 800 
+	1950 1500 2000 1500
 Wire Wire Line
-	2250 800  2300 800 
+	1950 1500 1850 1500
 Wire Wire Line
-	2250 800  2200 800 
-Connection ~ 2250 800 
+	1650 1500 1650 1800
+Connection ~ 1950 1500
 Wire Wire Line
-	1950 850  1950 800 
+	1950 1750 1950 1800
 Wire Wire Line
-	1950 800  2000 800 
+	2500 1750 2500 1800
 Wire Wire Line
-	1950 800  1650 800 
-Wire Wire Line
-	1650 800  1650 1100
-Connection ~ 1950 800 
-Text GLabel 2550 750  2    50   Input ~ 0
-vin
-Wire Wire Line
-	2550 800  2550 750 
-Connection ~ 2550 800 
-Wire Wire Line
-	1950 1050 1950 1100
-Wire Wire Line
-	1950 1100 2250 1100
-Wire Wire Line
-	2550 1100 2550 1050
-Wire Wire Line
-	2250 1050 2250 1100
-Connection ~ 2250 1100
-Wire Wire Line
-	2250 1100 2550 1100
-Wire Wire Line
-	2550 1100 2550 1150
-Connection ~ 2550 1100
-Text GLabel 1200 2350 0    50   Input ~ 0
+	2550 1800 2550 1850
+Text GLabel 1200 3050 0    50   Input ~ 0
 isense
-Text GLabel 2300 1850 2    50   Input ~ 0
+Text GLabel 2300 2550 2    50   Input ~ 0
 pgp
-Text GLabel 2550 1150 2    50   Input ~ 0
+Text GLabel 2550 1850 2    50   Input ~ 0
 pgp
-Text GLabel 750  1350 0    50   Input ~ 0
+Text GLabel 750  2050 0    50   Input ~ 0
 pgp
-Text GLabel 1550 2750 0    50   Input ~ 0
+Text GLabel 1550 3450 0    50   Input ~ 0
 outp
 Wire Wire Line
-	4200 5450 4250 5450
-Text GLabel 3900 5450 0    50   Input ~ 0
+	4500 5550 4550 5550
+Text GLabel 4200 5550 0    50   Input ~ 0
 vcc
 Wire Wire Line
-	3900 5450 4000 5450
+	4200 5550 4250 5550
 Wire Wire Line
-	3900 5500 3900 5450
+	4200 5600 4200 5550
 Wire Wire Line
-	3900 5700 3900 5800
-Text GLabel 3900 5800 2    50   Input ~ 0
+	4200 5800 4200 5900
+Text GLabel 4200 5900 2    50   Input ~ 0
 agp
-Text GLabel 4250 5450 2    50   Input ~ 0
+Text GLabel 4550 5550 2    50   Input ~ 0
 vin
 $Comp
 L Device:C_Small C14
 U 1 1 60696BDC
-P 3900 5600
-F 0 "C14" H 3992 5646 50  0000 L CNN
-F 1 "10u" H 3992 5555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 3900 5600 50  0001 C CNN
-F 3 "C1206X5R106K500NT" H 3900 5600 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 3900 5600 50  0001 C CNN "Link"
-	1    3900 5600
+P 4200 5700
+F 0 "C14" H 4292 5746 50  0000 L CNN
+F 1 "10u" H 4292 5655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 4200 5700 50  0001 C CNN
+F 3 "C1206X5R106K500NT" H 4200 5700 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 4200 5700 50  0001 C CNN "Link"
+	1    4200 5700
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:L_Small L4
-U 1 1 60696BD6
-P 4100 5450
-F 0 "L4" V 3919 5450 50  0000 C CNN
-F 1 "1.5u" V 4010 5450 50  0000 C CNN
-F 2 "custom:MCS0630-1R5MN2" H 4100 5450 50  0001 C CNN
-F 3 "MCS0630-1R5MN2" H 4100 5450 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Inductors-SMD_PSA-Prosperity-Dielectrics-MCS0630-1R5MN2_C400394.html" H 4100 5450 50  0001 C CNN "Link"
-	1    4100 5450
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	4200 4800 4250 4800
-Text GLabel 3900 4800 0    50   Input ~ 0
+	4500 4800 4550 4800
+Text GLabel 4200 4800 0    50   Input ~ 0
 vgg
 Wire Wire Line
-	3900 4800 4000 4800
+	4200 4800 4250 4800
 Wire Wire Line
-	3900 4850 3900 4800
+	4200 4850 4200 4800
 Wire Wire Line
-	3900 5050 3900 5150
-Text GLabel 3900 5150 2    50   Input ~ 0
+	4200 5050 4200 5150
+Text GLabel 4200 5150 2    50   Input ~ 0
 agp
-Text GLabel 4250 4800 2    50   Input ~ 0
+Text GLabel 4550 4800 2    50   Input ~ 0
 pg3
 $Comp
 L Device:C_Small C13
 U 1 1 60668614
-P 3900 4950
-F 0 "C13" H 3992 4996 50  0000 L CNN
-F 1 "10u" H 3992 4905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 3900 4950 50  0001 C CNN
-F 3 "C1206X5R106K500NT" H 3900 4950 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 3900 4950 50  0001 C CNN "Link"
-	1    3900 4950
+P 4200 4950
+F 0 "C13" H 4292 4996 50  0000 L CNN
+F 1 "10u" H 4292 4905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 4200 4950 50  0001 C CNN
+F 3 "C1206X5R106K500NT" H 4200 4950 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 4200 4950 50  0001 C CNN "Link"
+	1    4200 4950
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L_Small L3
 U 1 1 6066860E
-P 4100 4800
-F 0 "L3" V 3919 4800 50  0000 C CNN
-F 1 "1.5u" V 4010 4800 50  0000 C CNN
-F 2 "custom:MCS0630-1R5MN2" H 4100 4800 50  0001 C CNN
-F 3 "MCS0630-1R5MN2" H 4100 4800 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Inductors-SMD_PSA-Prosperity-Dielectrics-MCS0630-1R5MN2_C400394.html" H 4100 4800 50  0001 C CNN "Link"
-	1    4100 4800
+P 4400 4800
+F 0 "L3" V 4219 4800 50  0000 C CNN
+F 1 "6.8u" V 4310 4800 50  0000 C CNN
+F 2 "custom:SCCD54" H 4400 4800 50  0001 C CNN
+F 3 "SCCD54-6R8MT" H 4400 4800 50  0001 C CNN
+F 4 "https://lcsc.com/products/Power-Inductors_544.html" H 4400 4800 50  0001 C CNN "Link"
+	1    4400 4800
 	0    1    1    0   
 $EndComp
 Text GLabel 3300 7200 3    50   Input ~ 0
@@ -1082,33 +1013,7 @@ Wire Wire Line
 	5900 2150 4700 2150
 Wire Wire Line
 	4700 2150 4700 2500
-$Comp
-L Device:L_Small L6
-U 1 1 604C5C2C
-P 6250 2150
-F 0 "L6" V 6069 2150 50  0000 C CNN
-F 1 "4.7u" V 6160 2150 50  0000 C CNN
-F 2 "custom:CR6045-4R7N" H 6250 2150 50  0001 C CNN
-F 3 "CR6045-4R7N" H 6250 2150 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Power-Inductors_Ceaiya-CR6045-4R7N_C520360.html" H 6250 2150 50  0001 C CNN "Link"
-	1    6250 2150
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C_Small C18
-U 1 1 604C5C32
-P 6050 2250
-F 0 "C18" H 6142 2296 50  0000 L CNN
-F 1 "10u" H 6142 2205 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 6050 2250 50  0001 C CNN
-F 3 "C1206X5R106K500NT" H 6050 2250 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 6050 2250 50  0001 C CNN "Link"
-	1    6050 2250
-	1    0    0    -1  
-$EndComp
-Text GLabel 6350 2150 2    50   Input ~ 0
-vin
-Text GLabel 6050 2450 2    50   Input ~ 0
+Text GLabel 6100 2500 2    50   Input ~ 0
 sgp
 Connection ~ 5900 2150
 Wire Wire Line
@@ -1232,8 +1137,6 @@ Wire Wire Line
 Connection ~ 4700 2150
 Wire Wire Line
 	5900 1800 5900 2150
-Wire Wire Line
-	6050 2350 6050 2450
 $Comp
 L Connector_Generic:Conn_01x02 J3
 U 1 1 605D403E
@@ -1696,27 +1599,27 @@ F 3 "~" H 3600 1350 50  0001 C CNN
 	1    3600 1350
 	1    0    0    1   
 $EndComp
-Text GLabel 3400 1250 0    50   Input ~ 0
+Text GLabel 3500 1050 2    50   Input ~ 0
 dgp
 Wire Wire Line
 	3400 1350 3400 1550
 Text GLabel 3400 1550 0    50   Input ~ 0
 vin
-Text GLabel 3400 1150 0    50   Input ~ 0
+Text GLabel 3500 950  2    50   Input ~ 0
 pgp
-Text GLabel 3400 1050 0    50   Input ~ 0
+Text GLabel 3300 1050 0    50   Input ~ 0
 sgp
-Text GLabel 3400 950  0    50   Input ~ 0
+Text GLabel 3300 950  0    50   Input ~ 0
 agp
 $Comp
 L Mechanical:Heatsink HS1
 U 1 1 60ADB0EE
-P 2600 2250
-F 0 "HS1" H 2457 2279 50  0000 R CNN
-F 1 "Heatsink" H 2457 2370 50  0000 R CNN
-F 2 "custom:ATS-PCBT1090" H 2612 2250 50  0001 C CNN
-F 3 "~" H 2612 2250 50  0001 C CNN
-	1    2600 2250
+P 900 1400
+F 0 "HS1" H 757 1429 50  0000 R CNN
+F 1 "Heatsink" H 757 1520 50  0000 R CNN
+F 2 "custom:ATS-PCBT1090" H 912 1400 50  0001 C CNN
+F 3 "~" H 912 1400 50  0001 C CNN
+	1    900  1400
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -1839,20 +1742,15 @@ Wire Wire Line
 $Comp
 L Device:Q_NPN_BCE Q3
 U 1 1 607154C9
-P 1800 1300
-F 0 "Q3" H 1991 1254 50  0000 L CNN
-F 1 "2N3904" H 1991 1345 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-223" H 2000 1225 50  0001 L CIN
-F 3 "PZT3904" H 1800 1300 50  0001 L CNN
-F 4 "https://lcsc.com/product-detail/Transistors-NPN-PNP_Changjiang-Electronics-Tech-CJ-PZT3904_C189432.html" H 1800 1300 50  0001 C CNN "Link"
-	1    1800 1300
+P 1800 2000
+F 0 "Q3" H 1991 1954 50  0000 L CNN
+F 1 "2N3904" H 1991 2045 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 2000 1925 50  0001 L CIN
+F 3 "PZT3904" H 1800 2000 50  0001 L CNN
+F 4 "https://lcsc.com/product-detail/Transistors-NPN-PNP_Changjiang-Electronics-Tech-CJ-PZT3904_C189432.html" H 1800 2000 50  0001 C CNN "Link"
+	1    1800 2000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5900 2150 6050 2150
-Wire Wire Line
-	6150 2150 6050 2150
-Connection ~ 6050 2150
 Wire Wire Line
 	7150 4150 7900 4150
 Wire Wire Line
@@ -1874,5 +1772,287 @@ F 3 "~" H 1050 3850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3400 1250 3400 950 
+	2500 1350 2500 1500
+$Comp
+L Device:R_US R8
+U 1 1 6065303B
+P 1850 1150
+F 0 "R8" H 1783 1196 50  0000 R CNN
+F 1 "2" H 1783 1105 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 1890 1140 50  0001 C CNN
+F 3 "RN 1WS 2R2 F T/B A1" H 1850 1150 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Metal-Film-Resistor-TH_TyoHM-RN-1WS-2R2-F-T-B-A1_C433658.html" H 1850 1150 50  0001 C CNN "Link"
+	1    1850 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 1300 1850 1500
+Wire Wire Line
+	2200 1000 2200 1050
+$Comp
+L Device:L_Small L4
+U 1 1 60589FE7
+P 2200 1150
+F 0 "L4" H 2156 1104 50  0000 R CNN
+F 1 "0.68u" H 2156 1195 50  0000 R CNN
+F 2 "Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2200 1150 50  0001 C CNN
+F 3 "CIGT201610LMR68MNE" H 2200 1150 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Power-Inductors_Samsung-Electro-Mechanics_CIGT201610LMR68MNE_Samsung-Electro-Mechanics-CIGT201610LMR68MNE_C307629.html" H 2200 1150 50  0001 C CNN "Link"
+	1    2200 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L_Small L9
+U 1 1 606A1F35
+P 4400 5550
+F 0 "L9" V 4219 5550 50  0000 C CNN
+F 1 "6.8u" V 4310 5550 50  0000 C CNN
+F 2 "custom:SCCD54" H 4400 5550 50  0001 C CNN
+F 3 "SCCD54-6R8MT" H 4400 5550 50  0001 C CNN
+F 4 "https://lcsc.com/products/Power-Inductors_544.html" H 4400 5550 50  0001 C CNN "Link"
+	1    4400 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L_Small L11
+U 1 1 606BCBB0
+P 4550 5350
+F 0 "L11" H 4506 5304 50  0000 R CNN
+F 1 "3.3u" H 4506 5395 50  0000 R CNN
+F 2 "custom:SCCD43" H 4550 5350 50  0001 C CNN
+F 3 "SCCD43-3R3MT" H 4550 5350 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Power-Inductors_Yanchuang-SCCD43-3R3MT_C532860.html" H 4550 5350 50  0001 C CNN "Link"
+	1    4550 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R23
+U 1 1 606C4429
+P 4250 5400
+F 0 "R23" H 4183 5446 50  0000 R CNN
+F 1 "2" H 4183 5355 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 4290 5390 50  0001 C CNN
+F 3 "RN 1WS 2R2 F T/B A1" H 4250 5400 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Metal-Film-Resistor-TH_TyoHM-RN-1WS-2R2-F-T-B-A1_C433658.html" H 4250 5400 50  0001 C CNN "Link"
+	1    4250 5400
+	1    0    0    -1  
+$EndComp
+Connection ~ 4250 5550
+Wire Wire Line
+	4250 5550 4300 5550
+Wire Wire Line
+	4250 5250 4550 5250
+Wire Wire Line
+	4550 5450 4550 5550
+$Comp
+L Device:L_Small L10
+U 1 1 606E913F
+P 4550 4600
+F 0 "L10" H 4506 4554 50  0000 R CNN
+F 1 "3.3u" H 4506 4645 50  0000 R CNN
+F 2 "custom:SCCD43" H 4550 4600 50  0001 C CNN
+F 3 "SCCD43-3R3MT" H 4550 4600 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Power-Inductors_Yanchuang-SCCD43-3R3MT_C532860.html" H 4550 4600 50  0001 C CNN "Link"
+	1    4550 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R22
+U 1 1 606E9146
+P 4250 4650
+F 0 "R22" H 4183 4696 50  0000 R CNN
+F 1 "2" H 4183 4605 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 4290 4640 50  0001 C CNN
+F 3 "RN 1WS 2R2 F T/B A1" H 4250 4650 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Metal-Film-Resistor-TH_TyoHM-RN-1WS-2R2-F-T-B-A1_C433658.html" H 4250 4650 50  0001 C CNN "Link"
+	1    4250 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 4500 4550 4500
+Wire Wire Line
+	4550 4700 4550 4800
+Connection ~ 4250 4800
+Wire Wire Line
+	4250 4800 4300 4800
+Connection ~ 1850 1500
+Wire Wire Line
+	1850 1500 1650 1500
+Wire Wire Line
+	1850 1000 2200 1000
+$Comp
+L Device:C_Small C7
+U 1 1 604FBDB5
+P 2250 1650
+F 0 "C7" H 2342 1696 50  0000 L CNN
+F 1 "10u" H 2342 1605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 2250 1650 50  0001 C CNN
+F 3 "C1206X5R106K500NT" H 2250 1650 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 2250 1650 50  0001 C CNN "Link"
+	1    2250 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 1000 2550 1000
+Wire Wire Line
+	2850 1050 2850 1000
+Wire Wire Line
+	2850 1250 2850 1500
+Wire Wire Line
+	2750 1500 2850 1500
+Wire Wire Line
+	2550 1350 2550 1300
+Wire Wire Line
+	2550 1350 2500 1350
+$Comp
+L Device:R_US R21
+U 1 1 6056C60A
+P 2550 1150
+F 0 "R21" H 2618 1196 50  0000 L CNN
+F 1 "2" H 2618 1105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 2590 1140 50  0001 C CNN
+F 3 "RN 1WS 2R2 F T/B A1" H 2550 1150 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Metal-Film-Resistor-TH_TyoHM-RN-1WS-2R2-F-T-B-A1_C433658.html" H 2550 1150 50  0001 C CNN "Link"
+	1    2550 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L_Small L8
+U 1 1 6056A397
+P 2850 1150
+F 0 "L8" H 2806 1104 50  0000 R CNN
+F 1 "0.68u" H 2806 1195 50  0000 R CNN
+F 2 "Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2850 1150 50  0001 C CNN
+F 3 "CIGT201610LMR68MNE" H 2850 1150 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Power-Inductors_Samsung-Electro-Mechanics_CIGT201610LMR68MNE_Samsung-Electro-Mechanics-CIGT201610LMR68MNE_C307629.html" H 2850 1150 50  0001 C CNN "Link"
+	1    2850 1150
+	-1   0    0    1   
+$EndComp
+Text GLabel 2850 1500 2    50   Input ~ 0
+vin
+Wire Wire Line
+	2500 1500 2550 1500
+$Comp
+L Device:L_Small L2
+U 1 1 6046FF95
+P 2650 1500
+F 0 "L2" V 2469 1500 50  0000 C CNN
+F 1 "1.5u" V 2560 1500 50  0000 C CNN
+F 2 "custom:MCS0630-1R5MN2" H 2650 1500 50  0001 C CNN
+F 3 "MCS0630-1R5MN2" H 2650 1500 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Inductors-SMD_PSA-Prosperity-Dielectrics-MCS0630-2R2MN2_C385252.html" H 2650 1500 50  0001 C CNN "Link"
+	1    2650 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 6046FC2C
+P 2500 1650
+F 0 "C4" H 2592 1696 50  0000 L CNN
+F 1 "10u" H 2592 1605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 2500 1650 50  0001 C CNN
+F 3 "C1206X5R106K500NT" H 2500 1650 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 2500 1650 50  0001 C CNN "Link"
+	1    2500 1650
+	1    0    0    -1  
+$EndComp
+Connection ~ 2500 1800
+Wire Wire Line
+	2500 1800 2550 1800
+Wire Wire Line
+	1950 1800 2250 1800
+Wire Wire Line
+	2250 1550 2250 1500
+Wire Wire Line
+	2250 1500 2200 1500
+Wire Wire Line
+	2200 1250 2200 1500
+Connection ~ 2200 1500
+Connection ~ 2250 1500
+Wire Wire Line
+	2250 1500 2500 1500
+Wire Wire Line
+	2250 1750 2250 1800
+Connection ~ 2250 1800
+Wire Wire Line
+	2250 1800 2500 1800
+Wire Wire Line
+	6400 2150 6450 2150
+Wire Wire Line
+	6100 2150 6150 2150
+Wire Wire Line
+	6100 2200 6100 2150
+Wire Wire Line
+	6100 2400 6100 2500
+Text GLabel 6450 2150 2    50   Input ~ 0
+vin
+$Comp
+L Device:C_Small C18
+U 1 1 605F8034
+P 6100 2300
+F 0 "C18" H 6192 2346 50  0000 L CNN
+F 1 "10u" H 6192 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 6100 2300 50  0001 C CNN
+F 3 "C1206X5R106K500NT" H 6100 2300 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 6100 2300 50  0001 C CNN "Link"
+	1    6100 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L_Small L6
+U 1 1 605F803B
+P 6300 2150
+F 0 "L6" V 6119 2150 50  0000 C CNN
+F 1 "6.8u" V 6210 2150 50  0000 C CNN
+F 2 "custom:SCCD54" H 6300 2150 50  0001 C CNN
+F 3 "SCCD54-6R8MT" H 6300 2150 50  0001 C CNN
+F 4 "https://lcsc.com/products/Power-Inductors_544.html" H 6300 2150 50  0001 C CNN "Link"
+	1    6300 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L_Small L12
+U 1 1 605F8042
+P 6450 1950
+F 0 "L12" H 6406 1904 50  0000 R CNN
+F 1 "3.3u" H 6406 1995 50  0000 R CNN
+F 2 "custom:SCCD43" H 6450 1950 50  0001 C CNN
+F 3 "SCCD43-3R3MT" H 6450 1950 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Power-Inductors_Yanchuang-SCCD43-3R3MT_C532860.html" H 6450 1950 50  0001 C CNN "Link"
+	1    6450 1950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R24
+U 1 1 605F8049
+P 6150 2000
+F 0 "R24" H 6083 2046 50  0000 R CNN
+F 1 "2" H 6083 1955 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 6190 1990 50  0001 C CNN
+F 3 "RN 1WS 2R2 F T/B A1" H 6150 2000 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Metal-Film-Resistor-TH_TyoHM-RN-1WS-2R2-F-T-B-A1_C433658.html" H 6150 2000 50  0001 C CNN "Link"
+	1    6150 2000
+	1    0    0    -1  
+$EndComp
+Connection ~ 6150 2150
+Wire Wire Line
+	6150 2150 6200 2150
+Wire Wire Line
+	6150 1850 6450 1850
+Wire Wire Line
+	6450 2050 6450 2150
+Wire Wire Line
+	6100 2150 5900 2150
+Connection ~ 6100 2150
+Wire Wire Line
+	3400 1250 3400 1050
+Wire Wire Line
+	3500 1050 3500 950 
+Wire Wire Line
+	3300 950  3300 1050
+Connection ~ 3400 1050
+Wire Wire Line
+	3400 1050 3500 1050
+Wire Wire Line
+	3300 1050 3400 1050
 $EndSCHEMATC
