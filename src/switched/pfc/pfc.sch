@@ -13,9 +13,9 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 1250 4250 2    50   Input ~ 0
+Text GLabel 2750 3500 2    50   Input ~ 0
 v120p
-Text GLabel 1250 4350 2    50   Input ~ 0
+Text GLabel 2750 3600 2    50   Input ~ 0
 v120n
 $Comp
 L Device:D_Bridge_+AA- D1
@@ -1083,15 +1083,15 @@ vcc
 $Comp
 L Connector_Generic:Conn_01x02 J1
 U 1 1 6023F774
-P 1050 4250
-F 0 "J1" H 1130 4242 50  0000 L CNN
-F 1 "AC-input" H 1130 4151 50  0000 L CNN
-F 2 "custom:spacedConnector" H 1050 4250 50  0001 C CNN
-F 3 "NA" H 1050 4250 50  0001 C CNN
-F 4 "0" H 1050 4250 50  0001 C CNN "price"
-F 5 "NA" H 1050 4250 50  0001 C CNN "Checked"
-F 6 "NA" H 1050 4250 50  0001 C CNN "Link"
-	1    1050 4250
+P 650 3500
+F 0 "J1" H 730 3492 50  0000 L CNN
+F 1 "AC-input" H 730 3401 50  0000 L CNN
+F 2 "custom:spacedConnector" H 650 3500 50  0001 C CNN
+F 3 "NA" H 650 3500 50  0001 C CNN
+F 4 "0" H 650 3500 50  0001 C CNN "price"
+F 5 "NA" H 650 3500 50  0001 C CNN "Checked"
+F 6 "NA" H 650 3500 50  0001 C CNN "Link"
+	1    650  3500
 	-1   0    0    -1  
 $EndComp
 Wire Notes Line
@@ -1443,4 +1443,138 @@ F 7 "75" H 4150 5350 50  0001 C CNN "Working voltage"
 $EndComp
 Wire Wire Line
 	4000 5700 4350 5700
+$Comp
+L Device:L_Small L4
+U 1 1 604B54F3
+P 1650 3450
+F 0 "L4" V 1469 3450 50  0000 C CNN
+F 1 "22u" V 1560 3450 50  0000 C CNN
+F 2 "custom:TMPC1206HP" H 1650 3450 50  0001 C CNN
+F 3 "TMPC1206HP-220MG-D" H 1650 3450 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Power-Inductors_TAI-TECH-TMPC1206HP-220MG-D_C357261.html" H 1650 3450 50  0001 C CNN "Link"
+	1    1650 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:L_Small L5
+U 1 1 604B7224
+P 1650 3650
+F 0 "L5" V 1743 3650 50  0000 C CNN
+F 1 "22u" V 1834 3650 50  0000 C CNN
+F 2 "custom:TMPC1206HP" H 1650 3650 50  0001 C CNN
+F 3 "TMPC1206HP-220MG-D" H 1650 3650 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Power-Inductors_TAI-TECH-TMPC1206HP-220MG-D_C357261.html" H 1650 3650 50  0001 C CNN "Link"
+	1    1650 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C25
+U 1 1 604C6D8F
+P 1900 3550
+F 0 "C25" H 1992 3596 50  0000 L CNN
+F 1 "100n" H 1992 3505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 1900 3550 50  0001 C CNN
+F 3 "NM1206B104K451CEGN" H 1900 3550 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_HUI-JU-NM1206B104K451CEGN_C710468.html" H 1900 3550 50  0001 C CNN "Link"
+F 5 "450" H 1900 3550 50  0001 C CNN "Working voltage"
+	1    1900 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 3650 1900 3650
+Wire Wire Line
+	1550 3650 1400 3650
+Wire Wire Line
+	1400 3450 1550 3450
+Wire Wire Line
+	1750 3450 1900 3450
+$Comp
+L Device:C_Small C24
+U 1 1 60504748
+P 1400 3550
+F 0 "C24" H 1492 3596 50  0000 L CNN
+F 1 "100n" H 1492 3505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 1400 3550 50  0001 C CNN
+F 3 "NM1206B104K451CEGN" H 1400 3550 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_HUI-JU-NM1206B104K451CEGN_C710468.html" H 1400 3550 50  0001 C CNN "Link"
+F 5 "450" H 1400 3550 50  0001 C CNN "Working voltage"
+	1    1400 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C26
+U 1 1 60537560
+P 2350 3550
+F 0 "C26" H 2442 3596 50  0000 L CNN
+F 1 "100n" H 2442 3505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 2350 3550 50  0001 C CNN
+F 3 "NM1206B104K451CEGN" H 2350 3550 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_HUI-JU-NM1206B104K451CEGN_C710468.html" H 2350 3550 50  0001 C CNN "Link"
+F 5 "450" H 2350 3550 50  0001 C CNN "Working voltage"
+	1    2350 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C23
+U 1 1 6053FE58
+P 950 3550
+F 0 "C23" H 1042 3596 50  0000 L CNN
+F 1 "100n" H 1042 3505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 950 3550 50  0001 C CNN
+F 3 "NM1206B104K451CEGN" H 950 3550 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_HUI-JU-NM1206B104K451CEGN_C710468.html" H 950 3550 50  0001 C CNN "Link"
+F 5 "450" H 950 3550 50  0001 C CNN "Working voltage"
+	1    950  3550
+	1    0    0    -1  
+$EndComp
+Connection ~ 1900 3650
+Wire Wire Line
+	2350 3450 1900 3450
+Connection ~ 1900 3450
+Wire Wire Line
+	950  3450 1400 3450
+Connection ~ 1400 3450
+Wire Wire Line
+	950  3650 1400 3650
+Connection ~ 1400 3650
+Wire Wire Line
+	850  3500 850  3450
+Wire Wire Line
+	850  3450 950  3450
+Connection ~ 950  3450
+Wire Wire Line
+	850  3600 850  3650
+Wire Wire Line
+	850  3650 950  3650
+Connection ~ 950  3650
+Wire Wire Line
+	2750 3600 2750 3650
+Wire Wire Line
+	1900 3650 2350 3650
+Connection ~ 2350 3650
+Wire Wire Line
+	2350 3650 2750 3650
+Wire Wire Line
+	2350 3450 2750 3450
+Wire Wire Line
+	2750 3450 2750 3500
+Connection ~ 2350 3450
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 6060490C
+P 2600 3800
+F 0 "J4" H 2680 3792 50  0000 L CNN
+F 1 "AC-input" H 2680 3701 50  0000 L CNN
+F 2 "custom:spacedConnector" H 2600 3800 50  0001 C CNN
+F 3 "NA" H 2600 3800 50  0001 C CNN
+F 4 "0" H 2600 3800 50  0001 C CNN "price"
+F 5 "NA" H 2600 3800 50  0001 C CNN "Checked"
+F 6 "NA" H 2600 3800 50  0001 C CNN "Link"
+	1    2600 3800
+	-1   0    0    -1  
+$EndComp
+Text GLabel 2800 3800 2    50   Input ~ 0
+v120p
+Text GLabel 2800 3900 2    50   Input ~ 0
+v120n
 $EndSCHEMATC
