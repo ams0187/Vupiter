@@ -150,21 +150,6 @@ Connection ~ 3350 5700
 Wire Wire Line
 	3700 5350 3700 5700
 $Comp
-L Device:R_US Route1
-U 1 1 6037526C
-P 3850 5350
-F 0 "Route1" V 4055 5350 50  0000 C CNN
-F 1 "51" V 3964 5350 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3890 5340 50  0001 C CNN
-F 3 "CF1/4W-51Ω±5%T52" H 3850 5350 50  0001 C CNN
-F 4 "0.005" H 3850 5350 50  0001 C CNN "price"
-F 5 "" H 3850 5350 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-4W-51%CE%A9-5-T52_C714278.html" H 3850 5350 50  0001 C CNN "Link"
-F 7 "250" H 3850 5350 50  0001 C CNN "Working voltage"
-	1    3850 5350
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Device:D D3
 U 1 1 60377390
 P 3850 5700
@@ -179,21 +164,21 @@ F 6 "https://lcsc.com/product-detail/Diodes-General-Purpose_Shandong-Jingdao-Mic
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_US Rout3
+L Device:R_US R11
 U 1 1 60379771
-P 4200 5700
-F 0 "Rout3" V 4405 5700 50  0000 C CNN
-F 1 "10" V 4314 5700 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4240 5690 50  0001 C CNN
-F 3 "WR06X100JTL" H 4200 5700 50  0001 C CNN
-F 4 "0.0012" H 4200 5700 50  0001 C CNN "price"
-F 5 "" H 4200 5700 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_Walsin-Tech-Corp-WR06X100JTL_C384297.html" H 4200 5700 50  0001 C CNN "Link"
-F 7 "75" H 4200 5700 50  0001 C CNN "Working voltage"
-	1    4200 5700
+P 4500 5700
+F 0 "R11" V 4705 5700 50  0000 C CNN
+F 1 "13" V 4614 5700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4540 5690 50  0001 C CNN
+F 3 "ARG03FTC0130" H 4500 5700 50  0001 C CNN
+F 4 "0.0119" H 4500 5700 50  0001 C CNN "price"
+F 5 "" H 4500 5700 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_Viking-Tech-ARG03FTC0130_C217732.html" H 4500 5700 50  0001 C CNN "Link"
+F 7 "75" H 4500 5700 50  0001 C CNN "Working voltage"
+	1    4500 5700
 	0    -1   -1   0   
 $EndComp
-Text GLabel 4350 5700 2    50   Input ~ 0
+Text GLabel 4650 5700 2    50   Input ~ 0
 out
 Wire Wire Line
 	1800 5500 1950 5500
@@ -323,12 +308,10 @@ Connection ~ 1300 5200
 Wire Wire Line
 	1300 5200 1300 5500
 Wire Wire Line
-	4000 5350 4050 5350
+	4300 5350 4350 5350
 Wire Wire Line
-	4050 5700 4000 5700
-Wire Wire Line
-	4050 5700 4050 5350
-Connection ~ 4050 5700
+	4350 5700 4350 5350
+Connection ~ 4350 5700
 $Comp
 L Device:R_US Rout1
 U 1 1 605968C4
@@ -361,7 +344,6 @@ F 7 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_
 $EndComp
 Wire Wire Line
 	3350 4950 3350 5150
-Connection ~ 3700 5350
 Connection ~ 3700 5700
 Wire Wire Line
 	2700 5200 2700 5400
@@ -1428,4 +1410,37 @@ F 7 "50" H 5800 7000 50  0001 C CNN "Working voltage"
 	1    5800 7000
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R_US R9
+U 1 1 604B894B
+P 3850 5350
+F 0 "R9" V 4055 5350 50  0000 C CNN
+F 1 "13" V 3964 5350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3890 5340 50  0001 C CNN
+F 3 "ARG03FTC0130" H 3850 5350 50  0001 C CNN
+F 4 "0.0119" H 3850 5350 50  0001 C CNN "price"
+F 5 "" H 3850 5350 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_Viking-Tech-ARG03FTC0130_C217732.html" H 3850 5350 50  0001 C CNN "Link"
+F 7 "75" H 3850 5350 50  0001 C CNN "Working voltage"
+	1    3850 5350
+	0    -1   -1   0   
+$EndComp
+Connection ~ 3700 5350
+$Comp
+L Device:R_US R10
+U 1 1 604DB3E6
+P 4150 5350
+F 0 "R10" V 4355 5350 50  0000 C CNN
+F 1 "13" V 4264 5350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4190 5340 50  0001 C CNN
+F 3 "ARG03FTC0130" H 4150 5350 50  0001 C CNN
+F 4 "0.0119" H 4150 5350 50  0001 C CNN "price"
+F 5 "" H 4150 5350 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_Viking-Tech-ARG03FTC0130_C217732.html" H 4150 5350 50  0001 C CNN "Link"
+F 7 "75" H 4150 5350 50  0001 C CNN "Working voltage"
+	1    4150 5350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4000 5700 4350 5700
 $EndSCHEMATC

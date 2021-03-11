@@ -1599,17 +1599,17 @@ F 3 "~" H 3600 1350 50  0001 C CNN
 	1    3600 1350
 	1    0    0    1   
 $EndComp
-Text GLabel 3400 1250 0    50   Input ~ 0
+Text GLabel 3500 1050 2    50   Input ~ 0
 dgp
 Wire Wire Line
 	3400 1350 3400 1550
 Text GLabel 3400 1550 0    50   Input ~ 0
 vin
-Text GLabel 3400 1150 0    50   Input ~ 0
+Text GLabel 3500 950  2    50   Input ~ 0
 pgp
-Text GLabel 3400 1050 0    50   Input ~ 0
+Text GLabel 3300 1050 0    50   Input ~ 0
 sgp
-Text GLabel 3400 950  0    50   Input ~ 0
+Text GLabel 3300 950  0    50   Input ~ 0
 agp
 $Comp
 L Mechanical:Heatsink HS1
@@ -2044,4 +2044,15 @@ Wire Wire Line
 Wire Wire Line
 	6100 2150 5900 2150
 Connection ~ 6100 2150
+Wire Wire Line
+	3400 1250 3400 1050
+Wire Wire Line
+	3500 1050 3500 950 
+Wire Wire Line
+	3300 950  3300 1050
+Connection ~ 3400 1050
+Wire Wire Line
+	3400 1050 3500 1050
+Wire Wire Line
+	3300 1050 3400 1050
 $EndSCHEMATC

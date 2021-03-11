@@ -13,826 +13,502 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 1150 3950 2    50   Input ~ 0
+Text GLabel 1250 4250 2    50   Input ~ 0
 v120p
-Text GLabel 1150 4050 2    50   Input ~ 0
+Text GLabel 1250 4350 2    50   Input ~ 0
 v120n
 $Comp
 L Device:D_Bridge_+AA- D1
 U 1 1 6028BF8D
-P 2100 4100
-F 0 "D1" H 2444 4146 50  0000 L CNN
-F 1 "hp" H 2444 4055 50  0000 L CNN
-F 2 "custom:gbj6" H 2100 4100 50  0001 C CNN
-F 3 "GBJ2510" H 2100 4100 50  0001 C CNN
-F 4 "0.5086" H 2100 4100 50  0001 C CNN "price"
-F 5 "" H 2100 4100 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Bridge-Rectifiers_Yangzhou-Yangjie-Elec-Tech-GBJ2510_C698440.html" H 2100 4100 50  0001 C CNN "Link"
-	1    2100 4100
+P 2200 4400
+F 0 "D1" H 2544 4446 50  0000 L CNN
+F 1 "hp" H 2544 4355 50  0000 L CNN
+F 2 "custom:gbj6" H 2200 4400 50  0001 C CNN
+F 3 "GBJ2510" H 2200 4400 50  0001 C CNN
+F 4 "0.5086" H 2200 4400 50  0001 C CNN "price"
+F 5 "" H 2200 4400 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Bridge-Rectifiers_Yangzhou-Yangjie-Elec-Tech-GBJ2510_C698440.html" H 2200 4400 50  0001 C CNN "Link"
+	1    2200 4400
 	1    0    0    -1  
 $EndComp
-Text GLabel 2100 4500 0    50   Input ~ 0
+Text GLabel 2200 4800 0    50   Input ~ 0
 v120p
-Text GLabel 2100 3700 0    50   Input ~ 0
+Text GLabel 2200 4000 0    50   Input ~ 0
 v120n
-$Comp
-L Device:R_US Rovpl1
-U 1 1 60290D5B
-P 7250 6250
-F 0 "Rovpl1" H 7318 6296 50  0000 L CNN
-F 1 "13k" H 7318 6205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7290 6240 50  0001 C CNN
-F 3 "RS-03K133JT" H 7250 6250 50  0001 C CNN
-F 4 "0.0011" H 7250 6250 50  0001 C CNN "price"
-F 5 "" H 7250 6250 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FH-Guangdong-Fenghua-Advanced-Tech-RS-03K133JT_C294648.html" H 7250 6250 50  0001 C CNN "Link"
-F 7 "50" H 7250 6250 50  0001 C CNN "Working voltage"
-	1    7250 6250
-	1    0    0    -1  
-$EndComp
-Text GLabel 7250 6400 3    50   Input ~ 0
-gnd
-Text GLabel 7250 6050 2    50   Input ~ 0
-ovp
-Text GLabel 1850 5200 2    50   Input ~ 0
+Text GLabel 1950 5500 2    50   Input ~ 0
 is
 Wire Wire Line
-	1700 4100 1800 4100
+	1800 4400 1900 4400
 $Comp
 L Device:C_Small Cisf1
 U 1 1 60299ECD
-P 1700 5450
-F 0 "Cisf1" H 1792 5496 50  0000 L CNN
-F 1 "1000p" H 1792 5405 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1700 5450 50  0001 C CNN
-F 3 "TCC0603X7R102K500CT" H 1700 5450 50  0001 C CNN
-F 4 "0.0031" H 1700 5450 50  0001 C CNN "price"
-F 5 "" H 1700 5450 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R102K500CT_C282515.html" H 1700 5450 50  0001 C CNN "Link"
-F 7 "50" H 1700 5450 50  0001 C CNN "Working voltage"
-	1    1700 5450
+P 1800 5750
+F 0 "Cisf1" H 1892 5796 50  0000 L CNN
+F 1 "1000p" H 1892 5705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1800 5750 50  0001 C CNN
+F 3 "TCC0603X7R102K500CT" H 1800 5750 50  0001 C CNN
+F 4 "0.0031" H 1800 5750 50  0001 C CNN "price"
+F 5 "" H 1800 5750 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R102K500CT_C282515.html" H 1800 5750 50  0001 C CNN "Link"
+F 7 "50" H 1800 5750 50  0001 C CNN "Working voltage"
+	1    1800 5750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1700 5350 1700 5200
-Text GLabel 1700 5550 3    50   Input ~ 0
+	1800 5650 1800 5500
+Text GLabel 1800 5850 3    50   Input ~ 0
 gnd
-$Comp
-L Device:C_Small C12
-U 1 1 6029D027
-P 7000 6050
-F 0 "C12" V 6771 6050 50  0000 C CNN
-F 1 "1000p" V 6862 6050 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7000 6050 50  0001 C CNN
-F 3 "TCC0603X7R102K500CT" H 7000 6050 50  0001 C CNN
-F 4 "0.0031" H 7000 6050 50  0001 C CNN "price"
-F 5 "" H 7000 6050 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R102K500CT_C282515.html" H 7000 6050 50  0001 C CNN "Link"
-F 7 "50" H 7000 6050 50  0001 C CNN "Working voltage"
-	1    7000 6050
-	0    1    1    0   
-$EndComp
 $Comp
 L Device:L L1
 U 1 1 6029D978
-P 2800 4100
-F 0 "L1" V 2619 4100 50  0000 C CNN
-F 1 "9u" V 2710 4100 50  0000 C CNN
-F 2 "custom:CPVPQ20161S14PZ" H 2800 4100 50  0001 C CNN
-F 3 "CPV-PQ20/16-1S-14P-Z" H 2800 4100 50  0001 C CNN
-F 4 "2.14" H 2800 4100 50  0001 C CNN "price"
-F 5 "" H 2800 4100 50  0001 C CNN "Checked"
-F 6 "https://www.digikey.com/en/products/detail/ferroxcube/CPV-PQ20-16-1S-14P-Z/7034226?s=N4IgTCBcDaIMIAUBqBaBBFMAGA9ARgDYU8BlYgFgRQC0QBdAXyA" H 2800 4100 50  0001 C CNN "Link"
-	1    2800 4100
+P 2900 4400
+F 0 "L1" V 2719 4400 50  0000 C CNN
+F 1 "9u" V 2810 4400 50  0000 C CNN
+F 2 "custom:CPVPQ20161S14PZ" H 2900 4400 50  0001 C CNN
+F 3 "CPV-PQ20/16-1S-14P-Z" H 2900 4400 50  0001 C CNN
+F 4 "2.14" H 2900 4400 50  0001 C CNN "price"
+F 5 "" H 2900 4400 50  0001 C CNN "Checked"
+F 6 "https://www.digikey.com/en/products/detail/ferroxcube/CPV-PQ20-16-1S-14P-Z/7034226?s=N4IgTCBcDaIMIAUBqBaBBFMAGA9ARgDYU8BlYgFgRQC0QBdAXyA" H 2900 4400 50  0001 C CNN "Link"
+	1    2900 4400
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:D D2
 U 1 1 602A07FF
-P 3550 4100
-F 0 "D2" H 3550 3883 50  0000 C CNN
-F 1 "BYC15-600PQ" H 3550 3974 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-2_Horizontal_TabDown" H 3550 4100 50  0001 C CNN
-F 3 "BYC15-600PQ" H 3550 4100 50  0001 C CNN
-F 4 "0.7159" H 3550 4100 50  0001 C CNN "price"
-F 5 "" H 3550 4100 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Diodes-General-Purpose_WeEn-Semiconductors-BYC15-600PQ_C340199.html" H 3550 4100 50  0001 C CNN "Link"
-	1    3550 4100
+P 3650 4400
+F 0 "D2" H 3650 4183 50  0000 C CNN
+F 1 "BYC15-600PQ" H 3650 4274 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-2_Horizontal_TabDown" H 3650 4400 50  0001 C CNN
+F 3 "BYC15-600PQ" H 3650 4400 50  0001 C CNN
+F 4 "0.7159" H 3650 4400 50  0001 C CNN "price"
+F 5 "" H 3650 4400 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Diodes-General-Purpose_WeEn-Semiconductors-BYC15-600PQ_C340199.html" H 3650 4400 50  0001 C CNN "Link"
+	1    3650 4400
 	-1   0    0    1   
 $EndComp
-Text GLabel 5650 4000 2    50   Input ~ 0
+Text GLabel 5750 4300 2    50   Input ~ 0
 vpfc
 $Comp
 L Device:CP1_Small C5
 U 1 1 602AD9E2
-P 3800 4200
-F 0 "C5" H 3891 4246 50  0000 L CNN
-F 1 "47u" H 3891 4155 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 3800 4200 50  0001 C CNN
-F 3 "EGD2WM470L25OT" H 3800 4200 50  0001 C CNN
-F 4 "0.4815" H 3800 4200 50  0001 C CNN "price"
-F 5 "" H 3800 4200 50  0001 C CNN "Checked"
-F 6 "450" H 3800 4200 50  0001 C CNN "Working voltage"
-F 7 "https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_AISHI-Aihua-Group-EGD2WM470L25OT_C106332.html" H 3800 4200 50  0001 C CNN "Link"
-	1    3800 4200
+P 3900 4500
+F 0 "C5" H 3991 4546 50  0000 L CNN
+F 1 "47u" H 3991 4455 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 3900 4500 50  0001 C CNN
+F 3 "EGD2WM470L25OT" H 3900 4500 50  0001 C CNN
+F 4 "0.4815" H 3900 4500 50  0001 C CNN "price"
+F 5 "" H 3900 4500 50  0001 C CNN "Checked"
+F 6 "450" H 3900 4500 50  0001 C CNN "Working voltage"
+F 7 "https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_AISHI-Aihua-Group-EGD2WM470L25OT_C106332.html" H 3900 4500 50  0001 C CNN "Link"
+	1    3900 4500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C2
 U 1 1 602B0936
-P 2600 4500
-F 0 "C2" H 2692 4546 50  0000 L CNN
-F 1 "470n" H 2692 4455 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1812_4532Metric" H 2600 4500 50  0001 C CNN
-F 3 "FM43X474K501EGG" H 2600 4500 50  0001 C CNN
-F 4 "0.2238" H 2600 4500 50  0001 C CNN "price"
-F 5 "" H 2600 4500 50  0001 C CNN "Checked"
-F 6 "500" H 2600 4500 50  0001 C CNN "Working voltage"
-F 7 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_PSA-Prosperity-Dielectrics-FM43X474K501EGG_C692318.html" H 2600 4500 50  0001 C CNN "Link"
-	1    2600 4500
+P 2700 4800
+F 0 "C2" H 2792 4846 50  0000 L CNN
+F 1 "470n" H 2792 4755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1812_4532Metric" H 2700 4800 50  0001 C CNN
+F 3 "FM43X474K501EGG" H 2700 4800 50  0001 C CNN
+F 4 "0.2238" H 2700 4800 50  0001 C CNN "price"
+F 5 "" H 2700 4800 50  0001 C CNN "Checked"
+F 6 "500" H 2700 4800 50  0001 C CNN "Working voltage"
+F 7 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_PSA-Prosperity-Dielectrics-FM43X474K501EGG_C692318.html" H 2700 4800 50  0001 C CNN "Link"
+	1    2700 4800
 	1    0    0    -1  
 $EndComp
-Connection ~ 1700 4600
-$Comp
-L custom:bd7692fj U2
-U 1 1 602CFB88
-P 9850 5600
-F 0 "U2" H 9850 5975 50  0000 C CNN
-F 1 "bd7692fj" H 9850 5884 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 9850 5850 50  0001 C CNN
-F 3 "bd7692fj" H 9850 5850 50  0001 C CNN
-F 4 "0.88" H 9850 5600 50  0001 C CNN "price"
-F 5 "" H 9850 5600 50  0001 C CNN "Checked"
-F 6 "https://www.digikey.com/en/products/detail/BD7692FJ-E2/846-BD7692FJ-E2CT-ND/10448181?itemSeq=354539420" H 9850 5600 50  0001 C CNN "Link"
-	1    9850 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US Rt1
-U 1 1 602D6381
-P 9250 5800
-F 0 "Rt1" H 9318 5754 50  0000 L CNN
-F 1 "39k" H 9318 5845 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 9290 5790 50  0001 C CNN
-F 3 "TC0350D3902T5H" H 9250 5800 50  0001 C CNN
-F 4 "0.0071" H 9250 5800 50  0001 C CNN "price"
-F 5 "" H 9250 5800 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_UNI-ROYAL-Uniroyal-Elec-TC0350D3902T5H_C517681.html" H 9250 5800 50  0001 C CNN "Link"
-F 7 "75" H 9250 5800 50  0001 C CNN "Working voltage"
-	1    9250 5800
-	-1   0    0    1   
-$EndComp
-Text GLabel 9250 5950 3    50   Input ~ 0
+Connection ~ 1800 4900
+Wire Wire Line
+	1450 6450 1450 6750
+Text GLabel 1450 6750 3    50   Input ~ 0
 gnd
-$Comp
-L Device:CP1_Small C4
-U 1 1 602DCC07
-P 10550 5500
-F 0 "C4" H 10641 5546 50  0000 L CNN
-F 1 "22u" H 10641 5455 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 10550 5500 50  0001 C CNN
-F 3 "22uF 35V 5*7" H 10550 5500 50  0001 C CNN
-F 4 "0.0098" H 10550 5500 50  0001 C CNN "price"
-F 5 "35" H 10550 5500 50  0001 C CNN "Working voltage"
-F 6 "" H 10550 5500 50  0001 C CNN "Checked"
-F 7 "https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_CX-Dongguan-Chengxing-Elec-22uF-35V-5-7_C45073.html" H 10550 5500 50  0001 C CNN "Link"
-	1    10550 5500
-	1    0    0    -1  
-$EndComp
-Text GLabel 10550 5700 2    50   Input ~ 0
-gnd
-Wire Wire Line
-	10550 5600 10550 5650
-Wire Wire Line
-	10200 5650 10550 5650
-Connection ~ 10550 5650
-Wire Wire Line
-	10550 5650 10550 5700
-Wire Wire Line
-	10550 5400 10200 5400
-Wire Wire Line
-	10200 5400 10200 5450
-Text GLabel 10200 5750 2    50   Input ~ 0
-is
-Text GLabel 9500 5750 0    50   Input ~ 0
-ovp
-Text GLabel 9500 5450 0    50   Input ~ 0
-vs
-$Comp
-L Device:C_Small Ceo2
-U 1 1 60306B46
-P 8550 5550
-F 0 "Ceo2" V 8321 5550 50  0000 C CNN
-F 1 "0u1" V 8412 5550 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8550 5550 50  0001 C CNN
-F 3 "0603F104M500NT" H 8550 5550 50  0001 C CNN
-F 4 "0.0032" H 8550 5550 50  0001 C CNN "price"
-F 5 "" H 8550 5550 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_FH-Guangdong-Fenghua-Advanced-Tech-0603F104M500NT_C42998.html" H 8550 5550 50  0001 C CNN "Link"
-F 7 "50" H 8550 5550 50  0001 C CNN "Working voltage"
-	1    8550 5550
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C_Small Ceo1
-U 1 1 60307E5F
-P 8750 5850
-F 0 "Ceo1" V 8521 5850 50  0000 C CNN
-F 1 "0u47" V 8612 5850 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8750 5850 50  0001 C CNN
-F 3 "CL10B474KA8NNNC" H 8750 5850 50  0001 C CNN
-F 4 "0.0112" H 8750 5850 50  0001 C CNN "price"
-F 5 "" H 8750 5850 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/search?q=CL10B474KA8NNNC" H 8750 5850 50  0001 C CNN "Link"
-F 7 "25" H 8750 5850 50  0001 C CNN "Working voltage"
-	1    8750 5850
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_US Reo1
-U 1 1 6030AF3F
-P 8900 5550
-F 0 "Reo1" V 8695 5550 50  0000 C CNN
-F 1 "39k" V 8786 5550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 8940 5540 50  0001 C CNN
-F 3 "TC0350D3902T5H" H 8900 5550 50  0001 C CNN
-F 4 "0.0071" H 8900 5550 50  0001 C CNN "price"
-F 5 "" H 8900 5550 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_UNI-ROYAL-Uniroyal-Elec-TC0350D3902T5H_C517681.html" H 8900 5550 50  0001 C CNN "Link"
-F 7 "75" H 8900 5550 50  0001 C CNN "Working voltage"
-	1    8900 5550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8650 5550 8750 5550
-Wire Wire Line
-	8450 5550 8450 5850
-Wire Wire Line
-	8450 5850 8650 5850
-Wire Wire Line
-	8850 5850 9050 5850
-Wire Wire Line
-	9050 5850 9050 5550
-Wire Wire Line
-	9250 5650 9500 5650
-Wire Wire Line
-	9050 5550 9500 5550
-Connection ~ 9050 5550
-Text GLabel 8450 5850 3    50   Input ~ 0
-gnd
-Text GLabel 3250 5550 3    50   Input ~ 0
+Text GLabel 3350 5850 3    50   Input ~ 0
 gnd
 $Comp
 L Device:R_US Rgs1
 U 1 1 60355565
-P 3450 5400
-F 0 "Rgs1" V 3337 5400 50  0000 C CNN
-F 1 "13k" V 3246 5400 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3490 5390 50  0001 C CNN
-F 3 "RS-03K133JT" H 3450 5400 50  0001 C CNN
-F 4 "0.0011" H 3450 5400 50  0001 C CNN "price"
-F 5 "" H 3450 5400 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FH-Guangdong-Fenghua-Advanced-Tech-RS-03K133JT_C294648.html" H 3450 5400 50  0001 C CNN "Link"
-F 7 "50" H 3450 5400 50  0001 C CNN "Working voltage"
-	1    3450 5400
+P 3550 5700
+F 0 "Rgs1" V 3437 5700 50  0000 C CNN
+F 1 "13k" V 3346 5700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3590 5690 50  0001 C CNN
+F 3 "RS-03K133JT" H 3550 5700 50  0001 C CNN
+F 4 "0.0011" H 3550 5700 50  0001 C CNN "price"
+F 5 "" H 3550 5700 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FH-Guangdong-Fenghua-Advanced-Tech-RS-03K133JT_C294648.html" H 3550 5700 50  0001 C CNN "Link"
+F 7 "50" H 3550 5700 50  0001 C CNN "Working voltage"
+	1    3550 5700
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3550 5050 3600 5050
+	3650 5350 3700 5350
 Wire Wire Line
-	3300 5400 3250 5400
+	3400 5700 3350 5700
 Wire Wire Line
-	3250 5250 3250 5400
-Connection ~ 3250 5400
+	3350 5550 3350 5700
+Connection ~ 3350 5700
 Wire Wire Line
-	3600 5050 3600 5400
-$Comp
-L Device:R_US Route1
-U 1 1 6037526C
-P 3750 5050
-F 0 "Route1" V 3955 5050 50  0000 C CNN
-F 1 "51" V 3864 5050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3790 5040 50  0001 C CNN
-F 3 "CF1/4W-51Ω±5%T52" H 3750 5050 50  0001 C CNN
-F 4 "0.005" H 3750 5050 50  0001 C CNN "price"
-F 5 "" H 3750 5050 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-4W-51%CE%A9-5-T52_C714278.html" H 3750 5050 50  0001 C CNN "Link"
-F 7 "250" H 3750 5050 50  0001 C CNN "Working voltage"
-	1    3750 5050
-	0    -1   -1   0   
-$EndComp
+	3700 5350 3700 5700
 $Comp
 L Device:D D3
 U 1 1 60377390
-P 3750 5400
-F 0 "D3" H 3750 5525 50  0000 C CNN
-F 1 "1N4007W" H 3750 5616 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123F" H 3750 5400 50  0001 C CNN
-F 3 "1N4007W" H 3750 5400 50  0001 C CNN
-F 4 "0.0067" H 3750 5400 50  0001 C CNN "price"
-F 5 "" H 3750 5400 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Diodes-General-Purpose_Shandong-Jingdao-Microelectronics-1N4007W_C108803.html" H 3750 5400 50  0001 C CNN "Link"
-	1    3750 5400
+P 3850 5700
+F 0 "D3" H 3850 5825 50  0000 C CNN
+F 1 "1N4007W" H 3850 5916 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" H 3850 5700 50  0001 C CNN
+F 3 "1N4007W" H 3850 5700 50  0001 C CNN
+F 4 "0.0067" H 3850 5700 50  0001 C CNN "price"
+F 5 "" H 3850 5700 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Diodes-General-Purpose_Shandong-Jingdao-Microelectronics-1N4007W_C108803.html" H 3850 5700 50  0001 C CNN "Link"
+	1    3850 5700
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R_US Rout3
 U 1 1 60379771
-P 4100 5400
-F 0 "Rout3" V 4305 5400 50  0000 C CNN
-F 1 "10" V 4214 5400 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4140 5390 50  0001 C CNN
-F 3 "WR06X100JTL" H 4100 5400 50  0001 C CNN
-F 4 "0.0012" H 4100 5400 50  0001 C CNN "price"
-F 5 "" H 4100 5400 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_Walsin-Tech-Corp-WR06X100JTL_C384297.html" H 4100 5400 50  0001 C CNN "Link"
-F 7 "75" H 4100 5400 50  0001 C CNN "Working voltage"
-	1    4100 5400
+P 4500 5700
+F 0 "Rout3" V 4705 5700 50  0000 C CNN
+F 1 "13" V 4614 5700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4540 5690 50  0001 C CNN
+F 3 "ARG03FTC0130" H 4500 5700 50  0001 C CNN
+F 4 "0.0119" H 4500 5700 50  0001 C CNN "price"
+F 5 "" H 4500 5700 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_Viking-Tech-ARG03FTC0130_C217732.html" H 4500 5700 50  0001 C CNN "Link"
+F 7 "75" H 4500 5700 50  0001 C CNN "Working voltage"
+	1    4500 5700
 	0    -1   -1   0   
 $EndComp
-Text GLabel 4250 5400 2    50   Input ~ 0
-out
-Text GLabel 10200 5550 2    50   Input ~ 0
+Text GLabel 4650 5700 2    50   Input ~ 0
 out
 Wire Wire Line
-	1700 5200 1850 5200
+	1800 5500 1950 5500
 $Comp
 L Device:Q_NMOS_GDS Q1
 U 1 1 603B34B2
-P 3350 5050
-F 0 "Q1" H 3555 5096 50  0000 L CNN
-F 1 "AOT190A60CL‎" H 3555 5005 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 3550 5150 50  0001 C CNN
-F 3 "AOT190A60CL" H 3350 5050 50  0001 C CNN
-F 4 "2.17" H 3350 5050 50  0001 C CNN "price"
-F 5 "" H 3350 5050 50  0001 C CNN "Checked"
-F 6 "https://www.digikey.com/en/products/detail/alpha-omega-semiconductor-inc/AOT190A60CL/12180274?s=N4IgTCBcDaIOwA4CsBaAggeQCoEYCcADGgGwEDCAMigHIAiIAugL5A" H 3350 5050 50  0001 C CNN "Link"
-	1    3350 5050
+P 3450 5350
+F 0 "Q1" H 3655 5396 50  0000 L CNN
+F 1 "AOT190A60CL‎" H 3655 5305 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 3650 5450 50  0001 C CNN
+F 3 "AOT190A60CL" H 3450 5350 50  0001 C CNN
+F 4 "2.17" H 3450 5350 50  0001 C CNN "price"
+F 5 "" H 3450 5350 50  0001 C CNN "Checked"
+F 6 "https://www.digikey.com/en/products/detail/alpha-omega-semiconductor-inc/AOT190A60CL/12180274?s=N4IgTCBcDaIOwA4CsBaAggeQCoEYCcADGgGwEDCAMigHIAiIAugL5A" H 3450 5350 50  0001 C CNN "Link"
+	1    3450 5350
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C1
 U 1 1 603BACE8
-P 2250 4500
-F 0 "C1" H 2342 4546 50  0000 L CNN
-F 1 "470n" H 2342 4455 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1812_4532Metric" H 2250 4500 50  0001 C CNN
-F 3 "FM43X474K501EGG" H 2250 4500 50  0001 C CNN
-F 4 "0.2238" H 2250 4500 50  0001 C CNN "price"
-F 5 "" H 2250 4500 50  0001 C CNN "Checked"
-F 6 "500" H 2250 4500 50  0001 C CNN "Working voltage"
-F 7 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_PSA-Prosperity-Dielectrics-FM43X474K501EGG_C692318.html" H 2250 4500 50  0001 C CNN "Link"
-	1    2250 4500
+P 2350 4800
+F 0 "C1" H 2442 4846 50  0000 L CNN
+F 1 "470n" H 2442 4755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1812_4532Metric" H 2350 4800 50  0001 C CNN
+F 3 "FM43X474K501EGG" H 2350 4800 50  0001 C CNN
+F 4 "0.2238" H 2350 4800 50  0001 C CNN "price"
+F 5 "" H 2350 4800 50  0001 C CNN "Checked"
+F 6 "500" H 2350 4800 50  0001 C CNN "Working voltage"
+F 7 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_PSA-Prosperity-Dielectrics-FM43X474K501EGG_C692318.html" H 2350 4800 50  0001 C CNN "Link"
+	1    2350 4800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2250 4600 1700 4600
+	2350 4900 1800 4900
 Wire Wire Line
-	2250 4400 2400 4400
+	2350 4700 2500 4700
 Wire Wire Line
-	2400 4100 2400 4400
+	2500 4400 2500 4700
 Wire Wire Line
-	2400 4400 2600 4400
-Connection ~ 2400 4400
+	2500 4700 2700 4700
+Connection ~ 2500 4700
 Wire Wire Line
-	3800 4100 3950 4100
+	3900 4400 4050 4400
 Wire Wire Line
-	3800 4100 3700 4100
-Connection ~ 3800 4100
-Text GLabel 5650 4400 2    50   Input ~ 0
+	3900 4400 3800 4400
+Connection ~ 3900 4400
+Text GLabel 5750 4700 2    50   Input ~ 0
 gnd
 $Comp
 L Device:C_Small C11
 U 1 1 6040D8C3
-P 5000 4200
-F 0 "C11" H 5092 4246 50  0000 L CNN
-F 1 "470n" H 5092 4155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1812_4532Metric" H 5000 4200 50  0001 C CNN
-F 3 "FM43X474K501EGG" H 5000 4200 50  0001 C CNN
-F 4 "0.2238" H 5000 4200 50  0001 C CNN "price"
-F 5 "" H 5000 4200 50  0001 C CNN "Checked"
-F 6 "500" H 5000 4200 50  0001 C CNN "Working voltage"
-F 7 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_PSA-Prosperity-Dielectrics-FM43X474K501EGG_C692318.html" H 5000 4200 50  0001 C CNN "Link"
-	1    5000 4200
+P 5100 4500
+F 0 "C11" H 5192 4546 50  0000 L CNN
+F 1 "470n" H 5192 4455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1812_4532Metric" H 5100 4500 50  0001 C CNN
+F 3 "FM43X474K501EGG" H 5100 4500 50  0001 C CNN
+F 4 "0.2238" H 5100 4500 50  0001 C CNN "price"
+F 5 "" H 5100 4500 50  0001 C CNN "Checked"
+F 6 "500" H 5100 4500 50  0001 C CNN "Working voltage"
+F 7 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_PSA-Prosperity-Dielectrics-FM43X474K501EGG_C692318.html" H 5100 4500 50  0001 C CNN "Link"
+	1    5100 4500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5000 4300 5250 4300
-Connection ~ 5000 4300
+	5100 4600 5350 4600
+Connection ~ 5100 4600
 Wire Wire Line
-	5250 4100 5000 4100
-Connection ~ 5000 4100
+	5350 4400 5100 4400
+Connection ~ 5100 4400
 Wire Wire Line
-	7250 6000 7250 6050
-Wire Wire Line
-	7100 6050 7250 6050
-Connection ~ 7250 6050
-Wire Wire Line
-	7250 6050 7250 6100
-$Comp
-L Device:R_US Rovph2
-U 1 1 60460D71
-P 7250 5850
-F 0 "Rovph2" H 7318 5896 50  0000 L CNN
-F 1 "1Meg" H 7318 5805 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 7290 5840 50  0001 C CNN
-F 3 "HR1206J1M00P05Z" H 7250 5850 50  0001 C CNN
-F 4 "0.0234" H 7250 5850 50  0001 C CNN "price"
-F 5 "" H 7250 5850 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/High-Voltage-Resistor_Ever-Ohms-Tech-HR1206J1M00P05Z_C175518.html" H 7250 5850 50  0001 C CNN "Link"
-F 7 "500" H 7250 5850 50  0001 C CNN "Working voltage"
-	1    7250 5850
-	1    0    0    -1  
-$EndComp
-Text GLabel 7250 5200 1    50   Input ~ 0
-vpfc
-Wire Wire Line
-	7250 5300 7250 5200
-$Comp
-L Device:R_US Rovph1
-U 1 1 60460D79
-P 7250 5450
-F 0 "Rovph1" H 7318 5496 50  0000 L CNN
-F 1 "1Meg" H 7318 5405 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 7290 5440 50  0001 C CNN
-F 3 "HR1206J1M00P05Z" H 7250 5450 50  0001 C CNN
-F 4 "0.0234" H 7250 5450 50  0001 C CNN "price"
-F 5 "" H 7250 5450 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/High-Voltage-Resistor_Ever-Ohms-Tech-HR1206J1M00P05Z_C175518.html" H 7250 5450 50  0001 C CNN "Link"
-F 7 "500" H 7250 5450 50  0001 C CNN "Working voltage"
-	1    7250 5450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7250 5600 7250 5700
-Wire Wire Line
-	6100 5600 6100 5700
-$Comp
-L Device:R_US Rvsh1
-U 1 1 60453577
-P 6100 5450
-F 0 "Rvsh1" H 6168 5496 50  0000 L CNN
-F 1 "1Meg" H 6168 5405 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 6140 5440 50  0001 C CNN
-F 3 "HR1206J1M00P05Z" H 6100 5450 50  0001 C CNN
-F 4 "0.0234" H 6100 5450 50  0001 C CNN "price"
-F 5 "" H 6100 5450 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/High-Voltage-Resistor_Ever-Ohms-Tech-HR1206J1M00P05Z_C175518.html" H 6100 5450 50  0001 C CNN "Link"
-F 7 "500" H 6100 5450 50  0001 C CNN "Working voltage"
-	1    6100 5450
-	1    0    0    -1  
-$EndComp
-Connection ~ 6100 6100
-Wire Wire Line
-	6100 6100 6400 6100
-Wire Wire Line
-	6400 6400 6100 6400
-$Comp
-L Device:R_US Rvsl2
-U 1 1 604271B0
-P 6400 6250
-F 0 "Rvsl2" H 6468 6296 50  0000 L CNN
-F 1 "390k" H 6468 6205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6440 6240 50  0001 C CNN
-F 3 "RS-03K394JT" H 6400 6250 50  0001 C CNN
-F 4 "0.0011" H 6400 6250 50  0001 C CNN "price"
-F 5 "" H 6400 6250 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FH-Guangdong-Fenghua-Advanced-Tech-RS-03K394JT_C304747.html" H 6400 6250 50  0001 C CNN "Link"
-F 7 "50" H 6400 6250 50  0001 C CNN "Working voltage"
-	1    6400 6250
-	1    0    0    -1  
-$EndComp
-Text GLabel 6100 6050 2    50   Input ~ 0
-vs
-Text GLabel 5700 6050 0    50   Input ~ 0
-gnd
-$Comp
-L Device:C_Small C8
-U 1 1 602BC46F
-P 5800 6050
-F 0 "C8" V 5571 6050 50  0000 C CNN
-F 1 "1000p" V 5662 6050 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5800 6050 50  0001 C CNN
-F 3 "TCC0603X7R102K500CT" H 5800 6050 50  0001 C CNN
-F 4 "0.0031" H 5800 6050 50  0001 C CNN "price"
-F 5 "" H 5800 6050 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R102K500CT_C282515.html" H 5800 6050 50  0001 C CNN "Link"
-F 7 "50" H 5800 6050 50  0001 C CNN "Working voltage"
-	1    5800 6050
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6100 6050 6100 6000
-Connection ~ 6100 6050
-Wire Wire Line
-	6100 6050 5900 6050
-Wire Wire Line
-	6100 5300 6100 5200
-Text GLabel 6100 5200 1    50   Input ~ 0
-vpfc
-Wire Wire Line
-	6100 6100 6100 6050
-Text GLabel 6100 6400 3    50   Input ~ 0
-gnd
-$Comp
-L Device:R_US Rvsl1
-U 1 1 602BC461
-P 6100 6250
-F 0 "Rvsl1" H 6168 6296 50  0000 L CNN
-F 1 "13k" H 6168 6205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6140 6240 50  0001 C CNN
-F 3 "RS-03K133JT" H 6100 6250 50  0001 C CNN
-F 4 "0.0011" H 6100 6250 50  0001 C CNN "price"
-F 5 "" H 6100 6250 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FH-Guangdong-Fenghua-Advanced-Tech-RS-03K133JT_C294648.html" H 6100 6250 50  0001 C CNN "Link"
-F 7 "50" H 6100 6250 50  0001 C CNN "Working voltage"
-	1    6100 6250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_US Rvsh2
-U 1 1 602BC45B
-P 6100 5850
-F 0 "Rvsh2" H 6168 5896 50  0000 L CNN
-F 1 "1Meg" H 6168 5805 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 6140 5840 50  0001 C CNN
-F 3 "HR1206J1M00P05Z" H 6100 5850 50  0001 C CNN
-F 4 "0.0234" H 6100 5850 50  0001 C CNN "price"
-F 5 "" H 6100 5850 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/High-Voltage-Resistor_Ever-Ohms-Tech-HR1206J1M00P05Z_C175518.html" H 6100 5850 50  0001 C CNN "Link"
-F 7 "500" H 6100 5850 50  0001 C CNN "Working voltage"
-	1    6100 5850
-	1    0    0    -1  
-$EndComp
-Text GLabel 6900 6050 0    50   Input ~ 0
-gnd
-Wire Wire Line
-	1700 4100 1700 4600
+	1800 4400 1800 4900
 $Comp
 L Device:R_US Ris3
 U 1 1 6029481B
-P 1050 5200
-F 0 "Ris3" V 845 5200 50  0000 C CNN
-F 1 "0.08" V 936 5200 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder" V 1090 5190 50  0001 C CNN
-F 3 "RLP25FEER080" H 1050 5200 50  0001 C CNN
-F 4 "0.0732" H 1050 5200 50  0001 C CNN "price"
-F 5 "" H 1050 5200 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_TA-I-Tech-RLP25FEER080_C393080.html" H 1050 5200 50  0001 C CNN "Link"
-	1    1050 5200
+P 1150 5500
+F 0 "Ris3" V 945 5500 50  0000 C CNN
+F 1 "0.08" V 1036 5500 50  0000 C CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder" V 1190 5490 50  0001 C CNN
+F 3 "RLP25FEER080" H 1150 5500 50  0001 C CNN
+F 4 "0.0732" H 1150 5500 50  0001 C CNN "price"
+F 5 "" H 1150 5500 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_TA-I-Tech-RLP25FEER080_C393080.html" H 1150 5500 50  0001 C CNN "Link"
+	1    1150 5500
 	0    1    1    0   
 $EndComp
-Text GLabel 900  5200 0    50   Input ~ 0
+Text GLabel 1000 5500 0    50   Input ~ 0
 gnd
 Wire Wire Line
-	1200 4600 1700 4600
+	1300 4900 1800 4900
 $Comp
 L Device:R_US Ris2
 U 1 1 60495619
-P 1050 4900
-F 0 "Ris2" V 845 4900 50  0000 C CNN
-F 1 "0.08" V 936 4900 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder" V 1090 4890 50  0001 C CNN
-F 3 "RLP25FEER080" H 1050 4900 50  0001 C CNN
-F 4 "0.0732" H 1050 4900 50  0001 C CNN "price"
-F 5 "" H 1050 4900 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_TA-I-Tech-RLP25FEER080_C393080.html" H 1050 4900 50  0001 C CNN "Link"
-	1    1050 4900
+P 1150 5200
+F 0 "Ris2" V 945 5200 50  0000 C CNN
+F 1 "0.08" V 1036 5200 50  0000 C CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder" V 1190 5190 50  0001 C CNN
+F 3 "RLP25FEER080" H 1150 5200 50  0001 C CNN
+F 4 "0.0732" H 1150 5200 50  0001 C CNN "price"
+F 5 "" H 1150 5200 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_TA-I-Tech-RLP25FEER080_C393080.html" H 1150 5200 50  0001 C CNN "Link"
+	1    1150 5200
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	900  5200 900  4900
-Connection ~ 900  4900
+	1000 5500 1000 5200
+Connection ~ 1000 5200
 Wire Wire Line
-	900  4900 900  4600
+	1000 5200 1000 4900
 $Comp
 L Device:R_US Ris1
 U 1 1 60497D7B
-P 1050 4600
-F 0 "Ris1" V 845 4600 50  0000 C CNN
-F 1 "0.08" V 936 4600 50  0000 C CNN
-F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder" V 1090 4590 50  0001 C CNN
-F 3 "RLP25FEER080" H 1050 4600 50  0001 C CNN
-F 4 "0.0732" H 1050 4600 50  0001 C CNN "price"
-F 5 "" H 1050 4600 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_TA-I-Tech-RLP25FEER080_C393080.html" H 1050 4600 50  0001 C CNN "Link"
-	1    1050 4600
+P 1150 4900
+F 0 "Ris1" V 945 4900 50  0000 C CNN
+F 1 "0.08" V 1036 4900 50  0000 C CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder" V 1190 4890 50  0001 C CNN
+F 3 "RLP25FEER080" H 1150 4900 50  0001 C CNN
+F 4 "0.0732" H 1150 4900 50  0001 C CNN "price"
+F 5 "" H 1150 4900 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_TA-I-Tech-RLP25FEER080_C393080.html" H 1150 4900 50  0001 C CNN "Link"
+	1    1150 4900
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1200 4600 1200 4900
-Connection ~ 1200 4600
-Connection ~ 1200 4900
+	1300 4900 1300 5200
+Connection ~ 1300 4900
+Connection ~ 1300 5200
 Wire Wire Line
-	1200 4900 1200 5200
+	1300 5200 1300 5500
 Wire Wire Line
-	10550 5400 10550 5350
-Connection ~ 10550 5400
+	4300 5350 4350 5350
 Wire Wire Line
-	3900 5050 3950 5050
-Wire Wire Line
-	3950 5400 3900 5400
-Wire Wire Line
-	3950 5400 3950 5050
-Connection ~ 3950 5400
+	4350 5700 4350 5350
+Connection ~ 4350 5700
 $Comp
 L Device:R_US Rout1
 U 1 1 605968C4
-P 2600 5250
-F 0 "Rout1" V 2805 5250 50  0000 C CNN
-F 1 "51" V 2714 5250 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2640 5240 50  0001 C CNN
-F 3 "CF1/4W-51Ω±5%T52" H 2600 5250 50  0001 C CNN
-F 4 "0.005" H 2600 5250 50  0001 C CNN "price"
-F 5 "" H 2600 5250 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-4W-51%CE%A9-5-T52_C714278.html" H 2600 5250 50  0001 C CNN "Link"
-F 7 "250" H 2600 5250 50  0001 C CNN "Working voltage"
-	1    2600 5250
+P 2700 5550
+F 0 "Rout1" V 2905 5550 50  0000 C CNN
+F 1 "51" V 2814 5550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2740 5540 50  0001 C CNN
+F 3 "CF1/4W-51Ω±5%T52" H 2700 5550 50  0001 C CNN
+F 4 "0.005" H 2700 5550 50  0001 C CNN "price"
+F 5 "" H 2700 5550 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-4W-51%CE%A9-5-T52_C714278.html" H 2700 5550 50  0001 C CNN "Link"
+F 7 "250" H 2700 5550 50  0001 C CNN "Working voltage"
+	1    2700 5550
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:C_Small C3
 U 1 1 605A025C
-P 2600 4800
-F 0 "C3" H 2692 4846 50  0000 L CNN
-F 1 "220p" H 2692 4755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 2600 4800 50  0001 C CNN
-F 3 "C1206X221M102T" H 2600 4800 50  0001 C CNN
-F 4 "0.0126" H 2600 4800 50  0001 C CNN "price"
-F 5 "" H 2600 4800 50  0001 C CNN "Checked"
-F 6 "1kv" H 2600 4800 50  0001 C CNN "Working voltage"
-F 7 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_IHHEC-HOLY-STONE-ENTERPRISE-CO-LTD-C1206X221M102T_C961523.html" H 2600 4800 50  0001 C CNN "Link"
-	1    2600 4800
+P 2700 5100
+F 0 "C3" H 2792 5146 50  0000 L CNN
+F 1 "220p" H 2792 5055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 2700 5100 50  0001 C CNN
+F 3 "C1206X221M102T" H 2700 5100 50  0001 C CNN
+F 4 "0.0126" H 2700 5100 50  0001 C CNN "price"
+F 5 "" H 2700 5100 50  0001 C CNN "Checked"
+F 6 "1kv" H 2700 5100 50  0001 C CNN "Working voltage"
+F 7 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_IHHEC-HOLY-STONE-ENTERPRISE-CO-LTD-C1206X221M102T_C961523.html" H 2700 5100 50  0001 C CNN "Link"
+	1    2700 5100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3250 4650 3250 4850
-Connection ~ 3600 5050
-Connection ~ 3600 5400
+	3350 4950 3350 5150
+Connection ~ 3700 5700
 Wire Wire Line
-	2600 4900 2600 5100
+	2700 5200 2700 5400
 Wire Wire Line
-	3250 5400 3250 5550
+	3350 5700 3350 5850
 Wire Wire Line
-	2600 5400 3250 5400
+	2700 5700 3350 5700
 Wire Wire Line
-	2600 4700 2600 4650
+	2700 5000 2700 4950
 Wire Wire Line
-	2600 4650 3250 4650
+	2700 4950 3350 4950
 Wire Wire Line
-	3250 4100 3400 4100
+	3350 4400 3500 4400
 $Comp
 L Device:R_US Rout2
 U 1 1 605DF4B7
-P 3400 3700
-F 0 "Rout2" V 3605 3700 50  0000 C CNN
-F 1 "51" V 3514 3700 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3440 3690 50  0001 C CNN
-F 3 "CF1/4W-51Ω±5%T52" H 3400 3700 50  0001 C CNN
-F 4 "0.005" H 3400 3700 50  0001 C CNN "price"
-F 5 "" H 3400 3700 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-4W-51%CE%A9-5-T52_C714278.html" H 3400 3700 50  0001 C CNN "Link"
-F 7 "250" H 3400 3700 50  0001 C CNN "Working voltage"
-	1    3400 3700
+P 3500 4000
+F 0 "Rout2" V 3705 4000 50  0000 C CNN
+F 1 "51" V 3614 4000 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3540 3990 50  0001 C CNN
+F 3 "CF1/4W-51Ω±5%T52" H 3500 4000 50  0001 C CNN
+F 4 "0.005" H 3500 4000 50  0001 C CNN "price"
+F 5 "" H 3500 4000 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-4W-51%CE%A9-5-T52_C714278.html" H 3500 4000 50  0001 C CNN "Link"
+F 7 "250" H 3500 4000 50  0001 C CNN "Working voltage"
+	1    3500 4000
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3750 3700 3550 3700
+	3850 4000 3650 4000
 $Comp
 L Device:C_Small C6
 U 1 1 605DF4BE
-P 3850 3700
-F 0 "C6" V 3621 3700 50  0000 C CNN
-F 1 "220p" V 3712 3700 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 3850 3700 50  0001 C CNN
-F 3 "C1206X221M102T" H 3850 3700 50  0001 C CNN
-F 4 "0.0126" H 3850 3700 50  0001 C CNN "price"
-F 5 "" H 3850 3700 50  0001 C CNN "Checked"
-F 6 "1kv" H 3850 3700 50  0001 C CNN "Working voltage"
-F 7 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_IHHEC-HOLY-STONE-ENTERPRISE-CO-LTD-C1206X221M102T_C961523.html" H 3850 3700 50  0001 C CNN "Link"
-	1    3850 3700
+P 3950 4000
+F 0 "C6" V 3721 4000 50  0000 C CNN
+F 1 "220p" V 3812 4000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 3950 4000 50  0001 C CNN
+F 3 "C1206X221M102T" H 3950 4000 50  0001 C CNN
+F 4 "0.0126" H 3950 4000 50  0001 C CNN "price"
+F 5 "" H 3950 4000 50  0001 C CNN "Checked"
+F 6 "1kv" H 3950 4000 50  0001 C CNN "Working voltage"
+F 7 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_IHHEC-HOLY-STONE-ENTERPRISE-CO-LTD-C1206X221M102T_C961523.html" H 3950 4000 50  0001 C CNN "Link"
+	1    3950 4000
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3250 3700 3250 4100
+	3350 4000 3350 4400
 Wire Wire Line
-	3950 3700 3950 4100
-Connection ~ 3950 4100
+	4050 4000 4050 4400
+Connection ~ 4050 4400
 $Comp
 L Device:CP1_Small C7
 U 1 1 6060F2E0
-P 4100 4200
-F 0 "C7" H 4191 4246 50  0000 L CNN
-F 1 "47u" H 4191 4155 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 4100 4200 50  0001 C CNN
-F 3 "EGD2WM470L25OT" H 4100 4200 50  0001 C CNN
-F 4 "0.4815" H 4100 4200 50  0001 C CNN "price"
-F 5 "" H 4100 4200 50  0001 C CNN "Checked"
-F 6 "450" H 4100 4200 50  0001 C CNN "Working voltage"
-F 7 "https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_AISHI-Aihua-Group-EGD2WM470L25OT_C106332.html" H 4100 4200 50  0001 C CNN "Link"
-	1    4100 4200
+P 4200 4500
+F 0 "C7" H 4291 4546 50  0000 L CNN
+F 1 "47u" H 4291 4455 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 4200 4500 50  0001 C CNN
+F 3 "EGD2WM470L25OT" H 4200 4500 50  0001 C CNN
+F 4 "0.4815" H 4200 4500 50  0001 C CNN "price"
+F 5 "" H 4200 4500 50  0001 C CNN "Checked"
+F 6 "450" H 4200 4500 50  0001 C CNN "Working voltage"
+F 7 "https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_AISHI-Aihua-Group-EGD2WM470L25OT_C106332.html" H 4200 4500 50  0001 C CNN "Link"
+	1    4200 4500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:CP1_Small C9
 U 1 1 60610CF5
-P 4400 4200
-F 0 "C9" H 4491 4246 50  0000 L CNN
-F 1 "47u" H 4491 4155 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 4400 4200 50  0001 C CNN
-F 3 "EGD2WM470L25OT" H 4400 4200 50  0001 C CNN
-F 4 "0.4815" H 4400 4200 50  0001 C CNN "price"
-F 5 "" H 4400 4200 50  0001 C CNN "Checked"
-F 6 "450" H 4400 4200 50  0001 C CNN "Working voltage"
-F 7 "https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_AISHI-Aihua-Group-EGD2WM470L25OT_C106332.html" H 4400 4200 50  0001 C CNN "Link"
-	1    4400 4200
+P 4500 4500
+F 0 "C9" H 4591 4546 50  0000 L CNN
+F 1 "47u" H 4591 4455 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 4500 4500 50  0001 C CNN
+F 3 "EGD2WM470L25OT" H 4500 4500 50  0001 C CNN
+F 4 "0.4815" H 4500 4500 50  0001 C CNN "price"
+F 5 "" H 4500 4500 50  0001 C CNN "Checked"
+F 6 "450" H 4500 4500 50  0001 C CNN "Working voltage"
+F 7 "https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_AISHI-Aihua-Group-EGD2WM470L25OT_C106332.html" H 4500 4500 50  0001 C CNN "Link"
+	1    4500 4500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:CP1_Small C10
 U 1 1 60612678
-P 4700 4200
-F 0 "C10" H 4791 4246 50  0000 L CNN
-F 1 "47u" H 4791 4155 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 4700 4200 50  0001 C CNN
-F 3 "EGD2WM470L25OT" H 4700 4200 50  0001 C CNN
-F 4 "0.4815" H 4700 4200 50  0001 C CNN "price"
-F 5 "" H 4700 4200 50  0001 C CNN "Checked"
-F 6 "450" H 4700 4200 50  0001 C CNN "Working voltage"
-F 7 "https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_AISHI-Aihua-Group-EGD2WM470L25OT_C106332.html" H 4700 4200 50  0001 C CNN "Link"
-	1    4700 4200
+P 4800 4500
+F 0 "C10" H 4891 4546 50  0000 L CNN
+F 1 "47u" H 4891 4455 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 4800 4500 50  0001 C CNN
+F 3 "EGD2WM470L25OT" H 4800 4500 50  0001 C CNN
+F 4 "0.4815" H 4800 4500 50  0001 C CNN "price"
+F 5 "" H 4800 4500 50  0001 C CNN "Checked"
+F 6 "450" H 4800 4500 50  0001 C CNN "Working voltage"
+F 7 "https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_AISHI-Aihua-Group-EGD2WM470L25OT_C106332.html" H 4800 4500 50  0001 C CNN "Link"
+	1    4800 4500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_US Risf1
 U 1 1 6065E4F2
-P 1700 4750
-F 0 "Risf1" H 1632 4704 50  0000 R CNN
-F 1 "51" H 1632 4795 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 1740 4740 50  0001 C CNN
-F 3 "CF1/4W-51Ω±5%T52" H 1700 4750 50  0001 C CNN
-F 4 "0.005" H 1700 4750 50  0001 C CNN "price"
-F 5 "" H 1700 4750 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-4W-51%CE%A9-5-T52_C714278.html" H 1700 4750 50  0001 C CNN "Link"
-F 7 "250" H 1700 4750 50  0001 C CNN "Working voltage"
-	1    1700 4750
+P 1800 5050
+F 0 "Risf1" H 1732 5004 50  0000 R CNN
+F 1 "51" H 1732 5095 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 1840 5040 50  0001 C CNN
+F 3 "CF1/4W-51Ω±5%T52" H 1800 5050 50  0001 C CNN
+F 4 "0.005" H 1800 5050 50  0001 C CNN "price"
+F 5 "" H 1800 5050 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-4W-51%CE%A9-5-T52_C714278.html" H 1800 5050 50  0001 C CNN "Link"
+F 7 "250" H 1800 5050 50  0001 C CNN "Working voltage"
+	1    1800 5050
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R_US Risf2
 U 1 1 6066435E
-P 1700 5050
-F 0 "Risf2" H 1632 5004 50  0000 R CNN
-F 1 "51" H 1632 5095 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 1740 5040 50  0001 C CNN
-F 3 "CF1/4W-51Ω±5%T52" H 1700 5050 50  0001 C CNN
-F 4 "0.005" H 1700 5050 50  0001 C CNN "price"
-F 5 "" H 1700 5050 50  0001 C CNN "Checked"
-F 6 "https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-4W-51%CE%A9-5-T52_C714278.html" H 1700 5050 50  0001 C CNN "Link"
-F 7 "250" H 1700 5050 50  0001 C CNN "Working voltage"
-	1    1700 5050
+P 1800 5350
+F 0 "Risf2" H 1732 5304 50  0000 R CNN
+F 1 "51" H 1732 5395 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 1840 5340 50  0001 C CNN
+F 3 "CF1/4W-51Ω±5%T52" H 1800 5350 50  0001 C CNN
+F 4 "0.005" H 1800 5350 50  0001 C CNN "price"
+F 5 "" H 1800 5350 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-4W-51%CE%A9-5-T52_C714278.html" H 1800 5350 50  0001 C CNN "Link"
+F 7 "250" H 1800 5350 50  0001 C CNN "Working voltage"
+	1    1800 5350
 	-1   0    0    1   
 $EndComp
-Connection ~ 1700 5200
+Connection ~ 1800 5500
 Wire Wire Line
-	3950 4100 4100 4100
-Connection ~ 4100 4100
+	4050 4400 4200 4400
+Connection ~ 4200 4400
 Wire Wire Line
-	4100 4100 4400 4100
-Connection ~ 4400 4100
+	4200 4400 4500 4400
+Connection ~ 4500 4400
 Wire Wire Line
-	4400 4100 4700 4100
-Connection ~ 4700 4100
+	4500 4400 4800 4400
+Connection ~ 4800 4400
 Wire Wire Line
-	4700 4100 5000 4100
-Connection ~ 4700 4300
+	4800 4400 5100 4400
+Connection ~ 4800 4600
 Wire Wire Line
-	4700 4300 5000 4300
-Connection ~ 4400 4300
+	4800 4600 5100 4600
+Connection ~ 4500 4600
 Wire Wire Line
-	4400 4300 4700 4300
+	4500 4600 4800 4600
 Wire Wire Line
-	3800 4300 4100 4300
-Connection ~ 4100 4300
+	3900 4600 4200 4600
+Connection ~ 4200 4600
 Wire Wire Line
-	4100 4300 4400 4300
+	4200 4600 4500 4600
 $Comp
 L Connector_Generic:Conn_01x02 J2
 U 1 1 60763D20
-P 6350 4150
-F 0 "J2" H 6430 4142 50  0000 L CNN
-F 1 "Conn_01x02" H 6430 4051 50  0000 L CNN
-F 2 "custom:spacedConnector" H 6350 4150 50  0001 C CNN
-F 3 "NA" H 6350 4150 50  0001 C CNN
-F 4 "0" H 6350 4150 50  0001 C CNN "price"
-F 5 "NA" H 6350 4150 50  0001 C CNN "Checked"
-F 6 "NA" H 6350 4150 50  0001 C CNN "Link"
-	1    6350 4150
+P 6450 4450
+F 0 "J2" H 6530 4442 50  0000 L CNN
+F 1 "Conn_01x02" H 6530 4351 50  0000 L CNN
+F 2 "custom:spacedConnector" H 6450 4450 50  0001 C CNN
+F 3 "NA" H 6450 4450 50  0001 C CNN
+F 4 "0" H 6450 4450 50  0001 C CNN "price"
+F 5 "NA" H 6450 4450 50  0001 C CNN "Checked"
+F 6 "NA" H 6450 4450 50  0001 C CNN "Link"
+	1    6450 4450
 	1    0    0    -1  
 $EndComp
-Text GLabel 6150 4150 0    50   Input ~ 0
+Text GLabel 6250 4450 0    50   Input ~ 0
 vpfc
-Text GLabel 6150 4250 0    50   Input ~ 0
+Text GLabel 6250 4550 0    50   Input ~ 0
 gnd
 $Comp
 L custom:AP3917B U1
@@ -904,7 +580,7 @@ Wire Wire Line
 Wire Wire Line
 	6150 2600 6250 2600
 Text GLabel 6750 2600 2    50   Input ~ 0
-v12
+vcc
 $Comp
 L Device:R_US R6
 U 1 1 60ABAC54
@@ -1152,18 +828,18 @@ F 7 "0.0351" H 2100 2800 50  0001 C CNN "price"
 	1    2100 2800
 	0    1    1    0   
 $EndComp
-Connection ~ 2250 4600
+Connection ~ 2350 4900
 Wire Wire Line
-	2250 4600 2600 4600
+	2350 4900 2700 4900
 Wire Wire Line
-	2400 4100 2650 4100
-Connection ~ 2400 4100
+	2500 4400 2750 4400
+Connection ~ 2500 4400
 Wire Wire Line
-	2950 4100 3250 4100
-Connection ~ 3250 4100
+	3050 4400 3350 4400
+Connection ~ 3350 4400
 Wire Wire Line
-	3250 4650 3250 4100
-Connection ~ 3250 4650
+	3350 4950 3350 4400
+Connection ~ 3350 4950
 Connection ~ 5350 3100
 Wire Wire Line
 	5350 3100 6250 3100
@@ -1332,62 +1008,60 @@ Wire Wire Line
 	5000 1950 4200 1950
 Wire Wire Line
 	5750 1950 5750 2300
-Text GLabel 10550 5350 2    50   Input ~ 0
-v12
 Wire Wire Line
-	2100 3800 2100 3700
+	2200 4100 2200 4000
 Wire Wire Line
-	2100 4500 2100 4400
+	2200 4800 2200 4700
 Wire Wire Line
-	5250 4100 5250 4050
+	5350 4400 5350 4350
 Wire Wire Line
-	5250 4050 5350 4050
+	5350 4350 5450 4350
 Wire Wire Line
-	5250 4300 5250 4350
+	5350 4600 5350 4650
 Wire Wire Line
-	5250 4350 5350 4350
+	5350 4650 5450 4650
 Wire Wire Line
-	5650 4050 5650 4000
+	5750 4350 5750 4300
 Wire Wire Line
-	5650 4350 5650 4400
+	5750 4650 5750 4700
 $Comp
 L Device:R_US R8
 U 1 1 6122AAF8
-P 5650 4200
-F 0 "R8" H 5718 4246 50  0000 L CNN
-F 1 "82k" H 5718 4155 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P25.40mm_Horizontal" V 5690 4190 50  0001 C CNN
-F 3 "MO3W-82K±5%-QT73" H 5650 4200 50  0001 C CNN
-F 4 "" H 5650 4200 50  0001 C CNN "Checked"
-F 5 "https://lcsc.com/product-detail/Metal-Oxide-Resistors_FlyWin-MO3W-82K-5-QT73_C601908.html" H 5650 4200 50  0001 C CNN "Link"
-F 6 "500" H 5650 4200 50  0001 C CNN "Working voltage"
-F 7 "0.0487" H 5650 4200 50  0001 C CNN "price"
-	1    5650 4200
+P 5750 4500
+F 0 "R8" H 5818 4546 50  0000 L CNN
+F 1 "82k" H 5818 4455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P25.40mm_Horizontal" V 5790 4490 50  0001 C CNN
+F 3 "MO3W-82K±5%-QT73" H 5750 4500 50  0001 C CNN
+F 4 "" H 5750 4500 50  0001 C CNN "Checked"
+F 5 "https://lcsc.com/product-detail/Metal-Oxide-Resistors_FlyWin-MO3W-82K-5-QT73_C601908.html" H 5750 4500 50  0001 C CNN "Link"
+F 6 "500" H 5750 4500 50  0001 C CNN "Working voltage"
+F 7 "0.0487" H 5750 4500 50  0001 C CNN "price"
+	1    5750 4500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_US R7
 U 1 1 61217373
-P 5350 4200
-F 0 "R7" H 5418 4246 50  0000 L CNN
-F 1 "82k" H 5418 4155 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P25.40mm_Horizontal" V 5390 4190 50  0001 C CNN
-F 3 "MO3W-82K±5%-QT73" H 5350 4200 50  0001 C CNN
-F 4 "" H 5350 4200 50  0001 C CNN "Checked"
-F 5 "https://lcsc.com/product-detail/Metal-Oxide-Resistors_FlyWin-MO3W-82K-5-QT73_C601908.html" H 5350 4200 50  0001 C CNN "Link"
-F 6 "500" H 5350 4200 50  0001 C CNN "Working voltage"
-F 7 "0.0487" H 5350 4200 50  0001 C CNN "price"
-	1    5350 4200
+P 5450 4500
+F 0 "R7" H 5518 4546 50  0000 L CNN
+F 1 "82k" H 5518 4455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0617_L17.0mm_D6.0mm_P25.40mm_Horizontal" V 5490 4490 50  0001 C CNN
+F 3 "MO3W-82K±5%-QT73" H 5450 4500 50  0001 C CNN
+F 4 "" H 5450 4500 50  0001 C CNN "Checked"
+F 5 "https://lcsc.com/product-detail/Metal-Oxide-Resistors_FlyWin-MO3W-82K-5-QT73_C601908.html" H 5450 4500 50  0001 C CNN "Link"
+F 6 "500" H 5450 4500 50  0001 C CNN "Working voltage"
+F 7 "0.0487" H 5450 4500 50  0001 C CNN "price"
+	1    5450 4500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5350 4350 5650 4350
-Connection ~ 5350 4350
+	5450 4650 5750 4650
+Connection ~ 5450 4650
 Wire Wire Line
-	5350 4050 5650 4050
-Connection ~ 5350 4050
-Connection ~ 5650 4350
-Connection ~ 5650 4050
+	5450 4350 5750 4350
+Connection ~ 5450 4350
+Connection ~ 5750 4650
+Connection ~ 5750 4350
 $Comp
 L Connector_Generic:Conn_01x02 J3
 U 1 1 612EA138
@@ -1405,19 +1079,19 @@ $EndComp
 Text GLabel 7300 2950 0    50   Input ~ 0
 gnd
 Text GLabel 7300 2850 0    50   Input ~ 0
-v12
+vcc
 $Comp
 L Connector_Generic:Conn_01x02 J1
 U 1 1 6023F774
-P 950 3950
-F 0 "J1" H 1030 3942 50  0000 L CNN
-F 1 "AC-input" H 1030 3851 50  0000 L CNN
-F 2 "custom:spacedConnector" H 950 3950 50  0001 C CNN
-F 3 "NA" H 950 3950 50  0001 C CNN
-F 4 "0" H 950 3950 50  0001 C CNN "price"
-F 5 "NA" H 950 3950 50  0001 C CNN "Checked"
-F 6 "NA" H 950 3950 50  0001 C CNN "Link"
-	1    950  3950
+P 1050 4250
+F 0 "J1" H 1130 4242 50  0000 L CNN
+F 1 "AC-input" H 1130 4151 50  0000 L CNN
+F 2 "custom:spacedConnector" H 1050 4250 50  0001 C CNN
+F 3 "NA" H 1050 4250 50  0001 C CNN
+F 4 "0" H 1050 4250 50  0001 C CNN "price"
+F 5 "NA" H 1050 4250 50  0001 C CNN "Checked"
+F 6 "NA" H 1050 4250 50  0001 C CNN "Link"
+	1    1050 4250
 	-1   0    0    -1  
 $EndComp
 Wire Notes Line
@@ -1428,4 +1102,345 @@ Wire Notes Line
 	1650 550  1650 3150
 Wire Notes Line
 	1650 3150 8100 3150
+Text GLabel 3550 6250 2    50   Input ~ 0
+vcc
+Connection ~ 3550 6300
+Wire Wire Line
+	3550 6300 3550 6250
+Text GLabel 3200 6450 2    50   Input ~ 0
+out
+Connection ~ 2050 6450
+Wire Wire Line
+	2050 6450 2500 6450
+Wire Wire Line
+	2250 6550 2500 6550
+Wire Wire Line
+	2050 6750 2050 6450
+Wire Wire Line
+	1850 6750 2050 6750
+Wire Wire Line
+	1450 6750 1650 6750
+Wire Wire Line
+	1650 6450 1750 6450
+$Comp
+L Device:R_US Reo1
+U 1 1 6030AF3F
+P 1900 6450
+F 0 "Reo1" V 1695 6450 50  0000 C CNN
+F 1 "39k" V 1786 6450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 1940 6440 50  0001 C CNN
+F 3 "TC0350D3902T5H" H 1900 6450 50  0001 C CNN
+F 4 "0.0071" H 1900 6450 50  0001 C CNN "price"
+F 5 "" H 1900 6450 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_UNI-ROYAL-Uniroyal-Elec-TC0350D3902T5H_C517681.html" H 1900 6450 50  0001 C CNN "Link"
+F 7 "75" H 1900 6450 50  0001 C CNN "Working voltage"
+	1    1900 6450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small Ceo1
+U 1 1 60307E5F
+P 1750 6750
+F 0 "Ceo1" V 1521 6750 50  0000 C CNN
+F 1 "0u47" V 1612 6750 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1750 6750 50  0001 C CNN
+F 3 "CL10B474KA8NNNC" H 1750 6750 50  0001 C CNN
+F 4 "0.0112" H 1750 6750 50  0001 C CNN "price"
+F 5 "" H 1750 6750 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/search?q=CL10B474KA8NNNC" H 1750 6750 50  0001 C CNN "Link"
+F 7 "25" H 1750 6750 50  0001 C CNN "Working voltage"
+	1    1750 6750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small Ceo2
+U 1 1 60306B46
+P 1550 6450
+F 0 "Ceo2" V 1321 6450 50  0000 C CNN
+F 1 "0u1" V 1412 6450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1550 6450 50  0001 C CNN
+F 3 "0603F104M500NT" H 1550 6450 50  0001 C CNN
+F 4 "0.0032" H 1550 6450 50  0001 C CNN "price"
+F 5 "" H 1550 6450 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_FH-Guangdong-Fenghua-Advanced-Tech-0603F104M500NT_C42998.html" H 1550 6450 50  0001 C CNN "Link"
+F 7 "50" H 1550 6450 50  0001 C CNN "Working voltage"
+	1    1550 6450
+	0    1    1    0   
+$EndComp
+Text GLabel 2500 6350 0    50   Input ~ 0
+vs
+Text GLabel 2500 6650 0    50   Input ~ 0
+ovp
+Text GLabel 3200 6650 2    50   Input ~ 0
+is
+Wire Wire Line
+	3200 6300 3200 6350
+Wire Wire Line
+	3550 6300 3200 6300
+Wire Wire Line
+	3550 6550 3550 6600
+Connection ~ 3550 6550
+Wire Wire Line
+	3200 6550 3550 6550
+Wire Wire Line
+	3550 6500 3550 6550
+Text GLabel 3550 6600 2    50   Input ~ 0
+gnd
+$Comp
+L Device:CP1_Small C4
+U 1 1 602DCC07
+P 3550 6400
+F 0 "C4" H 3641 6446 50  0000 L CNN
+F 1 "22u" H 3641 6355 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 3550 6400 50  0001 C CNN
+F 3 "22uF 35V 5*7" H 3550 6400 50  0001 C CNN
+F 4 "0.0098" H 3550 6400 50  0001 C CNN "price"
+F 5 "35" H 3550 6400 50  0001 C CNN "Working voltage"
+F 6 "" H 3550 6400 50  0001 C CNN "Checked"
+F 7 "https://lcsc.com/product-detail/Aluminum-Electrolytic-Capacitors-Leaded_CX-Dongguan-Chengxing-Elec-22uF-35V-5-7_C45073.html" H 3550 6400 50  0001 C CNN "Link"
+	1    3550 6400
+	1    0    0    -1  
+$EndComp
+Text GLabel 2250 6850 3    50   Input ~ 0
+gnd
+$Comp
+L Device:R_US Rt1
+U 1 1 602D6381
+P 2250 6700
+F 0 "Rt1" H 2318 6654 50  0000 L CNN
+F 1 "39k" H 2318 6745 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2290 6690 50  0001 C CNN
+F 3 "TC0350D3902T5H" H 2250 6700 50  0001 C CNN
+F 4 "0.0071" H 2250 6700 50  0001 C CNN "price"
+F 5 "" H 2250 6700 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_UNI-ROYAL-Uniroyal-Elec-TC0350D3902T5H_C517681.html" H 2250 6700 50  0001 C CNN "Link"
+F 7 "75" H 2250 6700 50  0001 C CNN "Working voltage"
+	1    2250 6700
+	-1   0    0    1   
+$EndComp
+$Comp
+L custom:bd7692fj U2
+U 1 1 602CFB88
+P 2850 6500
+F 0 "U2" H 2850 6875 50  0000 C CNN
+F 1 "bd7692fj" H 2850 6784 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2850 6750 50  0001 C CNN
+F 3 "bd7692fj" H 2850 6750 50  0001 C CNN
+F 4 "0.88" H 2850 6500 50  0001 C CNN "price"
+F 5 "" H 2850 6500 50  0001 C CNN "Checked"
+F 6 "https://www.digikey.com/en/products/detail/BD7692FJ-E2/846-BD7692FJ-E2CT-ND/10448181?itemSeq=354539420" H 2850 6500 50  0001 C CNN "Link"
+	1    2850 6500
+	1    0    0    -1  
+$EndComp
+Text GLabel 5450 6800 0    50   Input ~ 0
+gnd
+$Comp
+L Device:R_US Rvsh2
+U 1 1 602BC45B
+P 4650 6600
+F 0 "Rvsh2" H 4718 6646 50  0000 L CNN
+F 1 "1Meg" H 4718 6555 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 4690 6590 50  0001 C CNN
+F 3 "HR1206J1M00P05Z" H 4650 6600 50  0001 C CNN
+F 4 "0.0234" H 4650 6600 50  0001 C CNN "price"
+F 5 "" H 4650 6600 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/High-Voltage-Resistor_Ever-Ohms-Tech-HR1206J1M00P05Z_C175518.html" H 4650 6600 50  0001 C CNN "Link"
+F 7 "500" H 4650 6600 50  0001 C CNN "Working voltage"
+	1    4650 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US Rvsl1
+U 1 1 602BC461
+P 4650 7000
+F 0 "Rvsl1" H 4718 7046 50  0000 L CNN
+F 1 "13k" H 4718 6955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4690 6990 50  0001 C CNN
+F 3 "RS-03K133JT" H 4650 7000 50  0001 C CNN
+F 4 "0.0011" H 4650 7000 50  0001 C CNN "price"
+F 5 "" H 4650 7000 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FH-Guangdong-Fenghua-Advanced-Tech-RS-03K133JT_C294648.html" H 4650 7000 50  0001 C CNN "Link"
+F 7 "50" H 4650 7000 50  0001 C CNN "Working voltage"
+	1    4650 7000
+	1    0    0    -1  
+$EndComp
+Text GLabel 4650 7150 3    50   Input ~ 0
+gnd
+Wire Wire Line
+	4650 6850 4650 6800
+Text GLabel 4650 5950 1    50   Input ~ 0
+vpfc
+Wire Wire Line
+	4650 6050 4650 5950
+Wire Wire Line
+	4650 6800 4450 6800
+Connection ~ 4650 6800
+Wire Wire Line
+	4650 6800 4650 6750
+$Comp
+L Device:C_Small C8
+U 1 1 602BC46F
+P 4350 6800
+F 0 "C8" V 4121 6800 50  0000 C CNN
+F 1 "1000p" V 4212 6800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4350 6800 50  0001 C CNN
+F 3 "TCC0603X7R102K500CT" H 4350 6800 50  0001 C CNN
+F 4 "0.0031" H 4350 6800 50  0001 C CNN "price"
+F 5 "" H 4350 6800 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R102K500CT_C282515.html" H 4350 6800 50  0001 C CNN "Link"
+F 7 "50" H 4350 6800 50  0001 C CNN "Working voltage"
+	1    4350 6800
+	0    1    1    0   
+$EndComp
+Text GLabel 4250 6800 0    50   Input ~ 0
+gnd
+Text GLabel 4650 6800 2    50   Input ~ 0
+vs
+$Comp
+L Device:R_US Rvsl2
+U 1 1 604271B0
+P 4950 7000
+F 0 "Rvsl2" H 5018 7046 50  0000 L CNN
+F 1 "390k" H 5018 6955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4990 6990 50  0001 C CNN
+F 3 "RS-03K394JT" H 4950 7000 50  0001 C CNN
+F 4 "0.0011" H 4950 7000 50  0001 C CNN "price"
+F 5 "" H 4950 7000 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FH-Guangdong-Fenghua-Advanced-Tech-RS-03K394JT_C304747.html" H 4950 7000 50  0001 C CNN "Link"
+F 7 "50" H 4950 7000 50  0001 C CNN "Working voltage"
+	1    4950 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 7150 4650 7150
+Wire Wire Line
+	4650 6850 4950 6850
+Connection ~ 4650 6850
+$Comp
+L Device:R_US Rvsh1
+U 1 1 60453577
+P 4650 6200
+F 0 "Rvsh1" H 4718 6246 50  0000 L CNN
+F 1 "1Meg" H 4718 6155 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 4690 6190 50  0001 C CNN
+F 3 "HR1206J1M00P05Z" H 4650 6200 50  0001 C CNN
+F 4 "0.0234" H 4650 6200 50  0001 C CNN "price"
+F 5 "" H 4650 6200 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/High-Voltage-Resistor_Ever-Ohms-Tech-HR1206J1M00P05Z_C175518.html" H 4650 6200 50  0001 C CNN "Link"
+F 7 "500" H 4650 6200 50  0001 C CNN "Working voltage"
+	1    4650 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 6350 4650 6450
+Wire Wire Line
+	5800 6350 5800 6450
+$Comp
+L Device:R_US Rovph1
+U 1 1 60460D79
+P 5800 6200
+F 0 "Rovph1" H 5868 6246 50  0000 L CNN
+F 1 "1Meg" H 5868 6155 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 5840 6190 50  0001 C CNN
+F 3 "HR1206J1M00P05Z" H 5800 6200 50  0001 C CNN
+F 4 "0.0234" H 5800 6200 50  0001 C CNN "price"
+F 5 "" H 5800 6200 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/High-Voltage-Resistor_Ever-Ohms-Tech-HR1206J1M00P05Z_C175518.html" H 5800 6200 50  0001 C CNN "Link"
+F 7 "500" H 5800 6200 50  0001 C CNN "Working voltage"
+	1    5800 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 6050 5800 5950
+Text GLabel 5800 5950 1    50   Input ~ 0
+vpfc
+$Comp
+L Device:R_US Rovph2
+U 1 1 60460D71
+P 5800 6600
+F 0 "Rovph2" H 5868 6646 50  0000 L CNN
+F 1 "1Meg" H 5868 6555 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 5840 6590 50  0001 C CNN
+F 3 "HR1206J1M00P05Z" H 5800 6600 50  0001 C CNN
+F 4 "0.0234" H 5800 6600 50  0001 C CNN "price"
+F 5 "" H 5800 6600 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/High-Voltage-Resistor_Ever-Ohms-Tech-HR1206J1M00P05Z_C175518.html" H 5800 6600 50  0001 C CNN "Link"
+F 7 "500" H 5800 6600 50  0001 C CNN "Working voltage"
+	1    5800 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 6800 5800 6850
+Connection ~ 5800 6800
+Wire Wire Line
+	5650 6800 5800 6800
+Wire Wire Line
+	5800 6750 5800 6800
+$Comp
+L Device:C_Small C12
+U 1 1 6029D027
+P 5550 6800
+F 0 "C12" V 5321 6800 50  0000 C CNN
+F 1 "1000p" V 5412 6800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5550 6800 50  0001 C CNN
+F 3 "TCC0603X7R102K500CT" H 5550 6800 50  0001 C CNN
+F 4 "0.0031" H 5550 6800 50  0001 C CNN "price"
+F 5 "" H 5550 6800 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R102K500CT_C282515.html" H 5550 6800 50  0001 C CNN "Link"
+F 7 "50" H 5550 6800 50  0001 C CNN "Working voltage"
+	1    5550 6800
+	0    1    1    0   
+$EndComp
+Text GLabel 5800 6800 2    50   Input ~ 0
+ovp
+Text GLabel 5800 7150 3    50   Input ~ 0
+gnd
+$Comp
+L Device:R_US Rovpl1
+U 1 1 60290D5B
+P 5800 7000
+F 0 "Rovpl1" H 5868 7046 50  0000 L CNN
+F 1 "13k" H 5868 6955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5840 6990 50  0001 C CNN
+F 3 "RS-03K133JT" H 5800 7000 50  0001 C CNN
+F 4 "0.0011" H 5800 7000 50  0001 C CNN "price"
+F 5 "" H 5800 7000 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FH-Guangdong-Fenghua-Advanced-Tech-RS-03K133JT_C294648.html" H 5800 7000 50  0001 C CNN "Link"
+F 7 "50" H 5800 7000 50  0001 C CNN "Working voltage"
+	1    5800 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US Rout?
+U 1 1 604B894B
+P 3850 5350
+F 0 "Rout?" V 4055 5350 50  0000 C CNN
+F 1 "13" V 3964 5350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3890 5340 50  0001 C CNN
+F 3 "ARG03FTC0130" H 3850 5350 50  0001 C CNN
+F 4 "0.0119" H 3850 5350 50  0001 C CNN "price"
+F 5 "" H 3850 5350 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_Viking-Tech-ARG03FTC0130_C217732.html" H 3850 5350 50  0001 C CNN "Link"
+F 7 "75" H 3850 5350 50  0001 C CNN "Working voltage"
+	1    3850 5350
+	0    -1   -1   0   
+$EndComp
+Connection ~ 3700 5350
+$Comp
+L Device:R_US Rout?
+U 1 1 604DB3E6
+P 4150 5350
+F 0 "Rout?" V 4355 5350 50  0000 C CNN
+F 1 "13" V 4264 5350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4190 5340 50  0001 C CNN
+F 3 "ARG03FTC0130" H 4150 5350 50  0001 C CNN
+F 4 "0.0119" H 4150 5350 50  0001 C CNN "price"
+F 5 "" H 4150 5350 50  0001 C CNN "Checked"
+F 6 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_Viking-Tech-ARG03FTC0130_C217732.html" H 4150 5350 50  0001 C CNN "Link"
+F 7 "75" H 4150 5350 50  0001 C CNN "Working voltage"
+	1    4150 5350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4000 5700 4350 5700
 $EndSCHEMATC
