@@ -315,8 +315,8 @@ P 7050 4450
 F 0 "R14" H 7118 4496 50  0000 L CNN
 F 1 "1k" H 7118 4405 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 7090 4440 50  0001 C CNN
-F 3 "CF1/4W-1KΩ±5% T52" H 7050 4450 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Carbon-Film-Resistors_CCO-Chian-Chia-Elec-CF1-4W-1KR-5-T52_C120055.html" H 7050 4450 50  0001 C CNN "Link"
+F 3 "CF1/6W-1KΩ±5%T52" H 7050 4450 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-6W-1KO-5-T52_C714219.html" H 7050 4450 50  0001 C CNN "Link"
 F 5 "yes" H 7050 4450 50  0001 C CNN "Checked"
 F 6 "0.0031" H 7050 4450 50  0001 C CNN "Price"
 	1    7050 4450
@@ -345,8 +345,8 @@ P 6900 4100
 F 0 "R13" H 6968 4146 50  0000 L CNN
 F 1 "100" H 6968 4055 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6940 4090 50  0001 C CNN
-F 3 "CF1/4W-100Ω±5% T52" H 6900 4100 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Carbon-Film-Resistors_CCO-Chian-Chia-Elec-CF1-4W-100R-5-T52_C120031.html" H 6900 4100 50  0001 C CNN "Link"
+F 3 "CF1/6W-100Ω±5% T52" H 6900 4100 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Carbon-Film-Resistors_CCO-Chian-Chia-Elec-CF1-6W-100R-5-T52_C119846.html" H 6900 4100 50  0001 C CNN "Link"
 F 5 "yes" H 6900 4100 50  0001 C CNN "Checked"
 F 6 "0.0052" H 6900 4100 50  0001 C CNN "Price"
 	1    6900 4100
@@ -364,8 +364,8 @@ P 2950 2900
 F 0 "R10" H 3018 2946 50  0000 L CNN
 F 1 "39k" H 3018 2855 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2990 2890 50  0001 C CNN
-F 3 "TC0350D3902T5H" H 2950 2900 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_UNI-ROYAL-Uniroyal-Elec-TC0350D3902T5H_C517681.html" H 2950 2900 50  0001 C CNN "Link"
+F 3 "TC0350B3902T5H" H 2950 2900 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_UNI-ROYAL-Uniroyal-Elec-TC0350B3902T5H_C517479.html" H 2950 2900 50  0001 C CNN "Link"
 F 5 "On PFC" H 2950 2900 50  0001 C CNN "Notes"
 F 6 "75" H 2950 2900 50  0001 C CNN "Working Voltage"
 F 7 "yes" H 2950 2900 50  0001 C CNN "Checked"
@@ -380,8 +380,8 @@ P 2950 1800
 F 0 "R9" H 3018 1846 50  0000 L CNN
 F 1 "39k" H 3018 1755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2990 1790 50  0001 C CNN
-F 3 "TC0350D3902T5H" H 2950 1800 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_UNI-ROYAL-Uniroyal-Elec-TC0350D3902T5H_C517681.html" H 2950 1800 50  0001 C CNN "Link"
+F 3 "TC0350B3902T5H" H 2950 1800 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_UNI-ROYAL-Uniroyal-Elec-TC0350B3902T5H_C517479.html" H 2950 1800 50  0001 C CNN "Link"
 F 5 "On PFC" H 2950 1800 50  0001 C CNN "Notes"
 F 6 "75" H 2950 1800 50  0001 C CNN "Working Voltage"
 F 7 "yes" H 2950 1800 50  0001 C CNN "Checked"
@@ -571,8 +571,8 @@ P 9650 5950
 F 0 "R17" H 9582 5904 50  0000 R CNN
 F 1 "39k" H 9582 5995 50  0000 R CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 9690 5940 50  0001 C CNN
-F 3 "TC0350D3902T5H" H 9650 5950 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_UNI-ROYAL-Uniroyal-Elec-TC0350D3902T5H_C517681.html" H 9650 5950 50  0001 C CNN "Link"
+F 3 "TC0350B3902T5H" H 9650 5950 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_UNI-ROYAL-Uniroyal-Elec-TC0350B3902T5H_C517479.html" H 9650 5950 50  0001 C CNN "Link"
 F 5 "On PFC" H 9650 5950 50  0001 C CNN "Notes"
 F 6 "75" H 9650 5950 50  0001 C CNN "Working Voltage"
 F 7 "yes" H 9650 5950 50  0001 C CNN "Checked"
@@ -607,8 +607,8 @@ P 9400 5800
 F 0 "R16" V 9605 5800 50  0000 C CNN
 F 1 "39k" V 9514 5800 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 9440 5790 50  0001 C CNN
-F 3 "TC0350D3902T5H" H 9400 5800 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_UNI-ROYAL-Uniroyal-Elec-TC0350D3902T5H_C517681.html" H 9400 5800 50  0001 C CNN "Link"
+F 3 "TC0350B3902T5H" H 9400 5800 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/High-Precision-Low-TCR-SMD-Resistors_UNI-ROYAL-Uniroyal-Elec-TC0350B3902T5H_C517479.html" H 9400 5800 50  0001 C CNN "Link"
 F 5 "On PFC" H 9400 5800 50  0001 C CNN "Notes"
 F 6 "75" H 9400 5800 50  0001 C CNN "Working Voltage"
 F 7 "yes" H 9400 5800 50  0001 C CNN "Checked"
@@ -694,8 +694,8 @@ P 8150 5150
 F 0 "R15" H 8082 5104 50  0000 R CNN
 F 1 "1k" H 8082 5195 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 8190 5140 50  0001 C CNN
-F 3 "CF1/4W-1KΩ±5% T52" H 8150 5150 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Carbon-Film-Resistors_CCO-Chian-Chia-Elec-CF1-4W-1KR-5-T52_C120055.html" H 8150 5150 50  0001 C CNN "Link"
+F 3 "CF1/6W-1KΩ±5%T52" H 8150 5150 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-6W-1KO-5-T52_C714219.html" H 8150 5150 50  0001 C CNN "Link"
 F 5 "yes" H 8150 5150 50  0001 C CNN "Checked"
 F 6 "0.0031" H 8150 5150 50  0001 C CNN "Price"
 	1    8150 5150
@@ -820,7 +820,7 @@ F 1 "10" V 2604 1950 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2440 1940 50  0001 C CNN
 F 3 "WR06X100JTL" H 2400 1950 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_Walsin-Tech-Corp-WR06X100JTL_C384297.html" H 2400 1950 50  0001 C CNN "Link"
-F 5 "On PFC" H 2400 1950 50  0001 C CNN "Notes"
+F 5 "" H 2400 1950 50  0001 C CNN "Notes"
 F 6 "75" H 2400 1950 50  0001 C CNN "Working Voltage"
 F 7 "yes" H 2400 1950 50  0001 C CNN "Checked"
 F 8 "0.0012" H 2400 1950 50  0001 C CNN "Price"
@@ -943,7 +943,7 @@ F 1 "10" V 2354 1450 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2190 1440 50  0001 C CNN
 F 3 "WR06X100JTL" H 2150 1450 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_Walsin-Tech-Corp-WR06X100JTL_C384297.html" H 2150 1450 50  0001 C CNN "Link"
-F 5 "On PFC" H 2150 1450 50  0001 C CNN "Notes"
+F 5 "" H 2150 1450 50  0001 C CNN "Notes"
 F 6 "75" H 2150 1450 50  0001 C CNN "Working Voltage"
 F 7 "yes" H 2150 1450 50  0001 C CNN "Checked"
 F 8 "0.0012" H 2150 1450 50  0001 C CNN "Price"
@@ -959,7 +959,7 @@ F 1 "10" V 2604 1650 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2440 1640 50  0001 C CNN
 F 3 "WR06X100JTL" H 2400 1650 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_Walsin-Tech-Corp-WR06X100JTL_C384297.html" H 2400 1650 50  0001 C CNN "Link"
-F 5 "On PFC" H 2400 1650 50  0001 C CNN "Notes"
+F 5 "" H 2400 1650 50  0001 C CNN "Notes"
 F 6 "75" H 2400 1650 50  0001 C CNN "Working Voltage"
 F 7 "yes" H 2400 1650 50  0001 C CNN "Checked"
 F 8 "0.0012" H 2400 1650 50  0001 C CNN "Price"
@@ -977,7 +977,7 @@ F 1 "10" V 2604 2750 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2440 2740 50  0001 C CNN
 F 3 "WR06X100JTL" H 2400 2750 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_Walsin-Tech-Corp-WR06X100JTL_C384297.html" H 2400 2750 50  0001 C CNN "Link"
-F 5 "On PFC" H 2400 2750 50  0001 C CNN "Notes"
+F 5 "" H 2400 2750 50  0001 C CNN "Notes"
 F 6 "75" H 2400 2750 50  0001 C CNN "Working Voltage"
 F 7 "yes" H 2400 2750 50  0001 C CNN "Checked"
 F 8 "0.0012" H 2400 2750 50  0001 C CNN "Price"
@@ -1183,8 +1183,8 @@ P 3100 6550
 F 0 "R3" V 3305 6550 50  0000 C CNN
 F 1 "1k" V 3214 6550 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3140 6540 50  0001 C CNN
-F 3 "CF1/4W-1KΩ±5% T52" H 3100 6550 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Carbon-Film-Resistors_CCO-Chian-Chia-Elec-CF1-4W-1KR-5-T52_C120055.html" H 3100 6550 50  0001 C CNN "Link"
+F 3 "CF1/6W-1KΩ±5%T52" H 3100 6550 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-6W-1KO-5-T52_C714219.html" H 3100 6550 50  0001 C CNN "Link"
 F 5 "yes" H 3100 6550 50  0001 C CNN "Checked"
 F 6 "0.0031" H 3100 6550 50  0001 C CNN "Price"
 	1    3100 6550
@@ -1285,7 +1285,7 @@ F 0 "T1" H 3900 2681 50  0000 C CNN
 F 1 "Transformer_1P_1S" H 3900 2590 50  0000 C CNN
 F 2 "custom:CSV-E25-13-7-1S-6P-C" H 3900 2300 50  0001 C CNN
 F 3 "custom" H 3900 2300 50  0001 C CNN
-F 4 "yes" H 3900 2300 50  0001 C CNN "Checked"
+F 4 "" H 3900 2300 50  0001 C CNN "Checked"
 F 5 "1.337" H 3900 2300 50  0001 C CNN "Price"
 	1    3900 2300
 	1    0    0    -1  
@@ -1323,7 +1323,7 @@ F 0 "IC1" H 4200 6565 50  0000 C CNN
 F 1 "NCP1252ADR2G" H 4200 6474 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4550 6400 50  0001 L CNN
 F 3 "https://www.onsemi.com/pub/Collateral/NCP1252-D.PDF" H 4550 6300 50  0001 L CNN
-F 4 "yes" H 3700 6300 50  0001 C CNN "Checked"
+F 4 "" H 3700 6300 50  0001 C CNN "Checked"
 F 5 "0.5338" H 3700 6300 50  0001 C CNN "Price"
 	1    3700 6300
 	1    0    0    -1  
@@ -1367,7 +1367,7 @@ F 1 "10u" H 5715 2255 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5638 2150 50  0001 C CNN
 F 3 "C1206X5R106K500NT" H 5600 2300 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 5600 2300 50  0001 C CNN "Link"
-F 5 "" H 5600 2300 50  0001 C CNN "Checked"
+F 5 "yes" H 5600 2300 50  0001 C CNN "Checked"
 F 6 "" H 5600 2300 50  0001 C CNN "Working Voltage"
 F 7 "" H 5600 2300 50  0001 C CNN "Price"
 F 8 "On linear" H 5600 2300 50  0001 C CNN "Notes"
@@ -1385,7 +1385,7 @@ F 1 "10u" H 6065 2255 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5988 2150 50  0001 C CNN
 F 3 "C1206X5R106K500NT" H 5950 2300 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 5950 2300 50  0001 C CNN "Link"
-F 5 "" H 5950 2300 50  0001 C CNN "Checked"
+F 5 "yes" H 5950 2300 50  0001 C CNN "Checked"
 F 6 "" H 5950 2300 50  0001 C CNN "Working Voltage"
 F 7 "" H 5950 2300 50  0001 C CNN "Price"
 F 8 "On linear" H 5950 2300 50  0001 C CNN "Notes"
@@ -1401,7 +1401,7 @@ F 1 "10u" H 6465 2255 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 6388 2150 50  0001 C CNN
 F 3 "C1206X5R106K500NT" H 6350 2300 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 6350 2300 50  0001 C CNN "Link"
-F 5 "" H 6350 2300 50  0001 C CNN "Checked"
+F 5 "yes" H 6350 2300 50  0001 C CNN "Checked"
 F 6 "" H 6350 2300 50  0001 C CNN "Working Voltage"
 F 7 "" H 6350 2300 50  0001 C CNN "Price"
 F 8 "On linear" H 6350 2300 50  0001 C CNN "Notes"
@@ -1417,7 +1417,7 @@ F 1 "10u" H 6815 2255 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 6738 2150 50  0001 C CNN
 F 3 "C1206X5R106K500NT" H 6700 2300 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 6700 2300 50  0001 C CNN "Link"
-F 5 "" H 6700 2300 50  0001 C CNN "Checked"
+F 5 "yes" H 6700 2300 50  0001 C CNN "Checked"
 F 6 "" H 6700 2300 50  0001 C CNN "Working Voltage"
 F 7 "" H 6700 2300 50  0001 C CNN "Price"
 F 8 "On linear" H 6700 2300 50  0001 C CNN "Notes"
@@ -1433,7 +1433,7 @@ F 1 "10u" H 7165 2255 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 7088 2150 50  0001 C CNN
 F 3 "C1206X5R106K500NT" H 7050 2300 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html" H 7050 2300 50  0001 C CNN "Link"
-F 5 "" H 7050 2300 50  0001 C CNN "Checked"
+F 5 "yes" H 7050 2300 50  0001 C CNN "Checked"
 F 6 "" H 7050 2300 50  0001 C CNN "Working Voltage"
 F 7 "" H 7050 2300 50  0001 C CNN "Price"
 F 8 "On linear" H 7050 2300 50  0001 C CNN "Notes"
