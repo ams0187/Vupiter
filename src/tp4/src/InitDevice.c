@@ -32,8 +32,7 @@ enter_DefaultMode_from_RESET (void)
   PBCFG_0_enter_DefaultMode_from_RESET ();
   ADC_0_enter_DefaultMode_from_RESET ();
   DAC_0_enter_DefaultMode_from_RESET ();
-  DAC_2_enter_DefaultMode_from_RESET ();
-  DACGCF_0_enter_DefaultMode_from_RESET ();
+  DAC_1_enter_DefaultMode_from_RESET ();
   VREF_0_enter_DefaultMode_from_RESET ();
   CIP51_0_enter_DefaultMode_from_RESET ();
   CLOCK_0_enter_DefaultMode_from_RESET ();
@@ -222,37 +221,29 @@ PORTS_2_enter_DefaultMode_from_RESET (void)
   // [P2 - Port 2 Pin Latch]$
 
   // $[P2MDOUT - Port 2 Output Mode]
-  /***********************************************************************
-   - P2.0 output is open-drain
-   - P2.1 output is open-drain
-   - P2.2 output is open-drain
-   - P2.3 output is push-pull
-   ***********************************************************************/
-  P2MDOUT = P2MDOUT_B0__OPEN_DRAIN | P2MDOUT_B1__OPEN_DRAIN
-      | P2MDOUT_B2__OPEN_DRAIN | P2MDOUT_B3__PUSH_PULL;
   // [P2MDOUT - Port 2 Output Mode]$
 
   // $[P2MDIN - Port 2 Input Mode]
   /***********************************************************************
    - P2.0 pin is configured for analog mode
-   - P2.1 pin is configured for digital mode
-   - P2.2 pin is configured for analog mode
+   - P2.1 pin is configured for analog mode
+   - P2.2 pin is configured for digital mode
    - P2.3 pin is configured for digital mode
    ***********************************************************************/
   SFRPAGE = 0x20;
-  P2MDIN = P2MDIN_B0__ANALOG | P2MDIN_B1__DIGITAL | P2MDIN_B2__ANALOG
+  P2MDIN = P2MDIN_B0__ANALOG | P2MDIN_B1__ANALOG | P2MDIN_B2__DIGITAL
       | P2MDIN_B3__DIGITAL;
   // [P2MDIN - Port 2 Input Mode]$
 
   // $[P2SKIP - Port 2 Skip]
   /***********************************************************************
    - P2.0 pin is skipped by the crossbar
-   - P2.1 pin is not skipped by the crossbar
+   - P2.1 pin is skipped by the crossbar
    - P2.2 pin is skipped by the crossbar
-   - P2.3 pin is skipped by the crossbar
+   - P2.3 pin is not skipped by the crossbar
    ***********************************************************************/
-  P2SKIP = P2SKIP_B0__SKIPPED | P2SKIP_B1__NOT_SKIPPED | P2SKIP_B2__SKIPPED
-      | P2SKIP_B3__SKIPPED;
+  P2SKIP = P2SKIP_B0__SKIPPED | P2SKIP_B1__SKIPPED | P2SKIP_B2__SKIPPED
+      | P2SKIP_B3__NOT_SKIPPED;
   // [P2SKIP - Port 2 Skip]$
 
   // $[P2MASK - Port 2 Mask]
@@ -271,14 +262,14 @@ PBCFG_0_enter_DefaultMode_from_RESET (void)
 {
   // $[XBR2 - Port I/O Crossbar 2]
   /***********************************************************************
-   - Weak Pullups enabled 
+   - Weak Pullups disabled
    - Crossbar enabled
    - UART1 I/O unavailable at Port pin
    - UART1 RTS1 unavailable at Port pin
    - UART1 CTS1 unavailable at Port pin
    ***********************************************************************/
   SFRPAGE = 0x00;
-  XBR2 = XBR2_WEAKPUD__PULL_UPS_ENABLED | XBR2_XBARE__ENABLED
+  XBR2 = XBR2_WEAKPUD__PULL_UPS_DISABLED | XBR2_XBARE__ENABLED
       | XBR2_URT1E__DISABLED | XBR2_URT1RTSE__DISABLED
       | XBR2_URT1CTSE__DISABLED;
   // [XBR2 - Port I/O Crossbar 2]$
@@ -327,6 +318,13 @@ ADC_0_enter_DefaultMode_from_RESET (void)
   // [ADC0MX - ADC0 Multiplexer Selection]$
 
   // $[ADC0CF2 - ADC0 Power Control]
+  /***********************************************************************
+   - The ADC0 ground reference is the GND pin
+   - The ADC0 voltage reference is the VREF pin 
+   - Power Up Delay Time = 0x1F
+   ***********************************************************************/
+  ADC0CF2 = ADC0CF2_GNDSL__GND_PIN | ADC0CF2_REFSL__VREF_PIN
+      | (0x1F << ADC0CF2_ADPWR__SHIFT);
   // [ADC0CF2 - ADC0 Power Control]$
 
   // $[ADC0CF0 - ADC0 Configuration]
@@ -448,11 +446,6 @@ extern void
 VREF_0_enter_DefaultMode_from_RESET (void)
 {
   // $[REF0CN - Voltage Reference Control]
-  /***********************************************************************
-   - 2.4 V reference output to VREF pin
-   ***********************************************************************/
-  SFRPAGE = 0x00;
-  REF0CN = REF0CN_VREFSL__VREF_2P4;
   // [REF0CN - Voltage Reference Control]$
 
 }
@@ -700,6 +693,25 @@ UART_0_enter_DefaultMode_from_RESET (void)
    ***********************************************************************/
   SCON0 |= SCON0_REN__RECEIVE_ENABLED;
   // [SCON0 - UART0 Serial Port Control]$
+
+}
+
+extern void
+DAC_1_enter_DefaultMode_from_RESET (void)
+{
+  // $[DAC1CF0 - DAC1 Configuration 0]
+  /***********************************************************************
+   - DAC1 is enabled and will drive the output pin
+   - DAC1 output updates occur on every clock cycle
+   - DAC1 input is treated as right-justified
+   - All resets will reset DAC1 and its associated registers
+   ***********************************************************************/
+  DAC1CF0 = DAC1CF0_EN__ENABLE | DAC1CF0_UPDATE__SYSCLK
+      | DAC1CF0_LJST__RIGHT_JUSTIFY | DAC1CF0_RSTMD__NORMAL;
+  // [DAC1CF0 - DAC1 Configuration 0]$
+
+  // $[DAC1CF1 - DAC1 Configuration 1]
+  // [DAC1CF1 - DAC1 Configuration 1]$
 
 }
 

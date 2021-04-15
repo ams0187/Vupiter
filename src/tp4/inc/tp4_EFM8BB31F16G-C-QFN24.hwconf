@@ -6,6 +6,7 @@
     <property object="ADC14_0" propertyId="adc14.enable.enableadc" value="Enabled"/>
     <property object="ADC14_0" propertyId="adc14.inputselection.positiveinputselection" value="ADC0.6 (P1.0)"/>
     <property object="ADC14_0" propertyId="adc14.throughput.conversiontrackingtimesetting" value="24"/>
+    <property object="ADC14_0" propertyId="adc14.voltagereference.selectvoltagereference" value="VREF pin"/>
     <property object="CIP51_0" propertyId="ABPeripheral.included" value="true"/>
     <property object="CIP51_0" propertyId="cip51.prefetchenginecontrol.flashreadtiming" value="SYSCLK is below 50 MHz"/>
     <property object="CLOCK_0" propertyId="ABPeripheral.included" value="true"/>
@@ -14,17 +15,16 @@
     <property object="CROSSBAR0" propertyId="xbar0.smbus0.clockdata" value="Enabled"/>
     <property object="CROSSBAR0" propertyId="xbar0.uart0.data" value="Enabled"/>
     <property object="DACGCF_0" propertyId="ABPeripheral.included" value="true"/>
-    <property object="DACGCF_0" propertyId="dacgcf.dac01configuration.dac01referencevoltageselection" value="VREF"/>
-    <property object="DACGCF_0" propertyId="dacgcf.dac23configuration.dac23referencevoltageselection" value="VREF"/>
     <property object="DAC_0" propertyId="ABPeripheral.included" value="true"/>
     <property object="DAC_0" propertyId="dac.enable.enabledac#" value="Enabled"/>
     <property object="DAC_1" propertyId="ABPeripheral.included" value="true"/>
+    <property object="DAC_1" propertyId="dac.enable.enabledac#" value="Enabled"/>
     <property object="DAC_2" propertyId="ABPeripheral.included" value="true"/>
-    <property object="DAC_2" propertyId="dac.enable.enabledac#" value="Enabled"/>
     <property object="DAC_3" propertyId="ABPeripheral.included" value="true"/>
     <property object="DefaultMode" propertyId="mode.diagramLocation" value="100, 100"/>
     <property object="P0.0" propertyId="ports.settings.inputmode" value="Analog"/>
     <property object="P0.0" propertyId="ports.settings.iomode" value="Analog I/O"/>
+    <property object="P0.0" propertyId="ports.settings.label" value="vref"/>
     <property object="P0.0" propertyId="ports.settings.skip" value="Skipped"/>
     <property object="P0.1" propertyId="ports.settings.iomode" value="Digital Push-Pull Output"/>
     <property object="P0.1" propertyId="ports.settings.label" value="e2_pb"/>
@@ -42,9 +42,11 @@
     <property object="P0.7" propertyId="ports.settings.skip" value="Skipped"/>
     <property object="P1.0" propertyId="ports.settings.inputmode" value="Analog"/>
     <property object="P1.0" propertyId="ports.settings.iomode" value="Analog I/O"/>
+    <property object="P1.0" propertyId="ports.settings.label" value="iread"/>
     <property object="P1.0" propertyId="ports.settings.skip" value="Skipped"/>
     <property object="P1.1" propertyId="ports.settings.inputmode" value="Analog"/>
     <property object="P1.1" propertyId="ports.settings.iomode" value="Analog I/O"/>
+    <property object="P1.1" propertyId="ports.settings.label" value="vread"/>
     <property object="P1.1" propertyId="ports.settings.skip" value="Skipped"/>
     <property object="P1.2" propertyId="ports.settings.iomode" value="Digital Push-Pull Output"/>
     <property object="P1.2" propertyId="ports.settings.label" value="led"/>
@@ -61,13 +63,14 @@
     <property object="P1.6" propertyId="ports.settings.skip" value="Skipped"/>
     <property object="P2.0" propertyId="ports.settings.inputmode" value="Analog"/>
     <property object="P2.0" propertyId="ports.settings.iomode" value="Analog I/O"/>
+    <property object="P2.0" propertyId="ports.settings.label" value="vset"/>
     <property object="P2.0" propertyId="ports.settings.skip" value="Skipped"/>
-    <property object="P2.2" propertyId="ports.settings.inputmode" value="Analog"/>
-    <property object="P2.2" propertyId="ports.settings.iomode" value="Analog I/O"/>
+    <property object="P2.1" propertyId="ports.settings.inputmode" value="Analog"/>
+    <property object="P2.1" propertyId="ports.settings.iomode" value="Analog I/O"/>
+    <property object="P2.1" propertyId="ports.settings.label" value="iset"/>
+    <property object="P2.1" propertyId="ports.settings.skip" value="Skipped"/>
     <property object="P2.2" propertyId="ports.settings.skip" value="Skipped"/>
-    <property object="P2.3" propertyId="ports.settings.iomode" value="Digital Push-Pull Output"/>
-    <property object="P2.3" propertyId="ports.settings.outputmode" value="Push-pull"/>
-    <property object="P2.3" propertyId="ports.settings.skip" value="Skipped"/>
+    <property object="PBCFG_0" propertyId="pbcfg.settings.disableportioweakpullup" value="Pull-ups disabled"/>
     <property object="PBCFG_0" propertyId="pbcfg.settings.enablecrossbar" value="Enabled"/>
     <property object="SMBUS_0" propertyId="ABPeripheral.included" value="true"/>
     <property object="SMBUS_0" propertyId="smbus.configuration.smbusclocksourceselection" value="Timer 2 low byte overflow"/>
@@ -96,8 +99,8 @@
     <property object="UART_0" propertyId="uart.serialportcontrol.enablereceive" value="Enabled"/>
     <property object="UART_0" propertyId="uart.serialportcontrol.timer1overflowfrequency" value="116.666 kHz"/>
     <property object="VREF_0" propertyId="ABPeripheral.included" value="true"/>
-    <property object="VREF_0" propertyId="vref.control.voltagereferenceselection" value="Internal 2.4V (output to VREF pin)"/>
-    <property object="VREF_0" propertyId="vref.control.vrefoutput" value="2.4 V Reference"/>
+    <property object="VREF_0" propertyId="vref.control.externalvoltageonvrefpin" value="3"/>
+    <property object="VREF_0" propertyId="vref.control.voltagereferenceselection" value="VREF pin input"/>
     <property object="WDT_0" propertyId="ABPeripheral.included" value="true"/>
     <property object="WDT_0" propertyId="wdt.watchdogcontrol.wdtenable" value="Disable"/>
   </mode>

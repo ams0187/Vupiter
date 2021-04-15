@@ -1,13 +1,13 @@
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        03/22/2021 18:54:51 PAGE 1   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/05/2021 11:36:01 PAGE 1   
 
 
 C51 COMPILER V9.60.0.0, COMPILATION OF MODULE INITDEVICE
 OBJECT MODULE PLACED IN .\src/InitDevice.OBJ
 COMPILER INVOKED BY: Z:\home\twoninefour\hdd\SimplicityStudio_v5\developer\toolchains\keil_8051\9.60\BIN\C51.exe /home/t
-                    -woninefour/hdd/seniorDesign/tp4/src/InitDevice.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) 
-                    -OPTIMIZE(0,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(/home/twoninefour/hdd/SimplicityStudio_v5/develope
-                    -r/sdks/8051/v4.2.0//Device/shared/si8051Base;/home/twoninefour/hdd/SimplicityStudio_v5/developer/sdks/8051/v4.2.0//Devic
-                    -e/EFM8BB3/inc) PRINT(.\src/InitDevice.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src/InitDevice.OBJ)
+                    -woninefour/hdd/seniorDesign/Vupiter/src/tp4/src/InitDevice.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) FL
+                    -OATFUZZY(3) OPTIMIZE(0,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(/home/twoninefour/hdd/SimplicityStudio
+                    -_v5/developer/sdks/8051/v4.2.0//Device/shared/si8051Base;/home/twoninefour/hdd/SimplicityStudio_v5/developer/sdks/8051/v
+                    -4.2.0//Device/EFM8BB3/inc) PRINT(.\src/InitDevice.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src/InitDevice.OBJ)
 
 line level    source
 
@@ -63,7 +63,7 @@ line level    source
   50          //================================================================================
   51          // WDT_0_enter_DefaultMode_from_RESET
   52          //================================================================================
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        03/22/2021 18:54:51 PAGE 2   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/05/2021 11:36:01 PAGE 2   
 
   53          extern void
   54          WDT_0_enter_DefaultMode_from_RESET (void)
@@ -128,7 +128,7 @@ line level    source
  113   1        // $[P0MDIN - Port 0 Input Mode]
  114   1        /***********************************************************************
  115   1         - P0.0 pin is configured for analog mode
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        03/22/2021 18:54:51 PAGE 3   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/05/2021 11:36:01 PAGE 3   
 
  116   1         - P0.1 pin is configured for digital mode
  117   1         - P0.2 pin is configured for digital mode
@@ -193,7 +193,7 @@ line level    source
  176   1      
  177   1        // $[P1MDIN - Port 1 Input Mode]
  178   1        /***********************************************************************
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        03/22/2021 18:54:51 PAGE 4   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/05/2021 11:36:01 PAGE 4   
 
  179   1         - P1.0 pin is configured for analog mode
  180   1         - P1.1 pin is configured for analog mode
@@ -258,7 +258,7 @@ line level    source
  239   1         - P2.2 pin is configured for analog mode
  240   1         - P2.3 pin is configured for digital mode
  241   1         ***********************************************************************/
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        03/22/2021 18:54:51 PAGE 5   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/05/2021 11:36:01 PAGE 5   
 
  242   1        SFRPAGE = 0x20;
  243   1        P2MDIN = P2MDIN_B0__ANALOG | P2MDIN_B1__DIGITAL | P2MDIN_B2__ANALOG
@@ -323,7 +323,7 @@ line level    source
  302   1            | XBR0_CP1AE__DISABLED | XBR0_SYSCKE__DISABLED;
  303   1        // [XBR0 - Port I/O Crossbar 0]$
  304   1      
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        03/22/2021 18:54:51 PAGE 6   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/05/2021 11:36:01 PAGE 6   
 
  305   1        // $[XBR1 - Port I/O Crossbar 1]
  306   1        // [XBR1 - Port I/O Crossbar 1]$
@@ -388,7 +388,7 @@ line level    source
  365   1        // $[ADC0CN0 - ADC0 Control 0]
  366   1        /***********************************************************************
  367   1         - Enable ADC0 
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        03/22/2021 18:54:51 PAGE 7   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/05/2021 11:36:01 PAGE 7   
 
  368   1         ***********************************************************************/
  369   1        ADC0CN0 |= ADC0CN0_ADEN__ENABLED;
@@ -453,7 +453,7 @@ line level    source
  428   1         - Select the VREF pin
  429   1         - Input = DAC1H:DAC1L
  430   1         - Input = DAC3H:DAC3L
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        03/22/2021 18:54:51 PAGE 8   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/05/2021 11:36:01 PAGE 8   
 
  431   1         - DAC1 always updates from the data source selected in D1SRC
  432   1         - DAC3 always updates from the data source selected in D3SRC
@@ -518,7 +518,7 @@ line level    source
  491   1        /***********************************************************************
  492   1         - Clock derived from the Internal High Frequency Oscillator 1
  493   1         - SYSCLK is equal to selected clock source divided by 1
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        03/22/2021 18:54:51 PAGE 9   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/05/2021 11:36:01 PAGE 9   
 
  494   1         ***********************************************************************/
  495   1        CLKSEL = CLKSEL_CLKSL__HFOSC1 | CLKSEL_CLKDIV__SYSCLK_DIV_1;
@@ -583,7 +583,7 @@ line level    source
  554   1        // [CKCON1 - Clock Control 1]$
  555   1      
  556   1        // $[TMOD - Timer 0/1 Mode]
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        03/22/2021 18:54:51 PAGE 10  
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/05/2021 11:36:01 PAGE 10  
 
  557   1        /***********************************************************************
  558   1         - Mode 0, 13-bit Counter/Timer
@@ -648,7 +648,7 @@ line level    source
  617   1         - Prescaler = 1
  618   1         ***********************************************************************/
  619   1        SFRPAGE = 0x20;
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        03/22/2021 18:54:51 PAGE 11  
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/05/2021 11:36:01 PAGE 11  
 
  620   1        SBCON1 = SBCON1_BREN__ENABLED | SBCON1_BPS__DIV_BY_1;
  621   1        // [SBCON1 - UART1 Baud Rate Generator Control]$
@@ -713,7 +713,7 @@ line level    source
  680   1        TH1 = (0xDD << TH1_TH1__SHIFT);
  681   1        // [TH1 - Timer 1 High Byte]$
  682   1      
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        03/22/2021 18:54:51 PAGE 12  
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/05/2021 11:36:01 PAGE 12  
 
  683   1        // $[TL1 - Timer 1 Low Byte]
  684   1        // [TL1 - Timer 1 Low Byte]$

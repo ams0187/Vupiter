@@ -1,13 +1,13 @@
-C51 COMPILER V9.60.0.0   TP4_MAIN                                                          03/22/2021 19:19:35 PAGE 1   
+C51 COMPILER V9.60.0.0   TP4_MAIN                                                          04/05/2021 12:26:40 PAGE 1   
 
 
 C51 COMPILER V9.60.0.0, COMPILATION OF MODULE TP4_MAIN
 OBJECT MODULE PLACED IN .\src/tp4_main.OBJ
 COMPILER INVOKED BY: Z:\home\twoninefour\hdd\SimplicityStudio_v5\developer\toolchains\keil_8051\9.60\BIN\C51.exe /home/t
-                    -woninefour/hdd/seniorDesign/tp4/src/tp4_main.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OP
-                    -TIMIZE(0,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(/home/twoninefour/hdd/SimplicityStudio_v5/developer/
-                    -sdks/8051/v4.2.0//Device/shared/si8051Base;/home/twoninefour/hdd/SimplicityStudio_v5/developer/sdks/8051/v4.2.0//Device/
-                    -EFM8BB3/inc) PRINT(.\src/tp4_main.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src/tp4_main.OBJ)
+                    -woninefour/hdd/seniorDesign/Vupiter/src/tp4/src/tp4_main.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) FLOA
+                    -TFUZZY(3) OPTIMIZE(0,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(/home/twoninefour/hdd/SimplicityStudio_v
+                    -5/developer/sdks/8051/v4.2.0//Device/shared/si8051Base;/home/twoninefour/hdd/SimplicityStudio_v5/developer/sdks/8051/v4.
+                    -2.0//Device/EFM8BB3/inc) PRINT(.\src/tp4_main.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src/tp4_main.OBJ)
 
 line level    source
 
@@ -33,39 +33,47 @@ line level    source
   20          int main (void)
   21          {
   22   1        int i,j,k;
-  23   1        enter_DefaultMode_from_RESET();
-  24   1        P0 = 0xFF; //set all pins to high so inputs can operate
-  25   1        P1 = 0xFF;
-  26   1        P2 = 0xFF;
-  27   1        while (1) {
-  28   2            for (i = 0; i < 3; i++)
-  29   2              {
-  30   3                NOP ();
-  31   3      
-  32   3            for (j = 0; j < 255; j++)
-  33   3              {
-  34   4                NOP ();
-  35   4      
-  36   4            for (k = 0; k < 255; k++)
-  37   4              {
-  38   5                NOP ();
-  39   5              }}}
-  40   2            P2 ^= 0x08;
-  41   2            P1 ^= 0x14; //toggle LED pin
-  42   2            P0 ^= 0xF2;
-  43   2      
-  44   2        }                             // Spin forever
-  45   1      }
+  23   1        uint8_t SFRPAGE_save;
+  24   1        enter_DefaultMode_from_RESET();
+  25   1        P0 = 0xFF; //set all pins to high so inputs can operate
+  26   1        P1 = 0xFF;
+  27   1        P2 = 0xFF;
+  28   1      
+  29   1        SFRPAGE_save = SFRPAGE;
+  30   1        SFRPAGE = 0x30;
+  31   1        DAC0L = 200;
+  32   1        DAC0H = 0;
+  33   1        DAC2L = 200;
+  34   1        DAC2H = 0;
+  35   1        SFRPAGE = SFRPAGE_save;
+  36   1        while (1) {
+  37   2            for (i = 0; i < 3; i++)
+  38   2              {
+  39   3                NOP ();
+  40   3      
+  41   3            for (j = 0; j < 255; j++)
+  42   3              {
+  43   4                NOP ();
+  44   4      
+  45   4            for (k = 0; k < 255; k++)
+  46   4              {
+  47   5                NOP ();
+  48   5              }}}
+  49   2            P1 ^= 0x04; //toggle LED pin
+  50   2      
+  51   2      
+  52   2        }                             // Spin forever
+C51 COMPILER V9.60.0.0   TP4_MAIN                                                          04/05/2021 12:26:40 PAGE 2   
+
+  53   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    115    ----
+   CODE SIZE        =    130    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-C51 COMPILER V9.60.0.0   TP4_MAIN                                                          03/22/2021 19:19:35 PAGE 2   
-
-   DATA SIZE        =      6    ----
+   DATA SIZE        =      7    ----
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
    EDATA SIZE       =   ----    ----

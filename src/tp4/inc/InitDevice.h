@@ -32,9 +32,7 @@ ADC_0_enter_DefaultMode_from_RESET (void);
 extern void
 DAC_0_enter_DefaultMode_from_RESET (void);
 extern void
-DAC_2_enter_DefaultMode_from_RESET (void);
-extern void
-DACGCF_0_enter_DefaultMode_from_RESET (void);
+DAC_1_enter_DefaultMode_from_RESET (void);
 extern void
 VREF_0_enter_DefaultMode_from_RESET (void);
 extern void
