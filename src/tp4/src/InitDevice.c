@@ -37,9 +37,11 @@ enter_DefaultMode_from_RESET (void)
   CIP51_0_enter_DefaultMode_from_RESET ();
   CLOCK_0_enter_DefaultMode_from_RESET ();
   TIMER01_0_enter_DefaultMode_from_RESET ();
+  TIMER16_2_enter_DefaultMode_from_RESET ();
   TIMER_SETUP_0_enter_DefaultMode_from_RESET ();
   SMBUS_0_enter_DefaultMode_from_RESET ();
   UART_0_enter_DefaultMode_from_RESET ();
+  INTERRUPT_0_enter_DefaultMode_from_RESET ();
   // Restore the SFRPAGE
   SFRPAGE = SFRPAGE_save;
   // [Config Calls]$
@@ -262,14 +264,14 @@ PBCFG_0_enter_DefaultMode_from_RESET (void)
 {
   // $[XBR2 - Port I/O Crossbar 2]
   /***********************************************************************
-   - Weak Pullups disabled
+   - Weak Pullups enabled 
    - Crossbar enabled
    - UART1 I/O unavailable at Port pin
    - UART1 RTS1 unavailable at Port pin
    - UART1 CTS1 unavailable at Port pin
    ***********************************************************************/
   SFRPAGE = 0x00;
-  XBR2 = XBR2_WEAKPUD__PULL_UPS_DISABLED | XBR2_XBARE__ENABLED
+  XBR2 = XBR2_WEAKPUD__PULL_UPS_ENABLED | XBR2_XBARE__ENABLED
       | XBR2_URT1E__DISABLED | XBR2_URT1RTSE__DISABLED
       | XBR2_URT1CTSE__DISABLED;
   // [XBR2 - Port I/O Crossbar 2]$
@@ -423,15 +425,14 @@ DACGCF_0_enter_DefaultMode_from_RESET (void)
   // $[DACGCF0 - DAC Global Configuration 0]
   /***********************************************************************
    - Select the VREF pin
-   - Select the VREF pin
+   - Select the VDD supply
    - Input = DAC1H:DAC1L
    - Input = DAC3H:DAC3L
    - DAC1 always updates from the data source selected in D1SRC
    - DAC3 always updates from the data source selected in D3SRC
    ***********************************************************************/
-  DACGCF0 = DACGCF0_D01REFSL__VREF | DACGCF0_D23REFSL__VREF
-      | DACGCF0_D1SRC__DAC1 | DACGCF0_D3SRC__DAC3 | DACGCF0_D1AMEN__NORMAL
-      | DACGCF0_D3AMEN__NORMAL;
+  DACGCF0 = DACGCF0_D01REFSL__VREF | DACGCF0_D23REFSL__VDD | DACGCF0_D1SRC__DAC1
+      | DACGCF0_D3SRC__DAC3 | DACGCF0_D1AMEN__NORMAL | DACGCF0_D3AMEN__NORMAL;
   // [DACGCF0 - DAC Global Configuration 0]$
 
   // $[DACGCF2 - DAC Global Configuration 2]
@@ -510,6 +511,10 @@ TIMER16_2_enter_DefaultMode_from_RESET (void)
   // [TMR2CN1 - Timer 2 Control 1]$
 
   // $[TMR2CN0 - Timer 2 Control]
+  /***********************************************************************
+   - Timer 2 operates as two 8-bit auto-reload timers
+   ***********************************************************************/
+  TMR2CN0 |= TMR2CN0_T2SPLIT__8_BIT_RELOAD;
   // [TMR2CN0 - Timer 2 Control]$
 
   // $[TMR2H - Timer 2 High Byte]
@@ -519,12 +524,20 @@ TIMER16_2_enter_DefaultMode_from_RESET (void)
   // [TMR2L - Timer 2 Low Byte]$
 
   // $[TMR2RLH - Timer 2 Reload High Byte]
+  /***********************************************************************
+   - Timer 2 Reload High Byte = 0xFB
+   ***********************************************************************/
+  TMR2RLH = (0xFB << TMR2RLH_TMR2RLH__SHIFT);
   // [TMR2RLH - Timer 2 Reload High Byte]$
 
   // $[TMR2RLL - Timer 2 Reload Low Byte]
   // [TMR2RLL - Timer 2 Reload Low Byte]$
 
   // $[TMR2CN0]
+  /***********************************************************************
+   - Start Timer 2 running
+   ***********************************************************************/
+  TMR2CN0 |= TMR2CN0_TR2__RUN;
   // [TMR2CN0]$
 
   // $[Timer Restoration]
@@ -541,6 +554,19 @@ extern void
 TIMER_SETUP_0_enter_DefaultMode_from_RESET (void)
 {
   // $[CKCON0 - Clock Control 0]
+  /***********************************************************************
+   - System clock divided by 12
+   - Counter/Timer 0 uses the system clock
+   - Timer 2 high byte uses the clock defined by T2XCLK in TMR2CN0
+   - Timer 2 low byte uses the clock defined by T2XCLK in TMR2CN0
+   - Timer 3 high byte uses the clock defined by T3XCLK in TMR3CN0
+   - Timer 3 low byte uses the clock defined by T3XCLK in TMR3CN0
+   - Timer 1 uses the clock defined by the prescale field, SCA
+   ***********************************************************************/
+  CKCON0 = CKCON0_SCA__SYSCLK_DIV_12 | CKCON0_T0M__SYSCLK
+      | CKCON0_T2MH__EXTERNAL_CLOCK | CKCON0_T2ML__EXTERNAL_CLOCK
+      | CKCON0_T3MH__EXTERNAL_CLOCK | CKCON0_T3ML__EXTERNAL_CLOCK
+      | CKCON0_T1M__PRESCALE;
   // [CKCON0 - Clock Control 0]$
 
   // $[CKCON1 - Clock Control 1]
@@ -548,14 +574,14 @@ TIMER_SETUP_0_enter_DefaultMode_from_RESET (void)
 
   // $[TMOD - Timer 0/1 Mode]
   /***********************************************************************
-   - Mode 0, 13-bit Counter/Timer
+   - Mode 1, 16-bit Counter/Timer
    - Mode 2, 8-bit Counter/Timer with Auto-Reload
    - Timer Mode
    - Timer 0 enabled when TR0 = 1 irrespective of INT0 logic level
    - Timer Mode
    - Timer 1 enabled when TR1 = 1 irrespective of INT1 logic level
    ***********************************************************************/
-  TMOD = TMOD_T0M__MODE0 | TMOD_T1M__MODE2 | TMOD_CT0__TIMER
+  TMOD = TMOD_T0M__MODE1 | TMOD_T1M__MODE2 | TMOD_CT0__TIMER
       | TMOD_GATE0__DISABLED | TMOD_CT1__TIMER | TMOD_GATE1__DISABLED;
   // [TMOD - Timer 0/1 Mode]$
 
@@ -591,9 +617,17 @@ SMBUS_0_enter_DefaultMode_from_RESET (void)
 
   // $[SMB0CF - SMBus 0 Configuration]
   /***********************************************************************
-   - Timer 2 Low Byte Overflow
+   - Timer 2 High Byte Overflow
+   - Slave states are inhibited
+   - Enable the SMBus module
+   - Enable bus free timeouts
+   - Enable SCL low timeouts if Timer 3 RLFSEL is set appropriately
+   - Enable SDA extended setup and hold times
    ***********************************************************************/
-  SMB0CF |= SMB0CF_SMBCS__TIMER2_LOW;
+  SMB0CF &= ~SMB0CF_SMBCS__FMASK;
+  SMB0CF |= SMB0CF_SMBCS__TIMER2_HIGH | SMB0CF_INH__SLAVE_DISABLED
+      | SMB0CF_ENSMB__ENABLED | SMB0CF_SMBFTE__FREE_TO_ENABLED
+      | SMB0CF_SMBTOE__SCL_TO_ENABLED | SMB0CF_EXTHOLD__ENABLED;
   // [SMB0CF - SMBus 0 Configuration]$
 
 }
@@ -668,9 +702,9 @@ TIMER01_0_enter_DefaultMode_from_RESET (void)
 
   // $[TH1 - Timer 1 High Byte]
   /***********************************************************************
-   - Timer 1 High Byte = 0xDD
+   - Timer 1 High Byte = 0x2B
    ***********************************************************************/
-  TH1 = (0xDD << TH1_TH1__SHIFT);
+  TH1 = (0x2B << TH1_TH1__SHIFT);
   // [TH1 - Timer 1 High Byte]$
 
   // $[TL1 - Timer 1 Low Byte]
@@ -688,10 +722,6 @@ extern void
 UART_0_enter_DefaultMode_from_RESET (void)
 {
   // $[SCON0 - UART0 Serial Port Control]
-  /***********************************************************************
-   - UART0 reception enabled
-   ***********************************************************************/
-  SCON0 |= SCON0_REN__RECEIVE_ENABLED;
   // [SCON0 - UART0 Serial Port Control]$
 
 }
@@ -712,6 +742,96 @@ DAC_1_enter_DefaultMode_from_RESET (void)
 
   // $[DAC1CF1 - DAC1 Configuration 1]
   // [DAC1CF1 - DAC1 Configuration 1]$
+
+}
+
+extern void
+INTERRUPT_0_enter_DefaultMode_from_RESET (void)
+{
+  // $[EIE1 - Extended Interrupt Enable 1]
+  /***********************************************************************
+   - Disable ADC0 Conversion Complete interrupt
+   - Disable ADC0 Window Comparison interrupt
+   - Disable CP0 interrupts
+   - Disable CP1 interrupts
+   - Disable all Port Match interrupts
+   - Disable all PCA0 interrupts
+   - Enable interrupt requests generated by SMB0
+   - Disable Timer 3 interrupts
+   ***********************************************************************/
+  EIE1 = EIE1_EADC0__DISABLED | EIE1_EWADC0__DISABLED | EIE1_ECP0__DISABLED
+      | EIE1_ECP1__DISABLED | EIE1_EMAT__DISABLED | EIE1_EPCA0__DISABLED
+      | EIE1_ESMB0__ENABLED | EIE1_ET3__DISABLED;
+  // [EIE1 - Extended Interrupt Enable 1]$
+
+  // $[EIE2 - Extended Interrupt Enable 2]
+  // [EIE2 - Extended Interrupt Enable 2]$
+
+  // $[EIP1H - Extended Interrupt Priority 1 High]
+  /***********************************************************************
+   - ADC0 Conversion Complete interrupt priority MSB set to low
+   - ADC0 Window interrupt priority MSB set to low
+   - CP0 interrupt priority MSB set to low
+   - CP1 interrupt priority MSB set to low
+   - Port Match interrupt priority MSB set to low
+   - PCA0 interrupt priority MSB set to low
+   - SMB0 interrupt priority MSB set to high
+   - Timer 3 interrupt priority MSB set to low
+   ***********************************************************************/
+  SFRPAGE = 0x10;
+  EIP1H = EIP1H_PHADC0__LOW | EIP1H_PHWADC0__LOW | EIP1H_PHCP0__LOW
+      | EIP1H_PHCP1__LOW | EIP1H_PHMAT__LOW | EIP1H_PHPCA0__LOW
+      | EIP1H_PHSMB0__HIGH | EIP1H_PHT3__LOW;
+  // [EIP1H - Extended Interrupt Priority 1 High]$
+
+  // $[EIP1 - Extended Interrupt Priority 1 Low]
+  // [EIP1 - Extended Interrupt Priority 1 Low]$
+
+  // $[EIP2 - Extended Interrupt Priority 2]
+  // [EIP2 - Extended Interrupt Priority 2]$
+
+  // $[EIP2H - Extended Interrupt Priority 2 High]
+  // [EIP2H - Extended Interrupt Priority 2 High]$
+
+  // $[IE - Interrupt Enable]
+  /***********************************************************************
+   - Enable each interrupt according to its individual mask setting
+   - Disable external interrupt 0
+   - Disable external interrupt 1
+   - Disable all SPI0 interrupts
+   - Enable interrupt requests generated by the TF0 flag
+   - Disable all Timer 1 interrupt
+   - Disable Timer 2 interrupt
+   - Enable UART0 interrupt
+   ***********************************************************************/
+  SFRPAGE = 0x00;
+  IE = IE_EA__ENABLED | IE_EX0__DISABLED | IE_EX1__DISABLED | IE_ESPI0__DISABLED
+      | IE_ET0__ENABLED | IE_ET1__DISABLED | IE_ET2__DISABLED | IE_ES0__ENABLED;
+  // [IE - Interrupt Enable]$
+
+  // $[IP - Interrupt Priority]
+  // [IP - Interrupt Priority]$
+
+  // $[IPH - Interrupt Priority High]
+  /***********************************************************************
+   - External Interrupt 0 priority MSB set to low
+   - External Interrupt 1 priority MSB set to low
+   - SPI0 interrupt priority MSB set to low
+   - Timer 0 interrupt priority MSB set to low
+   - Timer 1 interrupt priority MSB set to low
+   - Timer 2 interrupt priority MSB set to low
+   - UART0 interrupt priority MSB set to high
+   ***********************************************************************/
+  SFRPAGE = 0x10;
+  IPH = IPH_PHX0__LOW | IPH_PHX1__LOW | IPH_PHSPI0__LOW | IPH_PHT0__LOW
+      | IPH_PHT1__LOW | IPH_PHT2__LOW | IPH_PHS0__HIGH;
+  // [IPH - Interrupt Priority High]$
+
+}
+
+extern void
+TIMER16_5_enter_DefaultMode_from_RESET (void)
+{
 
 }
 

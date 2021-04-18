@@ -26,14 +26,14 @@ all: tp4.omf
 tp4.omf: echo_path $(OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Keil 8051 Linker'
-	wine "/home/twoninefour/hdd/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@tp4.lnp" || $(RC)
+	wine "/home/rootie/Documents/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/LX51" "@tp4.lnp" || $(RC)
 	@echo 'Finished building target: $@'
 
 # Change from all upper case to the expected case
 	@-mv "TP4.OMF.CRBUILD" "$@"
 
 # Generate hex file: tp4.hex
-	@wine "/home/twoninefour/hdd/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/Ohx51" "tp4.omf" "HEXFILE (tp4.hex)" "H386" 2>&1 >/dev/null
+	@wine "/home/rootie/Documents/SimplicityStudio_v5/developer/toolchains/keil_8051/9.60/BIN/Ohx51" "tp4.omf" "HEXFILE (tp4.hex)" "H386" 2>&1 >/dev/null
 
 # Other Targets
 clean:
