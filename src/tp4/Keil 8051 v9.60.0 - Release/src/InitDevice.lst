@@ -1,14 +1,14 @@
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 17:56:40 PAGE 1   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 1   
 
 
 C51 COMPILER V9.60.0.0, COMPILATION OF MODULE INITDEVICE
 OBJECT MODULE PLACED IN .\src/InitDevice.OBJ
-COMPILER INVOKED BY: Z:\home\rootie\Documents\SimplicityStudio_v5\developer\toolchains\keil_8051\9.60\BIN\C51.exe /home/
-                    -rootie/SimplicityStudio/v5_workspace/tp4/src/InitDevice.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) FLOAT
-                    -FUZZY(3) OPTIMIZE(9,SPEED) DEFINE(NDEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(/home/rootie/Documents/SimplicityStudio_
-                    -v5/developer/sdks/8051/v4.2.0//Device/shared/si8051Base;/home/rootie/Documents/SimplicityStudio_v5/developer/sdks/8051/v
-                    -4.2.0//Device/EFM8BB3/inc) REGFILE(tp4.ORC) PRINT(.\src/InitDevice.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src/
-                    -InitDevice.OBJ)
+COMPILER INVOKED BY: Z:\home\twoninefour\hdd\SimplicityStudio_v5\developer\toolchains\keil_8051\9.60\BIN\C51.exe /home/t
+                    -woninefour/hdd/seniorDesign/Vupiter/src/tp4/src/InitDevice.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) FL
+                    -OATFUZZY(3) OPTIMIZE(9,SPEED) DEFINE(NDEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(/home/twoninefour/hdd/SimplicityStudi
+                    -o_v5/developer/sdks/8051/v4.2.0//Device/shared/si8051Base;/home/twoninefour/hdd/SimplicityStudio_v5/developer/sdks/8051/
+                    -v4.2.0//Device/EFM8BB3/inc) REGFILE(tp4.ORC) PRINT(.\src/InitDevice.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src
+                    -/InitDevice.OBJ)
 
 line level    source
 
@@ -63,7 +63,7 @@ line level    source
   49   1      }
   50          
   51          //================================================================================
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 17:56:40 PAGE 2   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 2   
 
   52          // WDT_0_enter_DefaultMode_from_RESET
   53          //================================================================================
@@ -114,767 +114,768 @@ line level    source
   98   1        // $[P0MDOUT - Port 0 Output Mode]
   99   1        /***********************************************************************
  100   1         - P0.0 output is open-drain
- 101   1         - P0.1 output is push-pull
+ 101   1         - P0.1 output is open-drain
  102   1         - P0.2 output is open-drain
  103   1         - P0.3 output is open-drain
  104   1         - P0.4 output is push-pull
  105   1         - P0.5 output is open-drain
  106   1         - P0.6 output is open-drain
- 107   1         - P0.7 output is push-pull
+ 107   1         - P0.7 output is open-drain
  108   1         ***********************************************************************/
- 109   1        P0MDOUT = P0MDOUT_B0__OPEN_DRAIN | P0MDOUT_B1__PUSH_PULL
+ 109   1        P0MDOUT = P0MDOUT_B0__OPEN_DRAIN | P0MDOUT_B1__OPEN_DRAIN
  110   1            | P0MDOUT_B2__OPEN_DRAIN | P0MDOUT_B3__OPEN_DRAIN | P0MDOUT_B4__PUSH_PULL
- 111   1            | P0MDOUT_B5__OPEN_DRAIN | P0MDOUT_B6__OPEN_DRAIN | P0MDOUT_B7__PUSH_PULL;
- 112   1        // [P0MDOUT - Port 0 Output Mode]$
- 113   1      
- 114   1        // $[P0MDIN - Port 0 Input Mode]
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 17:56:40 PAGE 3   
+ 111   1            | P0MDOUT_B5__OPEN_DRAIN | P0MDOUT_B6__OPEN_DRAIN
+ 112   1            | P0MDOUT_B7__OPEN_DRAIN;
+ 113   1        // [P0MDOUT - Port 0 Output Mode]$
+ 114   1      
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 3   
 
- 115   1        /***********************************************************************
- 116   1         - P0.0 pin is configured for analog mode
- 117   1         - P0.1 pin is configured for digital mode
- 118   1         - P0.2 pin is configured for digital mode
- 119   1         - P0.3 pin is configured for digital mode
- 120   1         - P0.4 pin is configured for digital mode
- 121   1         - P0.5 pin is configured for digital mode
- 122   1         - P0.6 pin is configured for digital mode
- 123   1         - P0.7 pin is configured for digital mode
- 124   1         ***********************************************************************/
- 125   1        P0MDIN = P0MDIN_B0__ANALOG | P0MDIN_B1__DIGITAL | P0MDIN_B2__DIGITAL
- 126   1            | P0MDIN_B3__DIGITAL | P0MDIN_B4__DIGITAL | P0MDIN_B5__DIGITAL
- 127   1            | P0MDIN_B6__DIGITAL | P0MDIN_B7__DIGITAL;
- 128   1        // [P0MDIN - Port 0 Input Mode]$
- 129   1      
- 130   1        // $[P0SKIP - Port 0 Skip]
- 131   1        /***********************************************************************
- 132   1         - P0.0 pin is skipped by the crossbar
- 133   1         - P0.1 pin is skipped by the crossbar
- 134   1         - P0.2 pin is skipped by the crossbar
- 135   1         - P0.3 pin is skipped by the crossbar
- 136   1         - P0.4 pin is not skipped by the crossbar
- 137   1         - P0.5 pin is not skipped by the crossbar
- 138   1         - P0.6 pin is skipped by the crossbar
- 139   1         - P0.7 pin is skipped by the crossbar
- 140   1         ***********************************************************************/
- 141   1        P0SKIP = P0SKIP_B0__SKIPPED | P0SKIP_B1__SKIPPED | P0SKIP_B2__SKIPPED
- 142   1            | P0SKIP_B3__SKIPPED | P0SKIP_B4__NOT_SKIPPED | P0SKIP_B5__NOT_SKIPPED
- 143   1            | P0SKIP_B6__SKIPPED | P0SKIP_B7__SKIPPED;
- 144   1        // [P0SKIP - Port 0 Skip]$
- 145   1      
- 146   1        // $[P0MASK - Port 0 Mask]
- 147   1        // [P0MASK - Port 0 Mask]$
- 148   1      
- 149   1        // $[P0MAT - Port 0 Match]
- 150   1        // [P0MAT - Port 0 Match]$
- 151   1      
- 152   1      }
- 153          
- 154          //================================================================================
- 155          // PORTS_1_enter_DefaultMode_from_RESET
- 156          //================================================================================
- 157          extern void
- 158          PORTS_1_enter_DefaultMode_from_RESET (void)
- 159          {
- 160   1        // $[P1 - Port 1 Pin Latch]
- 161   1        // [P1 - Port 1 Pin Latch]$
- 162   1      
- 163   1        // $[P1MDOUT - Port 1 Output Mode]
- 164   1        /***********************************************************************
- 165   1         - P1.0 output is open-drain
- 166   1         - P1.1 output is open-drain
- 167   1         - P1.2 output is push-pull
- 168   1         - P1.3 output is open-drain
- 169   1         - P1.4 output is push-pull
- 170   1         - P1.5 output is open-drain
- 171   1         - P1.6 output is open-drain
- 172   1         ***********************************************************************/
- 173   1        P1MDOUT = P1MDOUT_B0__OPEN_DRAIN | P1MDOUT_B1__OPEN_DRAIN
- 174   1            | P1MDOUT_B2__PUSH_PULL | P1MDOUT_B3__OPEN_DRAIN | P1MDOUT_B4__PUSH_PULL
- 175   1            | P1MDOUT_B5__OPEN_DRAIN | P1MDOUT_B6__OPEN_DRAIN;
- 176   1        // [P1MDOUT - Port 1 Output Mode]$
- 177   1      
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 17:56:40 PAGE 4   
+ 115   1        // $[P0MDIN - Port 0 Input Mode]
+ 116   1        /***********************************************************************
+ 117   1         - P0.0 pin is configured for analog mode
+ 118   1         - P0.1 pin is configured for digital mode
+ 119   1         - P0.2 pin is configured for digital mode
+ 120   1         - P0.3 pin is configured for digital mode
+ 121   1         - P0.4 pin is configured for digital mode
+ 122   1         - P0.5 pin is configured for digital mode
+ 123   1         - P0.6 pin is configured for digital mode
+ 124   1         - P0.7 pin is configured for digital mode
+ 125   1         ***********************************************************************/
+ 126   1        P0MDIN = P0MDIN_B0__ANALOG | P0MDIN_B1__DIGITAL | P0MDIN_B2__DIGITAL
+ 127   1            | P0MDIN_B3__DIGITAL | P0MDIN_B4__DIGITAL | P0MDIN_B5__DIGITAL
+ 128   1            | P0MDIN_B6__DIGITAL | P0MDIN_B7__DIGITAL;
+ 129   1        // [P0MDIN - Port 0 Input Mode]$
+ 130   1      
+ 131   1        // $[P0SKIP - Port 0 Skip]
+ 132   1        /***********************************************************************
+ 133   1         - P0.0 pin is skipped by the crossbar
+ 134   1         - P0.1 pin is skipped by the crossbar
+ 135   1         - P0.2 pin is skipped by the crossbar
+ 136   1         - P0.3 pin is skipped by the crossbar
+ 137   1         - P0.4 pin is not skipped by the crossbar
+ 138   1         - P0.5 pin is not skipped by the crossbar
+ 139   1         - P0.6 pin is skipped by the crossbar
+ 140   1         - P0.7 pin is skipped by the crossbar
+ 141   1         ***********************************************************************/
+ 142   1        P0SKIP = P0SKIP_B0__SKIPPED | P0SKIP_B1__SKIPPED | P0SKIP_B2__SKIPPED
+ 143   1            | P0SKIP_B3__SKIPPED | P0SKIP_B4__NOT_SKIPPED | P0SKIP_B5__NOT_SKIPPED
+ 144   1            | P0SKIP_B6__SKIPPED | P0SKIP_B7__SKIPPED;
+ 145   1        // [P0SKIP - Port 0 Skip]$
+ 146   1      
+ 147   1        // $[P0MASK - Port 0 Mask]
+ 148   1        // [P0MASK - Port 0 Mask]$
+ 149   1      
+ 150   1        // $[P0MAT - Port 0 Match]
+ 151   1        // [P0MAT - Port 0 Match]$
+ 152   1      
+ 153   1      }
+ 154          
+ 155          //================================================================================
+ 156          // PORTS_1_enter_DefaultMode_from_RESET
+ 157          //================================================================================
+ 158          extern void
+ 159          PORTS_1_enter_DefaultMode_from_RESET (void)
+ 160          {
+ 161   1        // $[P1 - Port 1 Pin Latch]
+ 162   1        // [P1 - Port 1 Pin Latch]$
+ 163   1      
+ 164   1        // $[P1MDOUT - Port 1 Output Mode]
+ 165   1        /***********************************************************************
+ 166   1         - P1.0 output is open-drain
+ 167   1         - P1.1 output is open-drain
+ 168   1         - P1.2 output is push-pull
+ 169   1         - P1.3 output is open-drain
+ 170   1         - P1.4 output is open-drain
+ 171   1         - P1.5 output is open-drain
+ 172   1         - P1.6 output is open-drain
+ 173   1         ***********************************************************************/
+ 174   1        P1MDOUT = P1MDOUT_B0__OPEN_DRAIN | P1MDOUT_B1__OPEN_DRAIN
+ 175   1            | P1MDOUT_B2__PUSH_PULL | P1MDOUT_B3__OPEN_DRAIN | P1MDOUT_B4__OPEN_DRAIN
+ 176   1            | P1MDOUT_B5__OPEN_DRAIN | P1MDOUT_B6__OPEN_DRAIN;
+ 177   1        // [P1MDOUT - Port 1 Output Mode]$
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 4   
 
- 178   1        // $[P1MDIN - Port 1 Input Mode]
- 179   1        /***********************************************************************
- 180   1         - P1.0 pin is configured for analog mode
- 181   1         - P1.1 pin is configured for analog mode
- 182   1         - P1.2 pin is configured for digital mode
- 183   1         - P1.3 pin is configured for digital mode
- 184   1         - P1.4 pin is configured for digital mode
- 185   1         - P1.5 pin is configured for digital mode
- 186   1         - P1.6 pin is configured for digital mode
- 187   1         ***********************************************************************/
- 188   1        P1MDIN = P1MDIN_B0__ANALOG | P1MDIN_B1__ANALOG | P1MDIN_B2__DIGITAL
- 189   1            | P1MDIN_B3__DIGITAL | P1MDIN_B4__DIGITAL | P1MDIN_B5__DIGITAL
- 190   1            | P1MDIN_B6__DIGITAL;
- 191   1        // [P1MDIN - Port 1 Input Mode]$
- 192   1      
- 193   1        // $[P1SKIP - Port 1 Skip]
- 194   1        /***********************************************************************
- 195   1         - P1.0 pin is skipped by the crossbar
- 196   1         - P1.1 pin is skipped by the crossbar
- 197   1         - P1.2 pin is skipped by the crossbar
- 198   1         - P1.3 pin is not skipped by the crossbar
- 199   1         - P1.4 pin is skipped by the crossbar
- 200   1         - P1.5 pin is skipped by the crossbar
- 201   1         - P1.6 pin is skipped by the crossbar
- 202   1         ***********************************************************************/
- 203   1        P1SKIP = P1SKIP_B0__SKIPPED | P1SKIP_B1__SKIPPED | P1SKIP_B2__SKIPPED
- 204   1            | P1SKIP_B3__NOT_SKIPPED | P1SKIP_B4__SKIPPED | P1SKIP_B5__SKIPPED
- 205   1            | P1SKIP_B6__SKIPPED;
- 206   1        // [P1SKIP - Port 1 Skip]$
- 207   1      
- 208   1        // $[P1MASK - Port 1 Mask]
- 209   1        // [P1MASK - Port 1 Mask]$
- 210   1      
- 211   1        // $[P1MAT - Port 1 Match]
- 212   1        // [P1MAT - Port 1 Match]$
- 213   1      
- 214   1      }
- 215          
- 216          //================================================================================
- 217          // PORTS_2_enter_DefaultMode_from_RESET
- 218          //================================================================================
- 219          extern void
- 220          PORTS_2_enter_DefaultMode_from_RESET (void)
- 221          {
- 222   1        // $[P2 - Port 2 Pin Latch]
- 223   1        // [P2 - Port 2 Pin Latch]$
- 224   1      
- 225   1        // $[P2MDOUT - Port 2 Output Mode]
- 226   1        // [P2MDOUT - Port 2 Output Mode]$
- 227   1      
- 228   1        // $[P2MDIN - Port 2 Input Mode]
- 229   1        /***********************************************************************
- 230   1         - P2.0 pin is configured for analog mode
- 231   1         - P2.1 pin is configured for analog mode
- 232   1         - P2.2 pin is configured for digital mode
- 233   1         - P2.3 pin is configured for digital mode
- 234   1         ***********************************************************************/
- 235   1        SFRPAGE = 0x20;
- 236   1        P2MDIN = P2MDIN_B0__ANALOG | P2MDIN_B1__ANALOG | P2MDIN_B2__DIGITAL
- 237   1            | P2MDIN_B3__DIGITAL;
- 238   1        // [P2MDIN - Port 2 Input Mode]$
- 239   1      
- 240   1        // $[P2SKIP - Port 2 Skip]
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 17:56:40 PAGE 5   
+ 178   1      
+ 179   1        // $[P1MDIN - Port 1 Input Mode]
+ 180   1        /***********************************************************************
+ 181   1         - P1.0 pin is configured for analog mode
+ 182   1         - P1.1 pin is configured for analog mode
+ 183   1         - P1.2 pin is configured for digital mode
+ 184   1         - P1.3 pin is configured for digital mode
+ 185   1         - P1.4 pin is configured for digital mode
+ 186   1         - P1.5 pin is configured for digital mode
+ 187   1         - P1.6 pin is configured for digital mode
+ 188   1         ***********************************************************************/
+ 189   1        P1MDIN = P1MDIN_B0__ANALOG | P1MDIN_B1__ANALOG | P1MDIN_B2__DIGITAL
+ 190   1            | P1MDIN_B3__DIGITAL | P1MDIN_B4__DIGITAL | P1MDIN_B5__DIGITAL
+ 191   1            | P1MDIN_B6__DIGITAL;
+ 192   1        // [P1MDIN - Port 1 Input Mode]$
+ 193   1      
+ 194   1        // $[P1SKIP - Port 1 Skip]
+ 195   1        /***********************************************************************
+ 196   1         - P1.0 pin is skipped by the crossbar
+ 197   1         - P1.1 pin is skipped by the crossbar
+ 198   1         - P1.2 pin is skipped by the crossbar
+ 199   1         - P1.3 pin is not skipped by the crossbar
+ 200   1         - P1.4 pin is skipped by the crossbar
+ 201   1         - P1.5 pin is skipped by the crossbar
+ 202   1         - P1.6 pin is skipped by the crossbar
+ 203   1         ***********************************************************************/
+ 204   1        P1SKIP = P1SKIP_B0__SKIPPED | P1SKIP_B1__SKIPPED | P1SKIP_B2__SKIPPED
+ 205   1            | P1SKIP_B3__NOT_SKIPPED | P1SKIP_B4__SKIPPED | P1SKIP_B5__SKIPPED
+ 206   1            | P1SKIP_B6__SKIPPED;
+ 207   1        // [P1SKIP - Port 1 Skip]$
+ 208   1      
+ 209   1        // $[P1MASK - Port 1 Mask]
+ 210   1        // [P1MASK - Port 1 Mask]$
+ 211   1      
+ 212   1        // $[P1MAT - Port 1 Match]
+ 213   1        // [P1MAT - Port 1 Match]$
+ 214   1      
+ 215   1      }
+ 216          
+ 217          //================================================================================
+ 218          // PORTS_2_enter_DefaultMode_from_RESET
+ 219          //================================================================================
+ 220          extern void
+ 221          PORTS_2_enter_DefaultMode_from_RESET (void)
+ 222          {
+ 223   1        // $[P2 - Port 2 Pin Latch]
+ 224   1        // [P2 - Port 2 Pin Latch]$
+ 225   1      
+ 226   1        // $[P2MDOUT - Port 2 Output Mode]
+ 227   1        // [P2MDOUT - Port 2 Output Mode]$
+ 228   1      
+ 229   1        // $[P2MDIN - Port 2 Input Mode]
+ 230   1        /***********************************************************************
+ 231   1         - P2.0 pin is configured for analog mode
+ 232   1         - P2.1 pin is configured for analog mode
+ 233   1         - P2.2 pin is configured for digital mode
+ 234   1         - P2.3 pin is configured for digital mode
+ 235   1         ***********************************************************************/
+ 236   1        SFRPAGE = 0x20;
+ 237   1        P2MDIN = P2MDIN_B0__ANALOG | P2MDIN_B1__ANALOG | P2MDIN_B2__DIGITAL
+ 238   1            | P2MDIN_B3__DIGITAL;
+ 239   1        // [P2MDIN - Port 2 Input Mode]$
+ 240   1      
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 5   
 
- 241   1        /***********************************************************************
- 242   1         - P2.0 pin is skipped by the crossbar
- 243   1         - P2.1 pin is skipped by the crossbar
- 244   1         - P2.2 pin is skipped by the crossbar
- 245   1         - P2.3 pin is not skipped by the crossbar
- 246   1         ***********************************************************************/
- 247   1        P2SKIP = P2SKIP_B0__SKIPPED | P2SKIP_B1__SKIPPED | P2SKIP_B2__SKIPPED
- 248   1            | P2SKIP_B3__NOT_SKIPPED;
- 249   1        // [P2SKIP - Port 2 Skip]$
- 250   1      
- 251   1        // $[P2MASK - Port 2 Mask]
- 252   1        // [P2MASK - Port 2 Mask]$
- 253   1      
- 254   1        // $[P2MAT - Port 2 Match]
- 255   1        // [P2MAT - Port 2 Match]$
- 256   1      
- 257   1      }
- 258          
- 259          //================================================================================
- 260          // PBCFG_0_enter_DefaultMode_from_RESET
- 261          //================================================================================
- 262          extern void
- 263          PBCFG_0_enter_DefaultMode_from_RESET (void)
- 264          {
- 265   1        // $[XBR2 - Port I/O Crossbar 2]
- 266   1        /***********************************************************************
- 267   1         - Weak Pullups enabled 
- 268   1         - Crossbar enabled
- 269   1         - UART1 I/O unavailable at Port pin
- 270   1         - UART1 RTS1 unavailable at Port pin
- 271   1         - UART1 CTS1 unavailable at Port pin
- 272   1         ***********************************************************************/
- 273   1        SFRPAGE = 0x00;
- 274   1        XBR2 = XBR2_WEAKPUD__PULL_UPS_ENABLED | XBR2_XBARE__ENABLED
- 275   1            | XBR2_URT1E__DISABLED | XBR2_URT1RTSE__DISABLED
- 276   1            | XBR2_URT1CTSE__DISABLED;
- 277   1        // [XBR2 - Port I/O Crossbar 2]$
- 278   1      
- 279   1        // $[PRTDRV - Port Drive Strength]
- 280   1        // [PRTDRV - Port Drive Strength]$
- 281   1      
- 282   1        // $[XBR0 - Port I/O Crossbar 0]
- 283   1        /***********************************************************************
- 284   1         - UART0 TX0, RX0 routed to Port pins P0.4 and P0.5
- 285   1         - SPI I/O unavailable at Port pins
- 286   1         - SMBus 0 I/O routed to Port pins
- 287   1         - CP0 unavailable at Port pin
- 288   1         - Asynchronous CP0 unavailable at Port pin
- 289   1         - CP1 unavailable at Port pin
- 290   1         - Asynchronous CP1 unavailable at Port pin
- 291   1         - SYSCLK unavailable at Port pin
- 292   1         ***********************************************************************/
- 293   1        XBR0 = XBR0_URT0E__ENABLED | XBR0_SPI0E__DISABLED | XBR0_SMB0E__ENABLED
- 294   1            | XBR0_CP0E__DISABLED | XBR0_CP0AE__DISABLED | XBR0_CP1E__DISABLED
- 295   1            | XBR0_CP1AE__DISABLED | XBR0_SYSCKE__DISABLED;
- 296   1        // [XBR0 - Port I/O Crossbar 0]$
- 297   1      
- 298   1        // $[XBR1 - Port I/O Crossbar 1]
- 299   1        // [XBR1 - Port I/O Crossbar 1]$
- 300   1      
- 301   1      }
- 302          
- 303          //================================================================================
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 17:56:40 PAGE 6   
+ 241   1        // $[P2SKIP - Port 2 Skip]
+ 242   1        /***********************************************************************
+ 243   1         - P2.0 pin is skipped by the crossbar
+ 244   1         - P2.1 pin is skipped by the crossbar
+ 245   1         - P2.2 pin is skipped by the crossbar
+ 246   1         - P2.3 pin is not skipped by the crossbar
+ 247   1         ***********************************************************************/
+ 248   1        P2SKIP = P2SKIP_B0__SKIPPED | P2SKIP_B1__SKIPPED | P2SKIP_B2__SKIPPED
+ 249   1            | P2SKIP_B3__NOT_SKIPPED;
+ 250   1        // [P2SKIP - Port 2 Skip]$
+ 251   1      
+ 252   1        // $[P2MASK - Port 2 Mask]
+ 253   1        // [P2MASK - Port 2 Mask]$
+ 254   1      
+ 255   1        // $[P2MAT - Port 2 Match]
+ 256   1        // [P2MAT - Port 2 Match]$
+ 257   1      
+ 258   1      }
+ 259          
+ 260          //================================================================================
+ 261          // PBCFG_0_enter_DefaultMode_from_RESET
+ 262          //================================================================================
+ 263          extern void
+ 264          PBCFG_0_enter_DefaultMode_from_RESET (void)
+ 265          {
+ 266   1        // $[XBR2 - Port I/O Crossbar 2]
+ 267   1        /***********************************************************************
+ 268   1         - Weak Pullups enabled 
+ 269   1         - Crossbar enabled
+ 270   1         - UART1 I/O unavailable at Port pin
+ 271   1         - UART1 RTS1 unavailable at Port pin
+ 272   1         - UART1 CTS1 unavailable at Port pin
+ 273   1         ***********************************************************************/
+ 274   1        SFRPAGE = 0x00;
+ 275   1        XBR2 = XBR2_WEAKPUD__PULL_UPS_ENABLED | XBR2_XBARE__ENABLED
+ 276   1            | XBR2_URT1E__DISABLED | XBR2_URT1RTSE__DISABLED
+ 277   1            | XBR2_URT1CTSE__DISABLED;
+ 278   1        // [XBR2 - Port I/O Crossbar 2]$
+ 279   1      
+ 280   1        // $[PRTDRV - Port Drive Strength]
+ 281   1        // [PRTDRV - Port Drive Strength]$
+ 282   1      
+ 283   1        // $[XBR0 - Port I/O Crossbar 0]
+ 284   1        /***********************************************************************
+ 285   1         - UART0 TX0, RX0 routed to Port pins P0.4 and P0.5
+ 286   1         - SPI I/O unavailable at Port pins
+ 287   1         - SMBus 0 I/O routed to Port pins
+ 288   1         - CP0 unavailable at Port pin
+ 289   1         - Asynchronous CP0 unavailable at Port pin
+ 290   1         - CP1 unavailable at Port pin
+ 291   1         - Asynchronous CP1 unavailable at Port pin
+ 292   1         - SYSCLK unavailable at Port pin
+ 293   1         ***********************************************************************/
+ 294   1        XBR0 = XBR0_URT0E__ENABLED | XBR0_SPI0E__DISABLED | XBR0_SMB0E__ENABLED
+ 295   1            | XBR0_CP0E__DISABLED | XBR0_CP0AE__DISABLED | XBR0_CP1E__DISABLED
+ 296   1            | XBR0_CP1AE__DISABLED | XBR0_SYSCKE__DISABLED;
+ 297   1        // [XBR0 - Port I/O Crossbar 0]$
+ 298   1      
+ 299   1        // $[XBR1 - Port I/O Crossbar 1]
+ 300   1        // [XBR1 - Port I/O Crossbar 1]$
+ 301   1      
+ 302   1      }
+ 303          
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 6   
 
- 304          // ADC_0_enter_DefaultMode_from_RESET
- 305          //================================================================================
- 306          extern void
- 307          ADC_0_enter_DefaultMode_from_RESET (void)
- 308          {
- 309   1        // $[ADC0CN2 - ADC0 Control 2]
- 310   1        // [ADC0CN2 - ADC0 Control 2]$
- 311   1      
- 312   1        // $[ADC0CN1 - ADC0 Control 1]
- 313   1        // [ADC0CN1 - ADC0 Control 1]$
- 314   1      
- 315   1        // $[ADC0MX - ADC0 Multiplexer Selection]
- 316   1        /***********************************************************************
- 317   1         - Select ADC0.6
- 318   1         ***********************************************************************/
- 319   1        ADC0MX = ADC0MX_ADC0MX__ADC0P6;
- 320   1        // [ADC0MX - ADC0 Multiplexer Selection]$
- 321   1      
- 322   1        // $[ADC0CF2 - ADC0 Power Control]
- 323   1        /***********************************************************************
- 324   1         - The ADC0 ground reference is the GND pin
- 325   1         - The ADC0 voltage reference is the VREF pin 
- 326   1         - Power Up Delay Time = 0x1F
- 327   1         ***********************************************************************/
- 328   1        ADC0CF2 = ADC0CF2_GNDSL__GND_PIN | ADC0CF2_REFSL__VREF_PIN
- 329   1            | (0x1F << ADC0CF2_ADPWR__SHIFT);
- 330   1        // [ADC0CF2 - ADC0 Power Control]$
- 331   1      
- 332   1        // $[ADC0CF0 - ADC0 Configuration]
- 333   1        /***********************************************************************
- 334   1         - ADCCLK = SYSCLK
- 335   1         - SAR Clock Divider = 0x03
- 336   1         ***********************************************************************/
- 337   1        ADC0CF0 = ADC0CF0_ADCLKSEL__SYSCLK | (0x03 << ADC0CF0_ADSC__SHIFT);
- 338   1        // [ADC0CF0 - ADC0 Configuration]$
- 339   1      
- 340   1        // $[ADC0CF1 - ADC0 Configuration]
- 341   1        /***********************************************************************
- 342   1         - Conversion Tracking Time = 0x18
- 343   1         ***********************************************************************/
- 344   1        ADC0CF1 = (0x18 << ADC0CF1_ADTK__SHIFT);
- 345   1        // [ADC0CF1 - ADC0 Configuration]$
- 346   1      
- 347   1        // $[ADC0ASAL - ADC0 Autoscan Start Address Low Byte]
- 348   1        // [ADC0ASAL - ADC0 Autoscan Start Address Low Byte]$
- 349   1      
- 350   1        // $[ADC0GTH - ADC0 Greater-Than High Byte]
- 351   1        // [ADC0GTH - ADC0 Greater-Than High Byte]$
- 352   1      
- 353   1        // $[ADC0GTL - ADC0 Greater-Than Low Byte]
- 354   1        // [ADC0GTL - ADC0 Greater-Than Low Byte]$
- 355   1      
- 356   1        // $[ADC0LTH - ADC0 Less-Than High Byte]
- 357   1        // [ADC0LTH - ADC0 Less-Than High Byte]$
- 358   1      
- 359   1        // $[ADC0LTL - ADC0 Less-Than Low Byte]
- 360   1        // [ADC0LTL - ADC0 Less-Than Low Byte]$
- 361   1      
- 362   1        // $[ADC0ASCF - ADC0 Autoscan Configuration]
- 363   1        // [ADC0ASCF - ADC0 Autoscan Configuration]$
- 364   1      
- 365   1        // $[ADC0CN0 - ADC0 Control 0]
- 366   1        /***********************************************************************
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 17:56:40 PAGE 7   
+ 304          //================================================================================
+ 305          // ADC_0_enter_DefaultMode_from_RESET
+ 306          //================================================================================
+ 307          extern void
+ 308          ADC_0_enter_DefaultMode_from_RESET (void)
+ 309          {
+ 310   1        // $[ADC0CN2 - ADC0 Control 2]
+ 311   1        // [ADC0CN2 - ADC0 Control 2]$
+ 312   1      
+ 313   1        // $[ADC0CN1 - ADC0 Control 1]
+ 314   1        // [ADC0CN1 - ADC0 Control 1]$
+ 315   1      
+ 316   1        // $[ADC0MX - ADC0 Multiplexer Selection]
+ 317   1        /***********************************************************************
+ 318   1         - Select ADC0.6
+ 319   1         ***********************************************************************/
+ 320   1        ADC0MX = ADC0MX_ADC0MX__ADC0P6;
+ 321   1        // [ADC0MX - ADC0 Multiplexer Selection]$
+ 322   1      
+ 323   1        // $[ADC0CF2 - ADC0 Power Control]
+ 324   1        /***********************************************************************
+ 325   1         - The ADC0 ground reference is the GND pin
+ 326   1         - The ADC0 voltage reference is the VREF pin 
+ 327   1         - Power Up Delay Time = 0x1F
+ 328   1         ***********************************************************************/
+ 329   1        ADC0CF2 = ADC0CF2_GNDSL__GND_PIN | ADC0CF2_REFSL__VREF_PIN
+ 330   1            | (0x1F << ADC0CF2_ADPWR__SHIFT);
+ 331   1        // [ADC0CF2 - ADC0 Power Control]$
+ 332   1      
+ 333   1        // $[ADC0CF0 - ADC0 Configuration]
+ 334   1        /***********************************************************************
+ 335   1         - ADCCLK = SYSCLK
+ 336   1         - SAR Clock Divider = 0x03
+ 337   1         ***********************************************************************/
+ 338   1        ADC0CF0 = ADC0CF0_ADCLKSEL__SYSCLK | (0x03 << ADC0CF0_ADSC__SHIFT);
+ 339   1        // [ADC0CF0 - ADC0 Configuration]$
+ 340   1      
+ 341   1        // $[ADC0CF1 - ADC0 Configuration]
+ 342   1        /***********************************************************************
+ 343   1         - Conversion Tracking Time = 0x18
+ 344   1         ***********************************************************************/
+ 345   1        ADC0CF1 = (0x18 << ADC0CF1_ADTK__SHIFT);
+ 346   1        // [ADC0CF1 - ADC0 Configuration]$
+ 347   1      
+ 348   1        // $[ADC0ASAL - ADC0 Autoscan Start Address Low Byte]
+ 349   1        // [ADC0ASAL - ADC0 Autoscan Start Address Low Byte]$
+ 350   1      
+ 351   1        // $[ADC0GTH - ADC0 Greater-Than High Byte]
+ 352   1        // [ADC0GTH - ADC0 Greater-Than High Byte]$
+ 353   1      
+ 354   1        // $[ADC0GTL - ADC0 Greater-Than Low Byte]
+ 355   1        // [ADC0GTL - ADC0 Greater-Than Low Byte]$
+ 356   1      
+ 357   1        // $[ADC0LTH - ADC0 Less-Than High Byte]
+ 358   1        // [ADC0LTH - ADC0 Less-Than High Byte]$
+ 359   1      
+ 360   1        // $[ADC0LTL - ADC0 Less-Than Low Byte]
+ 361   1        // [ADC0LTL - ADC0 Less-Than Low Byte]$
+ 362   1      
+ 363   1        // $[ADC0ASCF - ADC0 Autoscan Configuration]
+ 364   1        // [ADC0ASCF - ADC0 Autoscan Configuration]$
+ 365   1      
+ 366   1        // $[ADC0CN0 - ADC0 Control 0]
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 7   
 
- 367   1         - Enable ADC0 
- 368   1         ***********************************************************************/
- 369   1        ADC0CN0 |= ADC0CN0_ADEN__ENABLED;
- 370   1        // [ADC0CN0 - ADC0 Control 0]$
- 371   1      
- 372   1      }
- 373          
- 374          //================================================================================
- 375          // DAC_0_enter_DefaultMode_from_RESET
- 376          //================================================================================
- 377          extern void
- 378          DAC_0_enter_DefaultMode_from_RESET (void)
- 379          {
- 380   1        // $[DAC0CF0 - DAC0 Configuration 0]
- 381   1        /***********************************************************************
- 382   1         - DAC0 is enabled and will drive the output pin
- 383   1         - DAC0 output updates occur on every clock cycle
- 384   1         - DAC0 input is treated as right-justified
- 385   1         - All resets will reset DAC0 and its associated registers
- 386   1         ***********************************************************************/
- 387   1        SFRPAGE = 0x30;
- 388   1        DAC0CF0 = DAC0CF0_EN__ENABLE | DAC0CF0_UPDATE__SYSCLK
- 389   1            | DAC0CF0_LJST__RIGHT_JUSTIFY | DAC0CF0_RSTMD__NORMAL;
- 390   1        // [DAC0CF0 - DAC0 Configuration 0]$
- 391   1      
- 392   1        // $[DAC0CF1 - DAC0 Configuration 1]
- 393   1        // [DAC0CF1 - DAC0 Configuration 1]$
- 394   1      
- 395   1      }
- 396          
- 397          //================================================================================
- 398          // DAC_2_enter_DefaultMode_from_RESET
- 399          //================================================================================
- 400          extern void
- 401          DAC_2_enter_DefaultMode_from_RESET (void)
- 402          {
- 403   1        // $[DAC2CF0 - DAC2 Configuration 0]
- 404   1        /***********************************************************************
- 405   1         - DAC2 is enabled and will drive the output pin
- 406   1         - DAC2 output updates occur on every clock cycle
- 407   1         - DAC2 input is treated as right-justified
- 408   1         - All resets will reset DAC2 and its associated registers
- 409   1         ***********************************************************************/
- 410   1        DAC2CF0 = DAC2CF0_EN__ENABLE | DAC2CF0_UPDATE__SYSCLK
- 411   1            | DAC2CF0_LJST__RIGHT_JUSTIFY | DAC2CF0_RSTMD__NORMAL;
- 412   1        // [DAC2CF0 - DAC2 Configuration 0]$
- 413   1      
- 414   1        // $[DAC2CF1 - DAC2 Configuration 1]
- 415   1        // [DAC2CF1 - DAC2 Configuration 1]$
- 416   1      
- 417   1      }
- 418          
- 419          //================================================================================
- 420          // DACGCF_0_enter_DefaultMode_from_RESET
- 421          //================================================================================
- 422          extern void
- 423          DACGCF_0_enter_DefaultMode_from_RESET (void)
- 424          {
- 425   1        // $[DACGCF0 - DAC Global Configuration 0]
- 426   1        /***********************************************************************
- 427   1         - Select the VREF pin
- 428   1         - Select the VDD supply
- 429   1         - Input = DAC1H:DAC1L
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 17:56:40 PAGE 8   
+ 367   1        /***********************************************************************
+ 368   1         - Enable ADC0 
+ 369   1         ***********************************************************************/
+ 370   1        ADC0CN0 |= ADC0CN0_ADEN__ENABLED;
+ 371   1        // [ADC0CN0 - ADC0 Control 0]$
+ 372   1      
+ 373   1      }
+ 374          
+ 375          //================================================================================
+ 376          // DAC_0_enter_DefaultMode_from_RESET
+ 377          //================================================================================
+ 378          extern void
+ 379          DAC_0_enter_DefaultMode_from_RESET (void)
+ 380          {
+ 381   1        // $[DAC0CF0 - DAC0 Configuration 0]
+ 382   1        /***********************************************************************
+ 383   1         - DAC0 is enabled and will drive the output pin
+ 384   1         - DAC0 output updates occur on every clock cycle
+ 385   1         - DAC0 input is treated as right-justified
+ 386   1         - All resets will reset DAC0 and its associated registers
+ 387   1         ***********************************************************************/
+ 388   1        SFRPAGE = 0x30;
+ 389   1        DAC0CF0 = DAC0CF0_EN__ENABLE | DAC0CF0_UPDATE__SYSCLK
+ 390   1            | DAC0CF0_LJST__RIGHT_JUSTIFY | DAC0CF0_RSTMD__NORMAL;
+ 391   1        // [DAC0CF0 - DAC0 Configuration 0]$
+ 392   1      
+ 393   1        // $[DAC0CF1 - DAC0 Configuration 1]
+ 394   1        // [DAC0CF1 - DAC0 Configuration 1]$
+ 395   1      
+ 396   1      }
+ 397          
+ 398          //================================================================================
+ 399          // DAC_2_enter_DefaultMode_from_RESET
+ 400          //================================================================================
+ 401          extern void
+ 402          DAC_2_enter_DefaultMode_from_RESET (void)
+ 403          {
+ 404   1        // $[DAC2CF0 - DAC2 Configuration 0]
+ 405   1        /***********************************************************************
+ 406   1         - DAC2 is enabled and will drive the output pin
+ 407   1         - DAC2 output updates occur on every clock cycle
+ 408   1         - DAC2 input is treated as right-justified
+ 409   1         - All resets will reset DAC2 and its associated registers
+ 410   1         ***********************************************************************/
+ 411   1        DAC2CF0 = DAC2CF0_EN__ENABLE | DAC2CF0_UPDATE__SYSCLK
+ 412   1            | DAC2CF0_LJST__RIGHT_JUSTIFY | DAC2CF0_RSTMD__NORMAL;
+ 413   1        // [DAC2CF0 - DAC2 Configuration 0]$
+ 414   1      
+ 415   1        // $[DAC2CF1 - DAC2 Configuration 1]
+ 416   1        // [DAC2CF1 - DAC2 Configuration 1]$
+ 417   1      
+ 418   1      }
+ 419          
+ 420          //================================================================================
+ 421          // DACGCF_0_enter_DefaultMode_from_RESET
+ 422          //================================================================================
+ 423          extern void
+ 424          DACGCF_0_enter_DefaultMode_from_RESET (void)
+ 425          {
+ 426   1        // $[DACGCF0 - DAC Global Configuration 0]
+ 427   1        /***********************************************************************
+ 428   1         - Select the VREF pin
+ 429   1         - Select the VDD supply
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 8   
 
- 430   1         - Input = DAC3H:DAC3L
- 431   1         - DAC1 always updates from the data source selected in D1SRC
- 432   1         - DAC3 always updates from the data source selected in D3SRC
- 433   1         ***********************************************************************/
- 434   1        DACGCF0 = DACGCF0_D01REFSL__VREF | DACGCF0_D23REFSL__VDD | DACGCF0_D1SRC__DAC1
- 435   1            | DACGCF0_D3SRC__DAC3 | DACGCF0_D1AMEN__NORMAL | DACGCF0_D3AMEN__NORMAL;
- 436   1        // [DACGCF0 - DAC Global Configuration 0]$
- 437   1      
- 438   1        // $[DACGCF2 - DAC Global Configuration 2]
- 439   1        // [DACGCF2 - DAC Global Configuration 2]$
- 440   1      
- 441   1      }
- 442          
- 443          //================================================================================
- 444          // VREF_0_enter_DefaultMode_from_RESET
- 445          //================================================================================
- 446          extern void
- 447          VREF_0_enter_DefaultMode_from_RESET (void)
- 448          {
- 449   1        // $[REF0CN - Voltage Reference Control]
- 450   1        // [REF0CN - Voltage Reference Control]$
- 451   1      
- 452   1      }
- 453          
- 454          //================================================================================
- 455          // CIP51_0_enter_DefaultMode_from_RESET
- 456          //================================================================================
- 457          extern void
- 458          CIP51_0_enter_DefaultMode_from_RESET (void)
- 459          {
- 460   1        // $[PFE0CN - Prefetch Engine Control]
- 461   1        /***********************************************************************
- 462   1         - SYSCLK < 50 MHz
- 463   1         ***********************************************************************/
- 464   1        SFRPAGE = 0x10;
- 465   1        PFE0CN = PFE0CN_FLRT__SYSCLK_BELOW_50_MHZ;
- 466   1        // [PFE0CN - Prefetch Engine Control]$
- 467   1      
- 468   1      }
- 469          
- 470          //================================================================================
- 471          // CLOCK_0_enter_DefaultMode_from_RESET
- 472          //================================================================================
- 473          extern void
- 474          CLOCK_0_enter_DefaultMode_from_RESET (void)
- 475          {
- 476   1        // $[HFOSC1 Setup]
- 477   1        // Ensure SYSCLK is > 24 MHz before switching to HFOSC1
- 478   1        SFRPAGE = 0x00;
- 479   1        CLKSEL = CLKSEL_CLKSL__HFOSC0 | CLKSEL_CLKDIV__SYSCLK_DIV_1;
- 480   1        while ((CLKSEL & CLKSEL_DIVRDY__BMASK) == CLKSEL_DIVRDY__NOT_READY)
- 481   1          ;
- 482   1        // [HFOSC1 Setup]$
- 483   1      
- 484   1        // $[CLKSEL - Clock Select]
- 485   1        /***********************************************************************
- 486   1         - Clock derived from the Internal High Frequency Oscillator 1
- 487   1         - SYSCLK is equal to selected clock source divided by 1
- 488   1         ***********************************************************************/
- 489   1        CLKSEL = CLKSEL_CLKSL__HFOSC1 | CLKSEL_CLKDIV__SYSCLK_DIV_1;
- 490   1        while ((CLKSEL & CLKSEL_DIVRDY__BMASK) == CLKSEL_DIVRDY__NOT_READY)
- 491   1          ;
- 492   1        // [CLKSEL - Clock Select]$
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 17:56:40 PAGE 9   
+ 430   1         - Input = DAC1H:DAC1L
+ 431   1         - Input = DAC3H:DAC3L
+ 432   1         - DAC1 always updates from the data source selected in D1SRC
+ 433   1         - DAC3 always updates from the data source selected in D3SRC
+ 434   1         ***********************************************************************/
+ 435   1        DACGCF0 = DACGCF0_D01REFSL__VREF | DACGCF0_D23REFSL__VDD | DACGCF0_D1SRC__DAC1
+ 436   1            | DACGCF0_D3SRC__DAC3 | DACGCF0_D1AMEN__NORMAL | DACGCF0_D3AMEN__NORMAL;
+ 437   1        // [DACGCF0 - DAC Global Configuration 0]$
+ 438   1      
+ 439   1        // $[DACGCF2 - DAC Global Configuration 2]
+ 440   1        // [DACGCF2 - DAC Global Configuration 2]$
+ 441   1      
+ 442   1      }
+ 443          
+ 444          //================================================================================
+ 445          // VREF_0_enter_DefaultMode_from_RESET
+ 446          //================================================================================
+ 447          extern void
+ 448          VREF_0_enter_DefaultMode_from_RESET (void)
+ 449          {
+ 450   1        // $[REF0CN - Voltage Reference Control]
+ 451   1        // [REF0CN - Voltage Reference Control]$
+ 452   1      
+ 453   1      }
+ 454          
+ 455          //================================================================================
+ 456          // CIP51_0_enter_DefaultMode_from_RESET
+ 457          //================================================================================
+ 458          extern void
+ 459          CIP51_0_enter_DefaultMode_from_RESET (void)
+ 460          {
+ 461   1        // $[PFE0CN - Prefetch Engine Control]
+ 462   1        /***********************************************************************
+ 463   1         - SYSCLK < 50 MHz
+ 464   1         ***********************************************************************/
+ 465   1        SFRPAGE = 0x10;
+ 466   1        PFE0CN = PFE0CN_FLRT__SYSCLK_BELOW_50_MHZ;
+ 467   1        // [PFE0CN - Prefetch Engine Control]$
+ 468   1      
+ 469   1      }
+ 470          
+ 471          //================================================================================
+ 472          // CLOCK_0_enter_DefaultMode_from_RESET
+ 473          //================================================================================
+ 474          extern void
+ 475          CLOCK_0_enter_DefaultMode_from_RESET (void)
+ 476          {
+ 477   1        // $[HFOSC1 Setup]
+ 478   1        // Ensure SYSCLK is > 24 MHz before switching to HFOSC1
+ 479   1        SFRPAGE = 0x00;
+ 480   1        CLKSEL = CLKSEL_CLKSL__HFOSC0 | CLKSEL_CLKDIV__SYSCLK_DIV_1;
+ 481   1        while ((CLKSEL & CLKSEL_DIVRDY__BMASK) == CLKSEL_DIVRDY__NOT_READY)
+ 482   1          ;
+ 483   1        // [HFOSC1 Setup]$
+ 484   1      
+ 485   1        // $[CLKSEL - Clock Select]
+ 486   1        /***********************************************************************
+ 487   1         - Clock derived from the Internal High Frequency Oscillator 1
+ 488   1         - SYSCLK is equal to selected clock source divided by 1
+ 489   1         ***********************************************************************/
+ 490   1        CLKSEL = CLKSEL_CLKSL__HFOSC1 | CLKSEL_CLKDIV__SYSCLK_DIV_1;
+ 491   1        while ((CLKSEL & CLKSEL_DIVRDY__BMASK) == CLKSEL_DIVRDY__NOT_READY)
+ 492   1          ;
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 9   
 
- 493   1      
- 494   1      }
- 495          
- 496          //================================================================================
- 497          // TIMER16_2_enter_DefaultMode_from_RESET
- 498          //================================================================================
- 499          extern void
- 500          TIMER16_2_enter_DefaultMode_from_RESET (void)
- 501          {
- 502   1        // $[Timer Initialization]
- 503   1        // Save Timer Configuration
- 504   1        uint8_t TMR2CN0_TR2_save;
- 505   1        TMR2CN0_TR2_save = TMR2CN0 & TMR2CN0_TR2__BMASK;
- 506   1        // Stop Timer
- 507   1        TMR2CN0 &= ~(TMR2CN0_TR2__BMASK);
- 508   1        // [Timer Initialization]$
- 509   1      
- 510   1        // $[TMR2CN1 - Timer 2 Control 1]
- 511   1        // [TMR2CN1 - Timer 2 Control 1]$
- 512   1      
- 513   1        // $[TMR2CN0 - Timer 2 Control]
- 514   1        /***********************************************************************
- 515   1         - Timer 2 operates as two 8-bit auto-reload timers
- 516   1         ***********************************************************************/
- 517   1        TMR2CN0 |= TMR2CN0_T2SPLIT__8_BIT_RELOAD;
- 518   1        // [TMR2CN0 - Timer 2 Control]$
- 519   1      
- 520   1        // $[TMR2H - Timer 2 High Byte]
- 521   1        // [TMR2H - Timer 2 High Byte]$
- 522   1      
- 523   1        // $[TMR2L - Timer 2 Low Byte]
- 524   1        // [TMR2L - Timer 2 Low Byte]$
- 525   1      
- 526   1        // $[TMR2RLH - Timer 2 Reload High Byte]
- 527   1        /***********************************************************************
- 528   1         - Timer 2 Reload High Byte = 0xFB
- 529   1         ***********************************************************************/
- 530   1        TMR2RLH = (0xFB << TMR2RLH_TMR2RLH__SHIFT);
- 531   1        // [TMR2RLH - Timer 2 Reload High Byte]$
- 532   1      
- 533   1        // $[TMR2RLL - Timer 2 Reload Low Byte]
- 534   1        // [TMR2RLL - Timer 2 Reload Low Byte]$
- 535   1      
- 536   1        // $[TMR2CN0]
- 537   1        /***********************************************************************
- 538   1         - Start Timer 2 running
- 539   1         ***********************************************************************/
- 540   1        TMR2CN0 |= TMR2CN0_TR2__RUN;
- 541   1        // [TMR2CN0]$
- 542   1      
- 543   1        // $[Timer Restoration]
- 544   1        // Restore Timer Configuration
- 545   1        TMR2CN0 |= TMR2CN0_TR2_save;
- 546   1        // [Timer Restoration]$
- 547   1      
- 548   1      }
- 549          
- 550          //================================================================================
- 551          // TIMER_SETUP_0_enter_DefaultMode_from_RESET
- 552          //================================================================================
- 553          extern void
- 554          TIMER_SETUP_0_enter_DefaultMode_from_RESET (void)
- 555          {
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 17:56:40 PAGE 10  
+ 493   1        // [CLKSEL - Clock Select]$
+ 494   1      
+ 495   1      }
+ 496          
+ 497          //================================================================================
+ 498          // TIMER16_2_enter_DefaultMode_from_RESET
+ 499          //================================================================================
+ 500          extern void
+ 501          TIMER16_2_enter_DefaultMode_from_RESET (void)
+ 502          {
+ 503   1        // $[Timer Initialization]
+ 504   1        // Save Timer Configuration
+ 505   1        uint8_t TMR2CN0_TR2_save;
+ 506   1        TMR2CN0_TR2_save = TMR2CN0 & TMR2CN0_TR2__BMASK;
+ 507   1        // Stop Timer
+ 508   1        TMR2CN0 &= ~(TMR2CN0_TR2__BMASK);
+ 509   1        // [Timer Initialization]$
+ 510   1      
+ 511   1        // $[TMR2CN1 - Timer 2 Control 1]
+ 512   1        // [TMR2CN1 - Timer 2 Control 1]$
+ 513   1      
+ 514   1        // $[TMR2CN0 - Timer 2 Control]
+ 515   1        /***********************************************************************
+ 516   1         - Timer 2 operates as two 8-bit auto-reload timers
+ 517   1         ***********************************************************************/
+ 518   1        TMR2CN0 |= TMR2CN0_T2SPLIT__8_BIT_RELOAD;
+ 519   1        // [TMR2CN0 - Timer 2 Control]$
+ 520   1      
+ 521   1        // $[TMR2H - Timer 2 High Byte]
+ 522   1        // [TMR2H - Timer 2 High Byte]$
+ 523   1      
+ 524   1        // $[TMR2L - Timer 2 Low Byte]
+ 525   1        // [TMR2L - Timer 2 Low Byte]$
+ 526   1      
+ 527   1        // $[TMR2RLH - Timer 2 Reload High Byte]
+ 528   1        /***********************************************************************
+ 529   1         - Timer 2 Reload High Byte = 0xFB
+ 530   1         ***********************************************************************/
+ 531   1        TMR2RLH = (0xFB << TMR2RLH_TMR2RLH__SHIFT);
+ 532   1        // [TMR2RLH - Timer 2 Reload High Byte]$
+ 533   1      
+ 534   1        // $[TMR2RLL - Timer 2 Reload Low Byte]
+ 535   1        // [TMR2RLL - Timer 2 Reload Low Byte]$
+ 536   1      
+ 537   1        // $[TMR2CN0]
+ 538   1        /***********************************************************************
+ 539   1         - Start Timer 2 running
+ 540   1         ***********************************************************************/
+ 541   1        TMR2CN0 |= TMR2CN0_TR2__RUN;
+ 542   1        // [TMR2CN0]$
+ 543   1      
+ 544   1        // $[Timer Restoration]
+ 545   1        // Restore Timer Configuration
+ 546   1        TMR2CN0 |= TMR2CN0_TR2_save;
+ 547   1        // [Timer Restoration]$
+ 548   1      
+ 549   1      }
+ 550          
+ 551          //================================================================================
+ 552          // TIMER_SETUP_0_enter_DefaultMode_from_RESET
+ 553          //================================================================================
+ 554          extern void
+ 555          TIMER_SETUP_0_enter_DefaultMode_from_RESET (void)
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 10  
 
- 556   1        // $[CKCON0 - Clock Control 0]
- 557   1        /***********************************************************************
- 558   1         - System clock divided by 12
- 559   1         - Counter/Timer 0 uses the system clock
- 560   1         - Timer 2 high byte uses the clock defined by T2XCLK in TMR2CN0
- 561   1         - Timer 2 low byte uses the clock defined by T2XCLK in TMR2CN0
- 562   1         - Timer 3 high byte uses the clock defined by T3XCLK in TMR3CN0
- 563   1         - Timer 3 low byte uses the clock defined by T3XCLK in TMR3CN0
- 564   1         - Timer 1 uses the clock defined by the prescale field, SCA
- 565   1         ***********************************************************************/
- 566   1        CKCON0 = CKCON0_SCA__SYSCLK_DIV_12 | CKCON0_T0M__SYSCLK
- 567   1            | CKCON0_T2MH__EXTERNAL_CLOCK | CKCON0_T2ML__EXTERNAL_CLOCK
- 568   1            | CKCON0_T3MH__EXTERNAL_CLOCK | CKCON0_T3ML__EXTERNAL_CLOCK
- 569   1            | CKCON0_T1M__PRESCALE;
- 570   1        // [CKCON0 - Clock Control 0]$
- 571   1      
- 572   1        // $[CKCON1 - Clock Control 1]
- 573   1        // [CKCON1 - Clock Control 1]$
- 574   1      
- 575   1        // $[TMOD - Timer 0/1 Mode]
- 576   1        /***********************************************************************
- 577   1         - Mode 1, 16-bit Counter/Timer
- 578   1         - Mode 2, 8-bit Counter/Timer with Auto-Reload
- 579   1         - Timer Mode
- 580   1         - Timer 0 enabled when TR0 = 1 irrespective of INT0 logic level
- 581   1         - Timer Mode
- 582   1         - Timer 1 enabled when TR1 = 1 irrespective of INT1 logic level
- 583   1         ***********************************************************************/
- 584   1        TMOD = TMOD_T0M__MODE1 | TMOD_T1M__MODE2 | TMOD_CT0__TIMER
- 585   1            | TMOD_GATE0__DISABLED | TMOD_CT1__TIMER | TMOD_GATE1__DISABLED;
- 586   1        // [TMOD - Timer 0/1 Mode]$
- 587   1      
- 588   1        // $[TCON - Timer 0/1 Control]
- 589   1        /***********************************************************************
- 590   1         - Start Timer 1 running
- 591   1         ***********************************************************************/
- 592   1        TCON |= TCON_TR1__RUN;
- 593   1        // [TCON - Timer 0/1 Control]$
- 594   1      
- 595   1      }
- 596          
- 597          //================================================================================
- 598          // SMBUS_0_enter_DefaultMode_from_RESET
- 599          //================================================================================
- 600          extern void
- 601          SMBUS_0_enter_DefaultMode_from_RESET (void)
- 602          {
- 603   1        // $[SMB0FCN0 - SMBus0 FIFO Control 0]
- 604   1        // [SMB0FCN0 - SMBus0 FIFO Control 0]$
- 605   1      
- 606   1        // $[SMB0RXLN - SMBus0 Receive Length Counter]
- 607   1        // [SMB0RXLN - SMBus0 Receive Length Counter]$
- 608   1      
- 609   1        // $[SMB0ADR - SMBus 0 Slave Address]
- 610   1        // [SMB0ADR - SMBus 0 Slave Address]$
- 611   1      
- 612   1        // $[SMB0ADM - SMBus 0 Slave Address Mask]
- 613   1        // [SMB0ADM - SMBus 0 Slave Address Mask]$
- 614   1      
- 615   1        // $[SMB0TC - SMBus 0 Timing and Pin Control]
- 616   1        // [SMB0TC - SMBus 0 Timing and Pin Control]$
- 617   1      
- 618   1        // $[SMB0CF - SMBus 0 Configuration]
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 17:56:40 PAGE 11  
+ 556          {
+ 557   1        // $[CKCON0 - Clock Control 0]
+ 558   1        /***********************************************************************
+ 559   1         - System clock divided by 12
+ 560   1         - Counter/Timer 0 uses the system clock
+ 561   1         - Timer 2 high byte uses the clock defined by T2XCLK in TMR2CN0
+ 562   1         - Timer 2 low byte uses the clock defined by T2XCLK in TMR2CN0
+ 563   1         - Timer 3 high byte uses the clock defined by T3XCLK in TMR3CN0
+ 564   1         - Timer 3 low byte uses the clock defined by T3XCLK in TMR3CN0
+ 565   1         - Timer 1 uses the clock defined by the prescale field, SCA
+ 566   1         ***********************************************************************/
+ 567   1        CKCON0 = CKCON0_SCA__SYSCLK_DIV_12 | CKCON0_T0M__SYSCLK
+ 568   1            | CKCON0_T2MH__EXTERNAL_CLOCK | CKCON0_T2ML__EXTERNAL_CLOCK
+ 569   1            | CKCON0_T3MH__EXTERNAL_CLOCK | CKCON0_T3ML__EXTERNAL_CLOCK
+ 570   1            | CKCON0_T1M__PRESCALE;
+ 571   1        // [CKCON0 - Clock Control 0]$
+ 572   1      
+ 573   1        // $[CKCON1 - Clock Control 1]
+ 574   1        // [CKCON1 - Clock Control 1]$
+ 575   1      
+ 576   1        // $[TMOD - Timer 0/1 Mode]
+ 577   1        /***********************************************************************
+ 578   1         - Mode 1, 16-bit Counter/Timer
+ 579   1         - Mode 2, 8-bit Counter/Timer with Auto-Reload
+ 580   1         - Timer Mode
+ 581   1         - Timer 0 enabled when TR0 = 1 irrespective of INT0 logic level
+ 582   1         - Timer Mode
+ 583   1         - Timer 1 enabled when TR1 = 1 irrespective of INT1 logic level
+ 584   1         ***********************************************************************/
+ 585   1        TMOD = TMOD_T0M__MODE1 | TMOD_T1M__MODE2 | TMOD_CT0__TIMER
+ 586   1            | TMOD_GATE0__DISABLED | TMOD_CT1__TIMER | TMOD_GATE1__DISABLED;
+ 587   1        // [TMOD - Timer 0/1 Mode]$
+ 588   1      
+ 589   1        // $[TCON - Timer 0/1 Control]
+ 590   1        /***********************************************************************
+ 591   1         - Start Timer 1 running
+ 592   1         ***********************************************************************/
+ 593   1        TCON |= TCON_TR1__RUN;
+ 594   1        // [TCON - Timer 0/1 Control]$
+ 595   1      
+ 596   1      }
+ 597          
+ 598          //================================================================================
+ 599          // SMBUS_0_enter_DefaultMode_from_RESET
+ 600          //================================================================================
+ 601          extern void
+ 602          SMBUS_0_enter_DefaultMode_from_RESET (void)
+ 603          {
+ 604   1        // $[SMB0FCN0 - SMBus0 FIFO Control 0]
+ 605   1        // [SMB0FCN0 - SMBus0 FIFO Control 0]$
+ 606   1      
+ 607   1        // $[SMB0RXLN - SMBus0 Receive Length Counter]
+ 608   1        // [SMB0RXLN - SMBus0 Receive Length Counter]$
+ 609   1      
+ 610   1        // $[SMB0ADR - SMBus 0 Slave Address]
+ 611   1        // [SMB0ADR - SMBus 0 Slave Address]$
+ 612   1      
+ 613   1        // $[SMB0ADM - SMBus 0 Slave Address Mask]
+ 614   1        // [SMB0ADM - SMBus 0 Slave Address Mask]$
+ 615   1      
+ 616   1        // $[SMB0TC - SMBus 0 Timing and Pin Control]
+ 617   1        // [SMB0TC - SMBus 0 Timing and Pin Control]$
+ 618   1      
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 11  
 
- 619   1        /***********************************************************************
- 620   1         - Timer 2 High Byte Overflow
- 621   1         - Slave states are inhibited
- 622   1         - Enable the SMBus module
- 623   1         - Enable bus free timeouts
- 624   1         - Enable SCL low timeouts if Timer 3 RLFSEL is set appropriately
- 625   1         - Enable SDA extended setup and hold times
- 626   1         ***********************************************************************/
- 627   1        SMB0CF &= ~SMB0CF_SMBCS__FMASK;
- 628   1        SMB0CF |= SMB0CF_SMBCS__TIMER2_HIGH | SMB0CF_INH__SLAVE_DISABLED
- 629   1            | SMB0CF_ENSMB__ENABLED | SMB0CF_SMBFTE__FREE_TO_ENABLED
- 630   1            | SMB0CF_SMBTOE__SCL_TO_ENABLED | SMB0CF_EXTHOLD__ENABLED;
- 631   1        // [SMB0CF - SMBus 0 Configuration]$
- 632   1      
- 633   1      }
- 634          
- 635          //================================================================================
- 636          // UARTE_1_enter_DefaultMode_from_RESET
- 637          //================================================================================
- 638          extern void
- 639          UARTE_1_enter_DefaultMode_from_RESET (void)
- 640          {
- 641   1        // $[SBCON1 - UART1 Baud Rate Generator Control]
- 642   1        /***********************************************************************
- 643   1         - Enable the baud rate generator
- 644   1         - Prescaler = 1
- 645   1         ***********************************************************************/
- 646   1        SFRPAGE = 0x20;
- 647   1        SBCON1 = SBCON1_BREN__ENABLED | SBCON1_BPS__DIV_BY_1;
- 648   1        // [SBCON1 - UART1 Baud Rate Generator Control]$
- 649   1      
- 650   1        // $[SMOD1 - UART1 Mode]
- 651   1        // [SMOD1 - UART1 Mode]$
- 652   1      
- 653   1        // $[UART1FCN0 - UART1 FIFO Control 0]
- 654   1        // [UART1FCN0 - UART1 FIFO Control 0]$
- 655   1      
- 656   1        // $[SBRLH1 - UART1 Baud Rate Generator High Byte]
- 657   1        /***********************************************************************
- 658   1         - UART1 Baud Rate Reload High = 0xFB
- 659   1         ***********************************************************************/
- 660   1        SBRLH1 = (0xFB << SBRLH1_BRH__SHIFT);
- 661   1        // [SBRLH1 - UART1 Baud Rate Generator High Byte]$
- 662   1      
- 663   1        // $[SBRLL1 - UART1 Baud Rate Generator Low Byte]
- 664   1        /***********************************************************************
- 665   1         - UART1 Baud Rate Reload Low = 0x04
- 666   1         ***********************************************************************/
- 667   1        SBRLL1 = (0x04 << SBRLL1_BRL__SHIFT);
- 668   1        // [SBRLL1 - UART1 Baud Rate Generator Low Byte]$
- 669   1      
- 670   1        // $[UART1LIN - UART1 LIN Configuration]
- 671   1        // [UART1LIN - UART1 LIN Configuration]$
- 672   1      
- 673   1        // $[SCON1 - UART1 Serial Port Control]
- 674   1        /***********************************************************************
- 675   1         - UART1 reception enabled
- 676   1         ***********************************************************************/
- 677   1        SCON1 |= SCON1_REN__RECEIVE_ENABLED;
- 678   1        // [SCON1 - UART1 Serial Port Control]$
- 679   1      
- 680   1        // $[UART1FCN1 - UART1 FIFO Control 1]
- 681   1        // [UART1FCN1 - UART1 FIFO Control 1]$
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 17:56:40 PAGE 12  
+ 619   1        // $[SMB0CF - SMBus 0 Configuration]
+ 620   1        /***********************************************************************
+ 621   1         - Timer 2 High Byte Overflow
+ 622   1         - Slave states are inhibited
+ 623   1         - Enable the SMBus module
+ 624   1         - Enable bus free timeouts
+ 625   1         - Enable SCL low timeouts if Timer 3 RLFSEL is set appropriately
+ 626   1         - Enable SDA extended setup and hold times
+ 627   1         ***********************************************************************/
+ 628   1        SMB0CF &= ~SMB0CF_SMBCS__FMASK;
+ 629   1        SMB0CF |= SMB0CF_SMBCS__TIMER2_HIGH | SMB0CF_INH__SLAVE_DISABLED
+ 630   1            | SMB0CF_ENSMB__ENABLED | SMB0CF_SMBFTE__FREE_TO_ENABLED
+ 631   1            | SMB0CF_SMBTOE__SCL_TO_ENABLED | SMB0CF_EXTHOLD__ENABLED;
+ 632   1        // [SMB0CF - SMBus 0 Configuration]$
+ 633   1      
+ 634   1      }
+ 635          
+ 636          //================================================================================
+ 637          // UARTE_1_enter_DefaultMode_from_RESET
+ 638          //================================================================================
+ 639          extern void
+ 640          UARTE_1_enter_DefaultMode_from_RESET (void)
+ 641          {
+ 642   1        // $[SBCON1 - UART1 Baud Rate Generator Control]
+ 643   1        /***********************************************************************
+ 644   1         - Enable the baud rate generator
+ 645   1         - Prescaler = 1
+ 646   1         ***********************************************************************/
+ 647   1        SFRPAGE = 0x20;
+ 648   1        SBCON1 = SBCON1_BREN__ENABLED | SBCON1_BPS__DIV_BY_1;
+ 649   1        // [SBCON1 - UART1 Baud Rate Generator Control]$
+ 650   1      
+ 651   1        // $[SMOD1 - UART1 Mode]
+ 652   1        // [SMOD1 - UART1 Mode]$
+ 653   1      
+ 654   1        // $[UART1FCN0 - UART1 FIFO Control 0]
+ 655   1        // [UART1FCN0 - UART1 FIFO Control 0]$
+ 656   1      
+ 657   1        // $[SBRLH1 - UART1 Baud Rate Generator High Byte]
+ 658   1        /***********************************************************************
+ 659   1         - UART1 Baud Rate Reload High = 0xFB
+ 660   1         ***********************************************************************/
+ 661   1        SBRLH1 = (0xFB << SBRLH1_BRH__SHIFT);
+ 662   1        // [SBRLH1 - UART1 Baud Rate Generator High Byte]$
+ 663   1      
+ 664   1        // $[SBRLL1 - UART1 Baud Rate Generator Low Byte]
+ 665   1        /***********************************************************************
+ 666   1         - UART1 Baud Rate Reload Low = 0x04
+ 667   1         ***********************************************************************/
+ 668   1        SBRLL1 = (0x04 << SBRLL1_BRL__SHIFT);
+ 669   1        // [SBRLL1 - UART1 Baud Rate Generator Low Byte]$
+ 670   1      
+ 671   1        // $[UART1LIN - UART1 LIN Configuration]
+ 672   1        // [UART1LIN - UART1 LIN Configuration]$
+ 673   1      
+ 674   1        // $[SCON1 - UART1 Serial Port Control]
+ 675   1        /***********************************************************************
+ 676   1         - UART1 reception enabled
+ 677   1         ***********************************************************************/
+ 678   1        SCON1 |= SCON1_REN__RECEIVE_ENABLED;
+ 679   1        // [SCON1 - UART1 Serial Port Control]$
+ 680   1      
+ 681   1        // $[UART1FCN1 - UART1 FIFO Control 1]
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 12  
 
- 682   1      
- 683   1      }
- 684          
- 685          extern void
- 686          TIMER01_0_enter_DefaultMode_from_RESET (void)
- 687          {
- 688   1        // $[Timer Initialization]
- 689   1        //Save Timer Configuration
- 690   1        uint8_t TCON_save;
- 691   1        TCON_save = TCON;
- 692   1        //Stop Timers
- 693   1        TCON &= ~TCON_TR0__BMASK & ~TCON_TR1__BMASK;
- 694   1      
- 695   1        // [Timer Initialization]$
- 696   1      
- 697   1        // $[TH0 - Timer 0 High Byte]
- 698   1        // [TH0 - Timer 0 High Byte]$
- 699   1      
- 700   1        // $[TL0 - Timer 0 Low Byte]
- 701   1        // [TL0 - Timer 0 Low Byte]$
- 702   1      
- 703   1        // $[TH1 - Timer 1 High Byte]
- 704   1        /***********************************************************************
- 705   1         - Timer 1 High Byte = 0x2B
- 706   1         ***********************************************************************/
- 707   1        TH1 = (0x2B << TH1_TH1__SHIFT);
- 708   1        // [TH1 - Timer 1 High Byte]$
- 709   1      
- 710   1        // $[TL1 - Timer 1 Low Byte]
- 711   1        // [TL1 - Timer 1 Low Byte]$
- 712   1      
- 713   1        // $[Timer Restoration]
- 714   1        //Restore Timer Configuration
- 715   1        TCON |= (TCON_save & TCON_TR0__BMASK) | (TCON_save & TCON_TR1__BMASK);
- 716   1      
- 717   1        // [Timer Restoration]$
- 718   1      
- 719   1      }
- 720          
- 721          extern void
- 722          UART_0_enter_DefaultMode_from_RESET (void)
- 723          {
- 724   1        // $[SCON0 - UART0 Serial Port Control]
- 725   1        // [SCON0 - UART0 Serial Port Control]$
- 726   1      
- 727   1      }
- 728          
- 729          extern void
- 730          DAC_1_enter_DefaultMode_from_RESET (void)
- 731          {
- 732   1        // $[DAC1CF0 - DAC1 Configuration 0]
- 733   1        /***********************************************************************
- 734   1         - DAC1 is enabled and will drive the output pin
- 735   1         - DAC1 output updates occur on every clock cycle
- 736   1         - DAC1 input is treated as right-justified
- 737   1         - All resets will reset DAC1 and its associated registers
- 738   1         ***********************************************************************/
- 739   1        DAC1CF0 = DAC1CF0_EN__ENABLE | DAC1CF0_UPDATE__SYSCLK
- 740   1            | DAC1CF0_LJST__RIGHT_JUSTIFY | DAC1CF0_RSTMD__NORMAL;
- 741   1        // [DAC1CF0 - DAC1 Configuration 0]$
- 742   1      
- 743   1        // $[DAC1CF1 - DAC1 Configuration 1]
- 744   1        // [DAC1CF1 - DAC1 Configuration 1]$
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 17:56:40 PAGE 13  
+ 682   1        // [UART1FCN1 - UART1 FIFO Control 1]$
+ 683   1      
+ 684   1      }
+ 685          
+ 686          extern void
+ 687          TIMER01_0_enter_DefaultMode_from_RESET (void)
+ 688          {
+ 689   1        // $[Timer Initialization]
+ 690   1        //Save Timer Configuration
+ 691   1        uint8_t TCON_save;
+ 692   1        TCON_save = TCON;
+ 693   1        //Stop Timers
+ 694   1        TCON &= ~TCON_TR0__BMASK & ~TCON_TR1__BMASK;
+ 695   1      
+ 696   1        // [Timer Initialization]$
+ 697   1      
+ 698   1        // $[TH0 - Timer 0 High Byte]
+ 699   1        // [TH0 - Timer 0 High Byte]$
+ 700   1      
+ 701   1        // $[TL0 - Timer 0 Low Byte]
+ 702   1        // [TL0 - Timer 0 Low Byte]$
+ 703   1      
+ 704   1        // $[TH1 - Timer 1 High Byte]
+ 705   1        /***********************************************************************
+ 706   1         - Timer 1 High Byte = 0x2B
+ 707   1         ***********************************************************************/
+ 708   1        TH1 = (0x2B << TH1_TH1__SHIFT);
+ 709   1        // [TH1 - Timer 1 High Byte]$
+ 710   1      
+ 711   1        // $[TL1 - Timer 1 Low Byte]
+ 712   1        // [TL1 - Timer 1 Low Byte]$
+ 713   1      
+ 714   1        // $[Timer Restoration]
+ 715   1        //Restore Timer Configuration
+ 716   1        TCON |= (TCON_save & TCON_TR0__BMASK) | (TCON_save & TCON_TR1__BMASK);
+ 717   1      
+ 718   1        // [Timer Restoration]$
+ 719   1      
+ 720   1      }
+ 721          
+ 722          extern void
+ 723          UART_0_enter_DefaultMode_from_RESET (void)
+ 724          {
+ 725   1        // $[SCON0 - UART0 Serial Port Control]
+ 726   1        // [SCON0 - UART0 Serial Port Control]$
+ 727   1      
+ 728   1      }
+ 729          
+ 730          extern void
+ 731          DAC_1_enter_DefaultMode_from_RESET (void)
+ 732          {
+ 733   1        // $[DAC1CF0 - DAC1 Configuration 0]
+ 734   1        /***********************************************************************
+ 735   1         - DAC1 is enabled and will drive the output pin
+ 736   1         - DAC1 output updates occur on every clock cycle
+ 737   1         - DAC1 input is treated as right-justified
+ 738   1         - All resets will reset DAC1 and its associated registers
+ 739   1         ***********************************************************************/
+ 740   1        DAC1CF0 = DAC1CF0_EN__ENABLE | DAC1CF0_UPDATE__SYSCLK
+ 741   1            | DAC1CF0_LJST__RIGHT_JUSTIFY | DAC1CF0_RSTMD__NORMAL;
+ 742   1        // [DAC1CF0 - DAC1 Configuration 0]$
+ 743   1      
+ 744   1        // $[DAC1CF1 - DAC1 Configuration 1]
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 13  
 
- 745   1      
- 746   1      }
- 747          
- 748          extern void
- 749          INTERRUPT_0_enter_DefaultMode_from_RESET (void)
- 750          {
- 751   1        // $[EIE1 - Extended Interrupt Enable 1]
- 752   1        /***********************************************************************
- 753   1         - Disable ADC0 Conversion Complete interrupt
- 754   1         - Disable ADC0 Window Comparison interrupt
- 755   1         - Disable CP0 interrupts
- 756   1         - Disable CP1 interrupts
- 757   1         - Disable all Port Match interrupts
- 758   1         - Disable all PCA0 interrupts
- 759   1         - Enable interrupt requests generated by SMB0
- 760   1         - Disable Timer 3 interrupts
- 761   1         ***********************************************************************/
- 762   1        EIE1 = EIE1_EADC0__DISABLED | EIE1_EWADC0__DISABLED | EIE1_ECP0__DISABLED
- 763   1            | EIE1_ECP1__DISABLED | EIE1_EMAT__DISABLED | EIE1_EPCA0__DISABLED
- 764   1            | EIE1_ESMB0__ENABLED | EIE1_ET3__DISABLED;
- 765   1        // [EIE1 - Extended Interrupt Enable 1]$
- 766   1      
- 767   1        // $[EIE2 - Extended Interrupt Enable 2]
- 768   1        // [EIE2 - Extended Interrupt Enable 2]$
- 769   1      
- 770   1        // $[EIP1H - Extended Interrupt Priority 1 High]
- 771   1        /***********************************************************************
- 772   1         - ADC0 Conversion Complete interrupt priority MSB set to low
- 773   1         - ADC0 Window interrupt priority MSB set to low
- 774   1         - CP0 interrupt priority MSB set to low
- 775   1         - CP1 interrupt priority MSB set to low
- 776   1         - Port Match interrupt priority MSB set to low
- 777   1         - PCA0 interrupt priority MSB set to low
- 778   1         - SMB0 interrupt priority MSB set to high
- 779   1         - Timer 3 interrupt priority MSB set to low
- 780   1         ***********************************************************************/
- 781   1        SFRPAGE = 0x10;
- 782   1        EIP1H = EIP1H_PHADC0__LOW | EIP1H_PHWADC0__LOW | EIP1H_PHCP0__LOW
- 783   1            | EIP1H_PHCP1__LOW | EIP1H_PHMAT__LOW | EIP1H_PHPCA0__LOW
- 784   1            | EIP1H_PHSMB0__HIGH | EIP1H_PHT3__LOW;
- 785   1        // [EIP1H - Extended Interrupt Priority 1 High]$
- 786   1      
- 787   1        // $[EIP1 - Extended Interrupt Priority 1 Low]
- 788   1        // [EIP1 - Extended Interrupt Priority 1 Low]$
- 789   1      
- 790   1        // $[EIP2 - Extended Interrupt Priority 2]
- 791   1        // [EIP2 - Extended Interrupt Priority 2]$
- 792   1      
- 793   1        // $[EIP2H - Extended Interrupt Priority 2 High]
- 794   1        // [EIP2H - Extended Interrupt Priority 2 High]$
- 795   1      
- 796   1        // $[IE - Interrupt Enable]
- 797   1        /***********************************************************************
- 798   1         - Enable each interrupt according to its individual mask setting
- 799   1         - Disable external interrupt 0
- 800   1         - Disable external interrupt 1
- 801   1         - Disable all SPI0 interrupts
- 802   1         - Enable interrupt requests generated by the TF0 flag
- 803   1         - Disable all Timer 1 interrupt
- 804   1         - Disable Timer 2 interrupt
- 805   1         - Enable UART0 interrupt
- 806   1         ***********************************************************************/
- 807   1        SFRPAGE = 0x00;
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 17:56:40 PAGE 14  
+ 745   1        // [DAC1CF1 - DAC1 Configuration 1]$
+ 746   1      
+ 747   1      }
+ 748          
+ 749          extern void
+ 750          INTERRUPT_0_enter_DefaultMode_from_RESET (void)
+ 751          {
+ 752   1        // $[EIE1 - Extended Interrupt Enable 1]
+ 753   1        /***********************************************************************
+ 754   1         - Disable ADC0 Conversion Complete interrupt
+ 755   1         - Disable ADC0 Window Comparison interrupt
+ 756   1         - Disable CP0 interrupts
+ 757   1         - Disable CP1 interrupts
+ 758   1         - Disable all Port Match interrupts
+ 759   1         - Disable all PCA0 interrupts
+ 760   1         - Enable interrupt requests generated by SMB0
+ 761   1         - Disable Timer 3 interrupts
+ 762   1         ***********************************************************************/
+ 763   1        EIE1 = EIE1_EADC0__DISABLED | EIE1_EWADC0__DISABLED | EIE1_ECP0__DISABLED
+ 764   1            | EIE1_ECP1__DISABLED | EIE1_EMAT__DISABLED | EIE1_EPCA0__DISABLED
+ 765   1            | EIE1_ESMB0__ENABLED | EIE1_ET3__DISABLED;
+ 766   1        // [EIE1 - Extended Interrupt Enable 1]$
+ 767   1      
+ 768   1        // $[EIE2 - Extended Interrupt Enable 2]
+ 769   1        // [EIE2 - Extended Interrupt Enable 2]$
+ 770   1      
+ 771   1        // $[EIP1H - Extended Interrupt Priority 1 High]
+ 772   1        /***********************************************************************
+ 773   1         - ADC0 Conversion Complete interrupt priority MSB set to low
+ 774   1         - ADC0 Window interrupt priority MSB set to low
+ 775   1         - CP0 interrupt priority MSB set to low
+ 776   1         - CP1 interrupt priority MSB set to low
+ 777   1         - Port Match interrupt priority MSB set to low
+ 778   1         - PCA0 interrupt priority MSB set to low
+ 779   1         - SMB0 interrupt priority MSB set to high
+ 780   1         - Timer 3 interrupt priority MSB set to low
+ 781   1         ***********************************************************************/
+ 782   1        SFRPAGE = 0x10;
+ 783   1        EIP1H = EIP1H_PHADC0__LOW | EIP1H_PHWADC0__LOW | EIP1H_PHCP0__LOW
+ 784   1            | EIP1H_PHCP1__LOW | EIP1H_PHMAT__LOW | EIP1H_PHPCA0__LOW
+ 785   1            | EIP1H_PHSMB0__HIGH | EIP1H_PHT3__LOW;
+ 786   1        // [EIP1H - Extended Interrupt Priority 1 High]$
+ 787   1      
+ 788   1        // $[EIP1 - Extended Interrupt Priority 1 Low]
+ 789   1        // [EIP1 - Extended Interrupt Priority 1 Low]$
+ 790   1      
+ 791   1        // $[EIP2 - Extended Interrupt Priority 2]
+ 792   1        // [EIP2 - Extended Interrupt Priority 2]$
+ 793   1      
+ 794   1        // $[EIP2H - Extended Interrupt Priority 2 High]
+ 795   1        // [EIP2H - Extended Interrupt Priority 2 High]$
+ 796   1      
+ 797   1        // $[IE - Interrupt Enable]
+ 798   1        /***********************************************************************
+ 799   1         - Enable each interrupt according to its individual mask setting
+ 800   1         - Disable external interrupt 0
+ 801   1         - Disable external interrupt 1
+ 802   1         - Disable all SPI0 interrupts
+ 803   1         - Enable interrupt requests generated by the TF0 flag
+ 804   1         - Disable all Timer 1 interrupt
+ 805   1         - Disable Timer 2 interrupt
+ 806   1         - Enable UART0 interrupt
+ 807   1         ***********************************************************************/
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 14  
 
- 808   1        IE = IE_EA__ENABLED | IE_EX0__DISABLED | IE_EX1__DISABLED | IE_ESPI0__DISABLED
- 809   1            | IE_ET0__ENABLED | IE_ET1__DISABLED | IE_ET2__DISABLED | IE_ES0__ENABLED;
- 810   1        // [IE - Interrupt Enable]$
- 811   1      
- 812   1        // $[IP - Interrupt Priority]
- 813   1        // [IP - Interrupt Priority]$
- 814   1      
- 815   1        // $[IPH - Interrupt Priority High]
- 816   1        /***********************************************************************
- 817   1         - External Interrupt 0 priority MSB set to low
- 818   1         - External Interrupt 1 priority MSB set to low
- 819   1         - SPI0 interrupt priority MSB set to low
- 820   1         - Timer 0 interrupt priority MSB set to low
- 821   1         - Timer 1 interrupt priority MSB set to low
- 822   1         - Timer 2 interrupt priority MSB set to low
- 823   1         - UART0 interrupt priority MSB set to high
- 824   1         ***********************************************************************/
- 825   1        SFRPAGE = 0x10;
- 826   1        IPH = IPH_PHX0__LOW | IPH_PHX1__LOW | IPH_PHSPI0__LOW | IPH_PHT0__LOW
- 827   1            | IPH_PHT1__LOW | IPH_PHT2__LOW | IPH_PHS0__HIGH;
- 828   1        // [IPH - Interrupt Priority High]$
- 829   1      
- 830   1      }
- 831          
- 832          extern void
- 833          TIMER16_5_enter_DefaultMode_from_RESET (void)
- 834          {
- 835   1      
- 836   1      }
- 837          
+ 808   1        SFRPAGE = 0x00;
+ 809   1        IE = IE_EA__ENABLED | IE_EX0__DISABLED | IE_EX1__DISABLED | IE_ESPI0__DISABLED
+ 810   1            | IE_ET0__ENABLED | IE_ET1__DISABLED | IE_ET2__DISABLED | IE_ES0__ENABLED;
+ 811   1        // [IE - Interrupt Enable]$
+ 812   1      
+ 813   1        // $[IP - Interrupt Priority]
+ 814   1        // [IP - Interrupt Priority]$
+ 815   1      
+ 816   1        // $[IPH - Interrupt Priority High]
+ 817   1        /***********************************************************************
+ 818   1         - External Interrupt 0 priority MSB set to low
+ 819   1         - External Interrupt 1 priority MSB set to low
+ 820   1         - SPI0 interrupt priority MSB set to low
+ 821   1         - Timer 0 interrupt priority MSB set to low
+ 822   1         - Timer 1 interrupt priority MSB set to low
+ 823   1         - Timer 2 interrupt priority MSB set to low
+ 824   1         - UART0 interrupt priority MSB set to high
+ 825   1         ***********************************************************************/
+ 826   1        SFRPAGE = 0x10;
+ 827   1        IPH = IPH_PHX0__LOW | IPH_PHX1__LOW | IPH_PHSPI0__LOW | IPH_PHT0__LOW
+ 828   1            | IPH_PHT1__LOW | IPH_PHT2__LOW | IPH_PHS0__HIGH;
+ 829   1        // [IPH - Interrupt Priority High]$
+ 830   1      
+ 831   1      }
+ 832          
+ 833          extern void
+ 834          TIMER16_5_enter_DefaultMode_from_RESET (void)
+ 835          {
+ 836   1      
+ 837   1      }
+ 838          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE

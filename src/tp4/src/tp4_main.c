@@ -137,13 +137,13 @@ int main (void)
   //P2 = 0xFF;
 
   // ALEX STUFF
-  SFRPAGE_save = SFRPAGE;
-  SFRPAGE = 0x30;
-  DAC0L = (546&0xFF);
-  DAC0H = ((546>>8)&0xFF);
-  DAC1L = 119;
-  DAC1H = 3;
-  SFRPAGE = SFRPAGE_save;
+//  SFRPAGE_save = SFRPAGE;
+//  SFRPAGE = 0x30;
+//  DAC0L = (546&0xFF);
+//  DAC0H = ((546>>8)&0xFF);
+//  DAC1L = 119;
+//  DAC1H = 3;
+//  SFRPAGE = SFRPAGE_save;
                             // Spin forever
 
 /*
@@ -297,7 +297,7 @@ int main (void)
      SFRPAGE_save = SFRPAGE;
      SFRPAGE = 0x0;
      TCON |= TCON_TR0__RUN;
-     SCON0 |= SCON0_REN__RECEIVE_ENABLED;
+     //SCON0 |= SCON0_REN__RECEIVE_ENABLED;
      SFRPAGE = SFRPAGE_save;
      ncnt = 0;
      while (1) {

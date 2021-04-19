@@ -98,17 +98,18 @@ PORTS_0_enter_DefaultMode_from_RESET (void)
   // $[P0MDOUT - Port 0 Output Mode]
   /***********************************************************************
    - P0.0 output is open-drain
-   - P0.1 output is push-pull
+   - P0.1 output is open-drain
    - P0.2 output is open-drain
    - P0.3 output is open-drain
    - P0.4 output is push-pull
    - P0.5 output is open-drain
    - P0.6 output is open-drain
-   - P0.7 output is push-pull
+   - P0.7 output is open-drain
    ***********************************************************************/
-  P0MDOUT = P0MDOUT_B0__OPEN_DRAIN | P0MDOUT_B1__PUSH_PULL
+  P0MDOUT = P0MDOUT_B0__OPEN_DRAIN | P0MDOUT_B1__OPEN_DRAIN
       | P0MDOUT_B2__OPEN_DRAIN | P0MDOUT_B3__OPEN_DRAIN | P0MDOUT_B4__PUSH_PULL
-      | P0MDOUT_B5__OPEN_DRAIN | P0MDOUT_B6__OPEN_DRAIN | P0MDOUT_B7__PUSH_PULL;
+      | P0MDOUT_B5__OPEN_DRAIN | P0MDOUT_B6__OPEN_DRAIN
+      | P0MDOUT_B7__OPEN_DRAIN;
   // [P0MDOUT - Port 0 Output Mode]$
 
   // $[P0MDIN - Port 0 Input Mode]
@@ -166,12 +167,12 @@ PORTS_1_enter_DefaultMode_from_RESET (void)
    - P1.1 output is open-drain
    - P1.2 output is push-pull
    - P1.3 output is open-drain
-   - P1.4 output is push-pull
+   - P1.4 output is open-drain
    - P1.5 output is open-drain
    - P1.6 output is open-drain
    ***********************************************************************/
   P1MDOUT = P1MDOUT_B0__OPEN_DRAIN | P1MDOUT_B1__OPEN_DRAIN
-      | P1MDOUT_B2__PUSH_PULL | P1MDOUT_B3__OPEN_DRAIN | P1MDOUT_B4__PUSH_PULL
+      | P1MDOUT_B2__PUSH_PULL | P1MDOUT_B3__OPEN_DRAIN | P1MDOUT_B4__OPEN_DRAIN
       | P1MDOUT_B5__OPEN_DRAIN | P1MDOUT_B6__OPEN_DRAIN;
   // [P1MDOUT - Port 1 Output Mode]$
 

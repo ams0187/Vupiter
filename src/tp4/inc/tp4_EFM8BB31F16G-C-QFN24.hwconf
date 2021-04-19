@@ -33,9 +33,7 @@
     <property object="P0.0" propertyId="ports.settings.iomode" value="Analog I/O"/>
     <property object="P0.0" propertyId="ports.settings.label" value="vref"/>
     <property object="P0.0" propertyId="ports.settings.skip" value="Skipped"/>
-    <property object="P0.1" propertyId="ports.settings.iomode" value="Digital Push-Pull Output"/>
     <property object="P0.1" propertyId="ports.settings.label" value="e2_pb"/>
-    <property object="P0.1" propertyId="ports.settings.outputmode" value="Push-pull"/>
     <property object="P0.1" propertyId="ports.settings.skip" value="Skipped"/>
     <property object="P0.2" propertyId="ports.settings.label" value="e2_b"/>
     <property object="P0.2" propertyId="ports.settings.skip" value="Skipped"/>
@@ -44,8 +42,6 @@
     <property object="P0.4" propertyId="ports.settings.iomode" value="Digital Push-Pull Output"/>
     <property object="P0.4" propertyId="ports.settings.outputmode" value="Push-pull"/>
     <property object="P0.6" propertyId="ports.settings.skip" value="Skipped"/>
-    <property object="P0.7" propertyId="ports.settings.iomode" value="Digital Push-Pull Output"/>
-    <property object="P0.7" propertyId="ports.settings.outputmode" value="Push-pull"/>
     <property object="P0.7" propertyId="ports.settings.skip" value="Skipped"/>
     <property object="P1.0" propertyId="ports.settings.inputmode" value="Analog"/>
     <property object="P1.0" propertyId="ports.settings.iomode" value="Analog I/O"/>
@@ -60,9 +56,7 @@
     <property object="P1.2" propertyId="ports.settings.outputmode" value="Push-pull"/>
     <property object="P1.2" propertyId="ports.settings.skip" value="Skipped"/>
     <property object="P1.3" propertyId="ports.settings.label" value="rv"/>
-    <property object="P1.4" propertyId="ports.settings.iomode" value="Digital Push-Pull Output"/>
     <property object="P1.4" propertyId="ports.settings.label" value="e1_a"/>
-    <property object="P1.4" propertyId="ports.settings.outputmode" value="Push-pull"/>
     <property object="P1.4" propertyId="ports.settings.skip" value="Skipped"/>
     <property object="P1.5" propertyId="ports.settings.label" value="e1_b"/>
     <property object="P1.5" propertyId="ports.settings.skip" value="Skipped"/>
