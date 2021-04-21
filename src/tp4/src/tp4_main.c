@@ -297,7 +297,7 @@ int main (void)
      SFRPAGE_save = SFRPAGE;
      SFRPAGE = 0x0;
      TCON |= TCON_TR0__RUN;
-     //SCON0 |= SCON0_REN__RECEIVE_ENABLED;
+     SCON0 |= SCON0_REN__RECEIVE_ENABLED;
      SFRPAGE = SFRPAGE_save;
      ncnt = 0;
      while (1) {

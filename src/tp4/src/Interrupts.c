@@ -11,6 +11,7 @@
 //-----------------------------------------------------------------------------
 // Global Constants
 //-----------------------------------------------------------------------------
+xdata float vcal[32] = {0,123.99512789281363,245.46553808948005,366.626213592233,488.7392900856794,611.4355231143553,733.0097087378641,854.7677261613692,975.9036144578314,1097.560975609756,1218.0722891566265,1339.0243902439024,1460.2409638554218,1583.75,1707.4074074074074,1830.8641975308642,1953.658536585366,2075.609756097561,2187.912087912088,2302.2988505747126,2418.292682926829,2540.7407407407404,2662.650602409639,2783.132530120482,2906.024096385542,3026.5060240963853,3147.560975609756,3286.3636363636365,3408.0,3508.0,3608.0,3608.0};
 
 //-----------------------------------------------------------------------------
 // Global Variables
@@ -55,7 +56,6 @@ struct DAC_voltCounter
   unsigned b :1;
   unsigned c :12;
 } volt_counter = {0, 0, 0};
-
 struct DAC_ampCounter
 {
   unsigned a :1;
@@ -87,7 +87,8 @@ SI_INTERRUPT(TIMER0_ISR, TIMER0_IRQn)
 //#define ZERO (0)
 //#define ONE (1)
 
-//
+    xdata uint8_t dex = 0;
+    xdata float temp;
     uint16_t dacVoffset = 0;
     uint16_t dacAoffset = 0;
     static uint16_t scaleV = 1;
@@ -104,9 +105,9 @@ SI_INTERRUPT(TIMER0_ISR, TIMER0_IRQn)
           {
             if ((enc1A != enc1B))
               {
-                if (volt_counter.c + scaleV > 4095)
+                if (volt_counter.c + scaleV > 3000)
                   {
-                    volt_counter.c = 4095;
+                    volt_counter.c = 3000;
                   }
                 else
                   {
@@ -174,8 +175,10 @@ SI_INTERRUPT(TIMER0_ISR, TIMER0_IRQn)
       //DAC control
       /*dacV = volt_counter.c * 1.36533333333 + dacVoffset;
       dacA = amp_counter.c * 8.192 + dacAoffset;*/
-
-      dacV = volt_counter.c;
+      dex = volt_counter.c/100;
+      temp = vcal[dex];
+      temp += (vcal[dex+1]-vcal[dex])*((volt_counter.c)%100)/100.0;
+      dacV = temp;
       dacA = amp_counter.c;
 
       SFRPAGE_save = SFRPAGE;

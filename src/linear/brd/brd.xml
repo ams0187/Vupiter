@@ -1,0 +1,2012 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/twoninefour/hdd/seniorDesign/Vupiter/src/linear/brd/brd.sch</source>
+    <date>Tue 20 Apr 2021 08:41:05 PM CDT</date>
+    <tool>Eeschema 5.1.9-73d0e3b20d~88~ubuntu20.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>brd.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="Q4">
+      <value>TIP41C</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown</footprint>
+      <datasheet>TIP41C</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Transistors-NPN-PNP_STMicroelectronics-TIP41C_C92603.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Transistor_BJT" part="TIP41C" description="6A Ic, 100V Vce, Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6045430D</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>TIP41C</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown</footprint>
+      <datasheet>TIP41C</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Transistors-NPN-PNP_STMicroelectronics-TIP41C_C92603.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Transistor_BJT" part="TIP41C" description="6A Ic, 100V Vce, Power NPN Transistor, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6045457D</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>2N3904</value>
+      <footprint>Package_TO_SOT_SMD:SOT-223</footprint>
+      <datasheet>PZT3904</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Transistors-NPN-PNP_Changjiang-Electronics-Tech-CJ-PZT3904_C189432.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="Q_NPN_BCE" description="NPN transistor, base/collector/emitter"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6045643B</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>0.1</value>
+      <footprint>Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder</footprint>
+      <datasheet>SY2512CFR100</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_SANYEAR-SY2512CFR100_C457144.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60461729</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>0.1</value>
+      <footprint>Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder</footprint>
+      <datasheet>SY2512CFR100</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_SANYEAR-SY2512CFR100_C457144.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60462278</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>0.05</value>
+      <footprint>Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder</footprint>
+      <datasheet>SY2512CFR050</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_SANYEAR-SY2512CFR050_C466811.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60462751</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>2.7k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P15.24mm_Horizontal</footprint>
+      <datasheet>MFR01SF2701A10</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Metal-Film-Resistor-TH_UNI-ROYAL-Uniroyal-Elec-MFR01SF2701A10_C111873.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60465A6E</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>6k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>RN1/2WS6.04KΩFT/BA1</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Metal-Film-Resistor-TH_TyoHM-RN1-2WS6-04KRFT-BA1_C385532.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604681F8</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>out</value>
+      <footprint>Connector_Wire:SolderWire-1.5sqmm_1x02_P6mm_D1.7mm_OD3mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6046C772</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
+      <datasheet>C1206X5R106K500NT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6046DA82</tstamp>
+    </comp>
+    <comp ref="L1">
+      <value>1.5u</value>
+      <footprint>custom:MCS0630-1R5MN2</footprint>
+      <datasheet>MCS0630-1R5MN2</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Inductors-SMD_PSA-Prosperity-Dielectrics-MCS0630-1R5MN2_C400394.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6046F293</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
+      <datasheet>C1206X5R106K500NT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60696BDC</tstamp>
+    </comp>
+    <comp ref="C13">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
+      <datasheet>C1206X5R106K500NT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60668614</tstamp>
+    </comp>
+    <comp ref="L3">
+      <value>6.8u</value>
+      <footprint>custom:SCCD54</footprint>
+      <datasheet>SCCD54-6R8MT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Power-Inductors_Yanchuang-SCCD54-6R8MT_C532871.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6066860E</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>1N4007</value>
+      <footprint>Diode_SMD:D_SOD-123F</footprint>
+      <datasheet>1N4007W</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Diodes-General-Purpose_Foshan-Blue-Rocket-Elec-1N4007W_C328592.html</field>
+        <field name="On other board">pfc</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Diode" part="1N4007" description="1000V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>605C70DA</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>1N4007</value>
+      <footprint>Diode_SMD:D_SOD-123F</footprint>
+      <datasheet>1N4007W</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Diodes-General-Purpose_Foshan-Blue-Rocket-Elec-1N4007W_C328592.html</field>
+        <field name="On other board">pfc</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Diode" part="1N4007" description="1000V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>605C70D4</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>TCC0603X7R104K500CT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R104K500CT_C282519.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>605C70CC</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>1k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <datasheet>CF1/6W-1KΩ±5%T52</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-6W-1K%CE%A9-5-T52_C714219.html</field>
+        <field name="On other board">iso</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>605C70C6</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>TCC0603X7R104K500CT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R104K500CT_C282519.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604C5058</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>500p</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>TCC0603X7R501K500CT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R501K500CT_C696904.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6057CBFB</tstamp>
+    </comp>
+    <comp ref="D3">
+      <value>1N4007</value>
+      <footprint>Diode_SMD:D_SOD-123F</footprint>
+      <datasheet>1N4007W</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Diodes-General-Purpose_Foshan-Blue-Rocket-Elec-1N4007W_C328592.html</field>
+        <field name="On other board">pfc</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Diode" part="1N4007" description="1000V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6056068D</tstamp>
+    </comp>
+    <comp ref="D4">
+      <value>1N4007</value>
+      <footprint>Diode_SMD:D_SOD-123F</footprint>
+      <datasheet>1N4007W</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Diodes-General-Purpose_Foshan-Blue-Rocket-Elec-1N4007W_C328592.html</field>
+        <field name="On other board">pfc</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Diode" part="1N4007" description="1000V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6055C591</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>TCC0603X7R104K500CT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R104K500CT_C282519.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60559072</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>1k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <datasheet>CF1/6W-1KΩ±5%T52</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-6W-1K%CE%A9-5-T52_C714219.html</field>
+        <field name="On other board">iso</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60558868</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>TCC0603X7R104K500CT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R104K500CT_C282519.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60541E0B</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>500p</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>TCC0603X7R501K500CT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R501K500CT_C696904.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6053B767</tstamp>
+    </comp>
+    <comp ref="RV2">
+      <value>50k</value>
+      <footprint>Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical</footprint>
+      <datasheet>VG039NCHXTB503</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Variable-Resistors_HDK-Hokuriku-Elec-Industry-VG039NCHXTB503_C145161.html</field>
+        <field name="On other board">iso</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_POT_US" description="Potentiometer, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604A9BE1</tstamp>
+    </comp>
+    <comp ref="RV1">
+      <value>50k</value>
+      <footprint>Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical</footprint>
+      <datasheet>VG039NCHXTB503</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Variable-Resistors_HDK-Hokuriku-Elec-Industry-VG039NCHXTB503_C145161.html</field>
+        <field name="On other board">iso</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_POT_US" description="Potentiometer, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604A9BE7</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>TCC0603X7R104K500CT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R104K500CT_C282519.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604DF02A</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>TCC0603X7R104K500CT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R104K500CT_C282519.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604D8786</tstamp>
+    </comp>
+    <comp ref="RV4">
+      <value>50k</value>
+      <footprint>Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical</footprint>
+      <datasheet>VG039NCHXTB503</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Variable-Resistors_HDK-Hokuriku-Elec-Industry-VG039NCHXTB503_C145161.html</field>
+        <field name="On other board">iso</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_POT_US" description="Potentiometer, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604A73C2</tstamp>
+    </comp>
+    <comp ref="RV3">
+      <value>50k</value>
+      <footprint>Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical</footprint>
+      <datasheet>VG039NCHXTB503</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Variable-Resistors_HDK-Hokuriku-Elec-Industry-VG039NCHXTB503_C145161.html</field>
+        <field name="On other board">iso</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_POT_US" description="Potentiometer, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604A4AE0</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>TL084h</value>
+      <footprint>Package_SO:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
+      <libsource lib="custom" part="TL084h" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604A1F2B</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>TL084h</value>
+      <footprint>Package_SO:SOIC-14_3.9x8.7mm_P1.27mm</footprint>
+      <libsource lib="custom" part="TL084h" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6049CF17</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>LM317</value>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown</footprint>
+      <datasheet>LM317T-DG</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Dropout-Regulators-LDO_STMicroelectronics-LM317T-DG_C18718.html</field>
+        <field name="On other board">iso</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Regulator_Linear" part="LM317L_TO92" description="100mA 35V Adjustable Linear Regulator, TO-92"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>607125AE</tstamp>
+    </comp>
+    <comp ref="C21">
+      <value>4.7u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <datasheet>CS2012X5R475K500NRE</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samwha-Capacitor-CS2012X5R475K500NRE_C513770.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>607138B1</tstamp>
+    </comp>
+    <comp ref="C17">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>TCC0603X7R104K500CT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R104K500CT_C282519.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>607182EF</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>1k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>CF1/6W-1KΩ±5%T52</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-6W-1K%CE%A9-5-T52_C714219.html</field>
+        <field name="On other board">iso</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6071AEE9</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>1k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>CF1/6W-1KΩ±5%T52</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-6W-1K%CE%A9-5-T52_C714219.html</field>
+        <field name="On other board">iso</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6071B72A</tstamp>
+    </comp>
+    <comp ref="RV6">
+      <value>1k</value>
+      <footprint>Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical</footprint>
+      <datasheet>VG039NCHXTB102</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Variable-Resistors_HDK-Hokuriku-Elec-Industry-VG039NCHXTB102_C128543.html</field>
+        <field name="On other board">iso</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_POT_US" description="Potentiometer, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6071D016</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>MC33063AD</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.onsemi.com/pub_link/Collateral/MC34063A-D.PDF</datasheet>
+      <libsource lib="Regulator_Switching" part="MC33063AD" description="1.5A, step-up/down/inverting switching regulator, 3-40V Vin, 100kHz, SO-8"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6075C60C</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>0.44</value>
+      <footprint>Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder</footprint>
+      <datasheet>CR2512FR430E04R</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_Ever-Ohms-Tech-CR2512FR430E04R_C176056.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6075F76B</tstamp>
+    </comp>
+    <comp ref="RV5">
+      <value>20k</value>
+      <footprint>Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical</footprint>
+      <datasheet>VG039NCHXTB203</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Variable-Resistors_HDK-Hokuriku-Elec-Industry-VG039NCHXTB203_C128550.html</field>
+        <field name="On other board">iso</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_POT_US" description="Potentiometer, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60767C02</tstamp>
+    </comp>
+    <comp ref="L5">
+      <value>50u</value>
+      <footprint>custom:GCDA0650-470MC</footprint>
+      <datasheet>GCDA0650-470MC</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Inductors-SMD_GLE-GCDA0650-470MC_C439291.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6076C456</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>1N4007</value>
+      <footprint>Diode_SMD:D_SOD-123F</footprint>
+      <datasheet>1N4007W</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Diodes-General-Purpose_Foshan-Blue-Rocket-Elec-1N4007W_C328592.html</field>
+        <field name="On other board">pfc</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Diode" part="1N4007" description="1000V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60770FC6</tstamp>
+    </comp>
+    <comp ref="C16">
+      <value>150p</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>TCC0603X7R151K500CT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R151K500CT_C376811.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60471440</tstamp>
+    </comp>
+    <comp ref="C19">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
+      <datasheet>C1206X5R106K500NT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60478173</tstamp>
+    </comp>
+    <comp ref="RV7">
+      <value>20k</value>
+      <footprint>Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical</footprint>
+      <datasheet>VG039NCHXTB203</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Variable-Resistors_HDK-Hokuriku-Elec-Industry-VG039NCHXTB203_C128550.html</field>
+        <field name="On other board">iso</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_POT_US" description="Potentiometer, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60514DD3</tstamp>
+    </comp>
+    <comp ref="C20">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
+      <datasheet>C1206X5R106K500NT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60505368</tstamp>
+    </comp>
+    <comp ref="L7">
+      <value>28u</value>
+      <footprint>custom:SLO0630H330MTT</footprint>
+      <datasheet>SLO0630H330MTT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Power-Inductors_Sunltech-Tech-SLO0630H330MTT_C207844.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604FCFD2</tstamp>
+    </comp>
+    <comp ref="D5">
+      <value>1N4007</value>
+      <footprint>Diode_SMD:D_SOD-123F</footprint>
+      <datasheet>1N4007W</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Diodes-General-Purpose_Foshan-Blue-Rocket-Elec-1N4007W_C328592.html</field>
+        <field name="On other board">pfc</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Diode" part="1N4007" description="1000V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604FC7CD</tstamp>
+    </comp>
+    <comp ref="C15">
+      <value>1n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>CL10C102JB8NNNC</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samsung-Electro-Mechanics-CL10C102JB8NNNC_C163508.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604F528A</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>0.3</value>
+      <footprint>Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder</footprint>
+      <datasheet>FBF25FP-R300-00L</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Low-Resistors-Current-Sense-Resistors-Surface-Mount_PSA-Prosperity-Dielectrics-FBF25FP-R300-00L_C382261.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604DAE58</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>MC33063AD</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.onsemi.com/pub_link/Collateral/MC34063A-D.PDF</datasheet>
+      <libsource lib="Regulator_Switching" part="MC33063AD" description="1.5A, step-up/down/inverting switching regulator, 3-40V Vin, 100kHz, SO-8"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604D9FAD</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>fan</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>605D403E</tstamp>
+    </comp>
+    <comp ref="IC1">
+      <value>EFM8BB31F16G-D-QFN24R</value>
+      <footprint>EFM8BB31F16G-D-QFN24R:EFM8BB31F16GDQFN24</footprint>
+      <datasheet>https://www.silabs.com/documents/public/data-sheets/efm8bb3-datasheet.pdf</datasheet>
+      <libsource lib="EFM8BB31F16G-D-QFN24R" part="EFM8BB31F16G-D-QFN24R" description="8-bit Microcontrollers - MCU 8051 50 MHz 16 kB flash 2.25 kB RAM 8-bit Busy Bee MCU"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60613747</tstamp>
+    </comp>
+    <comp ref="J9">
+      <value>e2</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x05" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60648D86</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>prog</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x05" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60662917</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>extra</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60686C2E</tstamp>
+    </comp>
+    <comp ref="U6">
+      <value>pi121u31</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>π121U31</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Digital-Isolators_2Pai-Semi-p121U31_C471589.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="custom" part="pi121u31" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>606898E3</tstamp>
+    </comp>
+    <comp ref="C25">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>TCC0603X7R104K500CT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R104K500CT_C282519.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>606E18F7</tstamp>
+    </comp>
+    <comp ref="C26">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>TCC0603X7R104K500CT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R104K500CT_C282519.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>606FFBA2</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>iso_uart</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6066E12D</tstamp>
+    </comp>
+    <comp ref="C23">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>TCC0603X7R104K500CT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R104K500CT_C282519.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60784438</tstamp>
+    </comp>
+    <comp ref="C22">
+      <value>4.7u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <datasheet>CS2012X5R475K500NRE</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samwha-Capacitor-CS2012X5R475K500NRE_C513770.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6078653B</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>1k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical</footprint>
+      <datasheet>CF1/6W-1KΩ±5%T52</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Carbon-Film-Resistors_Huaxing-Mechanical-Elec-CF1-6W-1K%CE%A9-5-T52_C714219.html</field>
+        <field name="On other board">iso</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>607E885C</tstamp>
+    </comp>
+    <comp ref="C24">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>TCC0603X7R104K500CT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R104K500CT_C282519.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60824004</tstamp>
+    </comp>
+    <comp ref="R19">
+      <value>13k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>RS-03K133JT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FH-Guangdong-Fenghua-Advanced-Tech-RS-03K133JT_C294648.html</field>
+        <field name="On other board">pfc</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>608318D8</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>13k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>RS-03K133JT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FH-Guangdong-Fenghua-Advanced-Tech-RS-03K133JT_C294648.html</field>
+        <field name="On other board">pfc</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>608372AA</tstamp>
+    </comp>
+    <comp ref="R20">
+      <value>13k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>RS-03K133JT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FH-Guangdong-Fenghua-Advanced-Tech-RS-03K133JT_C294648.html</field>
+        <field name="On other board">pfc</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60839A98</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>screen</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60650134</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>LED</value>
+      <footprint>Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder</footprint>
+      <datasheet>XL-1608UBC-04</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Pre-ordered-Products_XINGLIGHT-XL-1608UBC-04_C965807.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6094DBBC</tstamp>
+    </comp>
+    <comp ref="J8">
+      <value>e1</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x05" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609D0CF5</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>13k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>RS-03K133JT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FH-Guangdong-Fenghua-Advanced-Tech-RS-03K133JT_C294648.html</field>
+        <field name="On other board">pfc</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609D0CFB</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>13k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>RS-03K133JT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FH-Guangdong-Fenghua-Advanced-Tech-RS-03K133JT_C294648.html</field>
+        <field name="On other board">pfc</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609D0D01</tstamp>
+    </comp>
+    <comp ref="R18">
+      <value>13k</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder</footprint>
+      <datasheet>RS-03K133JT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FH-Guangdong-Fenghua-Advanced-Tech-RS-03K133JT_C294648.html</field>
+        <field name="On other board">pfc</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>609D0D07</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>input</value>
+      <footprint>Connector_Wire:SolderWire-1.5sqmm_1x02_P6mm_D1.7mm_OD3mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60A491A6</tstamp>
+    </comp>
+    <comp ref="HS1">
+      <value>Heatsink</value>
+      <footprint>custom:ATS-PCBT1090</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="Heatsink" description="Heatsink"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60ADB0EE</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>TCC0603X7R104K500CT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R104K500CT_C282519.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604E1373</tstamp>
+    </comp>
+    <comp ref="C27">
+      <value>0.1u</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
+      <datasheet>TCC0603X7R104K500CT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_CCTC-TCC0603X7R104K500CT_C282519.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60C25154</tstamp>
+    </comp>
+    <comp ref="D8">
+      <value>1N4007</value>
+      <footprint>Diode_SMD:D_SOD-123F</footprint>
+      <datasheet>1N4007W</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Diodes-General-Purpose_Foshan-Blue-Rocket-Elec-1N4007W_C328592.html</field>
+        <field name="On other board">pfc</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Diode" part="1N4007" description="1000V 1A General Purpose Rectifier Diode, DO-41"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60598900</tstamp>
+    </comp>
+    <comp ref="RV9">
+      <value>1k</value>
+      <footprint>Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical</footprint>
+      <datasheet>VG039NCHXTB102</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Variable-Resistors_HDK-Hokuriku-Elec-Industry-VG039NCHXTB102_C128543.html</field>
+        <field name="On other board">iso</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_POT_US" description="Potentiometer, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>606D2BF9</tstamp>
+    </comp>
+    <comp ref="RV8">
+      <value>1k</value>
+      <footprint>Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical</footprint>
+      <datasheet>VG039NCHXTB102</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Variable-Resistors_HDK-Hokuriku-Elec-Industry-VG039NCHXTB102_C128543.html</field>
+        <field name="On other board">iso</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_POT_US" description="Potentiometer, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>606E6A23</tstamp>
+    </comp>
+    <comp ref="Q3">
+      <value>2N3904</value>
+      <footprint>Package_TO_SOT_SMD:SOT-223</footprint>
+      <datasheet>PZT3904</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Transistors-NPN-PNP_Changjiang-Electronics-Tech-CJ-PZT3904_C189432.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="Q_NPN_BCE" description="NPN transistor, base/collector/emitter"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>607154C9</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>0</value>
+      <footprint>NetTie:NetTie-2_SMD_Pad0.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60BD661A</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical</footprint>
+      <datasheet>RN 1WS 2R2 F T/B A1</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Metal-Film-Resistor-TH_TyoHM-RN-1WS-2R2-F-T-B-A1_C433658.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6065303B</tstamp>
+    </comp>
+    <comp ref="L4">
+      <value>0.68u</value>
+      <footprint>Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>CIGT201610LMR68MNE</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Power-Inductors_Samsung-Electro-Mechanics_CIGT201610LMR68MNE_Samsung-Electro-Mechanics-CIGT201610LMR68MNE_C307629.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60589FE7</tstamp>
+    </comp>
+    <comp ref="L9">
+      <value>6.8u</value>
+      <footprint>custom:SCCD54</footprint>
+      <datasheet>SCCD54-6R8MT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Power-Inductors_Yanchuang-SCCD54-6R8MT_C532871.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>606A1F35</tstamp>
+    </comp>
+    <comp ref="L11">
+      <value>3.3u</value>
+      <footprint>custom:SCCD43</footprint>
+      <datasheet>SCCD43-3R3MT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Power-Inductors_Yanchuang-SCCD43-3R3MT_C532860.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>606BCBB0</tstamp>
+    </comp>
+    <comp ref="R23">
+      <value>2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical</footprint>
+      <datasheet>RN 1WS 2R2 F T/B A1</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Metal-Film-Resistor-TH_TyoHM-RN-1WS-2R2-F-T-B-A1_C433658.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>606C4429</tstamp>
+    </comp>
+    <comp ref="L10">
+      <value>3.3u</value>
+      <footprint>custom:SCCD43</footprint>
+      <datasheet>SCCD43-3R3MT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Power-Inductors_Yanchuang-SCCD43-3R3MT_C532860.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>606E913F</tstamp>
+    </comp>
+    <comp ref="R22">
+      <value>2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical</footprint>
+      <datasheet>RN 1WS 2R2 F T/B A1</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Metal-Film-Resistor-TH_TyoHM-RN-1WS-2R2-F-T-B-A1_C433658.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>606E9146</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
+      <datasheet>C1206X5R106K500NT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604FBDB5</tstamp>
+    </comp>
+    <comp ref="R21">
+      <value>2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical</footprint>
+      <datasheet>RN 1WS 2R2 F T/B A1</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Metal-Film-Resistor-TH_TyoHM-RN-1WS-2R2-F-T-B-A1_C433658.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6056C60A</tstamp>
+    </comp>
+    <comp ref="L8">
+      <value>0.68u</value>
+      <footprint>Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>CIGT201610LMR68MNE</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Power-Inductors_Samsung-Electro-Mechanics_CIGT201610LMR68MNE_Samsung-Electro-Mechanics-CIGT201610LMR68MNE_C307629.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6056A397</tstamp>
+    </comp>
+    <comp ref="L2">
+      <value>1.5u</value>
+      <footprint>custom:MCS0630-1R5MN2</footprint>
+      <datasheet>MCS0630-1R5MN2</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Inductors-SMD_PSA-Prosperity-Dielectrics-MCS0630-1R5MN2_C400394.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6046FF95</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
+      <datasheet>C1206X5R106K500NT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6046FC2C</tstamp>
+    </comp>
+    <comp ref="C18">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder</footprint>
+      <datasheet>C1206X5R106K500NT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C1206X5R106K500NT_C466808.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>605F8034</tstamp>
+    </comp>
+    <comp ref="L6">
+      <value>6.8u</value>
+      <footprint>custom:SCCD54</footprint>
+      <datasheet>SCCD54-6R8MT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Power-Inductors_Yanchuang-SCCD54-6R8MT_C532871.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>605F803B</tstamp>
+    </comp>
+    <comp ref="L12">
+      <value>3.3u</value>
+      <footprint>custom:SCCD43</footprint>
+      <datasheet>SCCD43-3R3MT</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Power-Inductors_Yanchuang-SCCD43-3R3MT_C532860.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="L_Small" description="Inductor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>605F8042</tstamp>
+    </comp>
+    <comp ref="R24">
+      <value>2</value>
+      <footprint>Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical</footprint>
+      <datasheet>RN 1WS 2R2 F T/B A1</datasheet>
+      <fields>
+        <field name="Link">https://lcsc.com/product-detail/Metal-Film-Resistor-TH_TyoHM-RN-1WS-2R2-F-T-B-A1_C433658.html</field>
+        <field name="checked">yes</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>605F8049</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x05">
+      <description>Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x05</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="L_Small">
+      <description>Inductor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Q_NPN_BCE">
+      <description>NPN transistor, base/collector/emitter</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NPN_BCE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_POT_US">
+      <description>Potentiometer, US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Potentiometer*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">R_POT_US</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_US">
+      <description>Resistor, US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_US</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="1N4001">
+      <aliases>
+        <alias>1N4002</alias>
+        <alias>1N4003</alias>
+        <alias>1N4004</alias>
+        <alias>1N4005</alias>
+        <alias>1N4006</alias>
+        <alias>1N4007</alias>
+        <alias>BA157</alias>
+        <alias>BA158</alias>
+        <alias>BA159</alias>
+      </aliases>
+      <description>50V 1A General Purpose Rectifier Diode, DO-41</description>
+      <docs>http://www.vishay.com/docs/88503/1n4001.pdf</docs>
+      <footprints>
+        <fp>D*DO?41*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">1N4001</field>
+        <field name="Footprint">Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="EFM8BB31F16G-D-QFN24R" part="EFM8BB31F16G-D-QFN24R">
+      <description>8-bit Microcontrollers - MCU 8051 50 MHz 16 kB flash 2.25 kB RAM 8-bit Busy Bee MCU</description>
+      <docs>https://www.silabs.com/documents/public/data-sheets/efm8bb3-datasheet.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">EFM8BB31F16G-D-QFN24R</field>
+        <field name="Footprint">EFM8BB31F16GDQFN24</field>
+        <field name="Datasheet">https://www.silabs.com/documents/public/data-sheets/efm8bb3-datasheet.pdf</field>
+        <field name="Description">8-bit Microcontrollers - MCU 8051 50 MHz 16 kB flash 2.25 kB RAM 8-bit Busy Bee MCU</field>
+        <field name="Height">0.9</field>
+        <field name="Manufacturer_Name">Silicon Labs</field>
+        <field name="Manufacturer_Part_Number">EFM8BB31F16G-D-QFN24R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P0.1" type="passive"/>
+        <pin num="2" name="P0.0" type="passive"/>
+        <pin num="3" name="GND_1" type="passive"/>
+        <pin num="4" name="VDD_/_VIO" type="passive"/>
+        <pin num="5" name="RSTB_/_C2CK" type="passive"/>
+        <pin num="6" name="P3.0_/_C2D" type="passive"/>
+        <pin num="7" name="P2.3" type="passive"/>
+        <pin num="8" name="P2.2" type="passive"/>
+        <pin num="9" name="P2.1" type="passive"/>
+        <pin num="10" name="P2.0" type="passive"/>
+        <pin num="11" name="P1.6" type="passive"/>
+        <pin num="12" name="P1.5" type="passive"/>
+        <pin num="13" name="P1.4" type="passive"/>
+        <pin num="14" name="P1.3" type="passive"/>
+        <pin num="15" name="GND_2" type="passive"/>
+        <pin num="16" name="P1.2" type="passive"/>
+        <pin num="17" name="P1.1" type="passive"/>
+        <pin num="18" name="P1.0" type="passive"/>
+        <pin num="19" name="P0.7" type="passive"/>
+        <pin num="20" name="P0.6" type="passive"/>
+        <pin num="21" name="P0.5" type="passive"/>
+        <pin num="22" name="P0.4" type="passive"/>
+        <pin num="23" name="P0.3" type="passive"/>
+        <pin num="24" name="P0.2" type="passive"/>
+        <pin num="25" name="GND_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="Heatsink">
+      <description>Heatsink</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Heatsink_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">HS</field>
+        <field name="Value">Heatsink</field>
+      </fields>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="LM317L_TO92">
+      <description>100mA 35V Adjustable Linear Regulator, TO-92</description>
+      <docs>http://www.ti.com/lit/ds/snvs775k/snvs775k.pdf</docs>
+      <footprints>
+        <fp>TO?92*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM317L_TO92</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline</field>
+      </fields>
+      <pins>
+        <pin num="1" name="ADJ" type="input"/>
+        <pin num="2" name="VO" type="power_out"/>
+        <pin num="3" name="VI" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Switching" part="MC33063AD">
+      <aliases>
+        <alias>SC33063AD</alias>
+        <alias>NCV33063AVD</alias>
+        <alias>MC34063AD</alias>
+      </aliases>
+      <description>1.5A, step-up/down/inverting switching regulator, 3-40V Vin, 100kHz, SO-8</description>
+      <docs>http://www.onsemi.com/pub_link/Collateral/MC34063A-D.PDF</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MC33063AD</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SwC" type="openCol"/>
+        <pin num="2" name="SwE" type="openEm"/>
+        <pin num="3" name="TC" type="passive"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="Vfb" type="input"/>
+        <pin num="6" name="Vin" type="power_in"/>
+        <pin num="7" name="Ipk" type="input"/>
+        <pin num="8" name="DC" type="openCol"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_BJT" part="BD911">
+      <aliases>
+        <alias>BD909</alias>
+        <alias>TIP41A</alias>
+        <alias>TIP41B</alias>
+        <alias>TIP41C</alias>
+        <alias>TIP41</alias>
+      </aliases>
+      <description>15A, Silicon Power NPN Transistors, TO-220</description>
+      <docs>http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001277.pdf</docs>
+      <footprints>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BD911</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-220-3_Vertical</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="custom" part="TL084h">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TL084h</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1out" type="input"/>
+        <pin num="2" name="1in-" type="input"/>
+        <pin num="3" name="1in+" type="input"/>
+        <pin num="4" name="Vcc+" type="input"/>
+        <pin num="5" name="2in+" type="input"/>
+        <pin num="6" name="2in-" type="input"/>
+        <pin num="7" name="2out" type="input"/>
+        <pin num="8" name="3out" type="input"/>
+        <pin num="9" name="3in-" type="input"/>
+        <pin num="10" name="3in+" type="input"/>
+        <pin num="11" name="Vcc-" type="input"/>
+        <pin num="12" name="4in+" type="input"/>
+        <pin num="13" name="4in-" type="input"/>
+        <pin num="14" name="4out" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="custom" part="pi121u31">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">pi121u31</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Vdd1" type="input"/>
+        <pin num="2" name="Via" type="input"/>
+        <pin num="3" name="Vob" type="input"/>
+        <pin num="4" name="Gnd" type="input"/>
+        <pin num="5" name="Gnd" type="input"/>
+        <pin num="6" name="Vib" type="input"/>
+        <pin num="7" name="Voa" type="input"/>
+        <pin num="8" name="Vdd2" type="input"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>/usr/share/kicad/library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/library/Device.lib</uri>
+    </library>
+    <library logical="Diode">
+      <uri>/usr/share/kicad/library/Diode.lib</uri>
+    </library>
+    <library logical="EFM8BB31F16G-D-QFN24R">
+      <uri>/home/twoninefour/hdd/seniorDesign/Vupiter/src/linear/brd/efm8/EFM8BB31F16G-D-QFN24R.lib</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>/usr/share/kicad/library/Mechanical.lib</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>/usr/share/kicad/library/Regulator_Linear.lib</uri>
+    </library>
+    <library logical="Regulator_Switching">
+      <uri>/usr/share/kicad/library/Regulator_Switching.lib</uri>
+    </library>
+    <library logical="Transistor_BJT">
+      <uri>/usr/share/kicad/library/Transistor_BJT.lib</uri>
+    </library>
+    <library logical="custom">
+      <uri>/home/twoninefour/hdd/seniorDesign/Vupiter/src/linear/brd/custom.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(C26-Pad2)">
+      <node ref="J4" pin="4"/>
+      <node ref="C26" pin="2"/>
+      <node ref="U6" pin="4"/>
+    </net>
+    <net code="2" name="Net-(J4-Pad3)">
+      <node ref="U6" pin="3"/>
+      <node ref="J4" pin="3"/>
+    </net>
+    <net code="3" name="Net-(D7-Pad1)">
+      <node ref="D7" pin="1"/>
+      <node ref="R14" pin="2"/>
+    </net>
+    <net code="4" name="Net-(D7-Pad2)">
+      <node ref="D7" pin="2"/>
+      <node ref="IC1" pin="16"/>
+    </net>
+    <net code="5" name="Net-(IC1-Pad14)">
+      <node ref="IC1" pin="14"/>
+      <node ref="J5" pin="1"/>
+    </net>
+    <net code="6" name="vref_">
+      <node ref="IC1" pin="2"/>
+      <node ref="C24" pin="1"/>
+      <node ref="U1" pin="10"/>
+    </net>
+    <net code="7" name="Net-(C26-Pad1)">
+      <node ref="C26" pin="1"/>
+      <node ref="U6" pin="1"/>
+      <node ref="J4" pin="1"/>
+    </net>
+    <net code="8" name="Net-(J4-Pad2)">
+      <node ref="J4" pin="2"/>
+      <node ref="U6" pin="2"/>
+    </net>
+    <net code="9" name="uart1_rx">
+      <node ref="IC1" pin="19"/>
+      <node ref="U6" pin="7"/>
+    </net>
+    <net code="10" name="scl">
+      <node ref="J6" pin="3"/>
+      <node ref="IC1" pin="7"/>
+    </net>
+    <net code="11" name="sda">
+      <node ref="IC1" pin="9"/>
+      <node ref="J6" pin="4"/>
+    </net>
+    <net code="12" name="Net-(R10-Pad2)">
+      <node ref="U3" pin="7"/>
+      <node ref="R10" pin="2"/>
+      <node ref="U3" pin="1"/>
+      <node ref="U3" pin="8"/>
+    </net>
+    <net code="13" name="Net-(C15-Pad1)">
+      <node ref="C15" pin="1"/>
+      <node ref="U3" pin="3"/>
+    </net>
+    <net code="14" name="agp">
+      <node ref="J2" pin="2"/>
+      <node ref="C10" pin="1"/>
+      <node ref="RV1" pin="3"/>
+      <node ref="J8" pin="2"/>
+      <node ref="J8" pin="4"/>
+      <node ref="C27" pin="1"/>
+      <node ref="C12" pin="2"/>
+      <node ref="RV4" pin="3"/>
+      <node ref="IC1" pin="15"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="C11" pin="2"/>
+      <node ref="R5" pin="2"/>
+      <node ref="C18" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C13" pin="2"/>
+      <node ref="J1" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="RV6" pin="3"/>
+      <node ref="L5" pin="1"/>
+      <node ref="RV5" pin="3"/>
+      <node ref="C21" pin="2"/>
+      <node ref="C17" pin="2"/>
+      <node ref="C19" pin="2"/>
+      <node ref="D2" pin="2"/>
+      <node ref="C9" pin="1"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C16" pin="2"/>
+      <node ref="D4" pin="2"/>
+      <node ref="C6" pin="1"/>
+      <node ref="R6" pin="2"/>
+      <node ref="R1" pin="1"/>
+      <node ref="C14" pin="2"/>
+      <node ref="U3" pin="4"/>
+      <node ref="C22" pin="1"/>
+      <node ref="J9" pin="2"/>
+      <node ref="J9" pin="4"/>
+      <node ref="J3" pin="2"/>
+      <node ref="R14" pin="1"/>
+      <node ref="J6" pin="1"/>
+      <node ref="IC1" pin="25"/>
+      <node ref="U6" pin="5"/>
+      <node ref="J5" pin="2"/>
+      <node ref="J7" pin="5"/>
+      <node ref="RV7" pin="1"/>
+      <node ref="C20" pin="2"/>
+      <node ref="IC1" pin="3"/>
+      <node ref="D5" pin="2"/>
+      <node ref="C15" pin="2"/>
+      <node ref="C24" pin="2"/>
+      <node ref="C23" pin="1"/>
+      <node ref="C25" pin="1"/>
+    </net>
+    <net code="15" name="Net-(RV7-Pad2)">
+      <node ref="U3" pin="5"/>
+      <node ref="RV7" pin="2"/>
+    </net>
+    <net code="16" name="5v">
+      <node ref="C20" pin="1"/>
+      <node ref="J3" pin="1"/>
+      <node ref="L7" pin="2"/>
+      <node ref="C17" pin="1"/>
+      <node ref="U5" pin="3"/>
+      <node ref="RV7" pin="3"/>
+    </net>
+    <net code="17" name="Net-(D5-Pad1)">
+      <node ref="U3" pin="2"/>
+      <node ref="L7" pin="1"/>
+      <node ref="D5" pin="1"/>
+    </net>
+    <net code="18" name="c2d">
+      <node ref="IC1" pin="6"/>
+      <node ref="J7" pin="1"/>
+    </net>
+    <net code="19" name="c2ck">
+      <node ref="J7" pin="2"/>
+      <node ref="IC1" pin="5"/>
+    </net>
+    <net code="20" name="uart0_tx">
+      <node ref="IC1" pin="22"/>
+      <node ref="J7" pin="3"/>
+    </net>
+    <net code="21" name="uart1_tx">
+      <node ref="IC1" pin="20"/>
+      <node ref="U6" pin="6"/>
+    </net>
+    <net code="22" name="v3">
+      <node ref="R19" pin="2"/>
+      <node ref="IC1" pin="4"/>
+      <node ref="U6" pin="8"/>
+      <node ref="R16" pin="1"/>
+      <node ref="R15" pin="1"/>
+      <node ref="R18" pin="2"/>
+      <node ref="R17" pin="2"/>
+      <node ref="R20" pin="2"/>
+      <node ref="C21" pin="1"/>
+      <node ref="C22" pin="2"/>
+      <node ref="C23" pin="2"/>
+      <node ref="J6" pin="2"/>
+      <node ref="C25" pin="2"/>
+      <node ref="R13" pin="1"/>
+      <node ref="U5" pin="2"/>
+    </net>
+    <net code="23" name="iset">
+      <node ref="U2" pin="3"/>
+      <node ref="U2" pin="12"/>
+      <node ref="C27" pin="2"/>
+      <node ref="IC1" pin="8"/>
+    </net>
+    <net code="24" name="vset">
+      <node ref="IC1" pin="10"/>
+      <node ref="C10" pin="2"/>
+      <node ref="U1" pin="12"/>
+    </net>
+    <net code="25" name="e1_pb">
+      <node ref="R18" pin="1"/>
+      <node ref="J8" pin="5"/>
+      <node ref="IC1" pin="11"/>
+    </net>
+    <net code="26" name="e1_b">
+      <node ref="J8" pin="3"/>
+      <node ref="R15" pin="2"/>
+      <node ref="IC1" pin="12"/>
+    </net>
+    <net code="27" name="e1_a">
+      <node ref="J8" pin="1"/>
+      <node ref="IC1" pin="13"/>
+      <node ref="R17" pin="1"/>
+    </net>
+    <net code="28" name="vread">
+      <node ref="D3" pin="2"/>
+      <node ref="D4" pin="1"/>
+      <node ref="C6" pin="2"/>
+      <node ref="R7" pin="2"/>
+      <node ref="IC1" pin="17"/>
+    </net>
+    <net code="29" name="iread">
+      <node ref="D1" pin="2"/>
+      <node ref="D2" pin="1"/>
+      <node ref="C9" pin="2"/>
+      <node ref="R9" pin="2"/>
+      <node ref="IC1" pin="18"/>
+    </net>
+    <net code="30" name="uart0_rx">
+      <node ref="J7" pin="4"/>
+      <node ref="IC1" pin="21"/>
+    </net>
+    <net code="31" name="e2_a">
+      <node ref="R19" pin="1"/>
+      <node ref="IC1" pin="23"/>
+      <node ref="J9" pin="1"/>
+    </net>
+    <net code="32" name="e2_b">
+      <node ref="J9" pin="3"/>
+      <node ref="IC1" pin="24"/>
+      <node ref="R16" pin="2"/>
+    </net>
+    <net code="33" name="Net-(L11-Pad2)">
+      <node ref="L11" pin="2"/>
+      <node ref="R23" pin="1"/>
+    </net>
+    <net code="34" name="pg3">
+      <node ref="U4" pin="4"/>
+      <node ref="L10" pin="1"/>
+      <node ref="L3" pin="1"/>
+      <node ref="C19" pin="1"/>
+      <node ref="RV5" pin="1"/>
+      <node ref="D6" pin="2"/>
+    </net>
+    <net code="35" name="Net-(L10-Pad2)">
+      <node ref="R22" pin="1"/>
+      <node ref="L10" pin="2"/>
+    </net>
+    <net code="36" name="Net-(L4-Pad1)">
+      <node ref="L4" pin="1"/>
+      <node ref="R8" pin="1"/>
+    </net>
+    <net code="37" name="Net-(L8-Pad2)">
+      <node ref="R21" pin="1"/>
+      <node ref="L8" pin="2"/>
+    </net>
+    <net code="38" name="Net-(R5-Pad1)">
+      <node ref="R5" pin="1"/>
+      <node ref="RV3" pin="1"/>
+    </net>
+    <net code="39" name="vin">
+      <node ref="L8" pin="1"/>
+      <node ref="L9" pin="1"/>
+      <node ref="L11" pin="1"/>
+      <node ref="L2" pin="1"/>
+      <node ref="J2" pin="1"/>
+      <node ref="L12" pin="1"/>
+      <node ref="L6" pin="1"/>
+    </net>
+    <net code="40" name="Net-(L12-Pad2)">
+      <node ref="R24" pin="1"/>
+      <node ref="L12" pin="2"/>
+    </net>
+    <net code="41" name="Net-(C4-Pad1)">
+      <node ref="C4" pin="1"/>
+      <node ref="L2" pin="2"/>
+      <node ref="L1" pin="1"/>
+      <node ref="C7" pin="1"/>
+      <node ref="R21" pin="2"/>
+      <node ref="L4" pin="2"/>
+    </net>
+    <net code="42" name="e2_pb">
+      <node ref="J9" pin="5"/>
+      <node ref="R20" pin="1"/>
+      <node ref="IC1" pin="1"/>
+    </net>
+    <net code="43" name="Net-(RV9-Pad1)">
+      <node ref="RV9" pin="1"/>
+    </net>
+    <net code="44" name="ad">
+      <node ref="Q3" pin="1"/>
+      <node ref="R1" pin="2"/>
+      <node ref="Q1" pin="1"/>
+      <node ref="D8" pin="2"/>
+      <node ref="U1" pin="14"/>
+      <node ref="C8" pin="1"/>
+    </net>
+    <net code="45" name="Net-(R7-Pad1)">
+      <node ref="R7" pin="1"/>
+      <node ref="U1" pin="6"/>
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="46" name="Net-(RV8-Pad1)">
+      <node ref="RV8" pin="1"/>
+    </net>
+    <net code="47" name="Net-(C5-Pad2)">
+      <node ref="U2" pin="13"/>
+      <node ref="U2" pin="2"/>
+      <node ref="RV8" pin="2"/>
+      <node ref="C5" pin="2"/>
+    </net>
+    <net code="48" name="Net-(R12-Pad1)">
+      <node ref="R12" pin="1"/>
+      <node ref="R13" pin="2"/>
+      <node ref="U5" pin="1"/>
+    </net>
+    <net code="49" name="Net-(RV2-Pad2)">
+      <node ref="U2" pin="6"/>
+      <node ref="RV2" pin="2"/>
+    </net>
+    <net code="50" name="Net-(RV1-Pad2)">
+      <node ref="U2" pin="5"/>
+      <node ref="RV1" pin="2"/>
+    </net>
+    <net code="51" name="vcc">
+      <node ref="R23" pin="2"/>
+      <node ref="L9" pin="2"/>
+      <node ref="U1" pin="4"/>
+      <node ref="C14" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="U2" pin="4"/>
+    </net>
+    <net code="52" name="Net-(R9-Pad1)">
+      <node ref="R9" pin="1"/>
+      <node ref="U2" pin="8"/>
+      <node ref="U2" pin="9"/>
+    </net>
+    <net code="53" name="vref">
+      <node ref="D3" pin="1"/>
+      <node ref="U1" pin="8"/>
+      <node ref="U1" pin="9"/>
+      <node ref="D1" pin="1"/>
+    </net>
+    <net code="54" name="Net-(C5-Pad1)">
+      <node ref="D8" pin="1"/>
+      <node ref="U2" pin="1"/>
+      <node ref="U2" pin="14"/>
+      <node ref="C5" pin="1"/>
+    </net>
+    <net code="55" name="Net-(Q2-Pad3)">
+      <node ref="Q2" pin="3"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="56" name="Net-(Q4-Pad3)">
+      <node ref="Q4" pin="3"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="57" name="isense">
+      <node ref="RV1" pin="1"/>
+      <node ref="R3" pin="1"/>
+      <node ref="R4" pin="2"/>
+      <node ref="R2" pin="2"/>
+    </net>
+    <net code="58" name="outp">
+      <node ref="J1" pin="1"/>
+      <node ref="R3" pin="2"/>
+      <node ref="RV2" pin="1"/>
+      <node ref="RV4" pin="1"/>
+    </net>
+    <net code="59" name="Net-(Q1-Pad3)">
+      <node ref="R6" pin="1"/>
+      <node ref="Q3" pin="3"/>
+      <node ref="Q1" pin="3"/>
+      <node ref="Q2" pin="1"/>
+      <node ref="Q4" pin="1"/>
+    </net>
+    <net code="60" name="vgg">
+      <node ref="U1" pin="11"/>
+      <node ref="U2" pin="11"/>
+      <node ref="C12" pin="1"/>
+      <node ref="C13" pin="1"/>
+      <node ref="L3" pin="2"/>
+      <node ref="R22" pin="2"/>
+      <node ref="C11" pin="1"/>
+    </net>
+    <net code="61" name="Net-(C1-Pad1)">
+      <node ref="Q3" pin="2"/>
+      <node ref="Q2" pin="2"/>
+      <node ref="Q4" pin="2"/>
+      <node ref="Q1" pin="2"/>
+      <node ref="L1" pin="2"/>
+      <node ref="C1" pin="1"/>
+      <node ref="R8" pin="2"/>
+    </net>
+    <net code="62" name="Net-(R12-Pad2)">
+      <node ref="R12" pin="2"/>
+      <node ref="RV6" pin="2"/>
+    </net>
+    <net code="63" name="Net-(RV6-Pad1)">
+      <node ref="RV6" pin="1"/>
+    </net>
+    <net code="64" name="Net-(C18-Pad1)">
+      <node ref="C18" pin="1"/>
+      <node ref="L6" pin="2"/>
+      <node ref="R24" pin="2"/>
+      <node ref="U3" pin="6"/>
+      <node ref="U4" pin="6"/>
+      <node ref="R11" pin="1"/>
+      <node ref="R10" pin="1"/>
+    </net>
+    <net code="65" name="Net-(R11-Pad2)">
+      <node ref="R11" pin="2"/>
+      <node ref="U4" pin="8"/>
+      <node ref="U4" pin="7"/>
+      <node ref="U4" pin="1"/>
+    </net>
+    <net code="66" name="Net-(RV3-Pad2)">
+      <node ref="U1" pin="2"/>
+      <node ref="RV3" pin="2"/>
+    </net>
+    <net code="67" name="Net-(RV4-Pad2)">
+      <node ref="RV4" pin="2"/>
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="68" name="Net-(RV2-Pad3)">
+      <node ref="U2" pin="10"/>
+      <node ref="RV2" pin="3"/>
+      <node ref="U2" pin="7"/>
+      <node ref="RV8" pin="3"/>
+    </net>
+    <net code="69" name="Net-(RV5-Pad2)">
+      <node ref="U4" pin="5"/>
+      <node ref="RV5" pin="2"/>
+    </net>
+    <net code="70" name="Net-(D6-Pad1)">
+      <node ref="D6" pin="1"/>
+      <node ref="L5" pin="2"/>
+      <node ref="U4" pin="2"/>
+    </net>
+    <net code="71" name="Net-(C16-Pad1)">
+      <node ref="U4" pin="3"/>
+      <node ref="C16" pin="1"/>
+    </net>
+    <net code="72" name="Net-(RV3-Pad3)">
+      <node ref="U1" pin="5"/>
+      <node ref="RV9" pin="3"/>
+      <node ref="U1" pin="1"/>
+      <node ref="RV3" pin="3"/>
+    </net>
+    <net code="73" name="Net-(C8-Pad2)">
+      <node ref="RV9" pin="2"/>
+      <node ref="U1" pin="13"/>
+      <node ref="C8" pin="2"/>
+    </net>
+  </nets>
+</export>

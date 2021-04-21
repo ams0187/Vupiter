@@ -1,4 +1,4 @@
-C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 19:40:06 PAGE 1   
+C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 23:23:01 PAGE 1   
 
 
 C51 COMPILER V9.60.0.0, COMPILATION OF MODULE INTERRUPTS
@@ -25,53 +25,57 @@ line level    source
   11          //-----------------------------------------------------------------------------
   12          // Global Constants
   13          //-----------------------------------------------------------------------------
-  14          
-  15          //-----------------------------------------------------------------------------
-  16          // Global Variables
-  17          //-----------------------------------------------------------------------------
-  18          uint8_t UART_Buffer_Size = 0;
-  19          uint8_t UART_Input_First = 0;
-  20          uint8_t UART_Output_First = 0;
-  21          uint8_t byte = 0;
-  22          uint8_t lastByte = 0;
-  23          
-  24          #define TIMER_PRESCALER            12  // Based on Timer CKCON settings
-  25          
-  26          // There are SYSCLK/TIMER_PRESCALER timer ticks per second, so
-  27          // SYSCLK/TIMER_PRESCALER/1000 timer ticks per millisecond.
-  28          #define TIMER_TICKS_PER_MS  SYSCLK/TIMER_PRESCALER/1000
-  29          
-  30          // Note: TIMER_TICKS_PER_MS should not exceed 255 (0xFF) for the 8-bit timers
-  31          
-  32          #define ENCODER_SCAN_RATE   2   // Encoder signal check toggle rate in milliseconds
-  33          
-  34          #define HB_TOGGLE_RATE         250  // HB toggle rate
-  35          
-  36          //-----------------------------------------------------------------------------
-  37          // Pin Definitions
-  38          //-----------------------------------------------------------------------------
-  39          //SI_SBIT (HB_led, SFR_P1, 2);// Heartbeat LED
-  40          //SI_SBIT (DisplayV, SFR_P1, 1);// Display Voltage set LED
-  41          //SI_SBIT (DisplayA, SFR_P1, 3);// Display Current LED
-  42          SI_SBIT (enc1A, SFR_P1, 4);// Encoder 1 channel A
-  43          SI_SBIT (enc1B, SFR_P1, 5);// Encoder 1 channel B
-  44          SI_SBIT (enc1bu, SFR_P1, 6);// Encoder 1 Button
-  45          SI_SBIT (enc2A, SFR_P0, 2);// Encoder 2 channel A
-  46          SI_SBIT (enc2B, SFR_P0, 3);// Encoder 2 channel B
-  47          SI_SBIT (enc2bu, SFR_P0, 1);// Encoder 2 Button
-  48          
-  49          extern voltage;
-  50          extern amp;
-  51          
-C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 19:40:06 PAGE 2   
+  14          xdata float vcal[32] = {0,123.99512789281363,245.46553808948005,366.626213592233,488.7392900856794,611.435
+             -5231143553,733.0097087378641,854.7677261613692,975.9036144578314,1097.560975609756,1218.0722891566265,1339.0243902439024
+             -,1460.2409638554218,1583.75,1707.4074074074074,1830.8641975308642,1953.658536585366,2075.609756097561,2187.912087912088,
+             -2302.2988505747126,2418.292682926829,2540.7407407407404,2662.650602409639,2783.132530120482,2906.024096385542,3026.50602
+             -40963853,3147.560975609756,3286.3636363636365,3408.0,3508.0,3608.0,3608.0};
+  15          
+  16          //-----------------------------------------------------------------------------
+  17          // Global Variables
+  18          //-----------------------------------------------------------------------------
+  19          uint8_t UART_Buffer_Size = 0;
+  20          uint8_t UART_Input_First = 0;
+  21          uint8_t UART_Output_First = 0;
+  22          uint8_t byte = 0;
+  23          uint8_t lastByte = 0;
+  24          
+  25          #define TIMER_PRESCALER            12  // Based on Timer CKCON settings
+  26          
+  27          // There are SYSCLK/TIMER_PRESCALER timer ticks per second, so
+  28          // SYSCLK/TIMER_PRESCALER/1000 timer ticks per millisecond.
+  29          #define TIMER_TICKS_PER_MS  SYSCLK/TIMER_PRESCALER/1000
+  30          
+  31          // Note: TIMER_TICKS_PER_MS should not exceed 255 (0xFF) for the 8-bit timers
+  32          
+  33          #define ENCODER_SCAN_RATE   2   // Encoder signal check toggle rate in milliseconds
+  34          
+  35          #define HB_TOGGLE_RATE         250  // HB toggle rate
+  36          
+  37          //-----------------------------------------------------------------------------
+  38          // Pin Definitions
+  39          //-----------------------------------------------------------------------------
+  40          //SI_SBIT (HB_led, SFR_P1, 2);// Heartbeat LED
+  41          //SI_SBIT (DisplayV, SFR_P1, 1);// Display Voltage set LED
+  42          //SI_SBIT (DisplayA, SFR_P1, 3);// Display Current LED
+  43          SI_SBIT (enc1A, SFR_P1, 4);// Encoder 1 channel A
+  44          SI_SBIT (enc1B, SFR_P1, 5);// Encoder 1 channel B
+  45          SI_SBIT (enc1bu, SFR_P1, 6);// Encoder 1 Button
+  46          SI_SBIT (enc2A, SFR_P0, 2);// Encoder 2 channel A
+  47          SI_SBIT (enc2B, SFR_P0, 3);// Encoder 2 channel B
+C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 23:23:01 PAGE 2   
 
-  52          struct DAC_voltCounter
-  53          {
-  54            unsigned a :1;
-  55            unsigned b :1;
-  56            unsigned c :12;
-  57          } volt_counter = {0, 0, 0};
-  58          
+  48          SI_SBIT (enc2bu, SFR_P0, 1);// Encoder 2 Button
+  49          
+  50          extern voltage;
+  51          extern amp;
+  52          
+  53          struct DAC_voltCounter
+  54          {
+  55            unsigned a :1;
+  56            unsigned b :1;
+  57            unsigned c :12;
+  58          } volt_counter = {0, 0, 0};
   59          struct DAC_ampCounter
   60          {
   61            unsigned a :1;
@@ -107,447 +111,450 @@ line level    source
   87   1      //#define ZERO (0)
   88   1      //#define ONE (1)
   89   1      
-  90   1      //
-  91   1          uint16_t dacVoffset = 0;
-  92   1          uint16_t dacAoffset = 0;
-  93   1          static uint16_t scaleV = 1;
-  94   1          static uint16_t scaleA = 1;
-  95   1          TL0 = 0;
-  96   1      
-  97   1      // Encoder signals handling
-  98   1          encoder_counter++;
-  99   1          if (encoder_counter == ENCODER_SCAN_RATE)
- 100   1            {
- 101   2              encoder_counter = 0;
- 102   2              // Voltage signals
- 103   2              if (enc1A && !volt_counter.a)
- 104   2                {
- 105   3                  if ((enc1A != enc1B))
- 106   3                    {
- 107   4                      if (volt_counter.c + scaleV > 4095)
- 108   4                        {
- 109   5                          volt_counter.c = 4095;
- 110   5                        }
-C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 19:40:06 PAGE 3   
+  90   1          xdata uint8_t dex = 0;
+  91   1          xdata float temp;
+  92   1          uint16_t dacVoffset = 0;
+  93   1          uint16_t dacAoffset = 0;
+  94   1          static uint16_t scaleV = 1;
+  95   1          static uint16_t scaleA = 1;
+  96   1          TL0 = 0;
+  97   1      
+  98   1      // Encoder signals handling
+  99   1          encoder_counter++;
+ 100   1          if (encoder_counter == ENCODER_SCAN_RATE)
+ 101   1            {
+ 102   2              encoder_counter = 0;
+ 103   2              // Voltage signals
+ 104   2              if (enc1A && !volt_counter.a)
+ 105   2                {
+ 106   3                  if ((enc1A != enc1B))
+C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 23:23:01 PAGE 3   
 
- 111   4                      else
- 112   4                        {
- 113   5                          volt_counter.c = volt_counter.c + scaleV;
- 114   5                        }
- 115   4                    }
- 116   3                  else
- 117   3                    {
- 118   4                      if (volt_counter.c < scaleV)
- 119   4                        {
- 120   5                          volt_counter.c = 0;
- 121   5                        }
- 122   4                      else
- 123   4                        {
- 124   5                          volt_counter.c = volt_counter.c - scaleV;
- 125   5                        }
- 126   4                    }
- 127   3                  volt_counter.a = 1;
- 128   3                  scaleVDisplayCount = 0;
- 129   3                  //DisplayV = 1;
- 130   3                }
- 131   2              if (!enc1A)
- 132   2                {
- 133   3                  volt_counter.a = 0;    // End of Voltage signals code
- 134   3                }
- 135   2              voltage = volt_counter.c;
- 136   2      
- 137   2              // Current signals
- 138   2              if (enc2A && !amp_counter.a)
- 139   2                {
- 140   3                  if ((enc2A != enc2B))
- 141   3                    {
- 142   4                      if (amp_counter.c + scaleA > 4095)
- 143   4                        {
- 144   5                          amp_counter.c = 4095;
- 145   5                        }
- 146   4                      else
- 147   4                        {
- 148   5                          amp_counter.c = amp_counter.c + scaleA;
- 149   5                        }
- 150   4                    }
- 151   3                  else
- 152   3                    {
- 153   4                      if (amp_counter.c < scaleA)
- 154   4                        {
- 155   5                          amp_counter.c = 0;
- 156   5                        }
- 157   4                      else
- 158   4                        {
- 159   5                          amp_counter.c = amp_counter.c - scaleA;
- 160   5                        }
- 161   4                    }
- 162   3                  amp_counter.a = 1;
- 163   3                  scaleADisplayCount = 1;
- 164   3                  //DisplayA = 1;
- 165   3                }
- 166   2              if (!enc2A)
- 167   2                {
- 168   3                  amp_counter.a = 0;      // End of Current signals code
- 169   3                }
- 170   2              amp = amp_counter.c;
- 171   2      
- 172   2            }                 // End of Encoder Signals Handling*/
- 173   1      
-C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 19:40:06 PAGE 4   
+ 107   3                    {
+ 108   4                      if (volt_counter.c + scaleV > 3000)
+ 109   4                        {
+ 110   5                          volt_counter.c = 3000;
+ 111   5                        }
+ 112   4                      else
+ 113   4                        {
+ 114   5                          volt_counter.c = volt_counter.c + scaleV;
+ 115   5                        }
+ 116   4                    }
+ 117   3                  else
+ 118   3                    {
+ 119   4                      if (volt_counter.c < scaleV)
+ 120   4                        {
+ 121   5                          volt_counter.c = 0;
+ 122   5                        }
+ 123   4                      else
+ 124   4                        {
+ 125   5                          volt_counter.c = volt_counter.c - scaleV;
+ 126   5                        }
+ 127   4                    }
+ 128   3                  volt_counter.a = 1;
+ 129   3                  scaleVDisplayCount = 0;
+ 130   3                  //DisplayV = 1;
+ 131   3                }
+ 132   2              if (!enc1A)
+ 133   2                {
+ 134   3                  volt_counter.a = 0;    // End of Voltage signals code
+ 135   3                }
+ 136   2              voltage = volt_counter.c;
+ 137   2      
+ 138   2              // Current signals
+ 139   2              if (enc2A && !amp_counter.a)
+ 140   2                {
+ 141   3                  if ((enc2A != enc2B))
+ 142   3                    {
+ 143   4                      if (amp_counter.c + scaleA > 4095)
+ 144   4                        {
+ 145   5                          amp_counter.c = 4095;
+ 146   5                        }
+ 147   4                      else
+ 148   4                        {
+ 149   5                          amp_counter.c = amp_counter.c + scaleA;
+ 150   5                        }
+ 151   4                    }
+ 152   3                  else
+ 153   3                    {
+ 154   4                      if (amp_counter.c < scaleA)
+ 155   4                        {
+ 156   5                          amp_counter.c = 0;
+ 157   5                        }
+ 158   4                      else
+ 159   4                        {
+ 160   5                          amp_counter.c = amp_counter.c - scaleA;
+ 161   5                        }
+ 162   4                    }
+ 163   3                  amp_counter.a = 1;
+ 164   3                  scaleADisplayCount = 1;
+ 165   3                  //DisplayA = 1;
+ 166   3                }
+ 167   2              if (!enc2A)
+ 168   2                {
+ 169   3                  amp_counter.a = 0;      // End of Current signals code
+C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 23:23:01 PAGE 4   
 
- 174   1            //DAC control
- 175   1            /*dacV = volt_counter.c * 1.36533333333 + dacVoffset;
- 176   1            dacA = amp_counter.c * 8.192 + dacAoffset;*/
- 177   1      
- 178   1            dacV = volt_counter.c;
- 179   1            dacA = amp_counter.c;
- 180   1      
- 181   1            SFRPAGE_save = SFRPAGE;
- 182   1            SFRPAGE = PG4_PAGE;
+ 170   3                }
+ 171   2              amp = amp_counter.c;
+ 172   2      
+ 173   2            }                 // End of Encoder Signals Handling*/
+ 174   1      
+ 175   1            //DAC control
+ 176   1            /*dacV = volt_counter.c * 1.36533333333 + dacVoffset;
+ 177   1            dacA = amp_counter.c * 8.192 + dacAoffset;*/
+ 178   1            dex = volt_counter.c/100;
+ 179   1            temp = vcal[dex];
+ 180   1            temp += (vcal[dex+1]-vcal[dex])*((volt_counter.c)%100)/100.0;
+ 181   1            dacV = temp;
+ 182   1            dacA = amp_counter.c;
  183   1      
- 184   1            DAC0L = dacV & 0xFF;
- 185   1            DAC0H = dacV >> 8;
+ 184   1            SFRPAGE_save = SFRPAGE;
+ 185   1            SFRPAGE = PG4_PAGE;
  186   1      
- 187   1            DAC1L = dacA & 0xFF;
- 188   1            DAC1H = dacA >> 8;
+ 187   1            DAC0L = dacV & 0xFF;
+ 188   1            DAC0H = dacV >> 8;
  189   1      
- 190   1           SFRPAGE = SFRPAGE_save;
- 191   1      
- 192   1          // Scaling control
- 193   1          //high_counter++;
+ 190   1            DAC1L = dacA & 0xFF;
+ 191   1            DAC1H = dacA >> 8;
+ 192   1      
+ 193   1           SFRPAGE = SFRPAGE_save;
  194   1      
- 195   1          if (!enc2bu && !enc2buPress)
- 196   1            {
- 197   2              if (scaleA == 1)
- 198   2                {
- 199   3                  scaleA = 10;
- 200   3                }
- 201   2              else if (scaleA == 10)
- 202   2                {
- 203   3                  scaleA = 100;
- 204   3                }
- 205   2              else
- 206   2                {
- 207   3                  scaleA = 1;
- 208   3                }
- 209   2              enc2buPress = 1;
- 210   2            }
- 211   1          if (enc2buPress && enc2bu)
- 212   1            {
- 213   2              enc2buPress = 0;
- 214   2            }
- 215   1      
- 216   1          if (!enc1bu && !enc1buPress)
- 217   1            {
- 218   2              if (scaleV == 1)
- 219   2                {
- 220   3                  scaleV = 10;
- 221   3                }
- 222   2              else if (scaleV == 10)
- 223   2                {
- 224   3                  scaleV = 100;
- 225   3                }
- 226   2              else
- 227   2                {
- 228   3                  scaleV = 1;
- 229   3                }
- 230   2              enc1buPress = 1;
- 231   2            }
- 232   1          if (enc1buPress && enc1bu)
- 233   1            {
- 234   2              enc1buPress = 0;
- 235   2            }
- 236   1        }
-C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 19:40:06 PAGE 5   
+ 195   1          // Scaling control
+ 196   1          //high_counter++;
+ 197   1      
+ 198   1          if (!enc2bu && !enc2buPress)
+ 199   1            {
+ 200   2              if (scaleA == 1)
+ 201   2                {
+ 202   3                  scaleA = 10;
+ 203   3                }
+ 204   2              else if (scaleA == 10)
+ 205   2                {
+ 206   3                  scaleA = 100;
+ 207   3                }
+ 208   2              else
+ 209   2                {
+ 210   3                  scaleA = 1;
+ 211   3                }
+ 212   2              enc2buPress = 1;
+ 213   2            }
+ 214   1          if (enc2buPress && enc2bu)
+ 215   1            {
+ 216   2              enc2buPress = 0;
+ 217   2            }
+ 218   1      
+ 219   1          if (!enc1bu && !enc1buPress)
+ 220   1            {
+ 221   2              if (scaleV == 1)
+ 222   2                {
+ 223   3                  scaleV = 10;
+ 224   3                }
+ 225   2              else if (scaleV == 10)
+ 226   2                {
+ 227   3                  scaleV = 100;
+ 228   3                }
+ 229   2              else
+ 230   2                {
+ 231   3                  scaleV = 1;
+ 232   3                }
+C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 23:23:01 PAGE 5   
 
+ 233   2              enc1buPress = 1;
+ 234   2            }
+ 235   1          if (enc1buPress && enc1bu)
+ 236   1            {
+ 237   2              enc1buPress = 0;
+ 238   2            }
+ 239   1        }
 *** WARNING C280 IN LINE 83 OF /home/twoninefour/hdd/seniorDesign/Vupiter/src/tp4/src/Interrupts.c: 'high_counter': unre
              -ferenced local variable
- 237          //-----------------------------------------------------------------------------
- 238          // SMBUS0_ISR
- 239          //-----------------------------------------------------------------------------
- 240          //
- 241          // SMBUS0 ISR Content goes here. Remember to clear flag bits:
- 242          // SMB0CN0::SI (SMBus Interrupt Flag)
+ 240          //-----------------------------------------------------------------------------
+ 241          // SMBUS0_ISR
+ 242          //-----------------------------------------------------------------------------
  243          //
- 244          // SMBus ISR state machine
- 245          // - Master only implementation - no slave or arbitration states defined
- 246          // - All incoming data is written to global variable array <SMB_DATA_IN>
- 247          // - All outgoing data is read from global variable array <SMB_DATA_OUT>
- 248          //
- 249          //-----------------------------------------------------------------------------
- 250          SI_INTERRUPT(SMBUS0_ISR, SMBUS0_IRQn)
- 251            {
- 252   1      
- 253   1          bool FAIL = 0;                       // Used by the ISR to flag failed
- 254   1          // transfers
+ 244          // SMBUS0 ISR Content goes here. Remember to clear flag bits:
+ 245          // SMB0CN0::SI (SMBus Interrupt Flag)
+ 246          //
+ 247          // SMBus ISR state machine
+ 248          // - Master only implementation - no slave or arbitration states defined
+ 249          // - All incoming data is written to global variable array <SMB_DATA_IN>
+ 250          // - All outgoing data is read from global variable array <SMB_DATA_OUT>
+ 251          //
+ 252          //-----------------------------------------------------------------------------
+ 253          SI_INTERRUPT(SMBUS0_ISR, SMBUS0_IRQn)
+ 254            {
  255   1      
- 256   1          static uint8_t sent_byte_counter;
- 257   1          static uint8_t rec_byte_counter;
- 258   1      //    IE = IE_EA__DISABLED;
- 259   1          if (SMB0CN0_ARBLOST == 0)// Check for errors
- 260   1            {
- 261   2              // Normal operation
- 262   2              switch (SMB0CN0 & 0xF0)// Status vector
- 263   2                {
- 264   3                  // Master Transmitter/Receiver: START condition transmitted.
- 265   3                  case SMB_MTSTA:
- 266   3                  SMB0DAT = TARGET;// Load address of the target slave
- 267   3                  SMB0DAT &= 0xFE;// Clear the LSB of the address for the
- 268   3                                  // R/W bit
- 269   3                  SMB0DAT |= (uint8_t) SMB_RW;// Load R/W bit
- 270   3                  SMB0CN0_STA = 0;// Manually clear START bit
- 271   3                  rec_byte_counter = 1;// Reset the counter
- 272   3                  sent_byte_counter = 1;// Reset the counter
- 273   3                  break;
- 274   3      
- 275   3                  // Master Transmitter: Data byte transmitted
- 276   3                  case SMB_MTDB:
- 277   3                  if (SMB0CN0_ACK)// Slave SMB0CN0_ACK?
- 278   3                    {
- 279   4                      if (SMB_RW == WRITE)    // If this transfer is a WRITE,
- 280   4                        {
- 281   5                          if (sent_byte_counter <= NUM_BYTES_WR)
- 282   5                            {
- 283   6                              // send data byte
- 284   6                              SMB0DAT = SMB_DATA_OUT[sent_byte_counter-1];
- 285   6                              sent_byte_counter++;
- 286   6                            }
- 287   5                          else
- 288   5                            {
- 289   6                              SMB0CN0_STO = 1; // Set SMB0CN0_STO to terminate transfer
- 290   6                              SMB_BUSY = 0;// And free SMBus interface
- 291   6                            }
- 292   5                        }
- 293   4                      else
- 294   4                        {}                 // If this transfer is a READ,
- 295   4                                           // proceed with transfer without
- 296   4                                           // writing to SMB0DAT (switch
- 297   4                                           // to receive mode)
-C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 19:40:06 PAGE 6   
+ 256   1          bool FAIL = 0;                       // Used by the ISR to flag failed
+ 257   1          // transfers
+ 258   1      
+ 259   1          static uint8_t sent_byte_counter;
+ 260   1          static uint8_t rec_byte_counter;
+ 261   1      //    IE = IE_EA__DISABLED;
+ 262   1          if (SMB0CN0_ARBLOST == 0)// Check for errors
+ 263   1            {
+ 264   2              // Normal operation
+ 265   2              switch (SMB0CN0 & 0xF0)// Status vector
+ 266   2                {
+ 267   3                  // Master Transmitter/Receiver: START condition transmitted.
+ 268   3                  case SMB_MTSTA:
+ 269   3                  SMB0DAT = TARGET;// Load address of the target slave
+ 270   3                  SMB0DAT &= 0xFE;// Clear the LSB of the address for the
+ 271   3                                  // R/W bit
+ 272   3                  SMB0DAT |= (uint8_t) SMB_RW;// Load R/W bit
+ 273   3                  SMB0CN0_STA = 0;// Manually clear START bit
+ 274   3                  rec_byte_counter = 1;// Reset the counter
+ 275   3                  sent_byte_counter = 1;// Reset the counter
+ 276   3                  break;
+ 277   3      
+ 278   3                  // Master Transmitter: Data byte transmitted
+ 279   3                  case SMB_MTDB:
+ 280   3                  if (SMB0CN0_ACK)// Slave SMB0CN0_ACK?
+ 281   3                    {
+ 282   4                      if (SMB_RW == WRITE)    // If this transfer is a WRITE,
+ 283   4                        {
+ 284   5                          if (sent_byte_counter <= NUM_BYTES_WR)
+ 285   5                            {
+ 286   6                              // send data byte
+ 287   6                              SMB0DAT = SMB_DATA_OUT[sent_byte_counter-1];
+ 288   6                              sent_byte_counter++;
+ 289   6                            }
+ 290   5                          else
+ 291   5                            {
+ 292   6                              SMB0CN0_STO = 1; // Set SMB0CN0_STO to terminate transfer
+ 293   6                              SMB_BUSY = 0;// And free SMBus interface
+C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 23:23:01 PAGE 6   
 
- 298   4      
- 299   4                    }
- 300   3                  else                       // If slave NACK,
- 301   3                    {
- 302   4                      SMB0CN0_STO = 1;        // Send STOP condition, followed
- 303   4                      SMB0CN0_STA = 1;// By a START
- 304   4                      NUM_ERRORS++;// Indicate error
- 305   4                    }
- 306   3                  break;
- 307   3      
- 308   3                  // Master Receiver: byte received
- 309   3                  case SMB_MRDB:
- 310   3                  if (rec_byte_counter < NUM_BYTES_RD)
- 311   3                    {
- 312   4                      SMB_DATA_IN[rec_byte_counter-1] = SMB0DAT; // Store received
- 313   4                                                                 // byte
- 314   4                      SMB0CN0_ACK = 1;// Send SMB0CN0_ACK to indicate byte received
- 315   4                      rec_byte_counter++;// Increment the byte counter
- 316   4                    }
- 317   3                  else
- 318   3                    {
- 319   4                      SMB_DATA_IN[rec_byte_counter-1] = SMB0DAT; // Store received
- 320   4                                                                 // byte
- 321   4                      SMB_BUSY = 0;// Free SMBus interface
- 322   4                      SMB0CN0_ACK = 0;// Send NACK to indicate last byte
- 323   4                                      // of this transfer
- 324   4      
- 325   4                      SMB0CN0_STO = 1;// Send STOP to terminate transfer
- 326   4                    }
- 327   3                  break;
- 328   3      
- 329   3                  default:
- 330   3                  FAIL = 1;                  // Indicate failed transfer
- 331   3                                             // and handle at end of ISR
- 332   3                  break;
- 333   3      
- 334   3                } // end switch
- 335   2            }
- 336   1          else
- 337   1            {
- 338   2              // SMB0CN0_ARBLOST = 1, error occurred... abort transmission
- 339   2              FAIL = 1;
- 340   2            } // end SMB0CN0_ARBLOST if
- 341   1      
- 342   1          if (FAIL)// If the transfer failed,
- 343   1            {
- 344   2              SMB0CF &= ~0x80;                 // Reset communication
- 345   2              SMB0CF |= 0x80;
- 346   2              SMB0CN0_STA = 0;
- 347   2              SMB0CN0_STO = 0;
- 348   2              SMB0CN0_ACK = 0;
- 349   2      
- 350   2              SMB_BUSY = 0;// Free SMBus
- 351   2      
- 352   2              FAIL = 0;
- 353   2      
- 354   2              NUM_ERRORS++;// Indicate an error occurred
- 355   2            }
- 356   1      
- 357   1          SMB0CN0_SI = 0;                     // Clear interrupt flag
- 358   1      //    IE = IE_EA__ENABLED;
- 359   1        }
- 360          
-C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 19:40:06 PAGE 7   
+ 294   6                            }
+ 295   5                        }
+ 296   4                      else
+ 297   4                        {}                 // If this transfer is a READ,
+ 298   4                                           // proceed with transfer without
+ 299   4                                           // writing to SMB0DAT (switch
+ 300   4                                           // to receive mode)
+ 301   4      
+ 302   4                    }
+ 303   3                  else                       // If slave NACK,
+ 304   3                    {
+ 305   4                      SMB0CN0_STO = 1;        // Send STOP condition, followed
+ 306   4                      SMB0CN0_STA = 1;// By a START
+ 307   4                      NUM_ERRORS++;// Indicate error
+ 308   4                    }
+ 309   3                  break;
+ 310   3      
+ 311   3                  // Master Receiver: byte received
+ 312   3                  case SMB_MRDB:
+ 313   3                  if (rec_byte_counter < NUM_BYTES_RD)
+ 314   3                    {
+ 315   4                      SMB_DATA_IN[rec_byte_counter-1] = SMB0DAT; // Store received
+ 316   4                                                                 // byte
+ 317   4                      SMB0CN0_ACK = 1;// Send SMB0CN0_ACK to indicate byte received
+ 318   4                      rec_byte_counter++;// Increment the byte counter
+ 319   4                    }
+ 320   3                  else
+ 321   3                    {
+ 322   4                      SMB_DATA_IN[rec_byte_counter-1] = SMB0DAT; // Store received
+ 323   4                                                                 // byte
+ 324   4                      SMB_BUSY = 0;// Free SMBus interface
+ 325   4                      SMB0CN0_ACK = 0;// Send NACK to indicate last byte
+ 326   4                                      // of this transfer
+ 327   4      
+ 328   4                      SMB0CN0_STO = 1;// Send STOP to terminate transfer
+ 329   4                    }
+ 330   3                  break;
+ 331   3      
+ 332   3                  default:
+ 333   3                  FAIL = 1;                  // Indicate failed transfer
+ 334   3                                             // and handle at end of ISR
+ 335   3                  break;
+ 336   3      
+ 337   3                } // end switch
+ 338   2            }
+ 339   1          else
+ 340   1            {
+ 341   2              // SMB0CN0_ARBLOST = 1, error occurred... abort transmission
+ 342   2              FAIL = 1;
+ 343   2            } // end SMB0CN0_ARBLOST if
+ 344   1      
+ 345   1          if (FAIL)// If the transfer failed,
+ 346   1            {
+ 347   2              SMB0CF &= ~0x80;                 // Reset communication
+ 348   2              SMB0CF |= 0x80;
+ 349   2              SMB0CN0_STA = 0;
+ 350   2              SMB0CN0_STO = 0;
+ 351   2              SMB0CN0_ACK = 0;
+ 352   2      
+ 353   2              SMB_BUSY = 0;// Free SMBus
+ 354   2      
+ 355   2              FAIL = 0;
+ 356   2      
+C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 23:23:01 PAGE 7   
 
- 361          //-----------------------------------------------------------------------------
- 362          // TIMER3_ISR
- 363          //-----------------------------------------------------------------------------
- 364          //
- 365          // TIMER3 ISR Content goes here. Remember to clear flag bits:
- 366          // TMR3CN::TF3H (Timer # High Byte Overflow Flag)
- 367          // TMR3CN::TF3L (Timer # Low Byte Overflow Flag)
- 368          //
- 369          //
- 370          // A Timer3 interrupt indicates an SMBus SCL low timeout.
- 371          // The SMBus is disabled and re-enabled here
+ 357   2              NUM_ERRORS++;// Indicate an error occurred
+ 358   2            }
+ 359   1      
+ 360   1          SMB0CN0_SI = 0;                     // Clear interrupt flag
+ 361   1      //    IE = IE_EA__ENABLED;
+ 362   1        }
+ 363          
+ 364          //-----------------------------------------------------------------------------
+ 365          // TIMER3_ISR
+ 366          //-----------------------------------------------------------------------------
+ 367          //
+ 368          // TIMER3 ISR Content goes here. Remember to clear flag bits:
+ 369          // TMR3CN::TF3H (Timer # High Byte Overflow Flag)
+ 370          // TMR3CN::TF3L (Timer # Low Byte Overflow Flag)
+ 371          //
  372          //
- 373          //-----------------------------------------------------------------------------
- 374          //SI_INTERRUPT(TIMER3_ISR, TIMER3_IRQn)
- 375          //  {
- 376          //    SMB0CF &= ~0x80;                   // Disable SMBus
- 377          //    SMB0CF |= 0x80;// Re-enable SMBus
- 378          //    TMR3CN0 &= ~0x80;// Clear Timer3 interrupt-pending
- 379          //                   // flag
- 380          //    SMB0CN0_STA = 0;
- 381          //    SMB_BUSY = 0;  // Free SMBus
- 382          //  }
- 383          
- 384          //-----------------------------------------------------------------------------
- 385          // UART0_ISR
- 386          //-----------------------------------------------------------------------------
- 387          //
- 388          // UART0 ISR Content goes here. Remember to clear flag bits:
- 389          // SCON0::RI (Receive Interrupt Flag)
- 390          // SCON0::TI (Transmit Interrupt Flag)
- 391          //
- 392          //-----------------------------------------------------------------------------
- 393          enum cmd_type {
- 394              VOLTAGE,
- 395              CURRENT
- 396          };
- 397          
- 398          enum uart_trans {
- 399            UT_IDLE,
- 400            SEND_START,
- 401            SEND_CMD,
- 402            SEND_BYTE1,
- 403            SEND_BYTE2
- 404          };
- 405          
- 406          enum uart_state {
- 407            READ_CMD,
- 408            READ_BYTE1,
- 409            READ_BYTE2,
- 410            US_IDLE
- 411          };
- 412          
- 413          SI_INTERRUPT (UART0_ISR, UART0_IRQn) {
- 414   1        static xdata enum cmd_type ct;
- 415   1        static xdata enum uart_state us = US_IDLE;
- 416   1        static xdata enum uart_trans ut = UT_IDLE;
- 417   1      
- 418   1        static xdata uint16_t dout = 0;
- 419   1      
- 420   1        if (SCON0_RI == 1) {
- 421   2      
- 422   2            SCON0_RI = 0;                          // Clear interrupt flag
- 423   2      
-C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 19:40:06 PAGE 8   
+ 373          // A Timer3 interrupt indicates an SMBus SCL low timeout.
+ 374          // The SMBus is disabled and re-enabled here
+ 375          //
+ 376          //-----------------------------------------------------------------------------
+ 377          //SI_INTERRUPT(TIMER3_ISR, TIMER3_IRQn)
+ 378          //  {
+ 379          //    SMB0CF &= ~0x80;                   // Disable SMBus
+ 380          //    SMB0CF |= 0x80;// Re-enable SMBus
+ 381          //    TMR3CN0 &= ~0x80;// Clear Timer3 interrupt-pending
+ 382          //                   // flag
+ 383          //    SMB0CN0_STA = 0;
+ 384          //    SMB_BUSY = 0;  // Free SMBus
+ 385          //  }
+ 386          
+ 387          //-----------------------------------------------------------------------------
+ 388          // UART0_ISR
+ 389          //-----------------------------------------------------------------------------
+ 390          //
+ 391          // UART0 ISR Content goes here. Remember to clear flag bits:
+ 392          // SCON0::RI (Receive Interrupt Flag)
+ 393          // SCON0::TI (Transmit Interrupt Flag)
+ 394          //
+ 395          //-----------------------------------------------------------------------------
+ 396          enum cmd_type {
+ 397              VOLTAGE,
+ 398              CURRENT
+ 399          };
+ 400          
+ 401          enum uart_trans {
+ 402            UT_IDLE,
+ 403            SEND_START,
+ 404            SEND_CMD,
+ 405            SEND_BYTE1,
+ 406            SEND_BYTE2
+ 407          };
+ 408          
+ 409          enum uart_state {
+ 410            READ_CMD,
+ 411            READ_BYTE1,
+ 412            READ_BYTE2,
+ 413            US_IDLE
+ 414          };
+ 415          
+ 416          SI_INTERRUPT (UART0_ISR, UART0_IRQn) {
+ 417   1        static xdata enum cmd_type ct;
+ 418   1        static xdata enum uart_state us = US_IDLE;
+ 419   1        static xdata enum uart_trans ut = UT_IDLE;
+C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 23:23:01 PAGE 8   
 
- 424   2            lastByte = byte;
- 425   2            byte = SBUF0;                    // Read a character from UART
+ 420   1      
+ 421   1        static xdata uint16_t dout = 0;
+ 422   1      
+ 423   1        if (SCON0_RI == 1) {
+ 424   2      
+ 425   2            SCON0_RI = 0;                          // Clear interrupt flag
  426   2      
- 427   2            switch (us) {
- 428   3              case READ_CMD:
- 429   3                  switch (byte) {
- 430   4                    case 0x0:
- 431   4                      us = READ_BYTE1;
- 432   4                      ct = VOLTAGE;
- 433   4                      break;
- 434   4                    case 0x01:
- 435   4                      us = READ_BYTE1;
- 436   4                      ct = CURRENT;
- 437   4                      break;
- 438   4                    case 0x02:
- 439   4                      us = US_IDLE;
- 440   4                      ut = SEND_START;
- 441   4                      SBUF0 = 0xFF;
- 442   4                      dout = voltage;
- 443   4                      break;
- 444   4                    case 0x03:
- 445   4                      us = US_IDLE;
- 446   4                      ut = SEND_START;
- 447   4                      SBUF0 = 0xFF;
- 448   4                      dout = amp;
- 449   4                      break;
- 450   4                  }
- 451   3                  break;
- 452   3              case READ_BYTE1:
- 453   3                us = READ_BYTE2;
- 454   3                break;
- 455   3              case READ_BYTE2:
- 456   3                  switch (ct) {
- 457   4                    case VOLTAGE:
- 458   4                      voltage = byte;
- 459   4                      voltage = voltage << 8;
- 460   4                      voltage += lastByte;
- 461   4                      volt_counter.c = voltage;
- 462   4                      break;
- 463   4                    case CURRENT:
- 464   4                      amp = byte;
- 465   4                      amp = amp << 8;
- 466   4                      amp += lastByte;
- 467   4                      amp_counter.c = amp;
- 468   4                      break;
- 469   4                  }
- 470   3                  us = US_IDLE;
- 471   3                  break;
- 472   3              case US_IDLE:
- 473   3                  if (byte == 0xFF && lastByte == 0xFF) {
- 474   4                      us = READ_CMD;
- 475   4                  }
- 476   3                  break;
- 477   3              }
- 478   2        }
- 479   1      
- 480   1      
- 481   1        if (SCON0_TI == 1)                        // Check if transmit flag is set
- 482   1        {
- 483   2          SCON0_TI = 0;                          // Clear interrupt flag
- 484   2          switch (ut) {
- 485   3            case SEND_START:
- 486   3              SBUF0 = 0xFF;
-C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 19:40:06 PAGE 9   
+ 427   2            lastByte = byte;
+ 428   2            byte = SBUF0;                    // Read a character from UART
+ 429   2      
+ 430   2            switch (us) {
+ 431   3              case READ_CMD:
+ 432   3                  switch (byte) {
+ 433   4                    case 0x0:
+ 434   4                      us = READ_BYTE1;
+ 435   4                      ct = VOLTAGE;
+ 436   4                      break;
+ 437   4                    case 0x01:
+ 438   4                      us = READ_BYTE1;
+ 439   4                      ct = CURRENT;
+ 440   4                      break;
+ 441   4                    case 0x02:
+ 442   4                      us = US_IDLE;
+ 443   4                      ut = SEND_START;
+ 444   4                      SBUF0 = 0xFF;
+ 445   4                      dout = voltage;
+ 446   4                      break;
+ 447   4                    case 0x03:
+ 448   4                      us = US_IDLE;
+ 449   4                      ut = SEND_START;
+ 450   4                      SBUF0 = 0xFF;
+ 451   4                      dout = amp;
+ 452   4                      break;
+ 453   4                  }
+ 454   3                  break;
+ 455   3              case READ_BYTE1:
+ 456   3                us = READ_BYTE2;
+ 457   3                break;
+ 458   3              case READ_BYTE2:
+ 459   3                  switch (ct) {
+ 460   4                    case VOLTAGE:
+ 461   4                      voltage = byte;
+ 462   4                      voltage = voltage << 8;
+ 463   4                      voltage += lastByte;
+ 464   4                      volt_counter.c = voltage;
+ 465   4                      break;
+ 466   4                    case CURRENT:
+ 467   4                      amp = byte;
+ 468   4                      amp = amp << 8;
+ 469   4                      amp += lastByte;
+ 470   4                      amp_counter.c = amp;
+ 471   4                      break;
+ 472   4                  }
+ 473   3                  us = US_IDLE;
+ 474   3                  break;
+ 475   3              case US_IDLE:
+ 476   3                  if (byte == 0xFF && lastByte == 0xFF) {
+ 477   4                      us = READ_CMD;
+ 478   4                  }
+ 479   3                  break;
+ 480   3              }
+ 481   2        }
+ 482   1      
+C51 COMPILER V9.60.0.0   INTERRUPTS                                                        04/18/2021 23:23:01 PAGE 9   
 
- 487   3              ut = SEND_CMD;
- 488   3              break;
- 489   3            case SEND_CMD:
- 490   3              SBUF0 = 0x00;
- 491   3              ut = SEND_BYTE1;
- 492   3              break;
- 493   3            case SEND_BYTE1:
- 494   3              SBUF0 = (uint8_t) (dout & 0xFF);
- 495   3              ut = SEND_BYTE2;
- 496   3              break;
- 497   3            case SEND_BYTE2:
- 498   3              SBUF0 = (uint8_t) (dout >> 8);
- 499   3              ut = UT_IDLE;
- 500   3              break;
- 501   3            case UT_IDLE:
+ 483   1      
+ 484   1        if (SCON0_TI == 1)                        // Check if transmit flag is set
+ 485   1        {
+ 486   2          SCON0_TI = 0;                          // Clear interrupt flag
+ 487   2          switch (ut) {
+ 488   3            case SEND_START:
+ 489   3              SBUF0 = 0xFF;
+ 490   3              ut = SEND_CMD;
+ 491   3              break;
+ 492   3            case SEND_CMD:
+ 493   3              SBUF0 = 0x00;
+ 494   3              ut = SEND_BYTE1;
+ 495   3              break;
+ 496   3            case SEND_BYTE1:
+ 497   3              SBUF0 = (uint8_t) (dout & 0xFF);
+ 498   3              ut = SEND_BYTE2;
+ 499   3              break;
+ 500   3            case SEND_BYTE2:
+ 501   3              SBUF0 = (uint8_t) (dout >> 8);
  502   3              ut = UT_IDLE;
  503   3              break;
- 504   3          }
- 505   2        }
- 506   1      }
- 507          
- 508          
+ 504   3            case UT_IDLE:
+ 505   3              ut = UT_IDLE;
+ 506   3              break;
+ 507   3          }
+ 508   2        }
+ 509   1      }
+ 510          
+ 511          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =   1284    ----
+   CODE SIZE        =   1492    ----
    CONSTANT SIZE    =   ----    ----
-   XDATA SIZE       =     15    ----
+   XDATA SIZE       =    143       5
    PDATA SIZE       =   ----    ----
    DATA SIZE        =     15       4
    IDATA SIZE       =   ----    ----

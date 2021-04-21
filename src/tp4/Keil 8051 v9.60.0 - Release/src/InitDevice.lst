@@ -1,4 +1,4 @@
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 1   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 22:43:02 PAGE 1   
 
 
 C51 COMPILER V9.60.0.0, COMPILATION OF MODULE INITDEVICE
@@ -63,7 +63,7 @@ line level    source
   49   1      }
   50          
   51          //================================================================================
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 2   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 22:43:02 PAGE 2   
 
   52          // WDT_0_enter_DefaultMode_from_RESET
   53          //================================================================================
@@ -128,7 +128,7 @@ line level    source
  112   1            | P0MDOUT_B7__OPEN_DRAIN;
  113   1        // [P0MDOUT - Port 0 Output Mode]$
  114   1      
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 3   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 22:43:02 PAGE 3   
 
  115   1        // $[P0MDIN - Port 0 Input Mode]
  116   1        /***********************************************************************
@@ -193,7 +193,7 @@ line level    source
  175   1            | P1MDOUT_B2__PUSH_PULL | P1MDOUT_B3__OPEN_DRAIN | P1MDOUT_B4__OPEN_DRAIN
  176   1            | P1MDOUT_B5__OPEN_DRAIN | P1MDOUT_B6__OPEN_DRAIN;
  177   1        // [P1MDOUT - Port 1 Output Mode]$
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 4   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 22:43:02 PAGE 4   
 
  178   1      
  179   1        // $[P1MDIN - Port 1 Input Mode]
@@ -258,7 +258,7 @@ line level    source
  238   1            | P2MDIN_B3__DIGITAL;
  239   1        // [P2MDIN - Port 2 Input Mode]$
  240   1      
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 5   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 22:43:02 PAGE 5   
 
  241   1        // $[P2SKIP - Port 2 Skip]
  242   1        /***********************************************************************
@@ -323,7 +323,7 @@ line level    source
  301   1      
  302   1      }
  303          
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 6   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 22:43:02 PAGE 6   
 
  304          //================================================================================
  305          // ADC_0_enter_DefaultMode_from_RESET
@@ -388,7 +388,7 @@ line level    source
  364   1        // [ADC0ASCF - ADC0 Autoscan Configuration]$
  365   1      
  366   1        // $[ADC0CN0 - ADC0 Control 0]
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 7   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 22:43:02 PAGE 7   
 
  367   1        /***********************************************************************
  368   1         - Enable ADC0 
@@ -453,7 +453,7 @@ line level    source
  427   1        /***********************************************************************
  428   1         - Select the VREF pin
  429   1         - Select the VDD supply
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 8   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 22:43:02 PAGE 8   
 
  430   1         - Input = DAC1H:DAC1L
  431   1         - Input = DAC3H:DAC3L
@@ -518,7 +518,7 @@ line level    source
  490   1        CLKSEL = CLKSEL_CLKSL__HFOSC1 | CLKSEL_CLKDIV__SYSCLK_DIV_1;
  491   1        while ((CLKSEL & CLKSEL_DIVRDY__BMASK) == CLKSEL_DIVRDY__NOT_READY)
  492   1          ;
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 9   
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 22:43:02 PAGE 9   
 
  493   1        // [CLKSEL - Clock Select]$
  494   1      
@@ -583,7 +583,7 @@ line level    source
  553          //================================================================================
  554          extern void
  555          TIMER_SETUP_0_enter_DefaultMode_from_RESET (void)
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 10  
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 22:43:02 PAGE 10  
 
  556          {
  557   1        // $[CKCON0 - Clock Control 0]
@@ -648,7 +648,7 @@ line level    source
  616   1        // $[SMB0TC - SMBus 0 Timing and Pin Control]
  617   1        // [SMB0TC - SMBus 0 Timing and Pin Control]$
  618   1      
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 11  
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 22:43:02 PAGE 11  
 
  619   1        // $[SMB0CF - SMBus 0 Configuration]
  620   1        /***********************************************************************
@@ -713,7 +713,7 @@ line level    source
  679   1        // [SCON1 - UART1 Serial Port Control]$
  680   1      
  681   1        // $[UART1FCN1 - UART1 FIFO Control 1]
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 12  
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 22:43:02 PAGE 12  
 
  682   1        // [UART1FCN1 - UART1 FIFO Control 1]$
  683   1      
@@ -778,7 +778,7 @@ line level    source
  742   1        // [DAC1CF0 - DAC1 Configuration 0]$
  743   1      
  744   1        // $[DAC1CF1 - DAC1 Configuration 1]
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 13  
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 22:43:02 PAGE 13  
 
  745   1        // [DAC1CF1 - DAC1 Configuration 1]$
  746   1      
@@ -843,7 +843,7 @@ line level    source
  805   1         - Disable Timer 2 interrupt
  806   1         - Enable UART0 interrupt
  807   1         ***********************************************************************/
-C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 19:40:05 PAGE 14  
+C51 COMPILER V9.60.0.0   INITDEVICE                                                        04/18/2021 22:43:02 PAGE 14  
 
  808   1        SFRPAGE = 0x00;
  809   1        IE = IE_EA__ENABLED | IE_EX0__DISABLED | IE_EX1__DISABLED | IE_ESPI0__DISABLED
