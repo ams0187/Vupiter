@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        04/18/21 20:24:55 PAGE     1
+=======
+AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        04/18/21 22:43:02 PAGE     1
+>>>>>>> 9c1453de99567e4a65d76df555cf76dd497127d7
 
 
 MACRO ASSEMBLER AX51 V3.15.3.0
@@ -62,7 +66,11 @@ LOC    OBJ             LINE     SOURCE
                          48     ;</h>
                          49     ;------------------------------------------------------------------------------
                          50     ;
+<<<<<<< HEAD
 AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        04/18/21 20:24:55 PAGE     2
+=======
+AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        04/18/21 22:43:02 PAGE     2
+>>>>>>> 9c1453de99567e4a65d76df555cf76dd497127d7
 
                          51     ;<h> Reentrant Stack Initialization
                          52     ;
@@ -127,7 +135,11 @@ LOC    OBJ             LINE     SOURCE
  0083                   111     DPH     DATA    83H
                         112     
                         113                     NAME    ?C_STARTUP
+<<<<<<< HEAD
 AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        04/18/21 20:24:55 PAGE     3
+=======
+AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        04/18/21 22:43:02 PAGE     3
+>>>>>>> 9c1453de99567e4a65d76df555cf76dd497127d7
 
                         114     
                         115     
@@ -192,7 +204,11 @@ LOC    OBJ             LINE     SOURCE
                                 
                                                 MOV     ?C_IBP,#LOW IBPSTACKTOP
                                 ENDIF
+<<<<<<< HEAD
 AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        04/18/21 20:24:55 PAGE     4
+=======
+AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        04/18/21 22:43:02 PAGE     4
+>>>>>>> 9c1453de99567e4a65d76df555cf76dd497127d7
 
                         177     
                         178     IF XBPSTACK <> 0
@@ -222,7 +238,11 @@ LOC    OBJ             LINE     SOURCE
 00000C 020000     E     201                     LJMP    ?C_START
                         202     
                         203                     END
+<<<<<<< HEAD
 AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        04/18/21 20:24:55 PAGE     5
+=======
+AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        04/18/21 22:43:02 PAGE     5
+>>>>>>> 9c1453de99567e4a65d76df555cf76dd497127d7
 
 SYMBOL TABLE LISTING
 ------ ----- -------
