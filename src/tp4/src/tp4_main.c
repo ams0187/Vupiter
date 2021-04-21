@@ -291,12 +291,7 @@ int main (void)
      SMB_DATA_OUT[1] = 128 - 1;
      TARGET = SLAVE_ADDR << 1;
      SMB_Write();
-     T0_Waitms (50);
-     i = 0;
-     // DONT TOUCH
-     SFRPAGE_save = SFRPAGE;
-     SFRPAGE = 0x0;
-     TCON |= TCON_TR0__RUN;
+
      //SCON0 |= SCON0_REN__RECEIVE_ENABLED;
      SFRPAGE = SFRPAGE_save;
      ncnt = 0;
